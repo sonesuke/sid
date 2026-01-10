@@ -27,6 +27,9 @@ Actor selects "Invite User" in the administration console.
 3. System validates the input and permissions.
 4. System sends the invitation email.
 
+**Related Requirements**:
+*   :ref:`FR-TENANT-001`
+
 .. _UC-TENANT-SSO:
 
 UC-TENANT-SSO SSO Configuration
@@ -51,3 +54,6 @@ Owner initiates "SSO Setup".
 1. Owne enters IdP details (Issuer URL, Client ID, Client Secret).
 2. System verifies the IdP configuration (discovery).
 3. System saves the configuration.
+
+**Related Requirements**:
+*   :ref:`FR-AUTH-003`

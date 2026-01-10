@@ -26,3 +26,8 @@ A new customer subscription is confirmed.
 2. Operator enters tenant details (Name, Domain, Plan).
 3. Operator selects the "Provision" action.
 4. System creates the tenant and confirms success.
+
+**Related Requirements**:
+*   :ref:`FR-FLAG-001`
+*   :ref:`FR-TENANT-001`
+*   :ref:`FR-TENANT-003`
