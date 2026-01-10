@@ -33,3 +33,4 @@ A new customer subscription is confirmed.
 *   :ref:`FR-FLAG-001`
 *   :ref:`FR-TENANT-001`
 *   :ref:`FR-TENANT-003`
+*   :ref:`FR-LOG-003`

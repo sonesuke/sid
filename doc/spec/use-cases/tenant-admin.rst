@@ -28,6 +28,7 @@ The :ref:`Tenant User <ACT-USER>` selects "Delete User" in the :ref:`IF-TENANT-C
 
 **Related Requirements**:
 *   :ref:`FR-TENANT-002`
+*   :ref:`FR-LOG-003`
 
 .. _UC-TENANT-USER-UPDATE:
 
@@ -58,6 +59,7 @@ The :ref:`Tenant User <ACT-USER>` selects "Edit Role" in the :ref:`IF-TENANT-CON
 
 **Related Requirements**:
 *   :ref:`FR-TENANT-004`
+*   :ref:`FR-LOG-003`
 
 .. _UC-TENANT-INVITE:
 
@@ -87,6 +89,7 @@ The :ref:`Tenant User <ACT-USER>` selects "Invite User" in the :ref:`IF-TENANT-C
 
 **Related Requirements**:
 *   :ref:`FR-TENANT-001`
+*   :ref:`FR-LOG-003`
 
 .. _UC-TENANT-SSO:
 
@@ -115,3 +118,4 @@ The :ref:`Tenant User <ACT-USER>` initiates "SSO Setup" in the :ref:`IF-TENANT-C
 
 **Related Requirements**:
 *   :ref:`FR-AUTH-003`
+*   :ref:`FR-LOG-003`
