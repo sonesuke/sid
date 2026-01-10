@@ -18,14 +18,16 @@ A new customer subscription is confirmed.
 
 **Postconditions**:
 1. A new tenant entity is created in the :ref:`Control Plane <TERM-SYS-CP>`.
-2. Initial admin user for the tenant is provisioned.
+2. Initial :ref:`Tenant User <ACT-USER>` (Role: Owner) is provisioned.
 3. Feature flags corresponding to the subscription plan are active.
 
 **Scenario**:
 1. The :ref:`Platform Operator <ACT-OPS>` navigates to the :ref:`IF-OPS-CONSOLE`.
-2. The :ref:`Platform Operator <ACT-OPS>` enters tenant details (Name, Domain, Plan) and selects the :ref:`Managed Application <TERM-APP-TARGET>`.
-3. The :ref:`Platform Operator <ACT-OPS>` selects the "Provision" action.
-4. The :ref:`Control Plane <TERM-SYS-CP>` creates the tenant and enables access to the :ref:`Managed Application <TERM-APP-TARGET>`.
+2. The :ref:`Platform Operator <ACT-OPS>` enters tenant details (Name, Domain, Plan) and the email address for the initial Owner.
+3. The :ref:`Platform Operator <ACT-OPS>` selects the :ref:`Managed Application <TERM-APP-TARGET>` to enable.
+4. The :ref:`Platform Operator <ACT-OPS>` selects the "Provision" action.
+5. The :ref:`Control Plane <TERM-SYS-CP>` creates the tenant and the initial user with Owner role.
+6. The :ref:`Control Plane <TERM-SYS-CP>` enables access to the :ref:`Managed Application <TERM-APP-TARGET>`.
 
 **Related Requirements**:
 *   :ref:`FR-FLAG-001`
