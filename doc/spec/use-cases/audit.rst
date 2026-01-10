@@ -29,3 +29,31 @@ The :ref:`Auditor <ACT-AUDIT>` selects "Export Logs" within the :ref:`IF-AUDIT-C
 **Related Requirements**:
 *   :ref:`FR-LOG-001` (Collection)
 *   :ref:`FR-LOG-002` (Export)
+
+.. _UC-AUDIT-RECORD-CP:
+
+UC-AUDIT-RECORD-CP Control Plane Event Recording
+------------------------------------------------
+**Actor**: :ref:`TERM-SYS-CP`
+
+**Description**:
+The :ref:`Control Plane <TERM-SYS-CP>` records internal state changes (e.g., provisioning, user management) as audit logs to ensure traceability of operator and admin actions.
+
+**Trigger**:
+A state-changing operation is successfully completed by any Actor.
+
+**Preconditions**:
+1. The operation (e.g., Tenant Provisioning, User Deletion) has succeeded.
+
+**Postconditions**:
+1. An audit log entry describing the event is persisted.
+
+**Scenario**:
+1. An Actor (Operator, Tenant Owner) performs an action (e.g., "Provision Tenant").
+2. The :ref:`Control Plane <TERM-SYS-CP>` executes the detailed business logic.
+3. The :ref:`Control Plane <TERM-SYS-CP>` generates an audit log event containing Actor ID, Action, Resource, and Timestamp.
+4. The :ref:`Control Plane <TERM-SYS-CP>` persists the log entry.
+
+**Related Requirements**:
+*   :ref:`FR-LOG-003` (CP Auditing)
+
