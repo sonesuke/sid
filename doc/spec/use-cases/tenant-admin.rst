@@ -29,6 +29,36 @@ The :ref:`Tenant User <ACT-USER>` selects "Delete User" in the :ref:`IF-TENANT-C
 **Related Requirements**:
 *   :ref:`FR-TENANT-002`
 
+.. _UC-TENANT-USER-UPDATE:
+
+UC-TENANT-USER-UPDATE User Role Update
+--------------------------------------
+**Actor**: :ref:`ACT-USER` (Role: Owner, Administrator)
+
+**Description**:
+The :ref:`Tenant User <ACT-USER>` (Role: Owner or Administrator) modifies the role of an existing user within the tenant organization.
+
+**Trigger**:
+The :ref:`Tenant User <ACT-USER>` selects "Edit Role" in the :ref:`IF-TENANT-CONSOLE`.
+
+**Preconditions**:
+1. The :ref:`Tenant User <ACT-USER>` is logged in with sufficient privileges.
+2. Target user exists.
+
+**Postconditions**:
+1. Target user's role is updated.
+2. Target user's permissions are immediately adjusted.
+
+**Scenario**:
+1. The :ref:`Tenant User <ACT-USER>` selects the user to update.
+2. The :ref:`Tenant User <ACT-USER>` selects the new role.
+3. The :ref:`Tenant User <ACT-USER>` saves the changes.
+4. The :ref:`Control Plane <TERM-SYS-CP>` validates the permissions (e.g., cannot downgrade own role if last Owner).
+5. The :ref:`Control Plane <TERM-SYS-CP>` updates the user record.
+
+**Related Requirements**:
+*   :ref:`FR-TENANT-004`
+
 .. _UC-TENANT-INVITE:
 
 UC-TENANT-INVITE User Invitation

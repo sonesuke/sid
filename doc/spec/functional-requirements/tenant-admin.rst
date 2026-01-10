@@ -18,3 +18,9 @@ The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to delete us
 FR-TENANT-003 Contract Modification
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The :ref:`TERM-SYS-CP` SHALL allow only Tenant Owners to modify the tenant's subscription contract.
+
+.. _FR-TENANT-004:
+
+FR-TENANT-004 User Role Management
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to modify the roles of existing users within their tenant.
