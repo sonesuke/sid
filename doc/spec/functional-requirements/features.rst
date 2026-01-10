@@ -20,6 +20,33 @@ FR-AUTH-002 SAML Exclusion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 The :ref:`TERM-SYS-CP` SHALL NOT support SAML authentication.
 
+.. _FR-AUTH-003:
+
+FR-AUTH-003 Tenant SSO Configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL allow a Tenant Owner (role of :ref:`ACT-USER`) to register an external Identity Provider (IdP) for Single Sign-On (SSO).
+
+Tenant Administration
+---------------------
+
+.. _FR-TENANT-001:
+
+FR-TENANT-001 User Invitation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to invite new users to their tenant.
+
+.. _FR-TENANT-002:
+
+FR-TENANT-002 User Deletion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to delete users from their tenant.
+
+.. _FR-TENANT-003:
+
+FR-TENANT-003 Contract Modification
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL allow only Tenant Owners to modify the tenant's subscription contract.
+
 Feature Flag Management
 -----------------------
 
