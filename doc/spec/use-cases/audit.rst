@@ -11,7 +11,7 @@ UC-AUDIT-EXPORT Audit Log Export
 The :ref:`Auditor <ACT-AUDIT>` exports system audit logs for compliance review.
 
 **Trigger**:
-The :ref:`Auditor <ACT-AUDIT>` selects "Export Logs" within the :ref:`Auditor Console <IF-AUDIT-CONSOLE>`.
+The :ref:`Auditor <ACT-AUDIT>` selects "Export Logs" within the **Auditor Console**.
 
 **Preconditions**:
 
@@ -23,7 +23,7 @@ The :ref:`Auditor <ACT-AUDIT>` selects "Export Logs" within the :ref:`Auditor Co
 
 **Scenario**:
 
-1. The :ref:`Auditor <ACT-AUDIT>` navigates to the "Audit Logs" view in the :ref:`Auditor Console <IF-AUDIT-CONSOLE>`.
+1. The :ref:`Auditor <ACT-AUDIT>` navigates to the "Audit Logs" view in the **Auditor Console**.
 2. The :ref:`Auditor <ACT-AUDIT>` selects the date range and filters for the export.
 3. The :ref:`Auditor <ACT-AUDIT>` initiates the download.
 3. The :ref:`Control Plane <TERM-SYS-CP>` queries the log storage.

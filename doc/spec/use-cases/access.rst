@@ -24,7 +24,7 @@ The :ref:`Tenant User <ACT-USER>` attempts to access a protected resource.
 
 **Scenario**:
 
-1. The :ref:`Tenant User <ACT-USER>` navigates to the :ref:`Universal Login Page <IF-LOGIN-UI>`.
+1. The :ref:`Tenant User <ACT-USER>` navigates to the **Universal Login Page**.
 2. The :ref:`Tenant User <ACT-USER>` selects authentication method (Password or SSO).
 3. If Password: The :ref:`Tenant User <ACT-USER>` enters email and password.
 4. If SSO: The :ref:`Tenant User <ACT-USER>` is redirected to IdP and authenticates.
@@ -45,7 +45,7 @@ UC-AUTH-RESET Password Reset
 The :ref:`Tenant User <ACT-USER>` initiates a password reset flow when they have forgotten their credentials.
 
 **Trigger**:
-The :ref:`Tenant User <ACT-USER>` selects "Forgot Password" on the :ref:`Universal Login Page <IF-LOGIN-UI>`.
+The :ref:`Tenant User <ACT-USER>` selects "Forgot Password" on the **Universal Login Page**.
 
 **Preconditions**:
 
@@ -59,7 +59,7 @@ The :ref:`Tenant User <ACT-USER>` selects "Forgot Password" on the :ref:`Univers
 
 **Scenario**:
 
-1. The :ref:`Tenant User <ACT-USER>` enters their email address on the :ref:`Universal Login Page <IF-LOGIN-UI>`.
+1. The :ref:`Tenant User <ACT-USER>` enters their email address on the **Universal Login Page**.
 2. The :ref:`Control Plane <TERM-SYS-CP>` sends a password reset link/token to the email.
 3. The :ref:`Tenant User <ACT-USER>` clicks the link and enters a new password.
 4. The :ref:`Control Plane <TERM-SYS-CP>` updates the credential store.

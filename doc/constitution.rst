@@ -110,19 +110,24 @@ Cross-Referencing
 *   **Direction**: Follow the reference hierarchy: Use Case -> Functional Requirement -> (API / IF, Data Entity, Error, Constraint). Avoid circular references.
 *   **Prohibitions**:
     *   Functional Requirements SHALL NOT reference Use Cases.
+    *   Use Cases SHALL NOT establish normative references to Interface or API specifications (mentions only).
     *   Data Models SHALL NOT reference API endpoints.
     *   Error Definitions SHALL NOT introduce new requirements.
+*   **Semantics**:
+    *   "Realized by" references in Functional Requirements indicate an example implementation mapping and do not constitute a strict normative dependency.
 
 Usage Coverage
 ^^^^^^^^^^^^^^
-All Functional Requirements (FR) MUST be referenced by at least one Use Case (UC). Orphan guidelines are considered incomplete specification.
+*   **FR Coverage**: All Functional Requirements (FR) MUST be referenced by at least one Use Case (UC). Orphan guidelines are considered incomplete specification.
+*   **UC Completeness**: All Use Cases (UC) MUST reference at least one Functional Requirement (FR). Empty Use Cases are prohibited.
+*   **Interface Utility**: All Interfaces and APIs MUST be referenced by at least one Functional Requirement (FR). Orphan Interfaces are prohibited.
 
 Use Case Structure
 ^^^^^^^^^^^^^^^^^^
-Use Cases (UC) SHALL follow the interaction principle: **Actor -> Interface -> Feature**.
-- **Actor**: A defined **Term** or **Actor**.
-- **Interface**: An explicit **API** or **UI** used to perform the action.
-- **Feature**: The **Functional Requirement** satisfied by the action.
+Use Cases (UC) SHALL follow the narrative structure: **Actor -> Entry Point (Informative) -> Goal**.
+- **Actor**: A defined :ref:`Actor <ACT>`.
+- **Entry Point**: A narrative mention of the interface (e.g., "via the Console"). **SHALL NOT** use ``:ref:`` to link to Interface specifications.
+- **Goal**: The value or outcome achieved, formally supporting a **Functional Requirement**.
 
 AI Authoring Rules
 ^^^^^^^^^^^^^^^^^^

@@ -11,7 +11,7 @@ UC-TENANT-USER-DELETE User Deletion
 The :ref:`Tenant User <ACT-USER>` (Role: Owner or Administrator) removes a user from the tenant organization.
 
 **Trigger**:
-The :ref:`Tenant User <ACT-USER>` selects "Delete User" in the :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`.
+The :ref:`Tenant User <ACT-USER>` selects "Delete User" in the **Tenant Administration Console**.
 
 **Preconditions**:
 
@@ -43,7 +43,7 @@ UC-TENANT-USER-UPDATE User Role Update
 The :ref:`Tenant User <ACT-USER>` (Role: Owner or Administrator) modifies the role of an existing user within the tenant organization.
 
 **Trigger**:
-The :ref:`Tenant User <ACT-USER>` selects "Edit Role" in the :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`.
+The :ref:`Tenant User <ACT-USER>` selects "Edit Role" in the **Tenant Administration Console**.
 
 **Preconditions**:
 
@@ -78,7 +78,7 @@ UC-TENANT-INVITE User Invitation
 The :ref:`Tenant User <ACT-USER>` (Role: Owner or Administrator) invites a new user to join their tenant organization. The invited user receives an email to set up their account.
 
 **Trigger**:
-The :ref:`Tenant User <ACT-USER>` selects "Invite User" in the :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`.
+The :ref:`Tenant User <ACT-USER>` selects "Invite User" in the **Tenant Administration Console**.
 
 **Preconditions**:
 
@@ -112,7 +112,7 @@ UC-TENANT-SSO SSO Configuration
 The :ref:`Tenant User <ACT-USER>` (Role: Owner) configures an external Identity Provider (OIDC) to enable Single Sign-On for their users.
 
 **Trigger**:
-The :ref:`Tenant User <ACT-USER>` initiates "SSO Setup" in the :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`.
+The :ref:`Tenant User <ACT-USER>` initiates "SSO Setup" in the **Tenant Administration Console**.
 
 **Preconditions**:
 

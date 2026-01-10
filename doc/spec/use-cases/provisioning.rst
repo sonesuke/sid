@@ -25,7 +25,7 @@ A new customer subscription is confirmed.
 
 **Scenario**:
 
-1. The :ref:`Platform Operator <ACT-OPS>` navigates to the :ref:`IF-OPS-CONSOLE`.
+1. The :ref:`Platform Operator <ACT-OPS>` navigates to the **Operator Console**.
 2. The :ref:`Platform Operator <ACT-OPS>` enters tenant details (Name, Domain, Plan) and the email address for the initial Owner.
 3. The :ref:`Platform Operator <ACT-OPS>` selects the :ref:`Managed Application <TERM-APP-TARGET>` to enable.
 4. The :ref:`Platform Operator <ACT-OPS>` selects the "Provision" action.
@@ -49,7 +49,7 @@ UC-TENANT-SUSPEND Tenant Suspension
 The :ref:`Platform Operator <ACT-OPS>` suspends a tenant's access to the managed application, usually due to non-payment or policy violation.
 
 **Trigger**:
-The :ref:`Platform Operator <ACT-OPS>` selects "Suspend Tenant" in the :ref:`Operator Console <IF-OPS-CONSOLE>`.
+The :ref:`Platform Operator <ACT-OPS>` selects "Suspend Tenant" in the **Operator Console**.
 
 **Preconditions**:
 
@@ -63,7 +63,7 @@ The :ref:`Platform Operator <ACT-OPS>` selects "Suspend Tenant" in the :ref:`Ope
 
 **Scenario**:
 
-1. The :ref:`Platform Operator <ACT-OPS>` searches for the tenant in the :ref:`Operator Console <IF-OPS-CONSOLE>`.
+1. The :ref:`Platform Operator <ACT-OPS>` searches for the tenant in the **Operator Console**.
 2. The :ref:`Platform Operator <ACT-OPS>` selects the "Suspend" action.
 3. The :ref:`Platform Operator <ACT-OPS>` provides a reason (optional).
 4. The :ref:`Platform Operator <ACT-OPS>` confirms the action.
