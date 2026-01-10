@@ -25,7 +25,7 @@ A new customer subscription is confirmed.
 1. Operator navigates to the :ref:`IF-OPS-CONSOLE`.
 2. Operator enters tenant details (Name, Domain, Plan).
 3. Operator selects the "Provision" action.
-4. System creates the tenant and confirms success.
+4. The :ref:`Control Plane <TERM-SYS-CP>` creates the tenant and confirms success.
 
 **Related Requirements**:
 *   :ref:`FR-FLAG-001`

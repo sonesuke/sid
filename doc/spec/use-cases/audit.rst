@@ -22,8 +22,8 @@ Auditor selects "Export Logs" via :ref:`IF-AUDIT-EXPORT`.
 **Scenario**:
 1. Auditor selects the date range and filters for the export.
 2. Auditor initiates the download.
-3. System queries the log storage.
-4. System formats the data as CSV and streams the response.
+3. The :ref:`Control Plane <TERM-SYS-CP>` queries the log storage.
+4. The :ref:`Control Plane <TERM-SYS-CP>` formats the data as CSV and streams the response.
 
 **Related Requirements**:
 *   :ref:`FR-LOG-001` (Collection)

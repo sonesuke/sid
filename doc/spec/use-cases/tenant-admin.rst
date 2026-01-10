@@ -23,7 +23,7 @@ Actor selects "Delete User".
 **Scenario**:
 1. Actor selects the user to remove.
 2. Actor confirms deletion.
-3. System removes the user.
+3. The :ref:`Control Plane <TERM-SYS-CP>` removes the user.
 
 **Related Requirements**:
 *   :ref:`FR-TENANT-002`
@@ -51,8 +51,8 @@ Actor selects "Invite User" in the :ref:`IF-TENANT-CONSOLE`.
 **Scenario**:
 1. Actor enters the email address and role (Admin or User) of the new user.
 2. Actor submits the invitation.
-3. System validates the input and permissions.
-4. System sends the invitation email.
+3. The :ref:`Control Plane <TERM-SYS-CP>` validates the input and permissions.
+4. The :ref:`Control Plane <TERM-SYS-CP>` sends the invitation email.
 
 **Related Requirements**:
 *   :ref:`FR-TENANT-001`
@@ -79,8 +79,8 @@ Owner initiates "SSO Setup".
 
 **Scenario**:
 1. Owne enters IdP details (Issuer URL, Client ID, Client Secret).
-2. System verifies the IdP configuration (discovery).
-3. System saves the configuration.
+2. The :ref:`Control Plane <TERM-SYS-CP>` verifies the IdP configuration (discovery).
+3. The :ref:`Control Plane <TERM-SYS-CP>` saves the configuration.
 
 **Related Requirements**:
 *   :ref:`FR-AUTH-003`

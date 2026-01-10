@@ -25,8 +25,8 @@ The :ref:`Tenant User <ACT-USER>` attempts to access a protected resource.
 2. The :ref:`Tenant User <ACT-USER>` selects authentication method (Password or SSO).
 3. If Password: The :ref:`Tenant User <ACT-USER>` enters email and password.
 4. If SSO: The :ref:`Tenant User <ACT-USER>` is redirected to IdP and authenticates.
-5. System validates credentials.
-6. System issues an authentication token.
+5. The :ref:`Control Plane <TERM-SYS-CP>` validates credentials.
+6. The :ref:`Control Plane <TERM-SYS-CP>` issues an authentication token.
 
 **Related Requirements**:
 *   :ref:`FR-AUTH-001`
