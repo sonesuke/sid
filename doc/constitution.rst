@@ -139,6 +139,11 @@ Change Management
 - Semantic changes SHALL result in a new identifier.
 - Deprecated identifiers SHALL remain documented and MUST NOT be reused.
 
+Documentation Format
+^^^^^^^^^^^^^^^^^^^^
+- **Tables**: Tables SHALL be written using the reStructuredText "Simple Tables" format (using ``===`` borders) for readability.
+  - Exception: Complex grids that require spanning cells may use "Grid Tables".
+
 
 **Amendment Policy**
 --------------------
