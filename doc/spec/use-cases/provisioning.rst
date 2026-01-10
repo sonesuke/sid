@@ -17,9 +17,9 @@ A new customer subscription is confirmed.
 1. The :ref:`Platform Operator <ACT-OPS>` is logged in.
 
 **Postconditions**:
-1. A new tenant entity is created in the :ref:`Control Plane <TERM-SYS-CP>`.
-2. Initial :ref:`Tenant User <ACT-USER>` (Role: Owner) is provisioned.
-3. Feature flags corresponding to the subscription plan are active.
+1. A new :ref:`Tenant <DAT-TENANT>` entity is created in the :ref:`Control Plane <TERM-SYS-CP>`.
+2. Initial :ref:`Tenant User <ACT-USER>` (Role: Owner) is provisioned in the :ref:`Users <DAT-USER>` table.
+3. :ref:`Feature Flags <DAT-FLAG>` corresponding to the subscription plan are active.
 
 **Scenario**:
 1. The :ref:`Platform Operator <ACT-OPS>` navigates to the :ref:`IF-OPS-CONSOLE`.

@@ -17,7 +17,7 @@ The :ref:`Auditor <ACT-AUDIT>` selects "Export Logs" within the :ref:`IF-AUDIT-C
 1. The :ref:`Auditor <ACT-AUDIT>` is logged in with Auditor privileges.
 
 **Postconditions**:
-1. A CSV file containing the requested logs is downloaded to the :ref:`Auditor <ACT-AUDIT>`'s device.
+1. A CSV file containing the requested :ref:`Audit Logs <DAT-LOG>` is downloaded to the :ref:`Auditor <ACT-AUDIT>`'s device.
 
 **Scenario**:
 1. The :ref:`Auditor <ACT-AUDIT>` navigates to the "Audit Logs" view in the :ref:`IF-AUDIT-CONSOLE`.
@@ -37,7 +37,7 @@ UC-AUDIT-RECORD-CP Control Plane Event Recording
 **Actor**: :ref:`TERM-SYS-CP`
 
 **Description**:
-The :ref:`Control Plane <TERM-SYS-CP>` records internal state changes (e.g., provisioning, user management) as audit logs to ensure traceability of operator and admin actions.
+The :ref:`Control Plane <TERM-SYS-CP>` records internal state changes (e.g., provisioning, user management) as :ref:`Audit Logs <DAT-LOG>` to ensure traceability of operator and admin actions.
 
 **Trigger**:
 A state-changing operation is successfully completed by any Actor.
@@ -46,7 +46,7 @@ A state-changing operation is successfully completed by any Actor.
 1. The operation (e.g., Tenant Provisioning, User Deletion) has succeeded.
 
 **Postconditions**:
-1. An audit log entry describing the event is persisted.
+1. An :ref:`Audit Log <DAT-LOG>` entry describing the event is persisted.
 
 **Scenario**:
 1. An Actor (Operator, Tenant Owner) performs an action (e.g., "Provision Tenant").
