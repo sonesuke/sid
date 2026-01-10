@@ -24,7 +24,7 @@ The :ref:`Managed Application <TERM-APP-TARGET>` starts up or periodic refresh i
 3. The :ref:`Control Plane <TERM-SYS-CP>` returns the flag configuration.
 
 **Related Requirements**:
-*   :ref:`FR-FLAG-002`
+*   :ref:`Flag Delivery <FR-FLAG-002>`
 
 .. _UC-SYS-BILL-REPORT:
 
@@ -47,8 +47,8 @@ A user performs a billable action within the :ref:`Managed Application <TERM-APP
 3. The :ref:`Control Plane <TERM-SYS-CP>` validates and stores the event.
 
 **Related Requirements**:
-*   :ref:`FR-BILL-001`
-*   :ref:`FR-BILL-002`
+*   :ref:`Billing Event Persistence <FR-BILL-001>`
+*   :ref:`Billing Event Ingestion <FR-BILL-002>`
 
 .. _UC-SYS-LOG-REPORT:
 
@@ -71,4 +71,4 @@ The :ref:`Managed Application <TERM-APP-TARGET>` generates a log entry.
 3. The :ref:`Control Plane <TERM-SYS-CP>` ingests the log.
 
 **Related Requirements**:
-*   :ref:`FR-LOG-001`
+*   :ref:`Audit Log Collection <FR-LOG-001>`

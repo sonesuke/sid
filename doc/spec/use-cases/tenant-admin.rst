@@ -5,7 +5,7 @@ Tenant Administration
 
 UC-TENANT-USER-DELETE User Deletion
 -----------------------------------
-**Actor**: :ref:`ACT-USER` (Role: Owner, Administrator)
+**Actor**: :ref:`Tenant User <ACT-USER>` (Role: Owner, Administrator)
 
 **Description**:
 The :ref:`Tenant User <ACT-USER>` (Role: Owner or Administrator) removes a user from the tenant organization.
@@ -27,14 +27,14 @@ The :ref:`Tenant User <ACT-USER>` selects "Delete User" in the :ref:`IF-TENANT-C
 3. The :ref:`Control Plane <TERM-SYS-CP>` removes the user.
 
 **Related Requirements**:
-*   :ref:`FR-TENANT-002`
-*   :ref:`FR-LOG-003`
+*   :ref:`User Deletion <FR-TENANT-002>`
+*   :ref:`Control Plane Auditing <FR-LOG-003>`
 
 .. _UC-TENANT-USER-UPDATE:
 
 UC-TENANT-USER-UPDATE User Role Update
 --------------------------------------
-**Actor**: :ref:`ACT-USER` (Role: Owner, Administrator)
+**Actor**: :ref:`Tenant User <ACT-USER>` (Role: Owner, Administrator)
 
 **Description**:
 The :ref:`Tenant User <ACT-USER>` (Role: Owner or Administrator) modifies the role of an existing user within the tenant organization.
@@ -58,14 +58,14 @@ The :ref:`Tenant User <ACT-USER>` selects "Edit Role" in the :ref:`IF-TENANT-CON
 5. The :ref:`Control Plane <TERM-SYS-CP>` updates the user record.
 
 **Related Requirements**:
-*   :ref:`FR-TENANT-004`
-*   :ref:`FR-LOG-003`
+*   :ref:`User Role Management <FR-TENANT-004>`
+*   :ref:`Control Plane Auditing <FR-LOG-003>`
 
 .. _UC-TENANT-INVITE:
 
 UC-TENANT-INVITE User Invitation
 --------------------------------
-**Actor**: :ref:`ACT-USER` (Role: Owner, Administrator)
+**Actor**: :ref:`Tenant User <ACT-USER>` (Role: Owner, Administrator)
 
 **Description**:
 The :ref:`Tenant User <ACT-USER>` (Role: Owner or Administrator) invites a new user to join their tenant organization. The invited user receives an email to set up their account.
@@ -88,14 +88,14 @@ The :ref:`Tenant User <ACT-USER>` selects "Invite User" in the :ref:`IF-TENANT-C
 4. The :ref:`Control Plane <TERM-SYS-CP>` sends the invitation email.
 
 **Related Requirements**:
-*   :ref:`FR-TENANT-001`
-*   :ref:`FR-LOG-003`
+*   :ref:`User Invitation <FR-TENANT-001>`
+*   :ref:`Control Plane Auditing <FR-LOG-003>`
 
 .. _UC-TENANT-SSO:
 
 UC-TENANT-SSO SSO Configuration
 -------------------------------
-**Actor**: :ref:`ACT-USER` (Role: Owner)
+**Actor**: :ref:`Tenant User <ACT-USER>` (Role: Owner)
 
 **Description**:
 The :ref:`Tenant User <ACT-USER>` (Role: Owner) configures an external Identity Provider (OIDC) to enable Single Sign-On for their users.
@@ -117,5 +117,5 @@ The :ref:`Tenant User <ACT-USER>` initiates "SSO Setup" in the :ref:`IF-TENANT-C
 3. The :ref:`Control Plane <TERM-SYS-CP>` saves the configuration.
 
 **Related Requirements**:
-*   :ref:`FR-AUTH-003`
-*   :ref:`FR-LOG-003`
+*   :ref:`Tenant SSO Configuration <FR-AUTH-003>`
+*   :ref:`Control Plane Auditing <FR-LOG-003>`

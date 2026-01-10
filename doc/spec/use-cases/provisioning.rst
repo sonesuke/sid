@@ -5,7 +5,7 @@ Primary Use Cases
 
 UC-PROV-001 Tenant Provisioning
 -------------------------------
-**Actor**: :ref:`ACT-OPS`
+**Actor**: :ref:`Platform Operator <ACT-OPS>`
 
 **Description**:
 The :ref:`Platform Operator <ACT-OPS>` creates a new tenant configuration and enables subscribed features, allowing the tenant to immediately access the :ref:`Managed Application <TERM-APP-TARGET>`.
@@ -30,7 +30,7 @@ A new customer subscription is confirmed.
 6. The :ref:`Control Plane <TERM-SYS-CP>` enables access to the :ref:`Managed Application <TERM-APP-TARGET>`.
 
 **Related Requirements**:
-*   :ref:`FR-FLAG-001`
-*   :ref:`FR-TENANT-001`
-*   :ref:`FR-TENANT-003`
-*   :ref:`FR-LOG-003`
+*   :ref:`Flag Configuration <FR-FLAG-001>`
+*   :ref:`User Invitation <FR-TENANT-001>`
+*   :ref:`Contract Modification <FR-TENANT-003>`
+*   :ref:`Control Plane Auditing <FR-LOG-003>`

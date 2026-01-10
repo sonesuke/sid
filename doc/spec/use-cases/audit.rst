@@ -5,7 +5,7 @@ Audit Management
 
 UC-AUDIT-EXPORT Audit Log Export
 --------------------------------
-**Actor**: :ref:`ACT-AUDIT`
+**Actor**: :ref:`Auditor <ACT-AUDIT>`
 
 **Description**:
 The :ref:`Auditor <ACT-AUDIT>` exports system audit logs for compliance review.
@@ -27,14 +27,14 @@ The :ref:`Auditor <ACT-AUDIT>` selects "Export Logs" within the :ref:`IF-AUDIT-C
 4. The :ref:`Control Plane <TERM-SYS-CP>` formats the data as CSV and streams the response.
 
 **Related Requirements**:
-*   :ref:`FR-LOG-001` (Collection)
-*   :ref:`FR-LOG-002` (Export)
+*   :ref:`Audit Log Collection <FR-LOG-001>`
+*   :ref:`Audit Log Export <FR-LOG-002>`
 
 .. _UC-AUDIT-RECORD-CP:
 
 UC-AUDIT-RECORD-CP Control Plane Event Recording
 ------------------------------------------------
-**Actor**: :ref:`TERM-SYS-CP`
+**Actor**: :ref:`Control Plane <TERM-SYS-CP>`
 
 **Description**:
 The :ref:`Control Plane <TERM-SYS-CP>` records internal state changes (e.g., provisioning, user management) as audit logs to ensure traceability of operator and admin actions.
@@ -55,5 +55,5 @@ A state-changing operation is successfully completed by any Actor.
 4. The :ref:`Control Plane <TERM-SYS-CP>` persists the log entry.
 
 **Related Requirements**:
-*   :ref:`FR-LOG-003` (CP Auditing)
+*   :ref:`Control Plane Auditing <FR-LOG-003>`
 

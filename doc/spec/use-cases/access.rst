@@ -5,7 +5,7 @@ Access Management
 
 UC-LOGIN Tenant User Login
 --------------------------
-**Actor**: :ref:`ACT-USER`
+**Actor**: :ref:`Tenant User <ACT-USER>`
 
 **Description**:
 The :ref:`Tenant User <ACT-USER>` logs in to the system or a managed application using their credentials or an external IdP.
@@ -29,4 +29,4 @@ The :ref:`Tenant User <ACT-USER>` attempts to access a protected resource.
 6. The :ref:`Control Plane <TERM-SYS-CP>` issues an authentication token.
 
 **Related Requirements**:
-*   :ref:`FR-AUTH-001`
+*   :ref:`Supported Authentication Methods <FR-AUTH-001>`
