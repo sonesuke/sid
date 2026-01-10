@@ -26,7 +26,7 @@ A new customer subscription is confirmed.
 2. The :ref:`Platform Operator <ACT-OPS>` enters tenant details (Name, Domain, Plan) and the email address for the initial Owner.
 3. The :ref:`Platform Operator <ACT-OPS>` selects the :ref:`Managed Application <TERM-APP-TARGET>` to enable.
 4. The :ref:`Platform Operator <ACT-OPS>` selects the "Provision" action.
-5. The :ref:`Control Plane <TERM-SYS-CP>` creates the tenant and the initial user with Owner role.
+5. The :ref:`Control Plane <TERM-SYS-CP>` creates the tenant and the initial :ref:`Tenant User <ACT-USER>` (Role: Owner).
 6. The :ref:`Control Plane <TERM-SYS-CP>` enables access to the :ref:`Managed Application <TERM-APP-TARGET>`.
 
 **Related Requirements**:
