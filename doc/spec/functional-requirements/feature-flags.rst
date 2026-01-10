@@ -11,4 +11,4 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-OPS` to configure :ref:`Feature Fla
 
 FR-FLAG-002 Flag Delivery
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-The system SHALL provide an interface for :ref:`TERM-APP-TARGET` to retrieve the current state of feature flags.
+The system SHALL provide an interface via :ref:`API-FLAG` for :ref:`TERM-APP-TARGET` to retrieve the current state of :ref:`Feature Flags <DAT-FLAG>`.

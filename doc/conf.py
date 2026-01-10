@@ -4,7 +4,9 @@ project = 'Project Specification'
 copyright = '2026, Project Team'
 author = 'Project Team'
 
-extensions = []
+extensions = [
+    'sphinx_simplepdf'
+]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']

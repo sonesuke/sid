@@ -32,6 +32,7 @@ Payment Processing
 ^^^^^^^^^^^^^^^^^^
 The system SHALL NOT handle handling of actual payments (e.g., credit card transactions) or invoice generation. This is delegated to an external billing system.
 
-Platform Operator Authentication
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The authentication mechanism for the :ref:`Platform Operator <ACT-OPS>` to access the :ref:`Control Plane <TERM-SYS-CP>` (:ref:`IF-OPS-CONSOLE`) is Out-of-Scope for this specification (e.g., assumed to be handled by infrastructure-level IAM or local admin accounts).
+Platform Operator Management
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The management of :ref:`Platform Operator <ACT-OPS>` accounts (registration, deletion, identity management) and their authentication to the :ref:`Control Plane <TERM-SYS-CP>` (:ref:`IF-OPS-CONSOLE`) is Out-of-Scope for this specification.
+These functions are delegated to an external Identity Provider (IdP) and managed by an external team. The system assumes a valid identity is provided via the IdP integration.

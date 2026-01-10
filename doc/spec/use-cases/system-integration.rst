@@ -19,7 +19,7 @@ The :ref:`Managed Application <TERM-APP-TARGET>` starts up or periodic refresh i
 1. The :ref:`Managed Application <TERM-APP-TARGET>` receives the current set of flags.
 
 **Scenario**:
-1. The :ref:`Managed Application <TERM-APP-TARGET>` requests flags from the :ref:`Control Plane <TERM-SYS-CP>` via :ref:`API-FLAG`.
+1. The :ref:`Managed Application <TERM-APP-TARGET>` requests flags from the :ref:`Control Plane <TERM-SYS-CP>`.
 2. The :ref:`Control Plane <TERM-SYS-CP>` identifies the tenant (via keys or context).
 3. The :ref:`Control Plane <TERM-SYS-CP>` returns the flag configuration.
 
@@ -43,7 +43,7 @@ A user performs a billable action within the :ref:`Managed Application <TERM-APP
 
 **Scenario**:
 1. The :ref:`Managed Application <TERM-APP-TARGET>` detects billable event.
-2. The :ref:`Managed Application <TERM-APP-TARGET>` sends event data to the :ref:`Control Plane <TERM-SYS-CP>` via :ref:`API-BILL`.
+2. The :ref:`Managed Application <TERM-APP-TARGET>` sends event data to the :ref:`Control Plane <TERM-SYS-CP>`.
 3. The :ref:`Control Plane <TERM-SYS-CP>` validates and stores the event.
 
 **Related Requirements**:
@@ -67,7 +67,7 @@ The :ref:`Managed Application <TERM-APP-TARGET>` generates a log entry.
 
 **Scenario**:
 1. The :ref:`Managed Application <TERM-APP-TARGET>` generates a log.
-2. The :ref:`Managed Application <TERM-APP-TARGET>` streams/sends the log to the :ref:`Control Plane <TERM-SYS-CP>` via :ref:`API-LOG`.
+2. The :ref:`Managed Application <TERM-APP-TARGET>` streams/sends the log to the :ref:`Control Plane <TERM-SYS-CP>`.
 3. The :ref:`Control Plane <TERM-SYS-CP>` ingests the log.
 
 **Related Requirements**:

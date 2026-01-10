@@ -1,5 +1,5 @@
-Primary Use Cases
-=================
+Tenant Provisioning & Lifecycle
+===============================
 
 .. _UC-PROV-001:
 
@@ -33,4 +33,35 @@ A new customer subscription is confirmed.
 *   :ref:`Flag Configuration <FR-FLAG-001>`
 *   :ref:`User Invitation <FR-TENANT-001>`
 *   :ref:`Contract Modification <FR-TENANT-003>`
+*   :ref:`Control Plane Auditing <FR-LOG-003>`
+
+.. _UC-TENANT-SUSPEND:
+
+UC-TENANT-SUSPEND Tenant Suspension
+-----------------------------------
+**Actor**: :ref:`Platform Operator <ACT-OPS>`
+
+**Description**:
+The :ref:`Platform Operator <ACT-OPS>` suspends a tenant's access to the managed application, usually due to non-payment or policy violation.
+
+**Trigger**:
+The :ref:`Platform Operator <ACT-OPS>` selects "Suspend Tenant" in the :ref:`Operator Console <IF-OPS-CONSOLE>`.
+
+**Preconditions**:
+1. The :ref:`Platform Operator <ACT-OPS>` is logged in.
+2. The target tenant is currently Active.
+
+**Postconditions**:
+1. The :ref:`Tenant <DAT-TENANT>` status is updated to Suspended.
+2. All :ref:`Users <DAT-USER>` under the tenant are immediately denied access.
+
+**Scenario**:
+1. The :ref:`Platform Operator <ACT-OPS>` searches for the tenant in the :ref:`Operator Console <IF-OPS-CONSOLE>`.
+2. The :ref:`Platform Operator <ACT-OPS>` selects the "Suspend" action.
+3. The :ref:`Platform Operator <ACT-OPS>` provides a reason (optional).
+4. The :ref:`Platform Operator <ACT-OPS>` confirms the action.
+5. The :ref:`Control Plane <TERM-SYS-CP>` invokes the suspension logic.
+
+**Related Requirements**:
+*   :ref:`Tenant Status Management <FR-OPS-001>`
 *   :ref:`Control Plane Auditing <FR-LOG-003>`

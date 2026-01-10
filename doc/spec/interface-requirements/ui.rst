@@ -37,4 +37,4 @@ IF-LOGIN-UI Universal Login Page
 **User**: :ref:`ACT-USER`, :ref:`ACT-OPS`, :ref:`ACT-AUDIT`
 **Description**:
 The centralized login page presented to all users.
-Supports input for Email/Password and redirects for SSO/OIDC authentication.
+Supports input for Email/Password, redirects for SSO/OIDC authentication, and provides access to password reset workflows.

@@ -6,6 +6,7 @@ Tenant Administration
 FR-TENANT-001 User Invitation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to invite new :ref:`Users <DAT-USER>` to their :ref:`Tenant <DAT-TENANT>`.
+This process SHALL create a :ref:`User Invitation <DAT-INVITE>` record.
 
 .. _FR-TENANT-002:
 
@@ -17,7 +18,7 @@ The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to delete :r
 
 FR-TENANT-003 Contract Modification
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL allow only Tenant Owners to modify the tenant's subscription contract.
+The :ref:`TERM-SYS-CP` SHALL allow only Tenant Owners to modify the tenant's subscription contract (specifically :ref:`Tenant.plan <DAT-TENANT>`).
 
 .. _FR-TENANT-004:
 

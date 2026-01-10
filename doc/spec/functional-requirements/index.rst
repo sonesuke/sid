@@ -10,3 +10,5 @@ Functional Requirements
    feature-flags
    billing
    audit
+   platform-ops
+   system-ops

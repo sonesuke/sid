@@ -80,3 +80,87 @@ resource    String     Identifier of the target resource.
 outcome     Enum       Result of the operation (``Success``, ``Failure``).
 metadata    JSON       Additional context (e.g., previous values, IP address).
 ==========  =========  ======================================================================
+
+.. _DAT-APP:
+
+Managed Applications
+--------------------
+Represents a registered :ref:`Managed Application <TERM-APP-TARGET>` instance that interacts with the Platform APIs.
+
+==========  =========  ======================================================================
+Field       Type       Description
+==========  =========  ======================================================================
+id          UUID       Unique identifier.
+name        String     Name of the application.
+owner_id    String     Identifier of the :ref:`Developer <ACT-DEV>` or owner.
+status      Enum       Registration status (``Active``, ``Revoked``).
+==========  =========  ======================================================================
+
+.. _DAT-KEY:
+
+API Access Keys
+---------------
+Credentials used by :ref:`Managed Applications <DAT-APP>` to authenticate against :ref:`Control Plane <TERM-SYS-CP>` APIs.
+
+==========  =========  ======================================================================
+Field       Type       Description
+==========  =========  ======================================================================
+id          UUID       Unique key identifier (KID).
+app_id      UUID       Foreign Key to :ref:`Managed Applications <DAT-APP>`.
+key_hash    String     Secure hash of the API Secret.
+scopes      String[]   List of allowed API scopes (e.g., ``bill:write``, ``log:write``).
+created_at  Timestamp  Issuance time.
+expires_at  Timestamp  Expiration time (optional).
+==========  =========  ======================================================================
+
+.. _DAT-SSO-CONFIG:
+
+SSO Configuration
+-----------------
+Stores the Identity Provider details for a :ref:`Tenant <DAT-TENANT>`.
+
+==========  =========  ======================================================================
+Field       Type       Description
+==========  =========  ======================================================================
+id          UUID       Unique identifier.
+tenant_id   UUID       Foreign Key to :ref:`Tenants <DAT-TENANT>`.
+issuer_url  String     OIDC Issuer URL.
+client_id   String     Client Identifier at IdP.
+secret      String     Encrypted Client Secret.
+created_at  Timestamp  Configuration time.
+==========  =========  ======================================================================
+
+.. _DAT-INVITE:
+
+User Invitations
+----------------
+Tracks pending invitations for new users.
+
+==========  =========  ======================================================================
+Field       Type       Description
+==========  =========  ======================================================================
+id          UUID       Unique identifier.
+tenant_id   UUID       Foreign Key to :ref:`Tenants <DAT-TENANT>`.
+email       String     Target email address.
+role        Enum       Proposed role (:ref:`DAT-ROLE`).
+token       String     Unique token sent via email.
+expires_at  Timestamp  Token expiration time.
+status      Enum       Invitation status (``Pending``, ``Accepted``, ``Expired``).
+==========  =========  ======================================================================
+
+.. _DAT-BILL-EVENT:
+
+Billing Events
+--------------
+Raw records of billable activities reported by applications.
+
+==========  =========  ======================================================================
+Field       Type       Description
+==========  =========  ======================================================================
+id          UUID       Unique identifier.
+tenant_id   UUID       Foreign Key to :ref:`Tenants <DAT-TENANT>`.
+app_id      UUID       Foreign Key to :ref:`Managed Applications <DAT-APP>`.
+event_type  String     Type of billable action (e.g., ``api_call``, ``storage_gb``).
+quantity    Integer    Amount consumed.
+timestamp   Timestamp  Event occurrence time.
+==========  =========  ======================================================================
