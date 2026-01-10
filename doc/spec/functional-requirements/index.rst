@@ -5,4 +5,8 @@ Functional Requirements
    :maxdepth: 1
    :caption: Contents:
 
-   features
+   auth
+   tenant-admin
+   feature-flags
+   billing
+   audit
