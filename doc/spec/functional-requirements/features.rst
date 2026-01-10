@@ -57,7 +57,7 @@ Audit & Logging
 
 FR-LOG-001 Audit Log Collection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL collect security and operational logs from all components.
+The :ref:`TERM-SYS-CP` SHALL collect security and operational logs from all components via :ref:`API-LOG`.
 
 .. _FR-LOG-002:
 

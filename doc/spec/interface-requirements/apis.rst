@@ -12,6 +12,16 @@ API-BILL Billing Event API
 **Purpose**: To report billable operations performed within the managed SaaS applications.
 **Payload**: SHALL include Tenant ID, Timestamp, Event Type, and Quantity.
 
+.. _API-LOG:
+
+API-LOG Audit Log API
+---------------------
+**Type**: REST API
+**Direction**: Input (:ref:`TERM-APP-TARGET` -> :ref:`TERM-SYS-CP`)
+**Purpose**: To report security and operational events for audit purposes.
+**Payload**: SHALL include Timestamp, Actor ID, Event Type, Resource ID, Outcome, and IP Address.
+
+
 .. _API-FLAG:
 
 API-FLAG Feature Flag API
