@@ -40,15 +40,15 @@ Billing & Usage
 
 .. _FR-BILL-001:
 
-FR-BILL-001 Billing Event Recording
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL record billable events triggers.
+FR-BILL-001 Billing Event Persistence
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL persistently record billable events triggers received via :ref:`FR-BILL-002`.
 
 .. _FR-BILL-002:
 
-FR-BILL-002 Billing API
-^^^^^^^^^^^^^^^^^^^^^^^
-The system SHALL provide an API that allows :ref:`TERM-APP-TARGET` to report billable events.
+FR-BILL-002 Billing Event Ingestion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL provide an API (:ref:`API-BILL`) that allows :ref:`TERM-APP-TARGET` to report billable events.
 
 Audit & Logging
 ---------------
