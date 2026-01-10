@@ -6,6 +6,7 @@ Authentication & Authorization
 FR-AUTH-001 Supported Authentication Methods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The :ref:`TERM-SYS-CP` SHALL support the following authentication methods for :ref:`Tenant Users <DAT-USER>`:
+
 *   OpenID Connect (OIDC)
 *   Password-based authentication
 

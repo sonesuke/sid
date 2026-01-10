@@ -14,14 +14,17 @@ The :ref:`Platform Operator <ACT-OPS>` creates a new tenant configuration and en
 A new customer subscription is confirmed.
 
 **Preconditions**:
+
 1. The :ref:`Platform Operator <ACT-OPS>` is logged in.
 
 **Postconditions**:
+
 1. A new tenant entity is created in the :ref:`Control Plane <TERM-SYS-CP>`.
 2. Initial :ref:`Tenant User <ACT-USER>` (Role: Owner) is provisioned.
 3. Feature flags corresponding to the subscription plan are active.
 
 **Scenario**:
+
 1. The :ref:`Platform Operator <ACT-OPS>` navigates to the :ref:`IF-OPS-CONSOLE`.
 2. The :ref:`Platform Operator <ACT-OPS>` enters tenant details (Name, Domain, Plan) and the email address for the initial Owner.
 3. The :ref:`Platform Operator <ACT-OPS>` selects the :ref:`Managed Application <TERM-APP-TARGET>` to enable.
@@ -30,6 +33,7 @@ A new customer subscription is confirmed.
 6. The :ref:`Control Plane <TERM-SYS-CP>` enables access to the :ref:`Managed Application <TERM-APP-TARGET>`.
 
 **Related Requirements**:
+
 *   :ref:`Flag Configuration <FR-FLAG-001>`
 *   :ref:`User Invitation <FR-TENANT-001>`
 *   :ref:`Contract Modification <FR-TENANT-003>`
@@ -48,14 +52,17 @@ The :ref:`Platform Operator <ACT-OPS>` suspends a tenant's access to the managed
 The :ref:`Platform Operator <ACT-OPS>` selects "Suspend Tenant" in the :ref:`Operator Console <IF-OPS-CONSOLE>`.
 
 **Preconditions**:
+
 1. The :ref:`Platform Operator <ACT-OPS>` is logged in.
 2. The target tenant is currently Active.
 
 **Postconditions**:
+
 1. The :ref:`Tenant <DAT-TENANT>` status is updated to Suspended.
 2. All :ref:`Users <DAT-USER>` under the tenant are immediately denied access.
 
 **Scenario**:
+
 1. The :ref:`Platform Operator <ACT-OPS>` searches for the tenant in the :ref:`Operator Console <IF-OPS-CONSOLE>`.
 2. The :ref:`Platform Operator <ACT-OPS>` selects the "Suspend" action.
 3. The :ref:`Platform Operator <ACT-OPS>` provides a reason (optional).
@@ -63,5 +70,6 @@ The :ref:`Platform Operator <ACT-OPS>` selects "Suspend Tenant" in the :ref:`Ope
 5. The :ref:`Control Plane <TERM-SYS-CP>` invokes the suspension logic.
 
 **Related Requirements**:
+
 *   :ref:`Tenant Status Management <FR-OPS-001>`
 *   :ref:`Control Plane Auditing <FR-LOG-003>`

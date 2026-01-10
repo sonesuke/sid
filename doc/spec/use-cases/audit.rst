@@ -14,12 +14,15 @@ The :ref:`Auditor <ACT-AUDIT>` exports system audit logs for compliance review.
 The :ref:`Auditor <ACT-AUDIT>` selects "Export Logs" within the :ref:`Auditor Console <IF-AUDIT-CONSOLE>`.
 
 **Preconditions**:
+
 1. The :ref:`Auditor <ACT-AUDIT>` is logged in with Auditor privileges.
 
 **Postconditions**:
+
 1. A CSV file containing the requested logs is downloaded to the :ref:`Auditor <ACT-AUDIT>`'s device.
 
 **Scenario**:
+
 1. The :ref:`Auditor <ACT-AUDIT>` navigates to the "Audit Logs" view in the :ref:`Auditor Console <IF-AUDIT-CONSOLE>`.
 2. The :ref:`Auditor <ACT-AUDIT>` selects the date range and filters for the export.
 3. The :ref:`Auditor <ACT-AUDIT>` initiates the download.
@@ -27,6 +30,7 @@ The :ref:`Auditor <ACT-AUDIT>` selects "Export Logs" within the :ref:`Auditor Co
 4. The :ref:`Control Plane <TERM-SYS-CP>` formats the data as CSV and streams the response.
 
 **Related Requirements**:
+
 *   :ref:`Audit Log Collection <FR-LOG-001>`
 *   :ref:`Audit Log Export <FR-LOG-002>`
 
@@ -43,17 +47,21 @@ The :ref:`Control Plane <TERM-SYS-CP>` records internal state changes (e.g., pro
 A state-changing operation is successfully completed by any Actor.
 
 **Preconditions**:
+
 1. The operation (e.g., Tenant Provisioning, User Deletion) has succeeded.
 
 **Postconditions**:
+
 1. An audit log entry describing the event is persisted.
 
 **Scenario**:
+
 1. An Actor (Operator, Tenant Owner) performs an action (e.g., "Provision Tenant").
 2. The :ref:`Control Plane <TERM-SYS-CP>` executes the detailed business logic.
 3. The :ref:`Control Plane <TERM-SYS-CP>` generates an audit log event containing Actor ID, Action, Resource, and Timestamp.
 4. The :ref:`Control Plane <TERM-SYS-CP>` persists the log entry.
 
 **Related Requirements**:
+
 *   :ref:`Control Plane Auditing <FR-LOG-003>`
 

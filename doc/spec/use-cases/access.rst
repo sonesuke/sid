@@ -14,13 +14,16 @@ The :ref:`Tenant User <ACT-USER>` logs in to the system or a managed application
 The :ref:`Tenant User <ACT-USER>` attempts to access a protected resource.
 
 **Preconditions**:
+
 1. The :ref:`Tenant User <ACT-USER>` account exists and is active.
 
 **Postconditions**:
+
 1. The :ref:`Tenant User <ACT-USER>` receives an authentication token.
 2. The :ref:`Tenant User <ACT-USER>` gains access to the application.
 
 **Scenario**:
+
 1. The :ref:`Tenant User <ACT-USER>` navigates to the :ref:`Universal Login Page <IF-LOGIN-UI>`.
 2. The :ref:`Tenant User <ACT-USER>` selects authentication method (Password or SSO).
 3. If Password: The :ref:`Tenant User <ACT-USER>` enters email and password.
@@ -29,6 +32,7 @@ The :ref:`Tenant User <ACT-USER>` attempts to access a protected resource.
 6. The :ref:`Control Plane <TERM-SYS-CP>` issues an authentication token.
 
 **Related Requirements**:
+
 *   :ref:`Supported Authentication Methods <FR-AUTH-001>`
 
 .. _UC-AUTH-RESET:
@@ -44,19 +48,23 @@ The :ref:`Tenant User <ACT-USER>` initiates a password reset flow when they have
 The :ref:`Tenant User <ACT-USER>` selects "Forgot Password" on the :ref:`Universal Login Page <IF-LOGIN-UI>`.
 
 **Preconditions**:
+
 1. The :ref:`Tenant User <ACT-USER>` has a registered account with an email address.
 2. The account is configured for password authentication.
 
 **Postconditions**:
+
 1. The :ref:`Tenant User <ACT-USER>` has updated their credential.
 2. The :ref:`Tenant User <ACT-USER>` can log in with the new password.
 
 **Scenario**:
+
 1. The :ref:`Tenant User <ACT-USER>` enters their email address on the :ref:`Universal Login Page <IF-LOGIN-UI>`.
 2. The :ref:`Control Plane <TERM-SYS-CP>` sends a password reset link/token to the email.
 3. The :ref:`Tenant User <ACT-USER>` clicks the link and enters a new password.
 4. The :ref:`Control Plane <TERM-SYS-CP>` updates the credential store.
 
 **Related Requirements**:
+
 *   :ref:`Password Reset <FR-AUTH-004>`
 *   :ref:`Control Plane Auditing <FR-LOG-003>`
