@@ -22,7 +22,6 @@ The :ref:`Tenant User <ACT-USER>` selects "Delete User" in the :ref:`IF-TENANT-C
 1. Target user is removed from authentication and cannot access applications.
 
 **Scenario**:
-**Scenario**:
 1. The :ref:`Tenant User <ACT-USER>` selects the user to remove.
 2. The :ref:`Tenant User <ACT-USER>` confirms deletion.
 3. The :ref:`Control Plane <TERM-SYS-CP>` removes the user.
@@ -50,7 +49,6 @@ The :ref:`Tenant User <ACT-USER>` selects "Invite User" in the :ref:`IF-TENANT-C
 1. An invitation email is sent to the specified address.
 2. A user record is created with "Invited" status.
 
-**Scenario**:
 **Scenario**:
 1. The :ref:`Tenant User <ACT-USER>` enters the email address and role (Admin or User) of the new user.
 2. The :ref:`Tenant User <ACT-USER>` submits the invitation.
