@@ -5,13 +5,13 @@ Tenant Administration
 
 FR-TENANT-001 User Invitation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to invite new users to their tenant.
+The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to invite new :ref:`Users <DAT-USER>` to their :ref:`Tenant <DAT-TENANT>`.
 
 .. _FR-TENANT-002:
 
 FR-TENANT-002 User Deletion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to delete users from their tenant.
+The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to delete :ref:`Users <DAT-USER>` from their :ref:`Tenant <DAT-TENANT>`.
 
 .. _FR-TENANT-003:
 
@@ -23,4 +23,4 @@ The :ref:`TERM-SYS-CP` SHALL allow only Tenant Owners to modify the tenant's sub
 
 FR-TENANT-004 User Role Management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to modify the roles of existing users within their tenant.
+The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to modify the :ref:`Roles <DAT-ROLE>` of existing :ref:`Users <DAT-USER>` within their :ref:`Tenant <DAT-TENANT>`.

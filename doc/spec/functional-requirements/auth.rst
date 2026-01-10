@@ -5,7 +5,7 @@ Authentication & Authorization
 
 FR-AUTH-001 Supported Authentication Methods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL support the following authentication methods for Tenant Users:
+The :ref:`TERM-SYS-CP` SHALL support the following authentication methods for :ref:`Tenant Users <DAT-USER>`:
 *   OpenID Connect (OIDC)
 *   Password-based authentication
 
@@ -13,4 +13,4 @@ The :ref:`TERM-SYS-CP` SHALL support the following authentication methods for Te
 
 FR-AUTH-003 Tenant SSO Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL allow a Tenant Owner (role of :ref:`ACT-USER`) to register an external Identity Provider (IdP) for Single Sign-On (SSO).
+The :ref:`TERM-SYS-CP` SHALL allow a Tenant Owner (role of :ref:`ACT-USER`, see :ref:`DAT-ROLE`) to register an external Identity Provider (IdP) for Single Sign-On (SSO).

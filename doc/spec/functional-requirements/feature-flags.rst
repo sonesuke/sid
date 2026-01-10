@@ -5,7 +5,7 @@ Feature Flag Management
 
 FR-FLAG-001 Flag Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-OPS` to configure feature flags for each tenant.
+The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-OPS` to configure :ref:`Feature Flags <DAT-FLAG>` for each :ref:`Tenant <DAT-TENANT>`.
 
 .. _FR-FLAG-002:
 

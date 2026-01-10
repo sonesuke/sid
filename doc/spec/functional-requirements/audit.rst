@@ -17,4 +17,4 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-AUDIT` to export audit logs in CSV 
 
 FR-LOG-003 Control Plane Auditing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL record its own state-changing operations (e.g., Tenant Provisioning, User Management) as audit logs.
+The :ref:`TERM-SYS-CP` SHALL record its own state-changing operations (e.g., Tenant Provisioning, User Management) as :ref:`Audit Logs <DAT-LOG>`.

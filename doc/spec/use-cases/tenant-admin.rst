@@ -19,7 +19,7 @@ The :ref:`Tenant User <ACT-USER>` selects "Delete User" in the :ref:`IF-TENANT-C
 2. Target user exists.
 
 **Postconditions**:
-1. Target :ref:`User <DAT-USER>` is removed from authentication and cannot access applications.
+1. Target user is removed from authentication and cannot access applications.
 
 **Scenario**:
 1. The :ref:`Tenant User <ACT-USER>` selects the user to remove.
@@ -47,7 +47,7 @@ The :ref:`Tenant User <ACT-USER>` selects "Edit Role" in the :ref:`IF-TENANT-CON
 2. Target user exists.
 
 **Postconditions**:
-1. Target :ref:`User's <DAT-USER>` :ref:`role <DAT-ROLE>` is updated.
+1. Target user's role is updated.
 2. Target user's permissions are immediately adjusted.
 
 **Scenario**:
@@ -79,7 +79,7 @@ The :ref:`Tenant User <ACT-USER>` selects "Invite User" in the :ref:`IF-TENANT-C
 
 **Postconditions**:
 1. An invitation email is sent to the specified address.
-2. A :ref:`User <DAT-USER>` record is created with "Invited" :ref:`status <DAT-USER>`.
+2. A user record is created with "Invited" status.
 
 **Scenario**:
 1. The :ref:`Tenant User <ACT-USER>` enters the email address and role (Admin or User) of the new user.

@@ -107,7 +107,7 @@ Identifier Assignment
 Cross-Referencing
 ^^^^^^^^^^^^^^^^^
 *   **Syntax**: Define targets using ``.. _ID:`` before the header. Reference using ``:ref:`ID```.
-*   **Direction**: Follow the reference hierarchy: Use Case -> Functional Requirement -> Data Entity -> Constraints/API. Avoid circular references.
+*   **Direction**: Follow the reference hierarchy: Use Case -> Functional Requirement -> (API / IF, Data Entity, Error, Constraint). Avoid circular references.
 *   **Prohibitions**:
     *   Functional Requirements SHALL NOT reference Use Cases.
     *   Data Models SHALL NOT reference API endpoints.
