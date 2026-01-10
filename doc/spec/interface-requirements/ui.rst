@@ -21,6 +21,15 @@ IF-TENANT-CONSOLE Tenant Administration Console
 The self-service web portal for Tenant Administrators.
 Allows management of users, invitations, SSO configuration, and subscription viewing.
 
+.. _IF-AUDIT-CONSOLE:
+
+IF-AUDIT-CONSOLE Auditor Console
+--------------------------------
+**User**: :ref:`ACT-AUDIT`
+**Description**:
+The compliance and observation portal for Auditors.
+Provides read-only access to system audit logs and reporting capabilities.
+
 .. _IF-LOGIN-UI:
 
 IF-LOGIN-UI Universal Login Page
