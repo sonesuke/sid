@@ -8,7 +8,7 @@ This section defines the external interfaces provided by the system.
 API-BILL Billing Event API
 --------------------------
 **Type**: REST API
-**Direction**: Input (Managed App -> Control Plane)
+**Direction**: Input (:ref:`TERM-APP-TARGET` -> :ref:`TERM-SYS-CP`)
 **Purpose**: To report billable operations performed within the managed SaaS applications.
 **Payload**: SHALL include Tenant ID, Timestamp, Event Type, and Quantity.
 
@@ -27,7 +27,7 @@ API-LOG Audit Log API
 API-FLAG Feature Flag API
 -------------------------
 **Type**: REST API
-**Direction**: Output (Control Plane -> Managed App)
+**Direction**: Output (:ref:`TERM-SYS-CP` -> :ref:`TERM-APP-TARGET`)
 **Purpose**: To retrieve the active feature flags for a specific tenant.
 **Caching**: Managed apps SHOULD cache this response to minimize latency.
 
