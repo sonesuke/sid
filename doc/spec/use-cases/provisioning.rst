@@ -23,9 +23,9 @@ A new customer subscription is confirmed.
 
 **Scenario**:
 1. The :ref:`Platform Operator <ACT-OPS>` navigates to the :ref:`IF-OPS-CONSOLE`.
-2. The :ref:`Platform Operator <ACT-OPS>` enters tenant details (Name, Domain, Plan).
+2. The :ref:`Platform Operator <ACT-OPS>` enters tenant details (Name, Domain, Plan) and selects the :ref:`Managed Application <TERM-APP-TARGET>`.
 3. The :ref:`Platform Operator <ACT-OPS>` selects the "Provision" action.
-4. The :ref:`Control Plane <TERM-SYS-CP>` creates the tenant and confirms success.
+4. The :ref:`Control Plane <TERM-SYS-CP>` creates the tenant and enables access to the :ref:`Managed Application <TERM-APP-TARGET>`.
 
 **Related Requirements**:
 *   :ref:`FR-FLAG-001`
