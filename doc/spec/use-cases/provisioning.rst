@@ -8,7 +8,7 @@ UC-PROV-001 Tenant Provisioning
 **Actor**: :ref:`ACT-OPS`
 
 **Description**:
-The :ref:`Platform Operator <ACT-OPS>` creates a new tenant configuration and enables subscribed features, allowing the tenant to immediately access the SaaS applications.
+The :ref:`Platform Operator <ACT-OPS>` creates a new tenant configuration and enables subscribed features, allowing the tenant to immediately access the :ref:`Managed Application <TERM-APP-TARGET>`.
 
 **Trigger**:
 A new customer subscription is confirmed.
