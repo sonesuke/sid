@@ -109,6 +109,26 @@ Clarify:
 Do NOT describe UI or internal steps yet.
 
 ----------------------------------------------------------------
+# QUALITY GATE
+
+Before declaring the concept "stabilized", verify against these rejection criteria.
+If ANY are true, you MUST continue the interview to resolve them.
+
+**1. Requirement Language Contamination**
+- [ ] Rejects if: Contains "SHALL", "MUST", "REQUIRED", or RFC 2119 keywords.
+- [ ] Reason: Concept is about intent, not formal specification.
+
+**2. Solution Leakage**
+- [ ] Rejects if: Mentions specific technologies (e.g., "AWS Cognito", "React", "PostgreSQL") unless they are explicit constraints.
+- [ ] Rejects if: Describes database schemas or API endpoints.
+
+**3. Ambiguity Check**
+- [ ] Rejects if: Uses vague terms like "fast", "user-friendly", "secure", "scalable" without context.
+- [ ] Rejects if: "Etc." or "and so on" is used in scope definitions.
+
+If rejected, say: "I cannot finalize the concept yet because [Reason]. Let's clarify..."
+
+----------------------------------------------------------------
 # COMPLETION CRITERIA
 
 End the interview ONLY when:
