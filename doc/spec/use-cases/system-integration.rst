@@ -10,18 +10,18 @@ UC-SYS-APP-AUTH Feature Flag Retrieval
 **Actor**: :ref:`TERM-APP-TARGET` (System)
 
 **Description**:
-A Managed Application retrieves the active feature flags for its tenant to enable/disable functionality dynamically.
+The :ref:`TERM-APP-TARGET` retrieves the active feature flags for its tenant to enable/disable functionality dynamically.
 
 **Trigger**:
-Application starts up or periodic refresh interval elapses.
+The :ref:`TERM-APP-TARGET` starts up or periodic refresh interval elapses.
 
 **Postconditions**:
-1. Application receives the current set of flags.
+1. The :ref:`TERM-APP-TARGET` receives the current set of flags.
 
 **Scenario**:
-1. Application requests flags from Control Plane (API).
-2. Control Plane identifies the tenant (via keys or context).
-3. Control Plane returns the flag configuration.
+1. The :ref:`TERM-APP-TARGET` requests flags from the :ref:`TERM-SYS-CP` (API).
+2. The :ref:`TERM-SYS-CP` identifies the tenant (via keys or context).
+3. The :ref:`TERM-SYS-CP` returns the flag configuration.
 
 **Related Requirements**:
 *   :ref:`FR-FLAG-002`
@@ -33,18 +33,18 @@ UC-SYS-BILL-REPORT Billing Event Reporting
 **Actor**: :ref:`TERM-APP-TARGET` (System)
 
 **Description**:
-A Managed Application reports a billable event to the Control Plane for tracking.
+The :ref:`TERM-APP-TARGET` reports a billable event to the :ref:`TERM-SYS-CP` for tracking.
 
 **Trigger**:
-A user performs a billable action within the application.
+A user performs a billable action within the :ref:`TERM-APP-TARGET`.
 
 **Postconditions**:
-1. The event is persisted in the Control Plane.
+1. The event is persisted in the :ref:`TERM-SYS-CP`.
 
 **Scenario**:
-1. Application detects billable event.
-2. Application sends event data to Control Plane API.
-3. Control Plane validates and stores the event.
+1. The :ref:`TERM-APP-TARGET` detects billable event.
+2. The :ref:`TERM-APP-TARGET` sends event data to the :ref:`TERM-SYS-CP` API.
+3. The :ref:`TERM-SYS-CP` validates and stores the event.
 
 **Related Requirements**:
 *   :ref:`FR-BILL-001`
@@ -57,18 +57,18 @@ UC-SYS-LOG-REPORT Audit Log Reporting
 **Actor**: :ref:`TERM-APP-TARGET` (System)
 
 **Description**:
-A Managed Application sends its security and operation logs to the Control Plane for centralized auditing.
+The :ref:`TERM-APP-TARGET` sends its security and operation logs to the :ref:`TERM-SYS-CP` for centralized auditing.
 
 **Trigger**:
-Application generates a log entry.
+The :ref:`TERM-APP-TARGET` generates a log entry.
 
 **Postconditions**:
-1. The log entry is collected by the Control Plane.
+1. The log entry is collected by the :ref:`TERM-SYS-CP`.
 
 **Scenario**:
-1. Application generates a log.
-2. Application streams/sends the log to Control Plane API.
-3. Control Plane ingests the log.
+1. The :ref:`TERM-APP-TARGET` generates a log.
+2. The :ref:`TERM-APP-TARGET` streams/sends the log to the :ref:`TERM-SYS-CP` API.
+3. The :ref:`TERM-SYS-CP` ingests the log.
 
 **Related Requirements**:
 *   :ref:`FR-LOG-001`
