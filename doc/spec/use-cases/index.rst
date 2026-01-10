@@ -6,3 +6,4 @@ Use Cases
    :caption: Contents:
 
    provisioning
+   tenant-admin
