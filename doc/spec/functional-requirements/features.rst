@@ -14,11 +14,7 @@ The :ref:`TERM-SYS-CP` SHALL support the following authentication methods for Te
 *   OpenID Connect (OIDC)
 *   Password-based authentication
 
-.. _FR-AUTH-002:
 
-FR-AUTH-002 SAML Exclusion
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :ref:`TERM-SYS-CP` SHALL NOT support SAML authentication.
 
 .. _FR-AUTH-003:
 

@@ -30,4 +30,3 @@ User attempts to access a protected resource.
 
 **Related Requirements**:
 *   :ref:`FR-AUTH-001`
-*   :ref:`FR-AUTH-002` (Exclusion of SAML constraint)
