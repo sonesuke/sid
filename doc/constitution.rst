@@ -117,6 +117,13 @@ Usage Coverage
 ^^^^^^^^^^^^^^
 All Functional Requirements (FR) MUST be referenced by at least one Use Case (UC). Orphan guidelines are considered incomplete specification.
 
+Use Case Structure
+^^^^^^^^^^^^^^^^^^
+Use Cases (UC) SHALL follow the interaction principle: **Actor -> Interface -> Feature**.
+- **Actor**: A defined **Term** or **Actor**.
+- **Interface**: An explicit **API** or **UI** used to perform the action.
+- **Feature**: The **Functional Requirement** satisfied by the action.
+
 AI Authoring Rules
 ^^^^^^^^^^^^^^^^^^
 When generating or modifying documentation:

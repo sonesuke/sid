@@ -38,7 +38,7 @@ UC-TENANT-INVITE User Invitation
 A Tenant Owner or Administrator invites a new user to join their tenant organization. The invited user receives an email to set up their account.
 
 **Trigger**:
-Actor selects "Invite User" in the administration console.
+Actor selects "Invite User" in the :ref:`IF-TENANT-CONSOLE`.
 
 **Preconditions**:
 1. Actor is logged in as Owner or Administrator.

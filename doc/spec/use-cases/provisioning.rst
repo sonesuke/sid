@@ -22,7 +22,7 @@ A new customer subscription is confirmed.
 3. Feature flags corresponding to the subscription plan are active.
 
 **Scenario**:
-1. Operator navigates to the "Tenant Management" console.
+1. Operator navigates to the :ref:`IF-OPS-CONSOLE`.
 2. Operator enters tenant details (Name, Domain, Plan).
 3. Operator selects the "Provision" action.
 4. System creates the tenant and confirms success.

@@ -21,7 +21,7 @@ User attempts to access a protected resource.
 2. User gains access to the application.
 
 **Scenario**:
-1. User navigates to the login page.
+1. User navigates to the :ref:`IF-LOGIN-UI`.
 2. User selects authentication method (Password or SSO).
 3. If Password: User enters email and password.
 4. If SSO: User is redirected to IdP and authenticates.

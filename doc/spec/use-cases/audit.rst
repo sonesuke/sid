@@ -11,7 +11,7 @@ UC-AUDIT-EXPORT Audit Log Export
 An Auditor exports system audit logs for compliance review.
 
 **Trigger**:
-Auditor selects "Export Logs".
+Auditor selects "Export Logs" via :ref:`IF-AUDIT-EXPORT`.
 
 **Preconditions**:
 1. Actor is logged in with Auditor privileges.
