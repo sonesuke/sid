@@ -1,6 +1,33 @@
 Tenant Administration
 =====================
 
+.. _UC-TENANT-USER-DELETE:
+
+UC-TENANT-USER-DELETE User Deletion
+-----------------------------------
+**Actor**: :ref:`ACT-USER` (Role: Owner, Administrator)
+
+**Description**:
+A Tenant Owner or Administrator removes a user from the tenant organization.
+
+**Trigger**:
+Actor selects "Delete User".
+
+**Preconditions**:
+1. Actor is logged in with sufficient privileges.
+2. Target user exists.
+
+**Postconditions**:
+1. Target user is removed from authentication and cannot access applications.
+
+**Scenario**:
+1. Actor selects the user to remove.
+2. Actor confirms deletion.
+3. System removes the user.
+
+**Related Requirements**:
+*   :ref:`FR-TENANT-002`
+
 .. _UC-TENANT-INVITE:
 
 UC-TENANT-INVITE User Invitation

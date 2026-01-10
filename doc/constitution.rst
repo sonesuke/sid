@@ -113,6 +113,10 @@ Cross-Referencing
     *   Data Models SHALL NOT reference API endpoints.
     *   Error Definitions SHALL NOT introduce new requirements.
 
+Usage Coverage
+^^^^^^^^^^^^^^
+All Functional Requirements (FR) MUST be referenced by at least one Use Case (UC). Orphan guidelines are considered incomplete specification.
+
 AI Authoring Rules
 ^^^^^^^^^^^^^^^^^^
 When generating or modifying documentation:

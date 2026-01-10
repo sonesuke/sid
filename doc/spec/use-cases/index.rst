@@ -7,3 +7,6 @@ Use Cases
 
    provisioning
    tenant-admin
+   access
+   audit
+   system-integration
