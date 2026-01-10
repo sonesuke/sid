@@ -8,20 +8,20 @@ UC-AUDIT-EXPORT Audit Log Export
 **Actor**: :ref:`ACT-AUDIT`
 
 **Description**:
-An Auditor exports system audit logs for compliance review.
+The :ref:`Auditor <ACT-AUDIT>` exports system audit logs for compliance review.
 
 **Trigger**:
-Auditor selects "Export Logs" via :ref:`IF-AUDIT-EXPORT`.
+The :ref:`Auditor <ACT-AUDIT>` selects "Export Logs" via :ref:`IF-AUDIT-EXPORT`.
 
 **Preconditions**:
-1. Actor is logged in with Auditor privileges.
+1. The :ref:`Auditor <ACT-AUDIT>` is logged in with Auditor privileges.
 
 **Postconditions**:
-1. A CSV file containing the requested logs is downloaded to the actor's device.
+1. A CSV file containing the requested logs is downloaded to the :ref:`Auditor <ACT-AUDIT>`'s device.
 
 **Scenario**:
-1. Auditor selects the date range and filters for the export.
-2. Auditor initiates the download.
+1. The :ref:`Auditor <ACT-AUDIT>` selects the date range and filters for the export.
+2. The :ref:`Auditor <ACT-AUDIT>` initiates the download.
 3. The :ref:`Control Plane <TERM-SYS-CP>` queries the log storage.
 4. The :ref:`Control Plane <TERM-SYS-CP>` formats the data as CSV and streams the response.
 
