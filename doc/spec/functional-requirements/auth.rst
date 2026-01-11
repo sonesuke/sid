@@ -60,7 +60,10 @@ FR-AUTH-005 Session Management
 The :ref:`TERM-SYS-CP` SHALL establish a :ref:`Session <DAT-SESSION>` upon successful user authentication.
 The :ref:`TERM-SYS-CP` SHALL support session invalidation triggers including explicit logout and administrative revocation.
 
-**Realized by**: :ref:`Universal Login Page <IF-LOGIN-UI>`, :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
+**Realized by**:
+
+*   :ref:`Universal Login Page <IF-LOGIN-UI>`
+*   :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
 
 **Quality Attributes**:
 
