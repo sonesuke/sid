@@ -19,7 +19,7 @@ IF-TENANT-CONSOLE Tenant Administration Console
 **User**: :ref:`ACT-USER` (Owner, Admin)
 **Description**:
 The self-service web portal for Tenant Administrators.
-Provides capabilities to list users, manage roles, revoke sessions, send invitations, configure SSO, and view subscription details.
+Provides capabilities to list users, manage roles and status (e.g., Disable), revoke sessions, send invitations, configure SSO, and view subscription details.
 
 .. _IF-AUDIT-CONSOLE:
 

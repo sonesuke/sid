@@ -71,6 +71,42 @@ The :ref:`Tenant User <ACT-USER>` selects "Edit Role" in the **Tenant Administra
 *   :ref:`User Role Management <FR-TENANT-004>`
 *   :ref:`Control Plane Auditing <FR-LOG-003>`
 
+.. _UC-TENANT-USER-STATUS-UPDATE:
+
+UC-TENANT-USER-STATUS-UPDATE User Status Update
+-----------------------------------------------
+**Actor**: :ref:`Tenant User <ACT-USER>` (Role: Owner, Administrator)
+
+**Description**:
+The :ref:`Tenant User <ACT-USER>` (Role: Owner or Administrator) changes the status of a user (e.g., to Disabled to block access).
+
+**Trigger**:
+The :ref:`Tenant User <ACT-USER>` selects "Disable User" or "Enable User" in the **Tenant Administration Console**.
+
+**Preconditions**:
+
+1. The :ref:`Tenant User <ACT-USER>` is logged in with sufficient privileges.
+2. Target user exists.
+
+**Postconditions**:
+
+1. Target user's status is updated.
+2. If Disabled, all active :ref:`Sessions <DAT-SESSION>` for the user are invalidated.
+
+**Scenario**:
+
+1. The :ref:`Tenant User <ACT-USER>` selects the user to update.
+2. The :ref:`Tenant User <ACT-USER>` toggles the status (e.g., Active to Disabled).
+3. The :ref:`Tenant User <ACT-USER>` saves the changes.
+4. The :ref:`Control Plane <TERM-SYS-CP>` validates the action.
+5. The :ref:`Control Plane <TERM-SYS-CP>` updates the user record.
+6. The :ref:`Control Plane <TERM-SYS-CP>` invalidates sessions if required.
+
+**Related Requirements**:
+
+*   :ref:`User Status Management <FR-TENANT-006>`
+*   :ref:`Control Plane Auditing <FR-LOG-003>`
+
 .. _UC-TENANT-SESSION-REVOKE:
 
 UC-TENANT-SESSION-REVOKE Session Revocation

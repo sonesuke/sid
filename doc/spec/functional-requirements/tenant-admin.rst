@@ -36,3 +36,12 @@ The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to modify th
 When a role is updated, the system SHALL invalidate all active :ref:`Sessions <DAT-SESSION>` for the target user.
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
+
+.. _FR-TENANT-006:
+
+FR-TENANT-006 User Status Management
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to modify the :ref:`Status <DAT-USER>` of existing :ref:`Users <DAT-USER>` (e.g., Enable, Disable).
+When a user is Disabled, the system SHALL invalidate all active :ref:`Sessions <DAT-SESSION>` for that user.
+
+**Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
