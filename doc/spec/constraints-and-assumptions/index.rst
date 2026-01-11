@@ -14,8 +14,6 @@ The :ref:`TERM-SYS-CP` SHALL allow each :ref:`Tenant <DAT-TENANT>` to configure 
 
 **Rationale**: Compliance with Japan's Act on the Protection of Personal Information (APPI).
 
-**Impacts**: :ref:`FR-AUTH-006`
-
 .. _CON-SEC-002:
 
 CON-SEC-002 Audit Log Provision
@@ -23,8 +21,6 @@ CON-SEC-002 Audit Log Provision
 The :ref:`TERM-SYS-CP` SHALL provide audit logs recording access to and modifications of personal data.
 
 **Rationale**: Compliance with Japan's Act on the Protection of Personal Information (APPI).
-
-**Impacts**: :ref:`FR-LOG-001`, :ref:`FR-LOG-002`
 
 .. _CON-SEC-003:
 
@@ -34,8 +30,6 @@ All communications between components and external systems SHALL be encrypted us
 
 **Rationale**: NIST CSF 2.0 / ISO 27001 - Encryption in transit.
 
-**Impacts**: :ref:`NFR-SEC-001`
-
 .. _CON-SEC-004:
 
 CON-SEC-004 Encryption at Rest
@@ -43,8 +37,6 @@ CON-SEC-004 Encryption at Rest
 All persistent data SHALL be encrypted at rest using AES-256 or equivalent.
 
 **Rationale**: NIST CSF 2.0 / ISO 27001 - Encryption at rest.
-
-**Impacts**: :ref:`NFR-SEC-002`
 
 .. _CON-SEC-005:
 
@@ -54,8 +46,6 @@ The system SHALL support Multi-Factor Authentication (MFA) for user login.
 
 **Rationale**: NIST CSF 2.0 - Strong authentication.
 
-**Impacts**: :ref:`NFR-SEC-003`
-
 .. _CON-SEC-006:
 
 CON-SEC-006 Key Management
@@ -63,8 +53,6 @@ CON-SEC-006 Key Management
 The system SHALL implement secure key management practices.
 
 **Rationale**: NIST CSF 2.0 - Data protection.
-
-**Impacts**: :ref:`NFR-SEC-004`
 
 .. _CON-SEC-007:
 
@@ -74,8 +62,6 @@ The system SHALL enforce the principle of least privilege.
 
 **Rationale**: NIST CSF 2.0 - Access control.
 
-**Impacts**: :ref:`NFR-SEC-005`
-
 .. _CON-SEC-008:
 
 CON-SEC-008 Adaptive Authentication
@@ -83,8 +69,6 @@ CON-SEC-008 Adaptive Authentication
 The system SHOULD implement adaptive (risk-based) authentication.
 
 **Rationale**: NIST CSF 2.0 - Context-aware security.
-
-**Impacts**: :ref:`NFR-SEC-006`
 
 .. _CON-SEC-009:
 
@@ -99,8 +83,6 @@ Error responses SHALL NOT reveal sensitive internal details including:
 
 **Rationale**: NIST CSF 2.0 / OWASP - Information disclosure prevention.
 
-**Impacts**: :ref:`ERR-AUTH-401`, :ref:`ERR-AUTH-403`, :ref:`ERR-RES-404`, :ref:`ERR-SYS-500`
-
 Data Constraints
 ----------------
 
@@ -112,8 +94,6 @@ All customer data SHALL be stored exclusively in data centers located in Japan o
 
 **Rationale**: GDPR / APPI - Cross-border data transfer restrictions.
 
-**Impacts**: :ref:`NFR-DATA-001`
-
 .. _CON-DATA-002:
 
 CON-DATA-002 Audit Log Retention
@@ -122,8 +102,6 @@ CON-DATA-002 Audit Log Retention
 
 **Rationale**: Legal compliance (Japan Accounting Law, APPI).
 
-**Impacts**: :ref:`FR-OPS-003`
-
 .. _CON-DATA-003:
 
 CON-DATA-003 Billing Data Retention
@@ -131,8 +109,6 @@ CON-DATA-003 Billing Data Retention
 :ref:`Billing Events <DAT-BILL-EVENT>` SHALL be retained for a minimum of 5 years to comply with tax regulations.
 
 **Rationale**: Legal compliance (Tax regulations).
-
-**Impacts**: :ref:`FR-OPS-003`
 
 Capacity Constraints
 --------------------
@@ -145,8 +121,6 @@ The system SHALL support a minimum of 1,000 active :ref:`Tenants <DAT-TENANT>`.
 
 **Rationale**: Business scalability requirement.
 
-**Impacts**: :ref:`NFR-CAP-001`
-
 .. _CON-CAP-002:
 
 CON-CAP-002 User Capacity per Tenant
@@ -154,8 +128,6 @@ CON-CAP-002 User Capacity per Tenant
 The system SHALL support a minimum of 10,000 :ref:`Users <DAT-USER>` per :ref:`Tenant <DAT-TENANT>`.
 
 **Rationale**: Business scalability requirement.
-
-**Impacts**: :ref:`NFR-CAP-002`
 
 Operational Constraints
 -----------------------
@@ -168,8 +140,6 @@ The system SHALL target a Service Level Objective (SLO) of 99.9% availability, e
 
 **Rationale**: Business continuity requirement.
 
-**Impacts**: :ref:`NFR-OPS-001`
-
 .. _CON-OPS-002:
 
 CON-OPS-002 Maintenance Window
@@ -177,8 +147,6 @@ CON-OPS-002 Maintenance Window
 Scheduled maintenance windows SHALL be defined and communicated in advance. (Details TBD)
 
 **Rationale**: Operational planning.
-
-**Impacts**: :ref:`NFR-OPS-002`
 
 .. _CON-OPS-003:
 
@@ -188,8 +156,6 @@ The system SHALL implement load balancing and automatic failover.
 
 **Rationale**: NIST CSF 2.0 - Availability.
 
-**Impacts**: :ref:`NFR-OPS-003`
-
 .. _CON-OPS-004:
 
 CON-OPS-004 Backup and Redundancy
@@ -197,8 +163,6 @@ CON-OPS-004 Backup and Redundancy
 The system SHALL implement backup and recovery capabilities following the 3-2-1 rule.
 
 **Rationale**: NIST CSF 2.0 - Recovery.
-
-**Impacts**: :ref:`NFR-OPS-004`
 
 Monitoring Constraints
 ----------------------
@@ -210,8 +174,6 @@ CON-MON-001 Continuous Monitoring
 The system SHALL implement continuous monitoring and anomaly detection.
 
 **Rationale**: NIST CSF 2.0 - Detection.
-
-**Impacts**: :ref:`NFR-MON-001`
 
 Development Constraints
 -----------------------
@@ -229,8 +191,6 @@ All software development SHALL follow Secure SDLC practices:
 
 **Rationale**: NIST CSF 2.0 - Software integrity.
 
-**Impacts**: All FRs
-
 .. _CON-DEV-002:
 
 CON-DEV-002 Supply Chain Risk Management
@@ -242,8 +202,6 @@ The project SHALL implement Cyber Supply Chain Risk Management (C-SCRM):
 *   Risk evaluation of third-party service providers.
 
 **Rationale**: NIST CSF 2.0 - Supply chain security.
-
-**Impacts**: All FRs
 
 Compliance Constraints
 ----------------------
@@ -261,8 +219,6 @@ The system SHALL support data subject rights as required by GDPR and Japan APPI:
 
 **Rationale**: Legal compliance with privacy regulations.
 
-**Impacts**: :ref:`FR-TENANT-002`, :ref:`FR-LOG-002`
-
 Performance Constraints
 -----------------------
 
@@ -273,5 +229,3 @@ CON-PERF-001 Response Time and Throughput
 The system SHALL meet performance targets for latency and throughput to ensure a responsive user experience.
 
 **Rationale**: User-Centricity principle - responsive systems improve user satisfaction.
-
-**Impacts**: :ref:`NFR-PERF-001`, :ref:`NFR-PERF-002`, :ref:`NFR-PERF-003`, :ref:`NFR-PERF-004`
