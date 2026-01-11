@@ -86,6 +86,21 @@ The system SHOULD implement adaptive (risk-based) authentication.
 
 **Impacts**: :ref:`NFR-SEC-006`
 
+.. _CON-SEC-009:
+
+CON-SEC-009 Error Disclosure
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error responses SHALL NOT reveal sensitive internal details including:
+
+*   Stack traces or internal exception messages
+*   Database query details
+*   Internal service names or versions
+*   User existence confirmation (for security-sensitive operations)
+
+**Rationale**: NIST CSF 2.0 / OWASP - Information disclosure prevention.
+
+**Impacts**: :ref:`ERR-AUTH-401`, :ref:`ERR-AUTH-403`, :ref:`ERR-RES-404`, :ref:`ERR-SYS-500`
+
 Data Constraints
 ----------------
 

@@ -116,16 +116,22 @@ The specification elements are related by the following dependency model.
 - Functional Requirements (FR) define the system's externally observable
   capabilities and SHALL serve as the central anchor for traceability.
 
+- Error Definitions (ERR) define failure outcomes for Functional Requirements.
+  ERR specifies what happens when an operation fails, not the capability itself.
+  Every Error Definition SHALL be referenced by at least one FR.
+
 - Constraints (CON) define externally imposed, mandatory conditions that
   restrict or qualify Functional and Non-Functional Requirements.
   Constraints SHALL NOT be derived from Functional Requirements.
+  Constraints MAY restrict how errors are handled or disclosed.
 
 - Non-Functional Requirements (NFR) define measurable quality attributes
   of Functional Requirements.
   Every Non-Functional Requirement SHALL be associated with at least one
   Functional Requirement.
+  NFRs MAY define retry policies and observability for error conditions.
 
-- Dependencies between UC, FR, CON, and NFR SHALL form a directed acyclic graph.
+- Dependencies between UC, FR, ERR, CON, and NFR SHALL form a directed acyclic graph.
   Cyclic dependencies are prohibited.
   
 Cross-Referencing
