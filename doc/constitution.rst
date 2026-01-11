@@ -106,15 +106,28 @@ Identifier Assignment
 
 Dependency Model
 ^^^^^^^^^^^^^^^^
-- Use Cases define the contextual justification for Functional Requirements.
-- Functional Requirements define system capabilities and serve as the central
-  anchor for traceability.
-- Constraints impose mandatory conditions on Functional and Non-Functional
-  Requirements.
-- Non-Functional Requirements define quality attributes of Functional
-  Requirements.
-- Dependencies SHALL NOT form cycles.
 
+The specification elements are related by the following dependency model.
+
+- Use Cases (UC) provide the business or user justification for
+  Functional Requirements (FR).
+  Every Functional Requirement SHALL be traceable to at least one Use Case.
+
+- Functional Requirements (FR) define the system's externally observable
+  capabilities and SHALL serve as the central anchor for traceability.
+
+- Constraints (CON) define externally imposed, mandatory conditions that
+  restrict or qualify Functional and Non-Functional Requirements.
+  Constraints SHALL NOT be derived from Functional Requirements.
+
+- Non-Functional Requirements (NFR) define measurable quality attributes
+  of Functional Requirements.
+  Every Non-Functional Requirement SHALL be associated with at least one
+  Functional Requirement.
+
+- Dependencies between UC, FR, CON, and NFR SHALL form a directed acyclic graph.
+  Cyclic dependencies are prohibited.
+  
 Cross-Referencing
 ^^^^^^^^^^^^^^^^^
 *   **Syntax**: Define targets using ``.. _ID:`` before the header. Reference using ``:ref:`ID```.

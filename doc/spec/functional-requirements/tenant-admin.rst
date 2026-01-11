@@ -10,15 +10,18 @@ This process SHALL create a :ref:`User Invitation <DAT-INVITE>` record.
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
 
+**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`User Scalability <NFR-CAP-002>`, :ref:`Availability SLO <NFR-OPS-001>`
+
 .. _FR-TENANT-002:
 
 FR-TENANT-002 User Deletion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to delete :ref:`Users <DAT-USER>` from their :ref:`Tenant <DAT-TENANT>`.
+When a user is deleted, the system SHALL invalidate all active :ref:`Sessions <DAT-SESSION>` for that user.
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
 
-When a user is deleted, the system SHALL invalidate all active :ref:`Sessions <DAT-SESSION>` for that user.
+**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Encryption at Rest <NFR-SEC-002>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Availability SLO <NFR-OPS-001>`
 
 .. _FR-TENANT-003:
 
@@ -27,6 +30,8 @@ FR-TENANT-003 Contract Modification
 The :ref:`TERM-SYS-CP` SHALL allow only Tenant Owners to modify the tenant's subscription contract (specifically :ref:`Tenant.plan <DAT-TENANT>`).
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
+
+**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Tenant Scalability <NFR-CAP-001>`, :ref:`Availability SLO <NFR-OPS-001>`
 
 .. _FR-TENANT-004:
 
@@ -37,6 +42,8 @@ When a role is updated, the system SHALL invalidate all active :ref:`Sessions <D
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
 
+**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Availability SLO <NFR-OPS-001>`
+
 .. _FR-TENANT-006:
 
 FR-TENANT-006 User Status Management
@@ -45,3 +52,5 @@ The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to modify th
 When a user is Disabled, the system SHALL invalidate all active :ref:`Sessions <DAT-SESSION>` for that user.
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
+
+**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Availability SLO <NFR-OPS-001>`
