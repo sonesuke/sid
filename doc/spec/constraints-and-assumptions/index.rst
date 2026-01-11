@@ -1,2 +1,88 @@
 Constraints and Assumptions
 ===========================
+
+This section documents the mandatory conditions imposed on the system.
+
+Security Constraints
+--------------------
+
+.. _CON-SEC-001:
+
+CON-SEC-001 Configurable Password Policy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL allow each :ref:`Tenant <DAT-TENANT>` to configure password complexity requirements (e.g., minimum length, character types).
+
+**Rationale**: Compliance with Japan's Act on the Protection of Personal Information (APPI).
+
+.. _CON-SEC-002:
+
+CON-SEC-002 Audit Log Provision
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL provide audit logs recording access to and modifications of personal data.
+
+**Rationale**: Compliance with Japan's Act on the Protection of Personal Information (APPI).
+
+.. _CON-SEC-003:
+
+CON-SEC-003 Encryption in Transit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+All communications between components and external systems SHALL be encrypted using TLS 1.2 or higher.
+
+**Rationale**: Security baseline requirement.
+
+.. _CON-SEC-004:
+
+CON-SEC-004 Encryption at Rest
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+All persistent data SHALL be encrypted at rest using AES-256 or equivalent.
+
+**Rationale**: Security baseline requirement.
+
+Data Constraints
+----------------
+
+.. _CON-DATA-001:
+
+CON-DATA-001 Data Residency
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+All customer data SHALL be stored exclusively in data centers located in Japan or the European Union.
+
+**Rationale**: Data sovereignty and regulatory compliance.
+
+Capacity Constraints
+--------------------
+
+.. _CON-CAP-001:
+
+CON-CAP-001 Tenant Capacity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL support a minimum of 1,000 active :ref:`Tenants <DAT-TENANT>`.
+
+**Rationale**: Business scalability requirement.
+
+.. _CON-CAP-002:
+
+CON-CAP-002 User Capacity per Tenant
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL support a minimum of 10,000 :ref:`Users <DAT-USER>` per :ref:`Tenant <DAT-TENANT>`.
+
+**Rationale**: Business scalability requirement.
+
+Operational Constraints
+-----------------------
+
+.. _CON-OPS-001:
+
+CON-OPS-001 Availability SLO
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL target a Service Level Objective (SLO) of 99.9% availability, excluding scheduled maintenance windows.
+
+**Rationale**: Business continuity requirement.
+
+.. _CON-OPS-002:
+
+CON-OPS-002 Maintenance Window
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Scheduled maintenance windows SHALL be defined and communicated in advance. (Details TBD)
+
+**Rationale**: Operational planning.
