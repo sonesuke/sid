@@ -8,6 +8,9 @@ FR-TENANT-001 User Invitation
 The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to invite new :ref:`Users <DAT-USER>` to their :ref:`Tenant <DAT-TENANT>`.
 This process SHALL create a :ref:`User Invitation <DAT-INVITE>` record.
 
+*   Invitations SHALL have a configurable expiration period (default: 7 days).
+*   Expired invitations SHALL be marked as invalid and cannot be used for registration.
+
 **Realized by**:
 
 *   :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
@@ -77,6 +80,25 @@ FR-TENANT-006 User Status Management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to modify the :ref:`Status <DAT-USER>` of existing :ref:`Users <DAT-USER>` (e.g., Enable, Disable).
 When a user is Disabled, the system SHALL invalidate all active :ref:`Sessions <DAT-SESSION>` for that user.
+
+**Realized by**:
+
+*   :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
+
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
+
+.. _FR-TENANT-007:
+
+FR-TENANT-007 Invitation Resend
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to resend an invitation to a user whose invitation has expired or was not received.
+
+*   Resending SHALL invalidate the previous :ref:`User Invitation <DAT-INVITE>` and create a new one.
+*   The new invitation SHALL have a fresh expiration period.
 
 **Realized by**:
 

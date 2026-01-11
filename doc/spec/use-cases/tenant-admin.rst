@@ -174,6 +174,41 @@ The :ref:`Tenant User <ACT-USER>` selects "Invite User" in the **Tenant Administ
 *   :ref:`User Invitation <FR-TENANT-001>`
 *   :ref:`Control Plane Auditing <FR-LOG-003>`
 
+.. _UC-TENANT-INVITE-RESEND:
+
+UC-TENANT-INVITE-RESEND Invitation Resend
+-----------------------------------------
+**Actor**: :ref:`Tenant User <ACT-USER>` (Role: Owner or Administrator)
+
+**Description**:
+The :ref:`Tenant User <ACT-USER>` resends an invitation to a user whose previous invitation expired or was not received.
+
+**Trigger**:
+The :ref:`Tenant User <ACT-USER>` selects "Resend Invitation" for a pending invitation.
+
+**Preconditions**:
+
+1. The :ref:`Tenant User <ACT-USER>` is logged in with Owner or Administrator role.
+2. A pending or expired invitation exists for the target user.
+
+**Postconditions**:
+
+1. The previous invitation is invalidated.
+2. A new invitation with fresh expiration is created.
+3. A new invitation email is sent to the user.
+
+**Scenario**:
+
+1. The :ref:`Tenant User <ACT-USER>` views the list of pending invitations.
+2. The :ref:`Tenant User <ACT-USER>` selects "Resend" for the target user.
+3. The :ref:`Control Plane <TERM-SYS-CP>` invalidates the old invitation.
+4. The :ref:`Control Plane <TERM-SYS-CP>` creates a new invitation and sends the email.
+
+**Related Requirements**:
+
+*   :ref:`Invitation Resend <FR-TENANT-007>`
+*   :ref:`Control Plane Auditing <FR-LOG-003>`
+
 .. _UC-TENANT-SSO:
 
 UC-TENANT-SSO SSO Configuration
