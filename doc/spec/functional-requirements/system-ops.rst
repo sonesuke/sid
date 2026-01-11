@@ -43,3 +43,20 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-DEV` to change the :ref:`Status <DA
 *   :ref:`Encryption in Transit <NFR-SEC-001>`
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
+
+.. _FR-SYS-004:
+
+FR-SYS-004 Operator JIT Provisioning
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL automatically provision a :ref:`User <DAT-USER>` record for :ref:`Platform Operators <ACT-OPS>` upon their first successful authentication via the external Identity Provider.
+
+*   The provisioned user SHALL have ``tenant_id`` set to NULL (platform-level user).
+*   The user's ``id`` SHALL be used as ``actor_id`` in :ref:`Audit Logs <DAT-LOG>`.
+*   Subsequent logins SHALL reuse the existing user record.
+
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
+*   :ref:`Continuous Monitoring <NFR-MON-001>`
