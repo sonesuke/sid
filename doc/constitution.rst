@@ -133,6 +133,16 @@ The specification elements are related by the following dependency model.
 
 - Dependencies between UC, FR, ERR, CON, and NFR SHALL form a directed acyclic graph.
   Cyclic dependencies are prohibited.
+
+Traceability Source of Truth
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- "Impacts" sections SHALL NOT be used. Reverse traceability (e.g., CON → FR/NFR)
+  SHALL be derived by tooling from explicit references.
+
+- Normative traceability SHALL be expressed only by forward references:
+  UC → FR, FR → NFR/CON/ERR, NFR → CON, and (optionally) ERR → CON.
+
+- Constraints (CON) SHALL be declarative and SHALL NOT enumerate impacted elements.
   
 Cross-Referencing
 ^^^^^^^^^^^^^^^^^
