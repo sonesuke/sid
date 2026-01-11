@@ -227,3 +227,16 @@ The system SHALL support data subject rights as required by GDPR and Japan APPI:
 **Rationale**: Legal compliance with privacy regulations.
 
 **Impacts**: :ref:`FR-TENANT-002`, :ref:`FR-LOG-002`
+
+Performance Constraints
+-----------------------
+
+.. _CON-PERF-001:
+
+CON-PERF-001 Response Time and Throughput
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL meet performance targets for latency and throughput to ensure a responsive user experience.
+
+**Rationale**: User-Centricity principle - responsive systems improve user satisfaction.
+
+**Impacts**: :ref:`NFR-PERF-001`, :ref:`NFR-PERF-002`, :ref:`NFR-PERF-003`, :ref:`NFR-PERF-004`

@@ -10,4 +10,5 @@ This section defines quality attributes that apply across the system.
    data
    capacity
    availability
+   performance
    monitoring
