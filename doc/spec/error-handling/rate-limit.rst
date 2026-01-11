@@ -19,12 +19,6 @@ The client has exceeded the allowed request rate.
 *   Current request is rejected
 *   Client should wait and retry
 
-**Related Requirements**:
-
-*   :ref:`FR-AUTH-001`
-*   :ref:`FR-BILL-002`
-*   :ref:`FR-FLAG-002`
-
 **Constraints**:
 
-*   :ref:`CON-PERF-001`
+*   :ref:`Response Time and Throughput <CON-PERF-001>`

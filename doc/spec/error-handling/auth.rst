@@ -19,15 +19,9 @@ Authentication failed due to invalid credentials.
 *   Authentication is denied
 *   No session is established
 
-
-**Related Requirements**:
-
-*   :ref:`FR-AUTH-001`
-*   :ref:`FR-AUTH-004`
-
 **Constraints**:
 
-*   :ref:`CON-SEC-009`
+*   :ref:`Error Disclosure <CON-SEC-009>`
 
 .. _ERR-AUTH-403:
 
@@ -47,15 +41,9 @@ An authenticated user attempted an operation they are not authorized to perform.
 *   Operation is rejected
 *   No state change occurs
 
-**Related Requirements**:
-
-*   :ref:`FR-AUTH-005`
-*   :ref:`FR-TENANT-004`
-*   :ref:`FR-TENANT-006`
-
 **Constraints**:
 
-*   :ref:`CON-SEC-009`
+*   :ref:`Error Disclosure <CON-SEC-009>`
 
 .. _ERR-AUTH-440:
 
@@ -76,12 +64,6 @@ The user's session has expired or been invalidated.
 *   Current operation is rejected
 *   User must re-authenticate
 
-**Related Requirements**:
-
-*   :ref:`FR-AUTH-005`
-*   :ref:`FR-TENANT-002`
-*   :ref:`FR-TENANT-006`
-
 .. _ERR-AUTH-461:
 
 ERR-AUTH-461 MFA Required
@@ -99,10 +81,6 @@ Multi-factor authentication is required but not provided.
 *   Authentication flow pauses
 *   User is prompted for MFA verification
 
-**Related Requirements**:
-
-*   :ref:`FR-AUTH-001`
-
 **Constraints**:
 
-*   :ref:`CON-SEC-005`
+*   :ref:`MFA <CON-SEC-005>`

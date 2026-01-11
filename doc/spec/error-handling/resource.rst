@@ -19,15 +19,9 @@ The requested resource does not exist.
 *   Operation is rejected
 *   No state change occurs
 
-**Related Requirements**:
-
-*   :ref:`FR-TENANT-002`
-*   :ref:`FR-TENANT-004`
-*   :ref:`FR-OPS-001`
-
 **Constraints**:
 
-*   :ref:`CON-SEC-009`
+*   :ref:`Error Disclosure <CON-SEC-009>`
 
 .. _ERR-RES-410:
 
@@ -45,8 +39,3 @@ The resource previously existed but has been permanently deleted.
 
 *   Operation is rejected
 *   Resource cannot be recovered
-
-**Related Requirements**:
-
-*   :ref:`FR-OPS-002`
-*   :ref:`FR-OPS-003`

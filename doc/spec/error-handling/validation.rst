@@ -19,10 +19,6 @@ The request contains invalid or malformed input data.
 *   Operation is rejected
 *   No state change occurs
 
-**Related Requirements**:
-
-*   All FRs accepting user input
-
 .. _ERR-VAL-409:
 
 ERR-VAL-409 Conflict
@@ -41,11 +37,6 @@ The operation conflicts with existing state.
 *   Operation is rejected
 *   Existing state is preserved
 
-**Related Requirements**:
-
-*   :ref:`FR-TENANT-001`
-*   :ref:`FR-SYS-001`
-
 .. _ERR-VAL-422:
 
 ERR-VAL-422 Business Rule Violation
@@ -63,9 +54,3 @@ The operation violates a business rule or policy.
 
 *   Operation is rejected
 *   No state change occurs
-
-**Related Requirements**:
-
-*   :ref:`FR-AUTH-006`
-*   :ref:`FR-TENANT-001`
-*   :ref:`FR-TENANT-007`

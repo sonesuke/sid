@@ -19,13 +19,9 @@ An unexpected internal error occurred.
 *   Operation fails
 *   State may be inconsistent (should be recoverable)
 
-**Related Requirements**:
-
-*   All FRs
-
 **Constraints**:
 
-*   :ref:`CON-SEC-009`
+*   :ref:`Error Disclosure <CON-SEC-009>`
 
 .. _ERR-SYS-503:
 
@@ -45,10 +41,6 @@ The service is temporarily unavailable.
 *   Operation is rejected
 *   Client should retry later
 
-**Related Requirements**:
-
-*   All FRs
-
 **Constraints**:
 
-*   :ref:`CON-OPS-002`
+*   :ref:`Maintenance Window <CON-OPS-002>`
