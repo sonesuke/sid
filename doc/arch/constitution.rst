@@ -4,7 +4,7 @@ Architecture Constitution
 This document defines the rules and conventions specifically for the architecture documentation.
 
 **Relationship to Main Constitution**
-This constitution inherits all principles from the :doc:`Main Specification Constitution <../../constitution>`. In case of conflict, the Main Constitution takes precedence for spec-related matters, while this document governs architectural decisions.
+This constitution inherits all principles from the :doc:`Main Specification Constitution <../spec/constitution>`. In case of conflict, the Main Constitution takes precedence for spec-related matters, while this document governs architectural decisions.
 
 **Architectural Decision Records (ADRs)**
 - All significant architectural decisions MUST be recorded as ADRs in `doc/adr`.
@@ -22,6 +22,7 @@ This constitution inherits all principles from the :doc:`Main Specification Cons
 - Architectural Elements and Rules SHALL be assigned unique Reference IDs to facilitate traceability.
     - **CTX-{Element}**: Context View Elements
     - **BB-{Component}**: Building Block Elements
+    - **RT-{Number}**: Runtime View Scenarios (e.g., `RT-001`)
     - **DEP-{Topic}**: Deployment Elements
     - **CC-{Topic}-{Number}**: Cross-cutting Rules (e.g., `CC-AUTH-001`)
 
@@ -77,15 +78,34 @@ Runtime View
 
 **Purpose**:
 - Explain how building blocks collaborate at runtime to fulfill key scenarios.
+- Demonstrate Cross-cutting Concepts "in action".
 
 **Scope**:
-- Representative interaction flows
+- Representative interaction flows (5-10 key scenarios)
 - Responsibility transitions between building blocks
 - Normal and exceptional execution paths (by reference to ERR)
+
+**ID Convention**:
+- **RT-{Number}**: Runtime Scenario identifier (e.g., `RT-001`, `RT-002`)
+
+**Required Structure** (per Scenario):
+1.  **Scenario**: Brief description of the runtime behavior.
+2.  **Actors**: List of Building Blocks and external systems involved.
+3.  **Flow**: Step-by-step sequence, preferably as a **Mermaid Sequence Diagram**.
+4.  **Cross-cutting**: Which CC rules are "active" during this flow.
+5.  **Requirements**: Related FR/NFR references.
+
+**Typical Scenarios**:
+- User Login (Authentication flow)
+- Authenticated API Request
+- Async Event Processing (Pub/Sub)
+- Blue-Green Switchover (Traffic Switching Behavior)
+- Error Handling / Retry Flow
 
 **Rules**:
 - Runtime Views SHALL NOT redefine Functional Requirements.
 - Error semantics are defined in ERR and SHALL be referenced only.
+- Focus on **time-axis stories**: "Who calls whom, in what order, under what rules."
 
 Architecture Decision Records (ADR)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

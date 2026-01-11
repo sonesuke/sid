@@ -5,6 +5,7 @@ Specifications
    :maxdepth: 2
    :caption: Contents:
 
+   constitution
    overview/index
    terminology/index
    background/index
