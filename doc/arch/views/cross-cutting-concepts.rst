@@ -191,9 +191,14 @@ Deployment and Operations
     *   **Root**:
         *   :ref:`NFR-SEC-002` (Supply Chain Security)
 
-.. _CC-OPS-003:
-
-*   **Rule [CC-OPS-003]**: Database Schema Changes MUST be **Backward Compatible**.
-    *   To support Blue-Green deployment, the database MUST support both the old and new application versions simultaneously.
     *   **Root**:
         *   :ref:`NFR-OPS-001` (Availability)
+
+.. _CC-OPS-004:
+
+*   **Rule [CC-OPS-004]**: CI/CD Pipelines SHALL be defined as Code (**Pipeline as Code**).
+    *   Workflows MUST be versioned alongside the application code to ensure the build process evolves with the software.
+    *   **Decision**: :doc:`../../adr/decisions/cicd-platform` (GitHub Actions).
+    *   **Root**:
+        *   :ref:`NFR-OPS-002` (MTTR - Revert of pipeline logic)
+

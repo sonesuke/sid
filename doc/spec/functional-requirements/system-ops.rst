@@ -81,3 +81,18 @@ The :ref:`TERM-SYS-CP` SHALL automatically provision a :ref:`User <DAT-USER>` re
 
 *   :ref:`Invalid Credentials <ERR-AUTH-401>`
 *   :ref:`Internal Error <ERR-SYS-500>`
+
+.. _FR-SYS-005:
+
+FR-SYS-005 System Health Monitoring
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL provide a Dashboard or API for :ref:`Platform Operators <ACT-OPS>` to view the real-time health status of system components.
+
+*   Status SHALL include connectivity to downstream dependencies (DB, Identity Provider, Event Bus).
+*   Status SHALL include Error Rates and P99 Latency of key services.
+
+**Quality Attributes**:
+
+*   :ref:`Continuous Monitoring <NFR-MON-001>`
+*   :ref:`System Health Alerting <NFR-MON-002>`
+

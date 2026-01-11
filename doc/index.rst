@@ -7,5 +7,5 @@ Documentation
 
    constitution
    spec/index
-   arch/architecture-description
+   arch/index
    adr/index

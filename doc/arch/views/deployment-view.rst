@@ -71,15 +71,17 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
     *   **AWS Service**: Amazon API Gateway
     *   **Mapping**: :ref:`BB-API-001`
     *   **Configuration Details**:
+
         *   HTTP APIs (v2) for lower latency and cost.
 
 .. _DEP-AWS-006:
 
 *   **[DEP-AWS-006] Web Console (SPA)**:
-    *   **AWS Service**: CloudFront + S3 + Lambda@Edge
+    *   **AWS Service**: CloudFront + S3 + Lambda@Edge + **Amazon API Gateway + AWS Lambda**
     *   **Mapping**: :ref:`BB-UI-001`
     *   **Configuration Details**:
-        *   Hosting for static assets (React/TS). Lambda@Edge for security headers/routing.
+        *   Hosting for static assets (React/TS). Lambda@Edge for security headers.
+        *   **BFF (Backend for Frontend)**: Specific API endpoints (e.g., config, session) served via APIGW + Lambda.
 
 .. _DEP-AZU-001:
 
@@ -87,6 +89,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
     *   **AWS Service**: Azure Entra ID (External)
     *   **Mapping**: :ref:`BB-AUTH-001`
     *   **Configuration Details**:
+
         *   External Identities (CIAM). OIDC integration.
 
 .. _DEP-AWS-002:
@@ -95,7 +98,9 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
     *   **AWS Service**: AWS Lambda
     *   **Mapping**: :ref:`BB-TNT-001`, :ref:`BB-BIL-001`, :ref:`BB-AUD-001`
     *   **Configuration Details**:
+
         *   Python 3.x runtime. Deployed via Terraform.
+
     *   **Decision**: :doc:`../../adr/decisions/language-runtime`, :doc:`../../adr/decisions/iac-tool-selection`
 
 .. _DEP-AWS-003:
@@ -104,7 +109,9 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
     *   **AWS Service**: Amazon DynamoDB
     *   **Mapping**: :ref:`BB-TNT-001`, :ref:`BB-BIL-001` (Persistence)
     *   **Configuration Details**:
+
         *   On-Demand Capacity mode.
+
     *   **Decision**: :doc:`../../adr/decisions/data-persistence`
 
 .. _DEP-AWS-004:
@@ -113,6 +120,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
     *   **AWS Service**: Amazon EventBridge
     *   **Mapping**: :ref:`BB-EVT-001`
     *   **Configuration Details**:
+
         *   Custom Registry for domain events.
 
 .. _DEP-AWS-005:
@@ -121,14 +129,16 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
     *   **AWS Service**: AWS AppConfig
     *   **Mapping**: :ref:`BB-FLG-001`
     *   **Configuration Details**:
+
         *   Freeform configuration profile.
 
 .. _DEP-AWS-007:
 
 *   **[DEP-AWS-007] Observability & Archive**:
     *   **AWS Service**: CloudWatch Logs / S3
-    *   **Mapping**: :ref:`BB-AUD-001`
+    *   **Mapping**: :ref:`BB-AUD-001`, :ref:`BB-OBS-001`
     *   **Configuration Details**:
+
         *   CloudWatch for real-time logs (Retention: 30 days). S3 Glacier for long-term audit archive (Retention: 7 years).
 
 .. _DEP-AWS-008:
@@ -137,6 +147,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
     *   **AWS Service**: AWS Backup
     *   **Mapping**: :ref:`BB-TNT-001`, :ref:`BB-BIL-001`
     *   **Configuration Details**:
+
         *   Centralized backup policy. DynamoDB PITR (Point-in-Time Recovery) enabled (35 days).
 
 .. _DEP-AWS-009:
@@ -145,6 +156,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
     *   **AWS Service**: AWS WAF
     *   **Mapping**: :ref:`BB-UI-001` (CloudFront), :ref:`BB-API-001` (API Gateway)
     *   **Configuration Details**:
+
         *   Protects against common web exploits (OWASP Top 10) and bots. Managed Rules enabled.
 
 Environment Strategy
@@ -177,14 +189,31 @@ We adopt **Blue-Green Deployment** to achieve Zero Downtime and Immediate Rollba
 *   **[DEP-OPS-001] Blue-Green Switchover**:
     *   **Mechanism**: Traffic shifting via API Gateway Stages / Lambda Aliases.
     *   **Procedure**:
+
         1.  Deploy new version (Green) alongside active version (Blue).
         2.  Run Smoke Tests against Green endpoint.
         3.  Update Routing Weight to 100% Green.
         4.  Monitor Error Rates (Red Metrics).
         5.  *If success*: Deprovision Blue after stabilization period.
         6.  *If failure*: Atomically revert Routing to 100% Blue.
+
+    *   **Decision**: :doc:`../../adr/decisions/deployment-strategy`
     *   **Decision**: :doc:`../../adr/decisions/deployment-strategy`
     *   **Principles**: :ref:`CC-OPS-001` (Reversibility), :ref:`CC-OPS-003` (DB Compatibility).
+
+.. _DEP-OPS-002:
+
+*   **[DEP-OPS-002] CI/CD Pipeline**:
+    *   **Automated Flow**:
+        1.  **Pull Request**: Run Linting (Ruff), Unit Tests (Pytest), and Security Scans (Trivy).
+        2.  **Merge to Main**: Trigger Build Artifact (Lambda Zip).
+        3.  **Deploy Dev**: Deploy to Development environment. Run Integration Tests.
+        4.  **Promote Staging**: Deploy same artifact to Staging (:ref:`CC-OPS-002`). Run E2E / Load Tests.
+        5.  **Manual Approval**: Operator approves promotion to Production.
+        6.  **Promote Production**: Trigger Blue-Green Deployment (:ref:`DEP-OPS-001`).
+    *   **Mechanism**: GitHub Actions Workflows.
+    *   **Decision**: :doc:`../../adr/decisions/cicd-platform`
+    *   **Principles**: :ref:`CC-OPS-002` (Immutable), :ref:`CC-OPS-004` (Pipeline as Code).
 
 NFR Satisfaction
 ----------------

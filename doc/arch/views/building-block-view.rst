@@ -20,8 +20,8 @@ Level 1: System Whitebox (Container View)
          Container(auth_svc, "Auth Service", "Identity Provider / FaaS", "IdP, Token Vending, User Mgmt")
          Container(tenant_svc, "Tenant Service", "FaaS + NoSQL", "Tenant Registration, Config, Lifecycle")
          Container(flag_svc, "Feature Flag Service", "Configuration Service", "Feature Toggles & Rollouts")
-         Container(billing_svc, "Billing Service", "FaaS + Event Logic", "Usage Metering, Payment Integration")
-         Container(audit_svc, "Audit Service", "Log Aggregator", "Centralized Audit Logging")
+         Container(obs_platform, "Observability Platform", "CloudWatch / X-Ray", "Metrics, Logs, Tracing, Alerting")
+         Container(cicd_svc, "CI/CD Service", "GitHub Actions", "Build, Test, Deploy Pipeline")
          
          Container(event_bus, "Event Bus", "Message Broker", "Asynchronous Event Backbone")
       }
@@ -40,6 +40,10 @@ Level 1: System Whitebox (Container View)
       Rel(tenant_svc, event_bus, "Publishes Tenant Events")
       Rel(billing_svc, event_bus, "Subscribes to Billable Events")
       Rel(audit_svc, event_bus, "Subscribes to All Events")
+      
+      Rel(api_gw, obs_platform, "Sends Metrics/Logs")
+      Rel(tenant_svc, obs_platform, "Sends Metrics/Logs")
+      Rel(auth_svc, obs_platform, "Sends Metrics/Logs")
       
       Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
@@ -144,6 +148,25 @@ Component Description
     *   **Related NFRs**:
 
         *   :ref:`Continuous Monitoring <NFR-MON-001>`
+
+.. _BB-OBS-001:
+
+*   **[BB-OBS-001] Observability Platform**:
+    *   **Responsibility**: Centralized collection and visualization of Metrics, Logs, and Traces. Handles Alerting and Synthetics.
+    *   **Related FRs**:
+        *   :ref:`System Health Monitoring <FR-SYS-005>`
+    *   **Related NFRs**:
+        *   :ref:`System Health Alerting <NFR-MON-002>`
+        *   :ref:`Synthetic Monitoring <NFR-MON-003>`
+        *   :ref:`Continuous Monitoring <NFR-MON-001>`
+
+.. _BB-CICD-001:
+
+*   **[BB-CICD-001] CI/CD Service**:
+    *   **Responsibility**: Automation of Build, Test, Security Scanning, and Deployment processes.
+    *   **Related NFRs**:
+        *   :ref:`Availability SLO <NFR-OPS-001>` (Deployment Safety)
+    *   **Decision**: :doc:`../../adr/decisions/cicd-platform`
 
 .. _BB-EVT-001:
 
