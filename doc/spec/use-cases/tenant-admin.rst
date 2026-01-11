@@ -53,7 +53,7 @@ The :ref:`Tenant User <ACT-USER>` selects "Edit Role" in the **Tenant Administra
 **Postconditions**:
 
 1. Target user's role is updated.
-2. Target user's permissions are immediately adjusted.
+2. All active :ref:`Sessions <DAT-SESSION>` for the user are invalidated.
 
 **Scenario**:
 
@@ -62,10 +62,44 @@ The :ref:`Tenant User <ACT-USER>` selects "Edit Role" in the **Tenant Administra
 3. The :ref:`Tenant User <ACT-USER>` saves the changes.
 4. The :ref:`Control Plane <TERM-SYS-CP>` validates the permissions (e.g., cannot downgrade own role if last Owner).
 5. The :ref:`Control Plane <TERM-SYS-CP>` updates the user record.
+6. The :ref:`Control Plane <TERM-SYS-CP>` invalidates existing sessions to enforce new permissions.
 
 **Related Requirements**:
 
 *   :ref:`User Role Management <FR-TENANT-004>`
+*   :ref:`Control Plane Auditing <FR-LOG-003>`
+
+.. _UC-TENANT-SESSION-REVOKE:
+
+UC-TENANT-SESSION-REVOKE Session Revocation
+-------------------------------------------
+**Actor**: :ref:`Tenant User <ACT-USER>` (Role: Owner, Administrator)
+
+**Description**:
+The :ref:`Tenant User <ACT-USER>` (Role: Owner or Administrator) invalidates a specific user's active sessions to force re-authentication.
+
+**Trigger**:
+The :ref:`Tenant User <ACT-USER>` selects "Revoke Sessions" for a user in the **Tenant Administration Console**.
+
+**Preconditions**:
+
+1. The :ref:`Tenant User <ACT-USER>` is logged in with sufficient privileges.
+2. The target :ref:`User <DAT-USER>` exists.
+
+**Postconditions**:
+
+1. All active :ref:`Sessions <DAT-SESSION>` for the target User are invalidated.
+2. The target User is required to log in again.
+
+**Scenario**:
+
+1. The :ref:`Tenant User <ACT-USER>` identifies the target user in the **Tenant Administration Console**.
+2. The :ref:`Tenant User <ACT-USER>` initiates the session revocation.
+3. The :ref:`Control Plane <TERM-SYS-CP>` invalidates all tokens associated with the user.
+
+**Related Requirements**:
+
+*   :ref:`Session Management <FR-AUTH-005>`
 *   :ref:`Control Plane Auditing <FR-LOG-003>`
 
 .. _UC-TENANT-INVITE:

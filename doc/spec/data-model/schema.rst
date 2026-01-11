@@ -164,3 +164,20 @@ event_type  String     Type of billable action (e.g., ``api_call``, ``storage_gb
 quantity    Integer    Amount consumed.
 timestamp   Timestamp  Event occurrence time.
 ==========  =========  ======================================================================
+
+.. _DAT-SESSION:
+
+User Sessions
+-------------
+Represents an active login session for a :ref:`User <DAT-USER>`.
+
+==========  =========  ======================================================================
+Field       Type       Description
+==========  =========  ======================================================================
+id          UUID       Unique identifier for the session.
+user_id     UUID       Foreign Key to :ref:`Users <DAT-USER>`.
+token       String     Secure session token or JWT reference.
+created_at  Timestamp  Session creation time.
+expires_at  Timestamp  Session expiration time.
+status      Enum       Session status (``Active``, ``Revoked``).
+==========  =========  ======================================================================

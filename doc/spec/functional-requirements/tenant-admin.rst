@@ -31,5 +31,6 @@ The :ref:`TERM-SYS-CP` SHALL allow only Tenant Owners to modify the tenant's sub
 FR-TENANT-004 User Role Management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to modify the :ref:`Roles <DAT-ROLE>` of existing :ref:`Users <DAT-USER>` within their :ref:`Tenant <DAT-TENANT>`.
+When a role is updated, the system SHALL invalidate all active :ref:`Sessions <DAT-SESSION>` for the target user.
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
