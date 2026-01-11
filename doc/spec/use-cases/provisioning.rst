@@ -73,3 +73,39 @@ The :ref:`Platform Operator <ACT-OPS>` selects "Suspend Tenant" in the **Operato
 
 *   :ref:`Tenant Status Management <FR-OPS-001>`
 *   :ref:`Control Plane Auditing <FR-LOG-003>`
+
+.. _UC-OPS-TENANT-DELETE:
+
+UC-OPS-TENANT-DELETE Tenant Deletion
+------------------------------------
+**Actor**: :ref:`Platform Operator <ACT-OPS>`
+
+**Description**:
+The :ref:`Platform Operator <ACT-OPS>` permanently deletes a tenant and all associated data upon contract termination or deletion request.
+
+**Trigger**:
+The :ref:`Platform Operator <ACT-OPS>` selects "Delete Tenant" in the **Operator Console**.
+
+**Preconditions**:
+
+1. The :ref:`Platform Operator <ACT-OPS>` is logged in.
+2. The target tenant exists.
+
+**Postconditions**:
+
+1. The :ref:`Tenant <DAT-TENANT>` enters a 30-day grace period (recoverable).
+2. After the grace period, all tenant data is permanently deleted.
+
+**Scenario**:
+
+1. The :ref:`Platform Operator <ACT-OPS>` searches for the tenant in the **Operator Console**.
+2. The :ref:`Platform Operator <ACT-OPS>` selects the "Delete" action.
+3. The :ref:`Platform Operator <ACT-OPS>` confirms the action with explicit acknowledgment.
+4. The :ref:`Control Plane <TERM-SYS-CP>` marks the tenant for deletion (30-day grace).
+5. After the grace period, the :ref:`Control Plane <TERM-SYS-CP>` permanently deletes all related data.
+
+**Related Requirements**:
+
+*   :ref:`Tenant Deletion <FR-OPS-002>`
+*   :ref:`Control Plane Auditing <FR-LOG-003>`
+*   :ref:`Data Subject Rights <CON-COMP-001>`

@@ -99,6 +99,26 @@ All customer data SHALL be stored exclusively in data centers located in Japan o
 
 **Impacts**: :ref:`NFR-DATA-001`
 
+.. _CON-DATA-002:
+
+CON-DATA-002 Audit Log Retention
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+:ref:`Audit Logs <DAT-LOG>` SHALL be retained for a minimum of 7 years to comply with Japanese accounting laws and APPI requirements.
+
+**Rationale**: Legal compliance (Japan Accounting Law, APPI).
+
+**Impacts**: :ref:`FR-OPS-003`
+
+.. _CON-DATA-003:
+
+CON-DATA-003 Billing Data Retention
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+:ref:`Billing Events <DAT-BILL-EVENT>` SHALL be retained for a minimum of 5 years to comply with tax regulations.
+
+**Rationale**: Legal compliance (Tax regulations).
+
+**Impacts**: :ref:`FR-OPS-003`
+
 Capacity Constraints
 --------------------
 
