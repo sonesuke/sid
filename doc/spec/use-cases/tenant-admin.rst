@@ -21,12 +21,14 @@ The :ref:`Tenant User <ACT-USER>` selects "Delete User" in the **Tenant Administ
 **Postconditions**:
 
 1. Target user is removed from authentication and cannot access applications.
+2. All active :ref:`Sessions <DAT-SESSION>` for the user are invalidated.
 
 **Scenario**:
 
 1. The :ref:`Tenant User <ACT-USER>` selects the user to remove.
 2. The :ref:`Tenant User <ACT-USER>` confirms deletion.
 3. The :ref:`Control Plane <TERM-SYS-CP>` removes the user.
+4. The :ref:`Control Plane <TERM-SYS-CP>` invalidates existing sessions.
 
 **Related Requirements**:
 

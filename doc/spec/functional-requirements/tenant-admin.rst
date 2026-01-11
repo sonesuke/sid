@@ -18,6 +18,8 @@ The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to delete :r
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
 
+When a user is deleted, the system SHALL invalidate all active :ref:`Sessions <DAT-SESSION>` for that user.
+
 .. _FR-TENANT-003:
 
 FR-TENANT-003 Contract Modification
