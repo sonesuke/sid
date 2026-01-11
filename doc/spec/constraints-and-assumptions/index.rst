@@ -14,6 +14,8 @@ The :ref:`TERM-SYS-CP` SHALL allow each :ref:`Tenant <DAT-TENANT>` to configure 
 
 **Rationale**: Compliance with Japan's Act on the Protection of Personal Information (APPI).
 
+**Impacts**: :ref:`FR-AUTH-006`
+
 .. _CON-SEC-002:
 
 CON-SEC-002 Audit Log Provision
@@ -21,6 +23,8 @@ CON-SEC-002 Audit Log Provision
 The :ref:`TERM-SYS-CP` SHALL provide audit logs recording access to and modifications of personal data.
 
 **Rationale**: Compliance with Japan's Act on the Protection of Personal Information (APPI).
+
+**Impacts**: :ref:`FR-LOG-001`, :ref:`FR-LOG-002`
 
 .. _CON-SEC-003:
 
@@ -30,6 +34,8 @@ All communications between components and external systems SHALL be encrypted us
 
 **Rationale**: Security baseline requirement.
 
+**Impacts**: :ref:`NFR-SEC-001`
+
 .. _CON-SEC-004:
 
 CON-SEC-004 Encryption at Rest
@@ -37,6 +43,8 @@ CON-SEC-004 Encryption at Rest
 All persistent data SHALL be encrypted at rest using AES-256 or equivalent.
 
 **Rationale**: Security baseline requirement.
+
+**Impacts**: :ref:`NFR-SEC-002`
 
 Data Constraints
 ----------------
@@ -49,6 +57,8 @@ All customer data SHALL be stored exclusively in data centers located in Japan o
 
 **Rationale**: Data sovereignty and regulatory compliance.
 
+**Impacts**: :ref:`NFR-DATA-001`
+
 Capacity Constraints
 --------------------
 
@@ -60,6 +70,8 @@ The system SHALL support a minimum of 1,000 active :ref:`Tenants <DAT-TENANT>`.
 
 **Rationale**: Business scalability requirement.
 
+**Impacts**: :ref:`NFR-CAP-001`
+
 .. _CON-CAP-002:
 
 CON-CAP-002 User Capacity per Tenant
@@ -67,6 +79,8 @@ CON-CAP-002 User Capacity per Tenant
 The system SHALL support a minimum of 10,000 :ref:`Users <DAT-USER>` per :ref:`Tenant <DAT-TENANT>`.
 
 **Rationale**: Business scalability requirement.
+
+**Impacts**: :ref:`NFR-CAP-002`
 
 Operational Constraints
 -----------------------
@@ -79,6 +93,8 @@ The system SHALL target a Service Level Objective (SLO) of 99.9% availability, e
 
 **Rationale**: Business continuity requirement.
 
+**Impacts**: :ref:`NFR-OPS-001`
+
 .. _CON-OPS-002:
 
 CON-OPS-002 Maintenance Window
@@ -86,3 +102,5 @@ CON-OPS-002 Maintenance Window
 Scheduled maintenance windows SHALL be defined and communicated in advance. (Details TBD)
 
 **Rationale**: Operational planning.
+
+**Impacts**: :ref:`NFR-OPS-002`

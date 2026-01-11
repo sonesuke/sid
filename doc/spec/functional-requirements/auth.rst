@@ -38,3 +38,13 @@ The :ref:`TERM-SYS-CP` SHALL establish a :ref:`Session <DAT-SESSION>` upon succe
 The :ref:`TERM-SYS-CP` SHALL support session invalidation triggers including explicit logout and administrative revocation.
 
 **Realized by**: :ref:`Universal Login Page <IF-LOGIN-UI>`, :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
+
+.. _FR-AUTH-006:
+
+FR-AUTH-006 Password Policy Configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :ref:`TERM-SYS-CP` SHALL allow each :ref:`Tenant <DAT-TENANT>` to configure password complexity requirements (e.g., minimum length, required character types).
+
+**Constrained by**: :ref:`CON-SEC-001`
+
+**Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
