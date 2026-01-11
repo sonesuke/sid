@@ -18,6 +18,11 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-OPS` to configure :ref:`Feature Fla
 *   :ref:`Tenant Scalability <NFR-CAP-001>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-RES-404`
+
 .. _FR-FLAG-002:
 
 FR-FLAG-002 Flag Delivery
@@ -34,3 +39,8 @@ The system SHALL provide an interface via :ref:`API-FLAG` for :ref:`TERM-APP-TAR
 *   :ref:`Key Management <NFR-SEC-004>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 *   :ref:`Load Balancing and Failover <NFR-OPS-003>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-401`
+*   :ref:`ERR-RATE-429`

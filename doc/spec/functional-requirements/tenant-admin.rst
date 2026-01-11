@@ -22,6 +22,12 @@ This process SHALL create a :ref:`User Invitation <DAT-INVITE>` record.
 *   :ref:`User Scalability <NFR-CAP-002>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-VAL-409`
+*   :ref:`ERR-VAL-422`
+
 .. _FR-TENANT-002:
 
 FR-TENANT-002 User Deletion
@@ -40,6 +46,11 @@ When a user is deleted, the system SHALL invalidate all active :ref:`Sessions <D
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-RES-404`
+
 .. _FR-TENANT-003:
 
 FR-TENANT-003 Contract Modification
@@ -56,6 +67,10 @@ The :ref:`TERM-SYS-CP` SHALL allow only Tenant Owners to modify the tenant's sub
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Tenant Scalability <NFR-CAP-001>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
 
 .. _FR-TENANT-004:
 
@@ -74,6 +89,11 @@ When a role is updated, the system SHALL invalidate all active :ref:`Sessions <D
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-RES-404`
+
 .. _FR-TENANT-006:
 
 FR-TENANT-006 User Status Management
@@ -90,6 +110,11 @@ When a user is Disabled, the system SHALL invalidate all active :ref:`Sessions <
 *   :ref:`Encryption in Transit <NFR-SEC-001>`
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-RES-404`
 
 .. _FR-TENANT-007:
 
@@ -109,3 +134,8 @@ The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to resend an
 *   :ref:`Encryption in Transit <NFR-SEC-001>`
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-RES-404`

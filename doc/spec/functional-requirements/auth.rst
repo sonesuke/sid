@@ -22,6 +22,12 @@ The :ref:`TERM-SYS-CP` SHALL support the following authentication methods for :r
 *   :ref:`Adaptive Authentication <NFR-SEC-006>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-401`
+*   :ref:`ERR-AUTH-461`
+*   :ref:`ERR-RATE-429`
+
 .. _FR-AUTH-003:
 
 FR-AUTH-003 Tenant SSO Configuration
@@ -39,6 +45,12 @@ The configuration SHALL be stored in :ref:`SSO Configuration <DAT-SSO-CONFIG>`.
 *   :ref:`Key Management <NFR-SEC-004>`
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-VAL-400`
+*   :ref:`ERR-VAL-409`
 
 .. _FR-AUTH-004:
 
@@ -59,6 +71,12 @@ Upon successful password reset or change, the system SHALL invalidate all active
 *   :ref:`Key Management <NFR-SEC-004>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-401`
+*   :ref:`ERR-VAL-422`
+*   :ref:`ERR-RATE-429`
+
 .. _FR-AUTH-005:
 
 FR-AUTH-005 Session Management
@@ -78,6 +96,11 @@ The :ref:`TERM-SYS-CP` SHALL support session invalidation triggers including exp
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-AUTH-440`
+
 .. _FR-AUTH-006:
 
 FR-AUTH-006 Password Policy Configuration
@@ -96,3 +119,8 @@ The :ref:`TERM-SYS-CP` SHALL allow each :ref:`Tenant <DAT-TENANT>` to configure 
 *   :ref:`Encryption at Rest <NFR-SEC-002>`
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-VAL-400`

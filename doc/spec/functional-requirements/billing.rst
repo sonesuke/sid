@@ -20,6 +20,11 @@ The :ref:`TERM-SYS-CP` SHALL persistently record billable events triggers receiv
 *   :ref:`Availability SLO <NFR-OPS-001>`
 *   :ref:`Backup and Redundancy <NFR-OPS-004>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-SYS-500`
+*   :ref:`ERR-SYS-503`
+
 .. _FR-BILL-002:
 
 FR-BILL-002 Billing Event Ingestion
@@ -36,6 +41,12 @@ The system SHALL provide an API (:ref:`API-BILL`) that allows :ref:`TERM-APP-TAR
 *   :ref:`Key Management <NFR-SEC-004>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 *   :ref:`Load Balancing and Failover <NFR-OPS-003>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-401`
+*   :ref:`ERR-VAL-400`
+*   :ref:`ERR-RATE-429`
 
 .. _FR-BILL-003:
 
@@ -54,3 +65,9 @@ The :ref:`TERM-SYS-CP` SHALL provide an interface for :ref:`External Billing Sys
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Data Residency <NFR-DATA-001>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-401`
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-RES-404`

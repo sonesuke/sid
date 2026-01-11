@@ -20,6 +20,11 @@ The :ref:`TERM-SYS-CP` SHALL collect security and operational logs from all comp
 *   :ref:`Backup and Redundancy <NFR-OPS-004>`
 *   :ref:`Continuous Monitoring <NFR-MON-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-SYS-500`
+*   :ref:`ERR-SYS-503`
+
 .. _FR-LOG-002:
 
 FR-LOG-002 Audit Log Export
@@ -37,6 +42,11 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-AUDIT` to export :ref:`Audit Logs <
 *   :ref:`Data Residency <NFR-DATA-001>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-SYS-500`
+
 .. _FR-LOG-003:
 
 FR-LOG-003 Control Plane Auditing
@@ -49,3 +59,7 @@ The :ref:`TERM-SYS-CP` SHALL record its own state-changing operations (e.g., Ten
 *   :ref:`Data Residency <NFR-DATA-001>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 *   :ref:`Continuous Monitoring <NFR-MON-001>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-SYS-500`

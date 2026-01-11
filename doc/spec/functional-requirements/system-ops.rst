@@ -15,6 +15,12 @@ The system SHALL generate a unique Application ID upon registration.
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-VAL-400`
+*   :ref:`ERR-VAL-409`
+
 .. _FR-SYS-002:
 
 FR-SYS-002 API Key Management
@@ -31,6 +37,11 @@ The system SHALL allow :ref:`ACT-DEV` to revoke existing keys.
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-RES-404`
+
 .. _FR-SYS-003:
 
 FR-SYS-003 Application Lifecycle Management
@@ -43,6 +54,11 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-DEV` to change the :ref:`Status <DA
 *   :ref:`Encryption in Transit <NFR-SEC-001>`
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-RES-404`
 
 .. _FR-SYS-004:
 
@@ -60,3 +76,8 @@ The :ref:`TERM-SYS-CP` SHALL automatically provision a :ref:`User <DAT-USER>` re
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 *   :ref:`Continuous Monitoring <NFR-MON-001>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-401`
+*   :ref:`ERR-SYS-500`

@@ -19,6 +19,11 @@ When a :ref:`Tenant <DAT-TENANT>` is Suspended, the system SHALL revoke access f
 *   :ref:`Tenant Scalability <NFR-CAP-001>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-RES-404`
+
 .. _FR-OPS-002:
 
 FR-OPS-002 Tenant Deletion
@@ -41,6 +46,12 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-OPS` to permanently delete a :ref:`
 *   :ref:`Least Privilege <NFR-SEC-005>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
 
+**Error Conditions**:
+
+*   :ref:`ERR-AUTH-403`
+*   :ref:`ERR-RES-404`
+*   :ref:`ERR-RES-410`
+
 .. _FR-OPS-003:
 
 FR-OPS-003 Data Retention Enforcement
@@ -61,3 +72,7 @@ The :ref:`TERM-SYS-CP` SHALL automatically enforce data retention policies:
 *   :ref:`Encryption at Rest <NFR-SEC-002>`
 *   :ref:`Data Residency <NFR-DATA-001>`
 *   :ref:`Availability SLO <NFR-OPS-001>`
+
+**Error Conditions**:
+
+*   :ref:`ERR-SYS-500`
