@@ -5,7 +5,6 @@ copyright = '2026, Project Team'
 author = 'Project Team'
 
 extensions = [
-    'sphinx_simplepdf'
 ]
 
 templates_path = ['_templates']

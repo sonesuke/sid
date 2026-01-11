@@ -31,7 +31,7 @@ The :ref:`Tenant User <ACT-USER>` attempts to access a protected resource.
 5. The :ref:`Control Plane <TERM-SYS-CP>` validates credentials.
 6. The :ref:`Control Plane <TERM-SYS-CP>` issues an authentication token.
 
-3. **Related Requirements**:
+**Related Requirements**:
 
 *   :ref:`Supported Authentication Methods <FR-AUTH-001>`
 *   :ref:`Session Management <FR-AUTH-005>`

@@ -26,8 +26,8 @@ The :ref:`Auditor <ACT-AUDIT>` selects "Export Logs" within the **Auditor Consol
 1. The :ref:`Auditor <ACT-AUDIT>` navigates to the "Audit Logs" view in the **Auditor Console**.
 2. The :ref:`Auditor <ACT-AUDIT>` selects the date range and filters for the export.
 3. The :ref:`Auditor <ACT-AUDIT>` initiates the download.
-3. The :ref:`Control Plane <TERM-SYS-CP>` queries the log storage.
-4. The :ref:`Control Plane <TERM-SYS-CP>` formats the data as CSV and streams the response.
+4. The :ref:`Control Plane <TERM-SYS-CP>` queries the log storage.
+5. The :ref:`Control Plane <TERM-SYS-CP>` formats the data as CSV and streams the response.
 
 **Related Requirements**:
 
