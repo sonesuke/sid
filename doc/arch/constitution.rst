@@ -61,6 +61,7 @@ Building Block View (C4 Level 2 / 3)
 
 **Rules**:
 - Building Blocks represent **responsibility-bearing units**, not technologies.
+- Specific Cloud Managed Services (e.g., AWS Cognito) SHALL NOT be named; use generic terms (e.g., IdP) instead.
 - Implementation technologies SHALL NOT be specified.
 - Each Functional Requirement SHALL have a clear architectural owner.
 
@@ -107,6 +108,7 @@ Deployment View
 
 **Rules**:
 - Deployment Views MAY reference specific platforms or services (e.g., AWS).
+- This is the primary view for mapping abstract building blocks to concrete Cloud Managed Services.
 - Deployment Views SHALL demonstrate how NFRs and CONs are satisfied.
 - No new Functional Requirements SHALL be introduced.
 
