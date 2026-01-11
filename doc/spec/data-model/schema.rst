@@ -93,7 +93,7 @@ Field       Type       Description
 id          UUID       Unique identifier.
 name        String     Name of the application.
 owner_id    String     Identifier of the :ref:`Developer <ACT-DEV>` or owner.
-status      Enum       Registration status (``Active``, ``Revoked``).
+status      Enum       Registration status (``Active``, ``Disabled``).
 ==========  =========  ======================================================================
 
 .. _DAT-KEY:

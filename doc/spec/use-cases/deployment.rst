@@ -35,3 +35,36 @@ The :ref:`Developer <ACT-DEV>` initiates the "Register System" workflow (via CLI
 
 *   :ref:`Application Registration <FR-SYS-001>`
 *   :ref:`API Key Management <FR-SYS-002>`
+
+.. _UC-DEV-UPDATE:
+
+UC-DEV-UPDATE Application Update
+--------------------------------
+**Actor**: :ref:`Developer <ACT-DEV>`
+
+**Description**:
+The :ref:`Developer <ACT-DEV>` updates the configuration or status of a :ref:`Managed Application <DAT-APP>`. This includes disabling the application to prevent access.
+
+**Trigger**:
+The :ref:`Developer <ACT-DEV>` initiates a deployment or CLI command to update the application.
+
+**Preconditions**:
+
+1. The :ref:`Developer <ACT-DEV>` has valid administrative credentials.
+2. The target :ref:`Managed Application <DAT-APP>` exists.
+
+**Postconditions**:
+
+1. The :ref:`Managed Application <DAT-APP>` record is updated.
+2. If status is set to Disabled, all API access is blocked.
+
+**Scenario**:
+
+1. The :ref:`Developer <ACT-DEV>` submits the update request (e.g., set status to Disabled).
+2. The :ref:`Control Plane <TERM-SYS-CP>` validates the request.
+3. The :ref:`Control Plane <TERM-SYS-CP>` updates the application record.
+4. The :ref:`Control Plane <TERM-SYS-CP>` applies the new state (e.g., blocking incoming API calls).
+
+**Related Requirements**:
+
+*   :ref:`Application Lifecycle Management <FR-SYS-003>`
