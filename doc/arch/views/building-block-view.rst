@@ -2,7 +2,7 @@ Building Block View
 ===================
 
 This section decomposes the system into its building blocks (modules, components).
-The architecture follows a **Microservices** approach utilizing **Managed Services** (see :doc:`../../adr/0006-architecture-style`).
+The architecture follows a **Microservices** approach utilizing **Managed Services** (see :doc:`../../adr/decisions/architecture-style`).
 
 Level 1: System Whitebox (Container View)
 -----------------------------------------
@@ -14,6 +14,7 @@ Level 1: System Whitebox (Container View)
       Person(user, "User", "Accesses via Browser/API")
       
       System_Boundary(c1, "SaaS Foundation Platform") {
+         Container(web_ui, "Web Console (SPA)", "React/TypeScript", "Operator & Tenant Administration Portal")
          Container(api_gw, "API Gateway", "API Gateway", "Unified Entry Point, Routing, Throttling")
          
          Container(auth_svc, "Auth Service", "Identity Provider / FaaS", "IdP, Token Vending, User Mgmt")
@@ -27,12 +28,14 @@ Level 1: System Whitebox (Container View)
 
       System_Ext(app, "Managed Application", "Consumes Auth & Flags")
 
+      Rel(user, web_ui, "HTTPS / Browser")
+      Rel(web_ui, api_gw, "HTTPS / REST (JSON)")
       Rel(user, api_gw, "HTTPS / REST")
       
       Rel(api_gw, auth_svc, "Routes Auth Req")
       Rel(api_gw, tenant_svc, "Routes Tenant Req")
       Rel(api_gw, flag_svc, "Routes Flag Req")
-      
+
       Rel(auth_svc, event_bus, "Publishes User Events")
       Rel(tenant_svc, event_bus, "Publishes Tenant Events")
       Rel(billing_svc, event_bus, "Subscribes to Billable Events")
@@ -40,67 +43,120 @@ Level 1: System Whitebox (Container View)
       
       Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
-**Container Responsibilities**:
+Component Description
+---------------------
 
-1. **API Gateway**
-   - **Responsibilities**: Entry point for all external traffic. Routes requests to appropriate microservices. Handles rate limiting and initial request validation.
-   - **Tech**: API Gateway.
+.. _BB-UI-001:
 
-2. **Auth Service**
-   - **Responsibilities**: User authentication, credential management, token generation (JWT).
-   - **Satisfies**: :ref:`FR-AUTH <FR-AUTH>`.
-   - **Tech**: Identity Provider (IdP) / Serverless Function.
+*   **[BB-UI-001] Web Console (SPA)**:
+    *   **Responsibility**: Single Page Application providing Administrative interfaces for Operators and Tenants.
+    *   **Related FRs**:
+        *   :ref:`Operator Console <IF-OPS-CONSOLE>`
+        *   :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
+        *   :ref:`Auditor Console <IF-AUDIT-CONSOLE>`
+        *   :ref:`Universal Login Page <IF-LOGIN-UI>`
+    *   **Related NFRs**:
+        *   :ref:`UI Responsiveness <NFR-PERF-003>`
 
-3. **Tenant Service**
-   - **Responsibilities**: Tenant onboarding, configuration management, subscription tracking.
-   - **Satisfies**: :ref:`FR-TENANT <FR-TENANT>`.
-   - **Tech**: Serverless Function, NoSQL Store.
+.. _BB-API-001:
 
-4. **Feature Flag Service**
-   - **Responsibilities**: Serves feature flag states to applications.
-   - **Satisfies**: :ref:`FR-FLAG <FR-FLAG>`.
-   - **Tech**: Configuration Management Service.
+*   **[BB-API-001] API Gateway**:
+    *   **Responsibility**: Entry point for all external requests. Handles routing, rate limiting, and authentication offloading.
+    *   **Related FRs**:
 
-5. **Billing Service**
-   - **Responsibilities**: Aggregates usage data, integrates with external billing providers.
-   - **Satisfies**: :ref:`FR-BILL <FR-BILL>`.
-   - **Tech**: Event Processing Logic.
+        *   :ref:`API Key Management <FR-SYS-002>`
+    *   **Related NFRs**:
 
-6. **Audit Service**
-   - **Responsibilities**: Persists audit logs for compliance.
-   - **Satisfies**: :ref:`FR-LOG <FR-LOG>`.
-   - **Tech**: Log Aggregation & Storage.
+        *   :ref:`Load Balancing and Failover <NFR-OPS-003>`
+        *   :ref:`Authentication Latency <NFR-PERF-001>`
 
-7. **Event Bus**
-   - **Responsibilities**: Decoupling services. Distributes domain events (e.g., `TenantCreated`, `UserLoggedIn`).
-   - **Tech**: Message Broker / Event Bus.
+.. _BB-AUTH-001:
 
-Level 2: Service Component Pattern
-----------------------------------
-Most microservices in this platform follow a **Event-Driven Service Pattern**.
+*   **[BB-AUTH-001] Auth Service**:
+    *   **Responsibility**: Manages user identities and credentials via External IdP.
+    *   **Related FRs**:
 
-.. mermaid::
-   
-   C4Component
-      title Generic Microservice Component Diagram
+        *   :ref:`Supported Authentication Methods <FR-AUTH-001>`
+        *   :ref:`Tenant SSO Configuration <FR-AUTH-003>`
+        *   :ref:`Password Reset <FR-AUTH-004>`
+        *   :ref:`Session Management <FR-AUTH-005>`
+        *   :ref:`Password Policy Configuration <FR-AUTH-006>`
+    *   **Related NFRs**:
 
-      Container_Boundary(svc, "Microservice Boundary") {
-         Component(handler, "API Handler", "Function", "Validates input, calls domain logic")
-         Component(logic, "Domain Logic", "Module", "Business rules, State transitions")
-         Component(dal, "Data Access Layer", "Module", "Abstracts DB interactions")
-         Component(db, "Service Data Store", "NoSQL / SQL", "Private state for this service")
-         Component(publisher, "Event Publisher", "Client", "Publishes to Event Bus")
-      }
+        *   :ref:`Multi-Factor Authentication <NFR-SEC-003>`
+        *   :ref:`Adaptive Authentication <NFR-SEC-006>`
+        *   :ref:`User Scalability <NFR-CAP-002>`
 
-      Rel(handler, logic, "Invokes")
-      Rel(logic, dal, "Reads/Writes")
-      Rel(dal, db, "Persists State")
-      Rel(logic, publisher, "Emits Domain Events")
+.. _BB-TNT-001:
 
-**Structure**:
-- **API Handler**: Entry point (triggered by API Gateway).
-- **Domain Logic**: Core business logic, agnostic of infrastructure where possible.
-- **Data Access Layer**: Repository pattern to access data stores.
-- **Data Store**: Dedicated storage ensuring loose coupling.
+*   **[BB-TNT-001] Tenant Service**:
+    *   **Responsibility**: Manages Tenant lifecycle (onboarding, configuration, suspension).
+    *   **Related FRs**:
 
+        *   :ref:`User Invitation <FR-TENANT-001>`
+        *   :ref:`User Deletion <FR-TENANT-002>`
+        *   :ref:`Contract Modification <FR-TENANT-003>`
+        *   :ref:`User Role Management <FR-TENANT-004>`
+        *   :ref:`User Status Management <FR-TENANT-006>`
+        *   :ref:`Invitation Resend <FR-TENANT-007>`
+        *   :ref:`Tenant Status Management <FR-OPS-001>`
+        *   :ref:`Tenant Deletion <FR-OPS-002>`
+        *   :ref:`Operator JIT Provisioning <FR-SYS-004>`
+    *   **Related NFRs**:
 
+        *   :ref:`Tenant Scalability <NFR-CAP-001>`
+        *   :ref:`Data Residency <NFR-DATA-001>`
+
+.. _BB-FLG-001:
+
+*   **[BB-FLG-001] Feature Flag Service**:
+    *   **Responsibility**: Delivers dynamic configuration and feature toggles to the Application.
+    *   **Related FRs**:
+
+        *   :ref:`Flag Configuration <FR-FLAG-001>`
+        *   :ref:`Flag Delivery <FR-FLAG-002>`
+    *   **Related NFRs**:
+
+        *   :ref:`API Latency <NFR-PERF-002>`
+
+.. _BB-BIL-001:
+
+*   **[BB-BIL-001] Billing Service**:
+    *   **Responsibility**: Aggregates usage metrics and interfaces with external Billing System.
+    *   **Related FRs**:
+
+        *   :ref:`Billing Event Persistence <FR-BILL-001>`
+        *   :ref:`Billing Event Ingestion <FR-BILL-002>`
+        *   :ref:`Billing Data Export <FR-BILL-003>`
+    *   **Related NFRs**:
+
+        *   :ref:`Backup and Redundancy <NFR-OPS-004>`
+
+.. _BB-AUD-001:
+
+*   **[BB-AUD-001] Audit Service**:
+    *   **Responsibility**: Ingests and archives security and operational logs.
+    *   **Related FRs**:
+
+        *   :ref:`Audit Log Collection <FR-LOG-001>`
+        *   :ref:`Audit Log Export <FR-LOG-002>`
+        *   :ref:`Control Plane Auditing <FR-LOG-003>`
+    *   **Related NFRs**:
+
+        *   :ref:`Continuous Monitoring <NFR-MON-001>`
+
+.. _BB-EVT-001:
+
+*   **[BB-EVT-001] Event Bus**:
+    *   **Responsibility**: Asynchronous message broker for decoupling services (Publish/Subscribe pattern).
+    *   **Related FRs**:
+
+        *   Infrastructure component supporting all Event-Driven FRs.
+    *   **Related NFRs**:
+
+        *   :ref:`Load Balancing and Failover <NFR-OPS-003>`
+
+Internal Structure
+------------------
+The internal structure of each microservice follows a standard **Layered / Hexagonal Architecture** to ensure testability and consistency.
+For the detailed component pattern, see :doc:`../../adr/decisions/architecture-style`.

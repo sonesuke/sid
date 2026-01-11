@@ -8,7 +8,7 @@ This constitution inherits all principles from the :doc:`Main Specification Cons
 
 **Architectural Decision Records (ADRs)**
 - All significant architectural decisions MUST be recorded as ADRs in `doc/adr`.
-- ADRs SHOULD follow the [Madr](https://adr.github.io/madr/) template.
+- ADRs SHOULD follow the `Madr <https://adr.github.io/madr/>`_ template.
 
 **Diagramming Standards**
 - **Format**: Diagrams SHOULD be defined using Mermaid.js code blocks where possible for version control.
@@ -17,6 +17,13 @@ This constitution inherits all principles from the :doc:`Main Specification Cons
 **References**
 - Architecture views MUST reference Functional Requirements (FR) and Non-Functional Requirements (NFR) using their identifiers.
 - Architecture views SHOULD NOT restate requirement text.
+
+**ID Naming Convention**
+- Architectural Elements and Rules SHALL be assigned unique Reference IDs to facilitate traceability.
+    - **CTX-{Element}**: Context View Elements
+    - **BB-{Component}**: Building Block Elements
+    - **DEP-{Topic}**: Deployment Elements
+    - **CC-{Topic}-{Number}**: Cross-cutting Rules (e.g., `CC-AUTH-001`)
 
 Architectural Views and Their Roles
 -----------------------------------
@@ -116,17 +123,29 @@ Cross-cutting Concepts
 ~~~~~~~~~~~~~~~~~~~~~~
 
 **Purpose**:
-- Describe architectural mechanisms that apply across multiple building blocks.
+- Define the **"Design Constitution"**: the permanent rules, principles, and mechanisms that apply consistently across all architectural elements.
+- It is the "Physical Laws" of the system that every component must obey.
 
-**Scope**:
-- Security, authentication, authorization
-- Logging, monitoring, and observability
-- Configuration, multi-tenancy, and data isolation
+**Scope (Typical Topics)**:
+1.  **Authentication & Authorization**: (e.g., "Delegate to External IdP", "Role + Scope model").
+2.  **Error Handling**: (e.g., "Map internal exceptions to standard error codes").
+3.  **Logging & Auditing**: (e.g., "Mandatory Correlation ID", "No PII in logs").
+4.  **Security**: (e.g., "Zero Trust", "TLS everywhere").
+5.  **Data & Transactions**: (e.g., "Idempotency", "Eventual Consistency", "No Distributed Tx").
+6.  **API Design**: (e.g., "REST + JSON", "Versioning rules").
+7.  **Observability**: (e.g., "SLI/SLO driven").
 
 **Rules**:
-- Cross-cutting Concepts explain **how** requirements are realized structurally.
-- Detailed requirement definitions remain in the Specification layer.
-- Concepts SHALL be consistent across all relevant views.
+- **DO NOT** write component-specific specific logic (Use Building Block View).
+- **DO NOT** write ADR rationale or history (Use ADRs).
+- **DO NOT** write generic best practices; only document rules adopted by this system.
+- Cross-cutting Concepts should be viewed as **"Permanent Rules extracted from ADRs"**.
+- Consistent with NFRs (Requirements) and ADRs (Decisions).
+
+**Operational Rules**:
+1.  **Promotion**: If an ADR is referenced 2-3 times with the same reasoning across different contexts, it is a candidate for promotion to a Cross-cutting Concept (CC).
+2.  **Stability**: Once promoted to a CC, the rule represents a stable "Institution". The original ADR may be detached or superseded to prevent regression.
+3.  **Exceptions**: Any ADR that violates a Cross-cutting Concept MUST be explicitly labeled as an **"Exception ADR"** with strong justification.
 
 Dependency Direction
 ~~~~~~~~~~~~~~~~~~~~

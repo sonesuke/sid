@@ -15,7 +15,7 @@ Before implementation begins, the following core architectural decisions MUST be
 
 Directory Structure & Naming
 ----------------------------
-ADRs are stored in `doc/adr/` and follow a strict naming convention to ensure ordering.
+ADRs are stored in `doc/adr/decisions/` and follow a strict naming convention to ensure ordering.
 
 **Structure**:
 
@@ -24,19 +24,27 @@ ADRs are stored in `doc/adr/` and follow a strict naming convention to ensure or
     doc/adr/
     |-- constitution.rst       # This file (Rules)
     |-- index.rst              # Table of Contents
-    |-- template.rst           # Copy this to create new ADRs
-    |-- 0001-language.rst      # Sequential ID and kebab-case title
-    |-- 0002-database.rst
-    `-- ...
+    |-- decisions/             # Stored decisions
+        |-- language-selection.rst
+        |-- database-selection.rst
+        `-- ...
 
 **Naming Convention**:
-- Filename: ``NNNN-short-title.rst``
-- ``NNNN``: Monotonic integer, distinct (e.g., 0001, 0002).
-- ``short-title``: Kebab-case description (e.g., ``event-bus-selection``).
+- Filename: ``short-title.rst``
+- Title: ``[ADR-{Category}-{Number}] Title Case Name``
+- **Format**: ``ADR-{Category}-{Number}``
+    - ``Category``: 3-4 letter code (e.g., ``ARCH``, ``AUTH``, ``DATA``, ``INF``, ``TECH``).
+    - ``Number``: Monotonic integer within category (e.g., 001).
+- **Example**: ``[ADR-AUTH-001] Select Auth Provider``
 
-Lifecycle
----------
-- **Proposed**: Draft state, under review.
-- **Accepted**: Approved and binding.
-- **Deprecated**: No longer valid due to newer decisions.
-- **Superseded**: Replaced by a specific newer ADR (reference the new ID).
+Required Structure
+------------------
+ADRs SHOULD follow the **Madr** template structure. Key sections include:
+
+1.  **Context and Problem Statement**: What is the issue? Why is it a problem?
+2.  **Decision Drivers**: Forces, constraints, and requirements driving the decision.
+3.  **Considered Options**: List of alternatives evaluated (including "do nothing").
+4.  **Decision Outcome**: The selected option and the justification (Rational).
+5.  **Consequences**:
+    *   **Positive**: Benefits, improvements.
+    *   **Negative**: Trade-offs, new debts, complexity.

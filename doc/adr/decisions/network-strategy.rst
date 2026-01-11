@@ -1,5 +1,5 @@
-ADR 0008: Adopt Identity-Based Security (No VPC) for Serverless Compute
-=====================================================================
+[ADR-INF-001] Adopt Identity-Based Security (No VPC) for Serverless Compute
+=============================================================================
 
 Status
 ------

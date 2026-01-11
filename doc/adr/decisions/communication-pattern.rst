@@ -1,9 +1,5 @@
-ADR-0002: Service Communication Pattern (Sync vs Async)
-=======================================================
-
-* Status: Proposed
-* Deciders: Project Team
-* Date: 2026-01-11
+[ADR-ARCH-002] Service Communication Pattern (Sync vs Async)
+============================================================
 
 Context and Problem Statement
 -----------------------------

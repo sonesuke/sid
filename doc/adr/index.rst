@@ -1,12 +1,10 @@
 Architecture Decision Records
 =============================
-Architecture Decision Records
-=============================
 
 This directory contains the Architecture Decision Records (ADRs) for the project.
 
 **Creating a new ADR**:
-Copy :doc:`template` to a new file named `XXXX-title.rst` (e.g., `0001-language-selection.rst`).
+Create a new file in `decisions/` named `NNNN-short-title.rst` following the structure defined in :doc:`constitution`.
 
 Indices
 -------
@@ -15,5 +13,4 @@ Indices
    :glob:
 
    constitution
-   template
-   *
+   decisions/*

@@ -1,5 +1,5 @@
-ADR 0007: Select Azure Entra ID External Identities for Authentication
-================================================================
+[ADR-AUTH-002] Select Azure Entra ID External Identities for Authentication
+============================================================================
 
 Status
 ------

@@ -1,9 +1,5 @@
-ADR-0003: State Management (Stateful vs Stateless)
-====================================================
-
-* Status: Proposed
-* Deciders: Project Team
-* Date: 2026-01-11
+[ADR-ARCH-003] State Management (Stateful vs Stateless)
+========================================================
 
 Context and Problem Statement
 -----------------------------

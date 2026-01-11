@@ -1,5 +1,5 @@
-ADR 0006: Adopt Microservices Architecture
-=========================================
+[ADR-ARCH-001] Adopt Microservices Architecture
+===============================================
 
 Status
 ------
@@ -42,3 +42,40 @@ Positive:
 Negative:
 - **Integration Complexity**: Debugging across distributed services is harder; requires robust Distributed Tracing (see FR-LOG).
 - **Vendor Lock-in**: Heavy reliance on specific managed services makes porting to another cloud provider difficult (accepted risk).
+
+Internal Structure
+------------------
+To ensure testability and consistency across microservices, we enforce a standard **Layered / Hexagonal Architecture**.
+
+**Decision**:
+All microservices SHALL be structured with the following layers:
+
+1.  **Transport / Adapter Layer (API Handler)**
+    - Responsibility: Receive events (HTTP/EventBridge), validate input, invoke Domain Logic.
+    - Technology: AWS Lambda Handler, API Gateway integration.
+2.  **Domain Logic Layer (Core)**
+    - Responsibility: Implement business rules, state transitions, and invariants.
+    - Constraint: **PURE CODE**. No dependencies on AWS SDKs or external frameworks.
+3.  **Data Access / Infrastructure Layer (Repository)**
+    - Responsibility: Persist state, publish events, call external APIs.
+    - Technology: DynamoDB SDK, HTTP Clients.
+
+**Component Diagram**:
+
+.. mermaid::
+   
+   C4Component
+      title Generic Microservice Component Diagram
+
+      Container_Boundary(svc, "Microservice Boundary") {
+         Component(handler, "API Handler", "Primary Adapter", "Validates input, calls domain logic")
+         Component(logic, "Domain Logic", "Core", "Business rules, State transitions")
+         Component(dal, "Data Access Layer", "Secondary Adapter", "Abstracts DB interactions")
+         Component(db, "Service Data Store", "NoSQL / SQL", "Private state for this service")
+         Component(publisher, "Event Publisher", "Secondary Adapter", "Publishes to Event Bus")
+      }
+
+      Rel(handler, logic, "Invokes")
+      Rel(logic, dal, "Reads/Writes")
+      Rel(dal, db, "Persists State")
+      Rel(logic, publisher, "Emits Domain Events")

@@ -1,9 +1,5 @@
-ADR-0005: Authentication Method Implementation
-==============================================
-
-* Status: Proposed
-* Deciders: Project Team
-* Date: 2026-01-11
+[ADR-AUTH-001] Authentication Method Implementation
+==================================================
 
 Context and Problem Statement
 -----------------------------

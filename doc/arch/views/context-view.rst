@@ -37,15 +37,36 @@ The following actors and systems interact with the SaaS Foundation Platform.
 
 Actors
 ~~~~~~
-- **Tenant User**: :ref:`ACT-USER <ACT-USER>`
-- **Platform Operator**: :ref:`ACT-OPS <ACT-OPS>`
-- **Auditor**: :ref:`ACT-AUDIT <ACT-AUDIT>`
-- **Developer**: :ref:`ACT-DEV <ACT-DEV>`
+.. _CTX-ACT-001:
+
+*   **[CTX-ACT-001] Tenant User**: :ref:`ACT-USER <ACT-USER>`
+
+.. _CTX-ACT-002:
+
+*   **[CTX-ACT-002] Platform Operator**: :ref:`ACT-OPS <ACT-OPS>`
+
+.. _CTX-ACT-003:
+
+*   **[CTX-ACT-003] Auditor**: :ref:`ACT-AUDIT <ACT-AUDIT>`
+
+.. _CTX-ACT-004:
+
+*   **[CTX-ACT-004] Developer**: :ref:`ACT-DEV <ACT-DEV>`
 
 External Systems
 ~~~~~~~~~~~~~~~~
-- **Managed Application**: :ref:`TERM-APP-TARGET <TERM-APP-TARGET>`
-- **External Billing System**: :ref:`ACT-BILLING <ACT-BILLING>`
+.. _CTX-EXT-001:
+
+*   **[CTX-EXT-001] Managed Application**: :ref:`TERM-APP-TARGET <TERM-APP-TARGET>`
+
+.. _CTX-EXT-002:
+
+*   **[CTX-EXT-002] External Billing System**: :ref:`ACT-BILLING <ACT-BILLING>`
+
+.. _CTX-EXT-003:
+
+*   **[CTX-EXT-003] External Identity Provider**: OIDC-compliant IdP (e.g., Azure Entra ID).
+    *   See :doc:`../../adr/decisions/authentication-provider`.
 
 Scope Boundaries
 ----------------
