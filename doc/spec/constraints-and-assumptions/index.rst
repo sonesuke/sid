@@ -32,7 +32,7 @@ CON-SEC-003 Encryption in Transit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 All communications between components and external systems SHALL be encrypted using TLS 1.2 or higher.
 
-**Rationale**: Security baseline requirement.
+**Rationale**: NIST CSF 2.0 / ISO 27001 - Encryption in transit.
 
 **Impacts**: :ref:`NFR-SEC-001`
 
@@ -42,7 +42,7 @@ CON-SEC-004 Encryption at Rest
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 All persistent data SHALL be encrypted at rest using AES-256 or equivalent.
 
-**Rationale**: Security baseline requirement.
+**Rationale**: NIST CSF 2.0 / ISO 27001 - Encryption at rest.
 
 **Impacts**: :ref:`NFR-SEC-002`
 
@@ -95,7 +95,7 @@ CON-DATA-001 Data Residency
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 All customer data SHALL be stored exclusively in data centers located in Japan or the European Union.
 
-**Rationale**: Data sovereignty and regulatory compliance.
+**Rationale**: GDPR / APPI - Cross-border data transfer restrictions.
 
 **Impacts**: :ref:`NFR-DATA-001`
 
