@@ -21,4 +21,4 @@ help:
 
 pdf:
 	@$(SPHINXBUILD) -M singlehtml "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-	pandoc $(BUILDDIR)/singlehtml/index.html -o ../specification.pdf --pdf-engine=pdflatex --metadata title="Project Specification"
+	pandoc $(BUILDDIR)/singlehtml/index.html -o ../specification.pdf --pdf-engine=pdflatex --resource-path=$(BUILDDIR)/singlehtml --metadata title="Project Specification"

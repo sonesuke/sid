@@ -79,7 +79,6 @@ Identifier Assignment
     +-------------------------+-------------+------------------------------------+
     | Category                | ID Prefix   | Directory                          |
     +=========================+=============+====================================+
-
     | Terminology             | TERM        | doc/spec/terminology               |
     +-------------------------+-------------+------------------------------------+
     | Functional Requirement  | FR          | doc/spec/functional-requirements   |
