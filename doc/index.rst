@@ -6,5 +6,6 @@ Documentation
    :caption: Contents:
 
    constitution
+   arch/architecture-description
    spec/index
    adr/index
