@@ -9,7 +9,14 @@ The :ref:`TERM-SYS-CP` SHALL persistently record billable events triggers receiv
 
 **Realized by**: :ref:`API-BILL`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Encryption at Rest <NFR-SEC-002>`, :ref:`Data Residency <NFR-DATA-001>`, :ref:`Tenant Scalability <NFR-CAP-001>`, :ref:`Availability SLO <NFR-OPS-001>`, :ref:`Backup and Redundancy <NFR-OPS-004>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Encryption at Rest <NFR-SEC-002>`
+*   :ref:`Data Residency <NFR-DATA-001>`
+*   :ref:`Tenant Scalability <NFR-CAP-001>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
+*   :ref:`Backup and Redundancy <NFR-OPS-004>`
 
 .. _FR-BILL-002:
 
@@ -19,7 +26,12 @@ The system SHALL provide an API (:ref:`API-BILL`) that allows :ref:`TERM-APP-TAR
 
 **Realized by**: :ref:`API-BILL`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Key Management <NFR-SEC-004>`, :ref:`Availability SLO <NFR-OPS-001>`, :ref:`Load Balancing and Failover <NFR-OPS-003>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Key Management <NFR-SEC-004>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
+*   :ref:`Load Balancing and Failover <NFR-OPS-003>`
 
 .. _FR-BILL-003:
 
@@ -29,4 +41,10 @@ The :ref:`TERM-SYS-CP` SHALL provide an interface for :ref:`External Billing Sys
 
 **Realized by**: :ref:`API-BILL`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Key Management <NFR-SEC-004>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Data Residency <NFR-DATA-001>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Key Management <NFR-SEC-004>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Data Residency <NFR-DATA-001>`
+*   :ref:`Availability SLO <NFR-OPS-001>`

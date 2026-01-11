@@ -10,4 +10,9 @@ When a :ref:`Tenant <DAT-TENANT>` is Suspended, the system SHALL revoke access f
 
 **Realized by**: :ref:`Operator Console <IF-OPS-CONSOLE>`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Tenant Scalability <NFR-CAP-001>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Tenant Scalability <NFR-CAP-001>`
+*   :ref:`Availability SLO <NFR-OPS-001>`

@@ -10,7 +10,12 @@ This process SHALL create a :ref:`User Invitation <DAT-INVITE>` record.
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`User Scalability <NFR-CAP-002>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`User Scalability <NFR-CAP-002>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
 
 .. _FR-TENANT-002:
 
@@ -21,7 +26,12 @@ When a user is deleted, the system SHALL invalidate all active :ref:`Sessions <D
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Encryption at Rest <NFR-SEC-002>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Encryption at Rest <NFR-SEC-002>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
 
 .. _FR-TENANT-003:
 
@@ -31,7 +41,12 @@ The :ref:`TERM-SYS-CP` SHALL allow only Tenant Owners to modify the tenant's sub
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Tenant Scalability <NFR-CAP-001>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Tenant Scalability <NFR-CAP-001>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
 
 .. _FR-TENANT-004:
 
@@ -42,7 +57,11 @@ When a role is updated, the system SHALL invalidate all active :ref:`Sessions <D
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
 
 .. _FR-TENANT-006:
 
@@ -53,4 +72,8 @@ When a user is Disabled, the system SHALL invalidate all active :ref:`Sessions <
 
 **Realized by**: :ref:`Tenant Administration Console <IF-TENANT-CONSOLE>`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Availability SLO <NFR-OPS-001>`

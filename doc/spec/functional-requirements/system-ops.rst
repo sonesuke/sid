@@ -8,7 +8,12 @@ FR-SYS-001 Application Registration
 The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-DEV` to register a new :ref:`Managed Application <DAT-APP>`.
 The system SHALL generate a unique Application ID upon registration.
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Key Management <NFR-SEC-004>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Key Management <NFR-SEC-004>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
 
 .. _FR-SYS-002:
 
@@ -18,7 +23,13 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-DEV` to issue :ref:`API Access Keys
 The system SHALL display the Client Secret only once upon issuance.
 The system SHALL allow :ref:`ACT-DEV` to revoke existing keys.
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Encryption at Rest <NFR-SEC-002>`, :ref:`Key Management <NFR-SEC-004>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Encryption at Rest <NFR-SEC-002>`
+*   :ref:`Key Management <NFR-SEC-004>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
 
 .. _FR-SYS-003:
 
@@ -27,4 +38,8 @@ FR-SYS-003 Application Lifecycle Management
 The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-DEV` to update the configuration of a :ref:`Managed Application <DAT-APP>`.
 The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-DEV` to change the :ref:`Status <DAT-APP>` (e.g., Disable) to block access.
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Availability SLO <NFR-OPS-001>`

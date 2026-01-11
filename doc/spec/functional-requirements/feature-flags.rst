@@ -9,7 +9,12 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-OPS` to configure :ref:`Feature Fla
 
 **Realized by**: :ref:`Operator Console <IF-OPS-CONSOLE>`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Least Privilege <NFR-SEC-005>`, :ref:`Tenant Scalability <NFR-CAP-001>`, :ref:`Availability SLO <NFR-OPS-001>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Least Privilege <NFR-SEC-005>`
+*   :ref:`Tenant Scalability <NFR-CAP-001>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
 
 .. _FR-FLAG-002:
 
@@ -19,4 +24,9 @@ The system SHALL provide an interface via :ref:`API-FLAG` for :ref:`TERM-APP-TAR
 
 **Realized by**: :ref:`API-FLAG`
 
-**Quality Attributes**: :ref:`Encryption in Transit <NFR-SEC-001>`, :ref:`Key Management <NFR-SEC-004>`, :ref:`Availability SLO <NFR-OPS-001>`, :ref:`Load Balancing and Failover <NFR-OPS-003>`
+**Quality Attributes**:
+
+*   :ref:`Encryption in Transit <NFR-SEC-001>`
+*   :ref:`Key Management <NFR-SEC-004>`
+*   :ref:`Availability SLO <NFR-OPS-001>`
+*   :ref:`Load Balancing and Failover <NFR-OPS-003>`
