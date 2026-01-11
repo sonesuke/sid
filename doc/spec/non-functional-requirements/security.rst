@@ -24,7 +24,7 @@ NFR-SEC-003 Multi-Factor Authentication
 The system SHALL support Multi-Factor Authentication (MFA) for user login.
 MFA options SHALL include TOTP (Time-based One-Time Password) and WebAuthn.
 
-**Rationale**: NIST CSF 2.0 - Strong authentication.
+**Constrained by**: :ref:`CON-SEC-005`
 
 .. _NFR-SEC-004:
 
@@ -36,7 +36,7 @@ The system SHALL implement secure key management practices including:
 *   Periodic key rotation (at least annually).
 *   Secure key destruction upon expiration or revocation.
 
-**Rationale**: NIST CSF 2.0 - Data protection.
+**Constrained by**: :ref:`CON-SEC-006`
 
 .. _NFR-SEC-005:
 
@@ -47,7 +47,7 @@ The system SHALL enforce the principle of least privilege:
 *   Users and services SHALL be granted only the minimum permissions required.
 *   Separation of duties SHALL be implemented for sensitive operations.
 
-**Rationale**: NIST CSF 2.0 - Access control.
+**Constrained by**: :ref:`CON-SEC-007`
 
 .. _NFR-SEC-006:
 
@@ -61,4 +61,4 @@ The system SHOULD implement adaptive (risk-based) authentication that considers:
 
 When elevated risk is detected, additional authentication factors SHALL be required.
 
-**Rationale**: NIST CSF 2.0 - Context-aware security.
+**Constrained by**: :ref:`CON-SEC-008`

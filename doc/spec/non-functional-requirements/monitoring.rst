@@ -11,4 +11,4 @@ The system SHALL implement continuous monitoring capabilities:
 *   User and Entity Behavior Analytics (UEBA) for anomaly detection.
 *   Automated alerting for suspicious activities.
 
-**Rationale**: NIST CSF 2.0 - Detection.
+**Constrained by**: :ref:`CON-MON-001`

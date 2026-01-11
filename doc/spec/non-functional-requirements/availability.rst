@@ -27,7 +27,7 @@ The system SHALL implement:
 *   Automatic failover to prevent single points of failure.
 *   Geographic redundancy where feasible.
 
-**Rationale**: NIST CSF 2.0 - Availability.
+**Constrained by**: :ref:`CON-OPS-003`
 
 .. _NFR-OPS-004:
 
@@ -40,4 +40,4 @@ The system SHALL implement backup and recovery capabilities:
 *   Backup encryption.
 *   Regular restore testing (at least annually).
 
-**Rationale**: NIST CSF 2.0 - Recovery.
+**Constrained by**: :ref:`CON-OPS-004`

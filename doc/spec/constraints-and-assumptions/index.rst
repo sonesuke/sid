@@ -46,6 +46,46 @@ All persistent data SHALL be encrypted at rest using AES-256 or equivalent.
 
 **Impacts**: :ref:`NFR-SEC-002`
 
+.. _CON-SEC-005:
+
+CON-SEC-005 Multi-Factor Authentication
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL support Multi-Factor Authentication (MFA) for user login.
+
+**Rationale**: NIST CSF 2.0 - Strong authentication.
+
+**Impacts**: :ref:`NFR-SEC-003`
+
+.. _CON-SEC-006:
+
+CON-SEC-006 Key Management
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL implement secure key management practices.
+
+**Rationale**: NIST CSF 2.0 - Data protection.
+
+**Impacts**: :ref:`NFR-SEC-004`
+
+.. _CON-SEC-007:
+
+CON-SEC-007 Least Privilege
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL enforce the principle of least privilege.
+
+**Rationale**: NIST CSF 2.0 - Access control.
+
+**Impacts**: :ref:`NFR-SEC-005`
+
+.. _CON-SEC-008:
+
+CON-SEC-008 Adaptive Authentication
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHOULD implement adaptive (risk-based) authentication.
+
+**Rationale**: NIST CSF 2.0 - Context-aware security.
+
+**Impacts**: :ref:`NFR-SEC-006`
+
 Data Constraints
 ----------------
 
@@ -104,6 +144,39 @@ Scheduled maintenance windows SHALL be defined and communicated in advance. (Det
 **Rationale**: Operational planning.
 
 **Impacts**: :ref:`NFR-OPS-002`
+
+.. _CON-OPS-003:
+
+CON-OPS-003 Load Balancing and Failover
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL implement load balancing and automatic failover.
+
+**Rationale**: NIST CSF 2.0 - Availability.
+
+**Impacts**: :ref:`NFR-OPS-003`
+
+.. _CON-OPS-004:
+
+CON-OPS-004 Backup and Redundancy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL implement backup and recovery capabilities following the 3-2-1 rule.
+
+**Rationale**: NIST CSF 2.0 - Recovery.
+
+**Impacts**: :ref:`NFR-OPS-004`
+
+Monitoring Constraints
+----------------------
+
+.. _CON-MON-001:
+
+CON-MON-001 Continuous Monitoring
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL implement continuous monitoring and anomaly detection.
+
+**Rationale**: NIST CSF 2.0 - Detection.
+
+**Impacts**: :ref:`NFR-MON-001`
 
 Development Constraints
 -----------------------
