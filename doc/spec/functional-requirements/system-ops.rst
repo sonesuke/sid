@@ -17,9 +17,9 @@ The system SHALL generate a unique Application ID upon registration.
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-VAL-400`
-*   :ref:`ERR-VAL-409`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Invalid Input <ERR-VAL-400>`
+*   :ref:`Conflict <ERR-VAL-409>`
 
 .. _FR-SYS-002:
 
@@ -39,8 +39,8 @@ The system SHALL allow :ref:`ACT-DEV` to revoke existing keys.
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-RES-404`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Resource Not Found <ERR-RES-404>`
 
 .. _FR-SYS-003:
 
@@ -57,8 +57,8 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-DEV` to change the :ref:`Status <DA
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-RES-404`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Resource Not Found <ERR-RES-404>`
 
 .. _FR-SYS-004:
 
@@ -79,5 +79,5 @@ The :ref:`TERM-SYS-CP` SHALL automatically provision a :ref:`User <DAT-USER>` re
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-401`
-*   :ref:`ERR-SYS-500`
+*   :ref:`Invalid Credentials <ERR-AUTH-401>`
+*   :ref:`Internal Error <ERR-SYS-500>`

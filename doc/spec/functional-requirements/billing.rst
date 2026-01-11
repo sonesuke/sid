@@ -22,8 +22,8 @@ The :ref:`TERM-SYS-CP` SHALL persistently record billable events triggers receiv
 
 **Error Conditions**:
 
-*   :ref:`ERR-SYS-500`
-*   :ref:`ERR-SYS-503`
+*   :ref:`Internal Error <ERR-SYS-500>`
+*   :ref:`Service Unavailable <ERR-SYS-503>`
 
 .. _FR-BILL-002:
 
@@ -44,9 +44,9 @@ The system SHALL provide an API (:ref:`API-BILL`) that allows :ref:`TERM-APP-TAR
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-401`
-*   :ref:`ERR-VAL-400`
-*   :ref:`ERR-RATE-429`
+*   :ref:`Invalid Credentials <ERR-AUTH-401>`
+*   :ref:`Invalid Input <ERR-VAL-400>`
+*   :ref:`Rate Limit Exceeded <ERR-RATE-429>`
 
 .. _FR-BILL-003:
 
@@ -68,6 +68,6 @@ The :ref:`TERM-SYS-CP` SHALL provide an interface for :ref:`External Billing Sys
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-401`
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-RES-404`
+*   :ref:`Invalid Credentials <ERR-AUTH-401>`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Resource Not Found <ERR-RES-404>`

@@ -22,8 +22,8 @@ The :ref:`TERM-SYS-CP` SHALL collect security and operational logs from all comp
 
 **Error Conditions**:
 
-*   :ref:`ERR-SYS-500`
-*   :ref:`ERR-SYS-503`
+*   :ref:`Internal Error <ERR-SYS-500>`
+*   :ref:`Service Unavailable <ERR-SYS-503>`
 
 .. _FR-LOG-002:
 
@@ -44,8 +44,8 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-AUDIT` to export :ref:`Audit Logs <
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-SYS-500`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Internal Error <ERR-SYS-500>`
 
 .. _FR-LOG-003:
 
@@ -62,4 +62,4 @@ The :ref:`TERM-SYS-CP` SHALL record its own state-changing operations (e.g., Ten
 
 **Error Conditions**:
 
-*   :ref:`ERR-SYS-500`
+*   :ref:`Internal Error <ERR-SYS-500>`

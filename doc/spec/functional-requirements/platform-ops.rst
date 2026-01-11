@@ -21,8 +21,8 @@ When a :ref:`Tenant <DAT-TENANT>` is Suspended, the system SHALL revoke access f
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-RES-404`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Resource Not Found <ERR-RES-404>`
 
 .. _FR-OPS-002:
 
@@ -48,9 +48,9 @@ The :ref:`TERM-SYS-CP` SHALL allow :ref:`ACT-OPS` to permanently delete a :ref:`
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-RES-404`
-*   :ref:`ERR-RES-410`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Resource Not Found <ERR-RES-404>`
+*   :ref:`Resource Gone <ERR-RES-410>`
 
 .. _FR-OPS-003:
 
@@ -75,4 +75,4 @@ The :ref:`TERM-SYS-CP` SHALL automatically enforce data retention policies:
 
 **Error Conditions**:
 
-*   :ref:`ERR-SYS-500`
+*   :ref:`Internal Error <ERR-SYS-500>`

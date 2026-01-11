@@ -24,9 +24,9 @@ This process SHALL create a :ref:`User Invitation <DAT-INVITE>` record.
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-VAL-409`
-*   :ref:`ERR-VAL-422`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Conflict <ERR-VAL-409>`
+*   :ref:`Business Rule Violation <ERR-VAL-422>`
 
 .. _FR-TENANT-002:
 
@@ -48,8 +48,8 @@ When a user is deleted, the system SHALL invalidate all active :ref:`Sessions <D
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-RES-404`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Resource Not Found <ERR-RES-404>`
 
 .. _FR-TENANT-003:
 
@@ -70,7 +70,7 @@ The :ref:`TERM-SYS-CP` SHALL allow only Tenant Owners to modify the tenant's sub
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
+*   :ref:`Access Denied <ERR-AUTH-403>`
 
 .. _FR-TENANT-004:
 
@@ -91,8 +91,8 @@ When a role is updated, the system SHALL invalidate all active :ref:`Sessions <D
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-RES-404`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Resource Not Found <ERR-RES-404>`
 
 .. _FR-TENANT-006:
 
@@ -113,8 +113,8 @@ When a user is Disabled, the system SHALL invalidate all active :ref:`Sessions <
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-RES-404`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Resource Not Found <ERR-RES-404>`
 
 .. _FR-TENANT-007:
 
@@ -137,5 +137,5 @@ The :ref:`TERM-SYS-CP` SHALL allow Tenant Owners and Administrators to resend an
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-RES-404`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Resource Not Found <ERR-RES-404>`

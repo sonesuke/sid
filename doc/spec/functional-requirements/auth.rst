@@ -24,9 +24,9 @@ The :ref:`TERM-SYS-CP` SHALL support the following authentication methods for :r
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-401`
-*   :ref:`ERR-AUTH-461`
-*   :ref:`ERR-RATE-429`
+*   :ref:`Invalid Credentials <ERR-AUTH-401>`
+*   :ref:`MFA Required <ERR-AUTH-461>`
+*   :ref:`Rate Limit Exceeded <ERR-RATE-429>`
 
 .. _FR-AUTH-003:
 
@@ -48,9 +48,9 @@ The configuration SHALL be stored in :ref:`SSO Configuration <DAT-SSO-CONFIG>`.
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-VAL-400`
-*   :ref:`ERR-VAL-409`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Invalid Input <ERR-VAL-400>`
+*   :ref:`Conflict <ERR-VAL-409>`
 
 .. _FR-AUTH-004:
 
@@ -73,9 +73,9 @@ Upon successful password reset or change, the system SHALL invalidate all active
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-401`
-*   :ref:`ERR-VAL-422`
-*   :ref:`ERR-RATE-429`
+*   :ref:`Invalid Credentials <ERR-AUTH-401>`
+*   :ref:`Business Rule Violation <ERR-VAL-422>`
+*   :ref:`Rate Limit Exceeded <ERR-RATE-429>`
 
 .. _FR-AUTH-005:
 
@@ -98,8 +98,8 @@ The :ref:`TERM-SYS-CP` SHALL support session invalidation triggers including exp
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-AUTH-440`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Session Expired <ERR-AUTH-440>`
 
 .. _FR-AUTH-006:
 
@@ -122,5 +122,5 @@ The :ref:`TERM-SYS-CP` SHALL allow each :ref:`Tenant <DAT-TENANT>` to configure 
 
 **Error Conditions**:
 
-*   :ref:`ERR-AUTH-403`
-*   :ref:`ERR-VAL-400`
+*   :ref:`Access Denied <ERR-AUTH-403>`
+*   :ref:`Invalid Input <ERR-VAL-400>`
