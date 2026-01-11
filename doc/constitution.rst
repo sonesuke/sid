@@ -104,6 +104,17 @@ Identifier Assignment
 *   **Stability**: IDs SHALL NOT change even if the section title or minor wording changes.
 *   **Deprecation**: If a requirement is removed, keep the ID and mark it as ``(Deprecated)``.
 
+Dependency Model
+^^^^^^^^^^^^^^^^
+- Use Cases define the contextual justification for Functional Requirements.
+- Functional Requirements define system capabilities and serve as the central
+  anchor for traceability.
+- Constraints impose mandatory conditions on Functional and Non-Functional
+  Requirements.
+- Non-Functional Requirements define quality attributes of Functional
+  Requirements.
+- Dependencies SHALL NOT form cycles.
+
 Cross-Referencing
 ^^^^^^^^^^^^^^^^^
 *   **Syntax**: Define targets using ``.. _ID:`` before the header. Reference using ``:ref:`ID```.
