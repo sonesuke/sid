@@ -8,8 +8,8 @@ This section defines the external interfaces provided by the system.
 API-BILL Billing Event API
 --------------------------
 **Type**: REST API
-**Direction**: Input (:ref:`TERM-APP-TARGET` -> :ref:`TERM-SYS-CP`)
-**Purpose**: To report billable operations performed within the managed SaaS applications.
+**Direction**: Bidirectional (:ref:`TERM-APP-TARGET` <-> :ref:`TERM-SYS-CP` / :ref:`ACT-BILLING` <- :ref:`TERM-SYS-CP`)
+**Purpose**: To report billable operations from managed applications and to retrieve billing events for invoicing.
 **Payload**: SHALL include Tenant ID, Timestamp, Event Type, and Quantity.
 
 .. _API-LOG:

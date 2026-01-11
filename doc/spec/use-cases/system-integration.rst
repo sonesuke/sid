@@ -81,3 +81,30 @@ The :ref:`Managed Application <TERM-APP-TARGET>` generates a log entry.
 **Related Requirements**:
 
 *   :ref:`Audit Log Collection <FR-LOG-001>`
+
+.. _UC-SYS-BILL-EXPORT:
+
+UC-SYS-BILL-EXPORT Billing Data Export
+--------------------------------------
+**Actor**: :ref:`External Billing System <ACT-BILLING>` (System)
+
+**Description**:
+The :ref:`External Billing System <ACT-BILLING>` retrieves billing events from the :ref:`Control Plane <TERM-SYS-CP>` to generate invoices and perform reconciliation.
+
+**Trigger**:
+Scheduled job or on-demand request from the :ref:`External Billing System <ACT-BILLING>`.
+
+**Postconditions**:
+
+1. The :ref:`External Billing System <ACT-BILLING>` receives the requested :ref:`Billing Events <DAT-BILL-EVENT>`.
+
+**Scenario**:
+
+1. The :ref:`External Billing System <ACT-BILLING>` requests billing events for a specified period/tenant.
+2. The :ref:`Control Plane <TERM-SYS-CP>` authenticates and authorizes the request.
+3. The :ref:`Control Plane <TERM-SYS-CP>` retrieves matching events from the data store.
+4. The :ref:`Control Plane <TERM-SYS-CP>` returns the event data to the :ref:`External Billing System <ACT-BILLING>`.
+
+**Related Requirements**:
+
+*   :ref:`Billing Data Export <FR-BILL-003>`

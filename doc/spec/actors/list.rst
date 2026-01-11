@@ -35,3 +35,10 @@ ACT-DEV Developer
 -----------------
 The engineer or system administrator responsible for deploying and configuring the :ref:`Managed Application <TERM-APP-TARGET>`.
 Interacts with the system to register applications and manage API credentials.
+
+.. _ACT-BILLING:
+
+ACT-BILLING External Billing System
+-----------------------------------
+A third-party system or internal finance application responsible for processing invoices.
+Interacts with the system to retrieve billing events.
