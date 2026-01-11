@@ -104,3 +104,53 @@ Scheduled maintenance windows SHALL be defined and communicated in advance. (Det
 **Rationale**: Operational planning.
 
 **Impacts**: :ref:`NFR-OPS-002`
+
+Development Constraints
+-----------------------
+
+.. _CON-DEV-001:
+
+CON-DEV-001 Secure Software Development Lifecycle
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+All software development SHALL follow Secure SDLC practices:
+
+*   Security by Design principles.
+*   Static and dynamic code analysis.
+*   Code review for security vulnerabilities.
+*   Dependency vulnerability scanning.
+
+**Rationale**: NIST CSF 2.0 - Software integrity.
+
+**Impacts**: All FRs
+
+.. _CON-DEV-002:
+
+CON-DEV-002 Supply Chain Risk Management
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The project SHALL implement Cyber Supply Chain Risk Management (C-SCRM):
+
+*   Inventory of third-party dependencies.
+*   Regular vulnerability assessment of dependencies.
+*   Risk evaluation of third-party service providers.
+
+**Rationale**: NIST CSF 2.0 - Supply chain security.
+
+**Impacts**: All FRs
+
+Compliance Constraints
+----------------------
+
+.. _CON-COMP-001:
+
+CON-COMP-001 Data Subject Rights
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The system SHALL support data subject rights as required by GDPR and Japan APPI:
+
+*   Right to access personal data.
+*   Right to rectification.
+*   Right to erasure (right to be forgotten).
+*   Data portability.
+
+**Rationale**: Legal compliance with privacy regulations.
+
+**Impacts**: :ref:`FR-TENANT-002`, :ref:`FR-LOG-002`
