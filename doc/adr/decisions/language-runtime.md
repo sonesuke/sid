@@ -1,6 +1,7 @@
 # [ADR-TECH-001] Language and Runtime Selection
 
 ## Context and Problem Statement
+
 We need to select the primary programming language and runtime environment for the backend services Control Plane.
 This decision is governed by **Rule [CC-DEV-001]** (AI-First Development).
 
@@ -17,13 +18,14 @@ This decision is governed by **Rule [CC-DEV-001]** (AI-First Development).
 * **Go** (Golang 1.21+)
 
 ## Decision Outcome
+
 **Chosen Option**: **Python 3.12+**
 
 **Justification**:
 While **Rust** provides superior runtime efficiency (memory/CPU) and is ideal for "Serverless First" from a resource perspective, we select **Python 3.12+** for the following reasons in an AI-driven development context:
-1.  **LLM Proficiency**: Large Language Models have significantly more training data for Python/Boto3/Lambda patterns than Rust/AWS-SDK-Rust. This maximizes the success rate of AI-generated code.
-2.  **Ecosystem Support**: `aws-lambda-powertools-python` and `boto3` are the de-facto standards for AWS, offering richer features and faster updates than their Rust counterparts.
-3.  **Hybrid Approach**: The AI Agent can easily refactor individual performance-critical Lambda functions to **Rust** if observability data indicates a bottleneck, but the default should be the language where the AI is most competent (Python).
+1. **LLM Proficiency**: Large Language Models have significantly more training data for Python/Boto3/Lambda patterns than Rust/AWS-SDK-Rust. This maximizes the success rate of AI-generated code.
+2. **Ecosystem Support**: `aws-lambda-powertools-python` and `boto3` are the de-facto standards for AWS, offering richer features and faster updates than their Rust counterparts.
+3. **Hybrid Approach**: The AI Agent can easily refactor individual performance-critical Lambda functions to **Rust** if observability data indicates a bottleneck, but the default should be the language where the AI is most competent (Python).
 
 ### Positive Consequences
 * **High Quality Generation**: AI produces idiomatic, correct code with high probability.
