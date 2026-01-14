@@ -1,6 +1,7 @@
 # [ADR-ARCH-002] Service Communication Pattern (Sync vs Async)
 
 ## Context and Problem Statement
+
 The system consists of a Control Plane and potentially distributed managed applications or agents.
 We need to decide how these components communicate, specifically balancing coupling, latency, and reliability.
 
@@ -16,7 +17,6 @@ We need to decide how these components communicate, specifically balancing coupl
 * Hybrid (Sync for queries, Async for mutations)
 
 ## Decision Outcome
-[Proposed]: [Option]
 
 ### Positive Consequences
 * ...

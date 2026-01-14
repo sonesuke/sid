@@ -1,6 +1,7 @@
 # [ADR-ARCH-003] State Management (Stateful vs Stateless)
 
 ## Context and Problem Statement
+
 We need to determine if the backend services should maintain session or application state in memory (Stateful) or delegate all state to external stores (Stateless). This impacts scalability and deployment strategies.
 
 ### Decision Drivers
@@ -14,7 +15,6 @@ We need to determine if the backend services should maintain session or applicat
 * Stateful (Sticky sessions)
 
 ## Decision Outcome
-[Proposed]: Stateless
 
 ### Positive Consequences
 * Easy to scale out

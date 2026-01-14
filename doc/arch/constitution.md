@@ -2,28 +2,33 @@
 
 This document defines the rules and conventions specifically for the architecture documentation.
 
-**Relationship to Main Constitution**
-This constitution inherits all principles from the [Main Specification Constitution ](../spec/constitution.md). In case of conflict, the Main Constitution takes precedence for spec-related matters, while this document governs architectural decisions.
+## Relationship to Main Constitution
 
-**Architectural Decision Records (ADRs)**
+This constitution inherits all principles from the [Main Specification Constitution](../spec/constitution.md). In case of conflict, the Main Constitution takes precedence for spec-related matters, while this document governs architectural decisions.
+
+## Architectural Decision Records (ADRs)
+
 - All significant architectural decisions MUST be recorded as ADRs in `doc/adr`.
 - ADRs SHOULD follow the `Madr <https://adr.github.io/madr/>`_ template.
 
-**Diagramming Standards**
+## Diagramming Standards
+
 - **Format**: Diagrams SHOULD be defined using Mermaid.js code blocks where possible for version control.
 - **Model**: The C4 model (Context, Containers, Components, Code) SHALL be used for structural views.
 
-**References**
+## References
+
 - Architecture views MUST reference Functional Requirements (FR) and Non-Functional Requirements (NFR) using their identifiers.
 - Architecture views SHOULD NOT restate requirement text.
 
-**ID Naming Convention**
+## ID Naming Convention
+
 - Architectural Elements and Rules SHALL be assigned unique Reference IDs to facilitate traceability.
-    - **CTX-{Element}**: Context View Elements
-    - **BB-{Component}**: Building Block Elements
-    - **RT-{Number}**: Runtime View Scenarios (e.g., `RT-001`)
-    - **DEP-{Topic}**: Deployment Elements
-    - **CC-{Topic}-{Number}**: Cross-cutting Rules (e.g., `CC-AUTH-001`)
+  - **CTX-{Element}**: Context View Elements
+  - **BB-{Component}**: Building Block Elements
+  - **RT-{Number}**: Runtime View Scenarios (e.g., `RT-001`)
+  - **DEP-{Topic}**: Deployment Elements
+  - **CC-{Topic}-{Number}**: Cross-cutting Rules (e.g., `CC-AUTH-001`)
 
 ## Architectural Views and Their Roles
 
@@ -83,11 +88,11 @@ Views SHALL NOT overlap in responsibility.
 - **RT-{Number}**: Runtime Scenario identifier (e.g., `RT-001`, `RT-002`)
 
 **Required Structure** (per Scenario):
-1.  **Scenario**: Brief description of the runtime behavior.
-2.  **Actors**: List of Building Blocks and external systems involved.
-3.  **Flow**: Step-by-step sequence, preferably as a **Mermaid Sequence Diagram**.
-4.  **Cross-cutting**: Which CC rules are "active" during this flow.
-5.  **Requirements**: Related FR/NFR references.
+1. **Scenario**: Brief description of the runtime behavior.
+2. **Actors**: List of Building Blocks and external systems involved.
+3. **Flow**: Step-by-step sequence, preferably as a **Mermaid Sequence Diagram**.
+4. **Cross-cutting**: Which CC rules are "active" during this flow.
+5. **Requirements**: Related FR/NFR references.
 
 **Typical Scenarios**:
 - User Login (Authentication flow)
@@ -138,13 +143,13 @@ Views SHALL NOT overlap in responsibility.
 - It is the "Physical Laws" of the system that every component must obey.
 
 **Scope (Typical Topics)**:
-1.  **Authentication & Authorization**: (e.g., "Delegate to External IdP", "Role + Scope model").
-2.  **Error Handling**: (e.g., "Map internal exceptions to standard error codes").
-3.  **Logging & Auditing**: (e.g., "Mandatory Correlation ID", "No PII in logs").
-4.  **Security**: (e.g., "Zero Trust", "TLS everywhere").
-5.  **Data & Transactions**: (e.g., "Idempotency", "Eventual Consistency", "No Distributed Tx").
-6.  **API Design**: (e.g., "REST + JSON", "Versioning rules").
-7.  **Observability**: (e.g., "SLI/SLO driven").
+1. **Authentication & Authorization**: (e.g., "Delegate to External IdP", "Role + Scope model").
+2. **Error Handling**: (e.g., "Map internal exceptions to standard error codes").
+3. **Logging & Auditing**: (e.g., "Mandatory Correlation ID", "No PII in logs").
+4. **Security**: (e.g., "Zero Trust", "TLS everywhere").
+5. **Data & Transactions**: (e.g., "Idempotency", "Eventual Consistency", "No Distributed Tx").
+6. **API Design**: (e.g., "REST + JSON", "Versioning rules").
+7. **Observability**: (e.g., "SLI/SLO driven").
 
 **Rules**:
 - **DO NOT** write component-specific specific logic (Use Building Block View).
@@ -154,9 +159,9 @@ Views SHALL NOT overlap in responsibility.
 - Consistent with NFRs (Requirements) and ADRs (Decisions).
 
 **Operational Rules**:
-1.  **Promotion**: If an ADR is referenced 2-3 times with the same reasoning across different contexts, it is a candidate for promotion to a Cross-cutting Concept (CC).
-2.  **Stability**: Once promoted to a CC, the rule represents a stable "Institution". The original ADR may be detached or superseded to prevent regression.
-3.  **Exceptions**: Any ADR that violates a Cross-cutting Concept MUST be explicitly labeled as an **"Exception ADR"** with strong justification.
+1. **Promotion**: If an ADR is referenced 2-3 times with the same reasoning across different contexts, it is a candidate for promotion to a Cross-cutting Concept (CC).
+2. **Stability**: Once promoted to a CC, the rule represents a stable "Institution". The original ADR may be detached or superseded to prevent regression.
+3. **Exceptions**: Any ADR that violates a Cross-cutting Concept MUST be explicitly labeled as an **"Exception ADR"** with strong justification.
 
 ### Dependency Direction
 

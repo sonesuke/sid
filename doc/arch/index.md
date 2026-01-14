@@ -1,14 +1,17 @@
 # Architecture Description
 
-**Purpose**
-This document describes the architecture of the system, focusing on *how* it satisfies the requirements defined in the [Specification ](../spec/index.md).
+## Purpose
 
-**Stakeholders**
+This document describes the architecture of the system, focusing on *how* it satisfies the requirements defined in the [Specification](../spec/index.md).
+
+## Stakeholders
+
 - Developers
 - Architects
 - System Operators
 
-**Viewpoints**
+## Viewpoints
+
 This documentation follows the **arc42** template and utilizes **C4 model** diagrams.
 
 Contents:

@@ -1,7 +1,7 @@
-[ADR-OPS-001] Deployment Strategy Implementation
-==============================================
+# [ADR-OPS-001] Deployment Strategy Implementation
 
 ## Context and Problem Statement
+
 We need to define a deployment strategy for the production environment that ensures system availability and allows for rapid recovery in case of failures.
 The system serves critical business operations, requiring high availability during updates.
 
@@ -18,13 +18,15 @@ The system serves critical business operations, requiring high availability duri
 * **Recreate**: Stop old, start new (Downtime).
 
 ## Decision Outcome
+
 **Chosen Option**: **Blue-Green Deployment** (Serverless variant)
 
 **Justification**:
 Blue-Green deployment offers the optimal balance between safety and complexity for our Serverless architecture.
-1.  **Instant Rollback**: Switching traffic back to the "Blue" (previous) version is an atomic DNS/Routing change.
-2.  **Verification**: The "Green" (new) version can be fully automated E2E tested in the production environment before receiving real traffic.
-3.  **Serverless Fit**: With Lambda/API Gateway, creating parallel environments (Versions/Aliases) is cheap and fast compared to VM-based replication.
+
+1. **Instant Rollback**: Switching traffic back to the "Blue" (previous) version is an atomic DNS/Routing change.
+2. **Verification**: The "Green" (new) version can be fully automated E2E tested in the production environment before receiving real traffic.
+3. **Serverless Fit**: With Lambda/API Gateway, creating parallel environments (Versions/Aliases) is cheap and fast compared to VM-based replication.
 
 ### Positive Consequences
 * **Safety**: Zero downtime updates guaranteed by atomic switchover.

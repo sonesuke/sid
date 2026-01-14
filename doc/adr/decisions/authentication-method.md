@@ -1,7 +1,7 @@
-[ADR-AUTH-001] Authentication Method Implementation
-==================================================
+# [ADR-AUTH-001] Authentication Method Implementation
 
 ## Context and Problem Statement
+
 We need to define *how* authentication is implemented. Specifically, the mechanism for transmitting identity and validating it across the Control Plane and Managed Apps.
 
 ### Decision Drivers
@@ -16,7 +16,6 @@ We need to define *how* authentication is implemented. Specifically, the mechani
 * API Keys (for M2M only)
 
 ## Decision Outcome
-[Proposed]: JWT (Access/Refresh Tokens)
 
 ### Positive Consequences
 * Stateless verification by services

@@ -1,6 +1,7 @@
 # [ADR-OPS-002] CI/CD Platform Selection
 
 ## Context and Problem Statement
+
 We need a Continuous Integration and Continuous Deployment (CI/CD) platform to automate the build, test, and release processes of our Serverless application.
 The platform must enable our "Build Once, Deploy Many" principle and integrate seamlessly with our source control.
 
@@ -17,14 +18,16 @@ The platform must enable our "Build Once, Deploy Many" principle and integrate s
 * **AWS CodePipeline/CodeBuild** (AWS Native)
 
 ## Decision Outcome
+
 **Chosen Option**: **GitHub Actions**
 
 **Justification**:
 GitHub Actions is the natural choice as our code resides in GitHub.
-1.  **Unified Experience**: CI/CD workflows are defined in the same repository (`.github/workflows`) and results are visible directly in Pull Requests.
-2.  **Security**: Native support for **OIDC (OpenID Connect)** allows us to authenticate with AWS/Azure without storing long-lived access keys (Keyless Authentication).
-3.  **NoOps**: Fully managed SaaS runners eliminate the need to maintain build servers (unlike Jenkins).
-4.  **Ecosystem**: Extensive marketplace of Actions simplifies tasks like "Setup Python", "Login to AWS", "Terraform Apply".
+
+1. **Unified Experience**: CI/CD workflows are defined in the same repository (`.github/workflows`) and results are visible directly in Pull Requests.
+2. **Security**: Native support for **OIDC (OpenID Connect)** allows us to authenticate with AWS/Azure without storing long-lived access keys (Keyless Authentication).
+3. **NoOps**: Fully managed SaaS runners eliminate the need to maintain build servers (unlike Jenkins).
+4. **Ecosystem**: Extensive marketplace of Actions simplifies tasks like "Setup Python", "Login to AWS", "Terraform Apply".
 
 ### Positive Consequences
 * **Developer Velocity**: Fast feedback loops on PRs.

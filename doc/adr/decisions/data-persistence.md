@@ -1,6 +1,7 @@
 # [ADR-DATA-001] Data Persistence Strategy
 
 ## Context and Problem Statement
+
 We need to select the primary data storage technology for the Core Database (Tenants, Users, Config).
 While the domain has some relational aspects, the system prioritizes "Serverless" characteristics (scale-to-zero, minimal operations) and consistent performance at scale.
 
@@ -16,6 +17,7 @@ While the domain has some relational aspects, the system prioritizes "Serverless
 * **Amazon RDS for PostgreSQL** (Provisioned Relational)
 
 ## Decision Outcome
+
 **Chosen Option**: **Amazon DynamoDB**
 
 **Justification**:
