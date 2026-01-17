@@ -1,4 +1,6 @@
-# [ADR-AUTH-001] Authentication Method Implementation
+<a id="ADR-AUTH-001"></a>
+
+# Authentication Method Implementation
 
 ## Context and Problem Statement
 

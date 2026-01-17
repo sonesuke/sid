@@ -1,4 +1,6 @@
-# [ADR-INF-001] Adopt Identity-Based Security (No VPC) for Serverless Compute
+<a id="ADR-INF-001"></a>
+
+# Adopt Identity-Based Security (No VPC) for Serverless Compute
 
 ## Status
 

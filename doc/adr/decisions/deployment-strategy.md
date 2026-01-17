@@ -1,4 +1,6 @@
-# [ADR-OPS-001] Deployment Strategy Implementation
+<a id="ADR-OPS-001"></a>
+
+# Deployment Strategy Implementation
 
 ## Context and Problem Statement
 

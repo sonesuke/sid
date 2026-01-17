@@ -1,4 +1,6 @@
-# [ADR-AUTH-002] Select Azure Entra ID External Identities for Authentication
+<a id="ADR-AUTH-002"></a>
+
+# Select Azure Entra ID External Identities for Authentication
 
 ## Status
 

@@ -1,4 +1,6 @@
-# [ADR-OPS-002] CI/CD Platform Selection
+<a id="ADR-OPS-002"></a>
+
+# CI/CD Platform Selection
 
 ## Context and Problem Statement
 

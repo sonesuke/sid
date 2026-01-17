@@ -1,4 +1,6 @@
-# [ADR-ARCH-003] State Management (Stateful vs Stateless)
+<a id="ADR-ARCH-003"></a>
+
+# State Management (Stateful vs Stateless)
 
 ## Context and Problem Statement
 

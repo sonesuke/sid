@@ -1,4 +1,6 @@
-# [ADR-ARCH-002] Service Communication Pattern (Sync vs Async)
+<a id="ADR-ARCH-002"></a>
+
+# Service Communication Pattern (Sync vs Async)
 
 ## Context and Problem Statement
 

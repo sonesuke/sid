@@ -1,4 +1,6 @@
-# [ADR-DATA-001] Data Persistence Strategy
+<a id="ADR-DATA-001"></a>
+
+# Data Persistence Strategy
 
 ## Context and Problem Statement
 

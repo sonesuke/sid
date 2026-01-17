@@ -1,4 +1,6 @@
-# [ADR-TECH-002] Infrastructure as Code (IaC) Tool Selection
+<a id="ADR-TECH-002"></a>
+
+# Infrastructure as Code (IaC) Tool Selection
 
 ## Context and Problem Statement
 
