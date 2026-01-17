@@ -6,12 +6,14 @@ We need to select the primary data storage technology for the Core Database (Ten
 While the domain has some relational aspects, the system prioritizes "Serverless" characteristics (scale-to-zero, minimal operations) and consistent performance at scale.
 
 ### Decision Drivers
+
 * **Operational Overhead**: Must minimize database management (NoOps).
 * **Scaling Characteristics**: Must handle "bursty" traffic and scale to zero (Cost efficiency).
 * **Performance**: Consistent single-digit millisecond latency regardless of scale.
 * **Ecosystem**: Integration with AWS Lambda and EventBridge (Event-Driven Architecture).
 
 ## Considered Options
+
 * **Amazon DynamoDB** (NoSQL, Serverless)
 * **Amazon Aurora Serverless v2** (PostgreSQL, Relational)
 * **Amazon RDS for PostgreSQL** (Provisioned Relational)
@@ -26,11 +28,13 @@ Unlike Aurora Serverless, DynamoDB offers true "pay-per-request" pricing and eli
 We accept the trade-off of "Eventual Consistency" (see [../../arch/views/cross-cutting-concepts](../../arch/views/cross-cutting-concepts.md) [CC-DAT-002]) and lack of joins in exchange for predictable performance and operational simplicity.
 
 ### Positive Consequences
+
 * **True Serverless**: No instance provisioning or scaling management.
 * **Performance**: Consistent low latency at any scale.
 * **Event Integration**: Native DynamoDB Streams integration for Event Sourcing patterns.
 
 ### Negative Consequences
+
 * **Modeling Complexity**: Requires "Single Table Design" or denormalization; no SQL joins.
 * **Consistency**: Strong consistency requires explicit configuration (Read consistency).
 * **Query Flexibility**: Limited ad-hoc query capabilities compared to SQL.

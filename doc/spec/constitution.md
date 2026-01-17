@@ -20,12 +20,14 @@ Unless explicitly stated otherwise, sections under "Specification Conventions" a
 The key words "MUST", "SHALL", "SHOULD", "MAY", and "MUST NOT" are to be interpreted as described in RFC 2119 and RFC 8174.
 
 ## Core Principles
+
 1. **Simplicity**: Favor simple solutions over complex ones. Avoid over-engineering.
 2. **Consistency**: Maintain uniformity in code style, naming conventions, and documentation.
 3. **Transparency**: All decisions and significant changes must be documented and open for review.
 4. **User-Centricity**: The needs of the end-user are paramount in every design decision.
 
 ## Architectural Guidelines
+
 - **Modularity**: The system should be composed of loosely coupled, highly cohesive modules.
 - **Separation of Concerns**: Each component should have a distinct and well-defined responsibility.
 - **Scalability**: Design consistently with future growth in mind, but implement for today's requirements.
@@ -65,6 +67,7 @@ To ensure traceability and maintainability of the specifications, the following 
 All identifiers SHALL be globally unique within the project. Identifiers MUST NOT be reused across different categories.
 
 #### Identifier Assignment
+
 - **Target**: IDs SHALL be assigned to all normative requirements (FR, NFR), use cases (UC), constraints (CON), data entities (DATA), API endpoints (API), and error definitions (ERR).
 - **Granularity**: Assign IDs to semantic units, not every paragraph or section.
 - **Format**: IDs SHALL follow the format ``<Category>-<Domain>-<Number>``.
@@ -127,6 +130,7 @@ The specification elements are related by the following dependency model.
   Cyclic dependencies are prohibited.
 
 #### Traceability Source of Truth
+
 - "Impacts" sections SHALL NOT be used. Reverse traceability (e.g., CON → FR/NFR)
   SHALL be derived by tooling from explicit references.
 
@@ -136,7 +140,8 @@ The specification elements are related by the following dependency model.
 - Constraints (CON) SHALL be declarative and SHALL NOT enumerate impacted elements.
 
 #### Cross-Referencing
-- **Syntax**: Define targets using ``.. _ID:`` before the header. Reference using ``[ID](#ID)``.
+
+- **Syntax**: Define targets using `.. _ID:` before the header. Reference using `[ID] (#ID)`.
 - **Direction**: Follow the reference hierarchy: Use Case -> Functional Requirement -> (API / IF, Data Entity, Error, Constraint). Avoid circular references.
 - **Prohibitions**:
   - Functional Requirements SHALL NOT reference Use Cases.
@@ -147,6 +152,7 @@ The specification elements are related by the following dependency model.
   - "Realized by" references in Functional Requirements indicate an example implementation mapping and do not constitute a strict normative dependency.
 
 #### Usage Coverage
+
 - **FR Coverage**: All Functional Requirements (FR) MUST be referenced by at least one Use Case (UC). Orphan guidelines are considered incomplete specification.
 - **UC Completeness**: All Use Cases (UC) MUST reference at least one Functional Requirement (FR). Empty Use Cases are prohibited.
 - **Interface Utility**: All Interfaces and APIs MUST be referenced by at least one Functional Requirement (FR). Orphan Interfaces are prohibited.
@@ -155,7 +161,7 @@ The specification elements are related by the following dependency model.
 
 Use Cases (UC) SHALL follow the narrative structure: **Actor -> Entry Point (Informative) -> Goal**.
 
-- **Actor**: A defined [Actor](#ACT).
+- **Actor**: A defined `Actor` ([ACT](actors/index.md)).
 - **Entry Point**: A narrative mention of the interface (e.g., "via the Console"). **SHALL NOT** use ``:ref:`` to link to Interface specifications.
 - **Goal**: The value or outcome achieved, formally supporting a **Functional Requirement**.
 
@@ -169,11 +175,13 @@ When generating or modifying documentation:
 - If no suitable identifier exists, the AI SHALL flag the gap instead of inventing one.
 
 #### Change Management
+
 - Editorial changes that do not alter meaning SHALL retain the same identifier.
 - Semantic changes SHALL result in a new identifier.
 - Deprecated identifiers SHALL remain documented and MUST NOT be reused.
 
 #### Documentation Format
+
 - **Tables**: Tables SHALL be written using the reStructuredText "Simple Tables" format (using ``===`` borders) for readability.
   - Exception: Complex grids that require spanning cells may use "Grid Tables".
 

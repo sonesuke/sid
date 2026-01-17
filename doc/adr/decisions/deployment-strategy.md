@@ -6,12 +6,14 @@ We need to define a deployment strategy for the production environment that ensu
 The system serves critical business operations, requiring high availability during updates.
 
 ### Decision Drivers
+
 * **Zero Downtime**: Updates must not interrupt active user sessions or API calls.
 * **Rollback Speed**: Ability to instantly revert to the previous known good state.
 * **Risk Mitigation**: Ability to verify changes in a production-like environment before switching traffic.
 * **Complexity**: Operational complexity of the deployment pipeline.
 
 ## Considered Options
+
 * **Rolling Deployment**: Gradually replace instances.
 * **Blue-Green Deployment**: Provision parallel environment and switch traffic.
 * **Canary Deployment**: Gradually shift traffic percentage.
@@ -29,10 +31,12 @@ Blue-Green deployment offers the optimal balance between safety and complexity f
 3. **Serverless Fit**: With Lambda/API Gateway, creating parallel environments (Versions/Aliases) is cheap and fast compared to VM-based replication.
 
 ### Positive Consequences
+
 * **Safety**: Zero downtime updates guaranteed by atomic switchover.
 * **Confidence**: Testing against production configuration reduces "it works on my machine" issues.
 * **NoOps**: Fits natively with AWS Lambda Aliases and Weighted Traffic.
 
 ### Negative Consequences
+
 * **Cost**: Transiently doubled resource usage (though negligible for Serverless/Scale-to-Zero).
 * **Database Complexity**: Schema changes must be backward compatible to support both Blue and Green versions simultaneously.

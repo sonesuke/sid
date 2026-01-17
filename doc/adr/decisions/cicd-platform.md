@@ -6,12 +6,14 @@ We need a Continuous Integration and Continuous Deployment (CI/CD) platform to a
 The platform must enable our "Build Once, Deploy Many" principle and integrate seamlessly with our source control.
 
 ### Decision Drivers
+
 * **Integration**: Tight integration with Source Code Management (Pull Requests, Code Review).
 * **Maintenance**: Minimal operational overhead (SaaS preferred).
 * **Security**: Secure handling of Cloud Provider credentials (OIDC).
 * **Parallelism**: efficient execution of concurrent test suites.
 
 ## Considered Options
+
 * **GitHub Actions** (SaaS)
 * **GitLab CI** (SaaS/Self-hosted)
 * **Jenkins** (Self-hosted)
@@ -30,10 +32,12 @@ GitHub Actions is the natural choice as our code resides in GitHub.
 4. **Ecosystem**: Extensive marketplace of Actions simplifies tasks like "Setup Python", "Login to AWS", "Terraform Apply".
 
 ### Positive Consequences
+
 * **Developer Velocity**: Fast feedback loops on PRs.
 * **Security**: Reduced attack surface via OIDC.
 * **Simplicity**: Single pane of glass for Code and Pipeline.
 
 ### Negative Consequences
+
 * **Vendor Lock-in**: Workflow syntax is specific to GitHub.
 * **Limits**: SaaS concurrency limits may require upgrading plans (handled via scaling to self-hosted runners if needed).
