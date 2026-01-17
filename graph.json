@@ -1,0 +1,5445 @@
+[
+  {
+    "id": "API-BILL",
+    "name": "API-BILL Billing Event API",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 10
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 10
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-BILLING",
+        "line": 10
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 10
+      }
+    ],
+    "file_path": "./doc/spec/interface-requirements/apis.md",
+    "line_start": 5,
+    "line_end": 13
+  },
+  {
+    "id": "API-LOG",
+    "name": "API-LOG Audit Log API",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 19
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 19
+      }
+    ],
+    "file_path": "./doc/spec/interface-requirements/apis.md",
+    "line_start": 14,
+    "line_end": 22
+  },
+  {
+    "id": "API-FLAG",
+    "name": "API-FLAG Feature Flag API",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 28
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 28
+      }
+    ],
+    "file_path": "./doc/spec/interface-requirements/apis.md",
+    "line_start": 23,
+    "line_end": 30
+  },
+  {
+    "id": "IF-OPS-CONSOLE",
+    "name": "IF-OPS-CONSOLE Operator Console",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 9
+      }
+    ],
+    "file_path": "./doc/spec/interface-requirements/ui.md",
+    "line_start": 5,
+    "line_end": 13
+  },
+  {
+    "id": "IF-TENANT-CONSOLE",
+    "name": "IF-TENANT-CONSOLE Tenant Administration Console",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 18
+      }
+    ],
+    "file_path": "./doc/spec/interface-requirements/ui.md",
+    "line_start": 14,
+    "line_end": 22
+  },
+  {
+    "id": "IF-AUDIT-CONSOLE",
+    "name": "IF-AUDIT-CONSOLE Auditor Console",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 27
+      }
+    ],
+    "file_path": "./doc/spec/interface-requirements/ui.md",
+    "line_start": 23,
+    "line_end": 31
+  },
+  {
+    "id": "IF-LOGIN-UI",
+    "name": "IF-LOGIN-UI Universal Login Page",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 36
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 36
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 36
+      }
+    ],
+    "file_path": "./doc/spec/interface-requirements/ui.md",
+    "line_start": 32,
+    "line_end": 39
+  },
+  {
+    "id": "ERR-VAL-400",
+    "name": "ERR-VAL-400 Invalid Input",
+    "edges": [],
+    "file_path": "./doc/spec/error-handling/validation.md",
+    "line_start": 3,
+    "line_end": 20
+  },
+  {
+    "id": "ERR-VAL-409",
+    "name": "ERR-VAL-409 Conflict",
+    "edges": [],
+    "file_path": "./doc/spec/error-handling/validation.md",
+    "line_start": 21,
+    "line_end": 38
+  },
+  {
+    "id": "ERR-VAL-422",
+    "name": "ERR-VAL-422 Business Rule Violation",
+    "edges": [],
+    "file_path": "./doc/spec/error-handling/validation.md",
+    "line_start": 39,
+    "line_end": 55
+  },
+  {
+    "id": "ERR-RATE-429",
+    "name": "ERR-RATE-429 Rate Limit Exceeded",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-PERF-001",
+        "line": 23
+      }
+    ],
+    "file_path": "./doc/spec/error-handling/rate-limit.md",
+    "line_start": 3,
+    "line_end": 23
+  },
+  {
+    "id": "ERR-AUTH-401",
+    "name": "ERR-AUTH-401 Invalid Credentials",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-009",
+        "line": 23
+      }
+    ],
+    "file_path": "./doc/spec/error-handling/auth.md",
+    "line_start": 3,
+    "line_end": 24
+  },
+  {
+    "id": "ERR-AUTH-403",
+    "name": "ERR-AUTH-403 Access Denied",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-009",
+        "line": 45
+      }
+    ],
+    "file_path": "./doc/spec/error-handling/auth.md",
+    "line_start": 25,
+    "line_end": 46
+  },
+  {
+    "id": "ERR-AUTH-440",
+    "name": "ERR-AUTH-440 Session Expired",
+    "edges": [],
+    "file_path": "./doc/spec/error-handling/auth.md",
+    "line_start": 47,
+    "line_end": 65
+  },
+  {
+    "id": "ERR-AUTH-461",
+    "name": "ERR-AUTH-461 MFA Required",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-005",
+        "line": 85
+      }
+    ],
+    "file_path": "./doc/spec/error-handling/auth.md",
+    "line_start": 66,
+    "line_end": 85
+  },
+  {
+    "id": "ERR-SYS-500",
+    "name": "ERR-SYS-500 Internal Error",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-009",
+        "line": 23
+      }
+    ],
+    "file_path": "./doc/spec/error-handling/system.md",
+    "line_start": 3,
+    "line_end": 24
+  },
+  {
+    "id": "ERR-SYS-503",
+    "name": "ERR-SYS-503 Service Unavailable",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-OPS-002",
+        "line": 45
+      }
+    ],
+    "file_path": "./doc/spec/error-handling/system.md",
+    "line_start": 25,
+    "line_end": 45
+  },
+  {
+    "id": "ERR-RES-404",
+    "name": "ERR-RES-404 Resource Not Found",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-009",
+        "line": 23
+      }
+    ],
+    "file_path": "./doc/spec/error-handling/resource.md",
+    "line_start": 3,
+    "line_end": 24
+  },
+  {
+    "id": "ERR-RES-410",
+    "name": "ERR-RES-410 Resource Gone",
+    "edges": [],
+    "file_path": "./doc/spec/error-handling/resource.md",
+    "line_start": 25,
+    "line_end": 40
+  },
+  {
+    "id": "FR-OPS-001",
+    "name": "FR-OPS-001 Tenant Status Management",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 8
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 8
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-OPS-CONSOLE",
+        "line": 12
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 16
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 17
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-CAP-001",
+        "line": 18
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 19
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 23
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-404",
+        "line": 24
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/platform-ops.md",
+    "line_start": 3,
+    "line_end": 25
+  },
+  {
+    "id": "FR-OPS-002",
+    "name": "FR-OPS-002 Tenant Deletion",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 30
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 30
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 30
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-LOG",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-BILL-EVENT",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CON-COMP-001",
+        "line": 36
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-OPS-CONSOLE",
+        "line": 40
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 44
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 45
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 46
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 50
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-404",
+        "line": 51
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-410",
+        "line": 52
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/platform-ops.md",
+    "line_start": 26,
+    "line_end": 53
+  },
+  {
+    "id": "FR-OPS-003",
+    "name": "FR-OPS-003 Data Retention Enforcement",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 58
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-LOG",
+        "line": 60
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-BILL-EVENT",
+        "line": 61
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CON-DATA-002",
+        "line": 63
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CON-DATA-003",
+        "line": 63
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 67
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-002",
+        "line": 71
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-DATA-001",
+        "line": 72
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 73
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-SYS-500",
+        "line": 77
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/platform-ops.md",
+    "line_start": 54,
+    "line_end": 77
+  },
+  {
+    "id": "FR-TENANT-001",
+    "name": "FR-TENANT-001 User Invitation",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-INVITE",
+        "line": 8
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-TENANT-CONSOLE",
+        "line": 15
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 19
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 20
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-CAP-002",
+        "line": 21
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 22
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 26
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-VAL-409",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-VAL-422",
+        "line": 28
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/tenant-admin.md",
+    "line_start": 3,
+    "line_end": 29
+  },
+  {
+    "id": "FR-TENANT-002",
+    "name": "FR-TENANT-002 User Deletion",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 35
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-TENANT-CONSOLE",
+        "line": 39
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 43
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-002",
+        "line": 44
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 45
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 46
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 50
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-404",
+        "line": 51
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/tenant-admin.md",
+    "line_start": 30,
+    "line_end": 52
+  },
+  {
+    "id": "FR-TENANT-003",
+    "name": "FR-TENANT-003 Contract Modification",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 57
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 57
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-TENANT-CONSOLE",
+        "line": 61
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 65
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 66
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-CAP-001",
+        "line": 67
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 68
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 72
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/tenant-admin.md",
+    "line_start": 53,
+    "line_end": 73
+  },
+  {
+    "id": "FR-TENANT-004",
+    "name": "FR-TENANT-004 User Role Management",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 78
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-ROLE",
+        "line": 78
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 78
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 78
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 79
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-TENANT-CONSOLE",
+        "line": 83
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 87
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 88
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 89
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 93
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-404",
+        "line": 94
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/tenant-admin.md",
+    "line_start": 74,
+    "line_end": 95
+  },
+  {
+    "id": "FR-TENANT-006",
+    "name": "FR-TENANT-006 User Status Management",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 100
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 100
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 100
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 101
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-TENANT-CONSOLE",
+        "line": 105
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 109
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 110
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 111
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 115
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-404",
+        "line": 116
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/tenant-admin.md",
+    "line_start": 96,
+    "line_end": 117
+  },
+  {
+    "id": "FR-TENANT-007",
+    "name": "FR-TENANT-007 Invitation Resend",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 122
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-INVITE",
+        "line": 124
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-TENANT-CONSOLE",
+        "line": 129
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 133
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 134
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 135
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 139
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-404",
+        "line": 140
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/tenant-admin.md",
+    "line_start": 118,
+    "line_end": 140
+  },
+  {
+    "id": "FR-FLAG-001",
+    "name": "FR-FLAG-001 Flag Configuration",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-FLAG",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-OPS-CONSOLE",
+        "line": 11
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 15
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 16
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-CAP-001",
+        "line": 17
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 18
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 22
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-404",
+        "line": 23
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/feature-flags.md",
+    "line_start": 3,
+    "line_end": 24
+  },
+  {
+    "id": "FR-FLAG-002",
+    "name": "FR-FLAG-002 Flag Delivery",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "API-FLAG",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-FLAG",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "API-FLAG",
+        "line": 33
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 37
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-004",
+        "line": 38
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 39
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-003",
+        "line": 40
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-401",
+        "line": 44
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RATE-429",
+        "line": 45
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/feature-flags.md",
+    "line_start": 25,
+    "line_end": 45
+  },
+  {
+    "id": "FR-BILL-001",
+    "name": "FR-BILL-001 Billing Event Persistence",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-BILL-002",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-BILL-EVENT",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "API-BILL",
+        "line": 11
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 15
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-002",
+        "line": 16
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-DATA-001",
+        "line": 17
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-CAP-001",
+        "line": 18
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 19
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-004",
+        "line": 20
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-SYS-500",
+        "line": 24
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-SYS-503",
+        "line": 25
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/billing.md",
+    "line_start": 3,
+    "line_end": 26
+  },
+  {
+    "id": "FR-BILL-002",
+    "name": "FR-BILL-002 Billing Event Ingestion",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "API-BILL",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-BILL-EVENT",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "API-BILL",
+        "line": 35
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 39
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-004",
+        "line": 40
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 41
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-003",
+        "line": 42
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-401",
+        "line": 46
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-VAL-400",
+        "line": 47
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RATE-429",
+        "line": 48
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/billing.md",
+    "line_start": 27,
+    "line_end": 49
+  },
+  {
+    "id": "FR-BILL-003",
+    "name": "FR-BILL-003 Billing Data Export",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 54
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-BILLING",
+        "line": 54
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-BILL-EVENT",
+        "line": 54
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "API-BILL",
+        "line": 58
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 62
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-004",
+        "line": 63
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 64
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-DATA-001",
+        "line": 65
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 66
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-401",
+        "line": 70
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 71
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-404",
+        "line": 72
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/billing.md",
+    "line_start": 50,
+    "line_end": 72
+  },
+  {
+    "id": "FR-LOG-001",
+    "name": "FR-LOG-001 Audit Log Collection",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "API-LOG",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-LOG",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "API-LOG",
+        "line": 11
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 15
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-002",
+        "line": 16
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-DATA-001",
+        "line": 17
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 18
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-004",
+        "line": 19
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-001",
+        "line": 20
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-SYS-500",
+        "line": 24
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-SYS-503",
+        "line": 25
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/audit.md",
+    "line_start": 3,
+    "line_end": 26
+  },
+  {
+    "id": "FR-LOG-002",
+    "name": "FR-LOG-002 Audit Log Export",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-LOG",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-AUDIT-CONSOLE",
+        "line": 35
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 39
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 40
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-DATA-001",
+        "line": 41
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 42
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 46
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-SYS-500",
+        "line": 47
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/audit.md",
+    "line_start": 27,
+    "line_end": 48
+  },
+  {
+    "id": "FR-LOG-003",
+    "name": "FR-LOG-003 Control Plane Auditing",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 53
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-LOG",
+        "line": 53
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-002",
+        "line": 57
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-DATA-001",
+        "line": 58
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 59
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-001",
+        "line": 60
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-SYS-500",
+        "line": 64
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/audit.md",
+    "line_start": 49,
+    "line_end": 64
+  },
+  {
+    "id": "FR-AUTH-001",
+    "name": "FR-AUTH-001 Supported Authentication Methods",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-LOGIN-UI",
+        "line": 14
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 18
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-003",
+        "line": 19
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 20
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-006",
+        "line": 21
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 22
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-401",
+        "line": 26
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-461",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RATE-429",
+        "line": 28
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/auth.md",
+    "line_start": 3,
+    "line_end": 29
+  },
+  {
+    "id": "FR-AUTH-003",
+    "name": "FR-AUTH-003 Tenant SSO Configuration",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-ROLE",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SSO-CONFIG",
+        "line": 35
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-TENANT-CONSOLE",
+        "line": 39
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 43
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-004",
+        "line": 44
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 45
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 46
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 50
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-VAL-400",
+        "line": 51
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-VAL-409",
+        "line": 52
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/auth.md",
+    "line_start": 30,
+    "line_end": 53
+  },
+  {
+    "id": "FR-AUTH-004",
+    "name": "FR-AUTH-004 Password Reset",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 58
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 58
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 59
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 59
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 60
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-LOGIN-UI",
+        "line": 64
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 68
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-003",
+        "line": 69
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-004",
+        "line": 70
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 71
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-401",
+        "line": 75
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-VAL-422",
+        "line": 76
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RATE-429",
+        "line": 77
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/auth.md",
+    "line_start": 54,
+    "line_end": 78
+  },
+  {
+    "id": "FR-AUTH-005",
+    "name": "FR-AUTH-005 Session Management",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 83
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 83
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 84
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-LOGIN-UI",
+        "line": 88
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-TENANT-CONSOLE",
+        "line": 89
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 93
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-002",
+        "line": 94
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 95
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 96
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 100
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-440",
+        "line": 101
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/auth.md",
+    "line_start": 79,
+    "line_end": 102
+  },
+  {
+    "id": "FR-AUTH-006",
+    "name": "FR-AUTH-006 Password Policy Configuration",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 107
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 107
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-001",
+        "line": 109
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-TENANT-CONSOLE",
+        "line": 113
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 117
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-002",
+        "line": 118
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 119
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 120
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 124
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-VAL-400",
+        "line": 125
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/auth.md",
+    "line_start": 103,
+    "line_end": 125
+  },
+  {
+    "id": "FR-SYS-001",
+    "name": "FR-SYS-001 Application Registration",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 12
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-004",
+        "line": 13
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 14
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 15
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 19
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-VAL-400",
+        "line": 20
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-VAL-409",
+        "line": 21
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/system-ops.md",
+    "line_start": 3,
+    "line_end": 22
+  },
+  {
+    "id": "FR-SYS-002",
+    "name": "FR-SYS-002 API Key Management",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-KEY",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 33
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-002",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-004",
+        "line": 35
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 36
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 37
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 41
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-404",
+        "line": 42
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/system-ops.md",
+    "line_start": 23,
+    "line_end": 43
+  },
+  {
+    "id": "FR-SYS-003",
+    "name": "FR-SYS-003 Application Lifecycle Management",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 48
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 48
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 48
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 49
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 49
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 49
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 53
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 54
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 55
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-403",
+        "line": 59
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-RES-404",
+        "line": 60
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/system-ops.md",
+    "line_start": 44,
+    "line_end": 61
+  },
+  {
+    "id": "FR-SYS-004",
+    "name": "FR-SYS-004 Operator JIT Provisioning",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 66
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 66
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 66
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-LOG",
+        "line": 69
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 74
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 75
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 76
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-001",
+        "line": 77
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-AUTH-401",
+        "line": 81
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ERR-SYS-500",
+        "line": 82
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/system-ops.md",
+    "line_start": 62,
+    "line_end": 83
+  },
+  {
+    "id": "FR-SYS-005",
+    "name": "FR-SYS-005 System Health Monitoring",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 88
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 88
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-001",
+        "line": 95
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-002",
+        "line": 96
+      }
+    ],
+    "file_path": "./doc/spec/functional-requirements/system-ops.md",
+    "line_start": 84,
+    "line_end": 96
+  },
+  {
+    "id": "CON-SEC-001",
+    "name": "CON-SEC-001 Configurable Password Policy",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 11
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 11
+      }
+    ],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 7,
+    "line_end": 14
+  },
+  {
+    "id": "CON-SEC-002",
+    "name": "CON-SEC-002 Audit Log Provision",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 19
+      }
+    ],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 15,
+    "line_end": 22
+  },
+  {
+    "id": "CON-SEC-003",
+    "name": "CON-SEC-003 Encryption in Transit",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 23,
+    "line_end": 30
+  },
+  {
+    "id": "CON-SEC-004",
+    "name": "CON-SEC-004 Encryption at Rest",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 31,
+    "line_end": 38
+  },
+  {
+    "id": "CON-SEC-005",
+    "name": "CON-SEC-005 Multi-Factor Authentication",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 39,
+    "line_end": 46
+  },
+  {
+    "id": "CON-SEC-006",
+    "name": "CON-SEC-006 Key Management",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 47,
+    "line_end": 54
+  },
+  {
+    "id": "CON-SEC-007",
+    "name": "CON-SEC-007 Least Privilege",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 55,
+    "line_end": 62
+  },
+  {
+    "id": "CON-SEC-008",
+    "name": "CON-SEC-008 Adaptive Authentication",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 63,
+    "line_end": 70
+  },
+  {
+    "id": "CON-SEC-009",
+    "name": "CON-SEC-009 Error Disclosure",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 71,
+    "line_end": 85
+  },
+  {
+    "id": "CON-DATA-001",
+    "name": "CON-DATA-001 Data Residency",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 86,
+    "line_end": 93
+  },
+  {
+    "id": "CON-DATA-002",
+    "name": "CON-DATA-002 Audit Log Retention",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-LOG",
+        "line": 98
+      }
+    ],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 94,
+    "line_end": 101
+  },
+  {
+    "id": "CON-DATA-003",
+    "name": "CON-DATA-003 Billing Data Retention",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-BILL-EVENT",
+        "line": 106
+      }
+    ],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 102,
+    "line_end": 111
+  },
+  {
+    "id": "CON-CAP-001",
+    "name": "CON-CAP-001 Tenant Capacity",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 116
+      }
+    ],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 112,
+    "line_end": 119
+  },
+  {
+    "id": "CON-CAP-002",
+    "name": "CON-CAP-002 User Capacity per Tenant",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 124
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 124
+      }
+    ],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 120,
+    "line_end": 129
+  },
+  {
+    "id": "CON-OPS-001",
+    "name": "CON-OPS-001 Availability SLO",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 130,
+    "line_end": 137
+  },
+  {
+    "id": "CON-OPS-002",
+    "name": "CON-OPS-002 Maintenance Window",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 138,
+    "line_end": 145
+  },
+  {
+    "id": "CON-OPS-003",
+    "name": "CON-OPS-003 Load Balancing and Failover",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 146,
+    "line_end": 153
+  },
+  {
+    "id": "CON-OPS-004",
+    "name": "CON-OPS-004 Backup and Redundancy",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 154,
+    "line_end": 163
+  },
+  {
+    "id": "CON-MON-001",
+    "name": "CON-MON-001 Continuous Monitoring",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 164,
+    "line_end": 173
+  },
+  {
+    "id": "CON-DEV-001",
+    "name": "CON-DEV-001 Secure Software Development Lifecycle",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 174,
+    "line_end": 186
+  },
+  {
+    "id": "CON-DEV-002",
+    "name": "CON-DEV-002 Supply Chain Risk Management",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 187,
+    "line_end": 200
+  },
+  {
+    "id": "CON-COMP-001",
+    "name": "CON-COMP-001 Data Subject Rights",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 201,
+    "line_end": 215
+  },
+  {
+    "id": "CON-PERF-001",
+    "name": "CON-PERF-001 Response Time and Throughput",
+    "edges": [],
+    "file_path": "./doc/spec/constraints-and-assumptions/index.md",
+    "line_start": 216,
+    "line_end": 222
+  },
+  {
+    "id": "TERM-SYS-CP",
+    "name": "Control Plane (TERM-SYS-CP)",
+    "edges": [],
+    "file_path": "./doc/spec/terminology/definitions.md",
+    "line_start": 5,
+    "line_end": 10
+  },
+  {
+    "id": "TERM-APP-TARGET",
+    "name": "Managed Application (TERM-APP-TARGET)",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 15
+      }
+    ],
+    "file_path": "./doc/spec/terminology/definitions.md",
+    "line_start": 11,
+    "line_end": 16
+  },
+  {
+    "id": "NFR-DATA-001",
+    "name": "NFR-DATA-001 Data Residency",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-DATA-001",
+        "line": 9
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/data.md",
+    "line_start": 3,
+    "line_end": 9
+  },
+  {
+    "id": "NFR-OPS-001",
+    "name": "NFR-OPS-001 Service Level Objective",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-OPS-001",
+        "line": 9
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/availability.md",
+    "line_start": 3,
+    "line_end": 10
+  },
+  {
+    "id": "NFR-OPS-002",
+    "name": "NFR-OPS-002 Maintenance Scheduling",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-OPS-002",
+        "line": 17
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/availability.md",
+    "line_start": 11,
+    "line_end": 18
+  },
+  {
+    "id": "NFR-OPS-003",
+    "name": "NFR-OPS-003 Load Balancing and Failover",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-OPS-003",
+        "line": 29
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/availability.md",
+    "line_start": 19,
+    "line_end": 30
+  },
+  {
+    "id": "NFR-OPS-004",
+    "name": "NFR-OPS-004 Backup and Redundancy",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-OPS-004",
+        "line": 42
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/availability.md",
+    "line_start": 31,
+    "line_end": 42
+  },
+  {
+    "id": "NFR-PERF-001",
+    "name": "NFR-PERF-001 Authentication Latency",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-PERF-001",
+        "line": 14
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/performance.md",
+    "line_start": 3,
+    "line_end": 15
+  },
+  {
+    "id": "NFR-PERF-002",
+    "name": "NFR-PERF-002 API Latency",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-PERF-001",
+        "line": 25
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/performance.md",
+    "line_start": 16,
+    "line_end": 26
+  },
+  {
+    "id": "NFR-PERF-003",
+    "name": "NFR-PERF-003 UI Responsiveness",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-PERF-001",
+        "line": 36
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/performance.md",
+    "line_start": 27,
+    "line_end": 37
+  },
+  {
+    "id": "NFR-PERF-004",
+    "name": "NFR-PERF-004 Authentication Throughput",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-PERF-001",
+        "line": 48
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/performance.md",
+    "line_start": 38,
+    "line_end": 48
+  },
+  {
+    "id": "NFR-CAP-001",
+    "name": "NFR-CAP-001 Tenant Scalability",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CON-CAP-001",
+        "line": 9
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/capacity.md",
+    "line_start": 3,
+    "line_end": 10
+  },
+  {
+    "id": "NFR-CAP-002",
+    "name": "NFR-CAP-002 User Scalability",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 15
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 15
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CON-CAP-002",
+        "line": 17
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/capacity.md",
+    "line_start": 11,
+    "line_end": 17
+  },
+  {
+    "id": "NFR-MON-001",
+    "name": "NFR-MON-001 Continuous Monitoring",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-MON-001",
+        "line": 13
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/monitoring.md",
+    "line_start": 3,
+    "line_end": 14
+  },
+  {
+    "id": "NFR-MON-002",
+    "name": "NFR-MON-002 System Health Alerting",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 19
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/monitoring.md",
+    "line_start": 15,
+    "line_end": 24
+  },
+  {
+    "id": "NFR-MON-003",
+    "name": "NFR-MON-003 Synthetic Monitoring",
+    "edges": [],
+    "file_path": "./doc/spec/non-functional-requirements/monitoring.md",
+    "line_start": 25,
+    "line_end": 29
+  },
+  {
+    "id": "NFR-SEC-001",
+    "name": "NFR-SEC-001 Encryption in Transit",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-003",
+        "line": 9
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/security.md",
+    "line_start": 3,
+    "line_end": 10
+  },
+  {
+    "id": "NFR-SEC-002",
+    "name": "NFR-SEC-002 Encryption at Rest",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-004",
+        "line": 17
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/security.md",
+    "line_start": 11,
+    "line_end": 18
+  },
+  {
+    "id": "NFR-SEC-003",
+    "name": "NFR-SEC-003 Multi-Factor Authentication",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-005",
+        "line": 26
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/security.md",
+    "line_start": 19,
+    "line_end": 27
+  },
+  {
+    "id": "NFR-SEC-004",
+    "name": "NFR-SEC-004 Key Management",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-006",
+        "line": 38
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/security.md",
+    "line_start": 28,
+    "line_end": 39
+  },
+  {
+    "id": "NFR-SEC-005",
+    "name": "NFR-SEC-005 Least Privilege",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-007",
+        "line": 49
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/security.md",
+    "line_start": 40,
+    "line_end": 50
+  },
+  {
+    "id": "NFR-SEC-006",
+    "name": "NFR-SEC-006 Adaptive Authentication",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CON-SEC-008",
+        "line": 63
+      }
+    ],
+    "file_path": "./doc/spec/non-functional-requirements/security.md",
+    "line_start": 51,
+    "line_end": 63
+  },
+  {
+    "id": "FR-AUTH",
+    "name": "Authentication (FR-AUTH)",
+    "edges": [],
+    "file_path": "./doc/spec/scope/boundaries.md",
+    "line_start": 7,
+    "line_end": 12
+  },
+  {
+    "id": "FR-FLAG",
+    "name": "Feature Flag Management (FR-FLAG)",
+    "edges": [],
+    "file_path": "./doc/spec/scope/boundaries.md",
+    "line_start": 13,
+    "line_end": 18
+  },
+  {
+    "id": "FR-LOG",
+    "name": "Logging and Auditing (FR-LOG)",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-OPS-CONSOLE",
+        "line": 34
+      }
+    ],
+    "file_path": "./doc/spec/scope/boundaries.md",
+    "line_start": 19,
+    "line_end": 35
+  },
+  {
+    "id": "UC-TENANT-USER-DELETE",
+    "name": "UC-TENANT-USER-DELETE User Deletion",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 10
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 13
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 17
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 23
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 28
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 30
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-002",
+        "line": 34
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 35
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/tenant-admin.md",
+    "line_start": 3,
+    "line_end": 36
+  },
+  {
+    "id": "UC-TENANT-USER-UPDATE",
+    "name": "UC-TENANT-USER-UPDATE User Role Update",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 41
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 44
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 47
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 51
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 57
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 61
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 62
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 63
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 64
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 65
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 66
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-004",
+        "line": 70
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 71
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/tenant-admin.md",
+    "line_start": 37,
+    "line_end": 72
+  },
+  {
+    "id": "UC-TENANT-USER-STATUS-UPDATE",
+    "name": "UC-TENANT-USER-STATUS-UPDATE User Status Update",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 77
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 80
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 83
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 87
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 93
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 97
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 98
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 99
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 100
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 101
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 102
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-006",
+        "line": 106
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 107
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/tenant-admin.md",
+    "line_start": 73,
+    "line_end": 108
+  },
+  {
+    "id": "UC-TENANT-SESSION-REVOKE",
+    "name": "UC-TENANT-SESSION-REVOKE Session Revocation",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 113
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 116
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 119
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 123
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 124
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 128
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 133
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 134
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 135
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-005",
+        "line": 139
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 140
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/tenant-admin.md",
+    "line_start": 109,
+    "line_end": 141
+  },
+  {
+    "id": "UC-TENANT-INVITE",
+    "name": "UC-TENANT-INVITE User Invitation",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 146
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 149
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 152
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 156
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 166
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 167
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 168
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 169
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-001",
+        "line": 173
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 174
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/tenant-admin.md",
+    "line_start": 142,
+    "line_end": 175
+  },
+  {
+    "id": "UC-TENANT-INVITE-RESEND",
+    "name": "UC-TENANT-INVITE-RESEND Invitation Resend",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 180
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 183
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 186
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 190
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 201
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 202
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 203
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 204
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-007",
+        "line": 208
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 209
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/tenant-admin.md",
+    "line_start": 176,
+    "line_end": 210
+  },
+  {
+    "id": "UC-TENANT-SSO",
+    "name": "UC-TENANT-SSO SSO Configuration",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 215
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 218
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 221
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 225
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 226
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 235
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 236
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 237
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-003",
+        "line": 241
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 242
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/tenant-admin.md",
+    "line_start": 211,
+    "line_end": 242
+  },
+  {
+    "id": "UC-PROV-001",
+    "name": "UC-PROV-001 Tenant Provisioning",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 10
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 10
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 17
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 21
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 22
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 28
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 30
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 32
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 32
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-FLAG-001",
+        "line": 36
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-001",
+        "line": 37
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-003",
+        "line": 38
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 39
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/provisioning.md",
+    "line_start": 3,
+    "line_end": 40
+  },
+  {
+    "id": "UC-TENANT-SUSPEND",
+    "name": "UC-TENANT-SUSPEND Tenant Suspension",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 45
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 48
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 51
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 55
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 60
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 61
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 65
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 66
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 67
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 68
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 69
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-OPS-001",
+        "line": 73
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 74
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/provisioning.md",
+    "line_start": 41,
+    "line_end": 75
+  },
+  {
+    "id": "UC-OPS-TENANT-DELETE",
+    "name": "UC-OPS-TENANT-DELETE Tenant Deletion",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 80
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 83
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 86
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 90
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 95
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 100
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 101
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 102
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 103
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 104
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-OPS-002",
+        "line": 108
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 109
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CON-COMP-001",
+        "line": 110
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/provisioning.md",
+    "line_start": 76,
+    "line_end": 110
+  },
+  {
+    "id": "UC-AUDIT-EXPORT",
+    "name": "UC-AUDIT-EXPORT Audit Log Export",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 10
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 13
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 17
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 21
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 25
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 26
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 28
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-001",
+        "line": 33
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-002",
+        "line": 34
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/audit.md",
+    "line_start": 3,
+    "line_end": 35
+  },
+  {
+    "id": "UC-AUDIT-RECORD-CP",
+    "name": "UC-AUDIT-RECORD-CP Control Plane Event Recording",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 40
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 43
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 59
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 60
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 61
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 65
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/audit.md",
+    "line_start": 36,
+    "line_end": 65
+  },
+  {
+    "id": "UC-DEV-REGISTER",
+    "name": "UC-DEV-REGISTER Application Registration",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 10
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 10
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 13
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 17
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 21
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-KEY",
+        "line": 22
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 22
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 23
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 28
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 30
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-SYS-001",
+        "line": 35
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-SYS-002",
+        "line": 36
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/deployment.md",
+    "line_start": 3,
+    "line_end": 37
+  },
+  {
+    "id": "UC-DEV-UPDATE",
+    "name": "UC-DEV-UPDATE Application Update",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 42
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 45
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 45
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 48
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 52
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 53
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 57
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 62
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 63
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 64
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 65
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-SYS-003",
+        "line": 69
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/deployment.md",
+    "line_start": 38,
+    "line_end": 69
+  },
+  {
+    "id": "UC-SYS-APP-AUTH",
+    "name": "UC-SYS-APP-AUTH Feature Flag Retrieval",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 9
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 12
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 15
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 19
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 23
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 23
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 24
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 25
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-FLAG-002",
+        "line": 29
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/system-integration.md",
+    "line_start": 5,
+    "line_end": 30
+  },
+  {
+    "id": "UC-SYS-BILL-REPORT",
+    "name": "UC-SYS-BILL-REPORT Billing Event Reporting",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 35
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 38
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 38
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 41
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 45
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 49
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 50
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 50
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 51
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-BILL-001",
+        "line": 55
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-BILL-002",
+        "line": 56
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/system-integration.md",
+    "line_start": 31,
+    "line_end": 57
+  },
+  {
+    "id": "UC-SYS-LOG-REPORT",
+    "name": "UC-SYS-LOG-REPORT Audit Log Reporting",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 62
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 65
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 65
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 68
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 72
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 76
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 77
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 77
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 78
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-001",
+        "line": 82
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/system-integration.md",
+    "line_start": 58,
+    "line_end": 83
+  },
+  {
+    "id": "UC-SYS-BILL-EXPORT",
+    "name": "UC-SYS-BILL-EXPORT Billing Data Export",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-BILLING",
+        "line": 88
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-BILLING",
+        "line": 91
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 91
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-BILLING",
+        "line": 94
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-BILLING",
+        "line": 98
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-BILL-EVENT",
+        "line": 98
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-BILLING",
+        "line": 102
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 103
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 104
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 105
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-BILLING",
+        "line": 105
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-BILL-003",
+        "line": 109
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/system-integration.md",
+    "line_start": 84,
+    "line_end": 109
+  },
+  {
+    "id": "UC-LOGIN",
+    "name": "UC-LOGIN Tenant User Login",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 7
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 10
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 13
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 17
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 21
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 22
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 26
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 27
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 28
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 30
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-001",
+        "line": 35
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-005",
+        "line": 36
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/access.md",
+    "line_start": 3,
+    "line_end": 37
+  },
+  {
+    "id": "UC-LOGOUT",
+    "name": "UC-LOGOUT Tenant User Logout",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 42
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 45
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 48
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 52
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 52
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 56
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 61
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 62
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 63
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-005",
+        "line": 67
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 68
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/access.md",
+    "line_start": 38,
+    "line_end": 69
+  },
+  {
+    "id": "UC-AUTH-RESET",
+    "name": "UC-AUTH-RESET Password Reset",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 74
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 77
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 80
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 84
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 89
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-SESSION",
+        "line": 90
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 94
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 95
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 96
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 97
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 98
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-004",
+        "line": 102
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 103
+      }
+    ],
+    "file_path": "./doc/spec/use-cases/access.md",
+    "line_start": 70,
+    "line_end": 103
+  },
+  {
+    "id": "ACT-USER",
+    "name": "ACT-USER Tenant User",
+    "edges": [],
+    "file_path": "./doc/spec/actors/list.md",
+    "line_start": 5,
+    "line_end": 17
+  },
+  {
+    "id": "ACT-OPS",
+    "name": "ACT-OPS Platform Operator",
+    "edges": [],
+    "file_path": "./doc/spec/actors/list.md",
+    "line_start": 18,
+    "line_end": 24
+  },
+  {
+    "id": "ACT-AUDIT",
+    "name": "ACT-AUDIT Auditor",
+    "edges": [],
+    "file_path": "./doc/spec/actors/list.md",
+    "line_start": 25,
+    "line_end": 30
+  },
+  {
+    "id": "ACT-DEV",
+    "name": "ACT-DEV Developer",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 35
+      }
+    ],
+    "file_path": "./doc/spec/actors/list.md",
+    "line_start": 31,
+    "line_end": 37
+  },
+  {
+    "id": "ACT-BILLING",
+    "name": "ACT-BILLING External Billing System",
+    "edges": [],
+    "file_path": "./doc/spec/actors/list.md",
+    "line_start": 38,
+    "line_end": 43
+  },
+  {
+    "id": "FC-AUTH-SAML",
+    "name": "FC-AUTH-SAML SAML Authentication Support",
+    "edges": [],
+    "file_path": "./doc/spec/future-considerations/roadmap.md",
+    "line_start": 5,
+    "line_end": 12
+  },
+  {
+    "id": "DAT-TENANT",
+    "name": "Tenants",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 9
+      }
+    ],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 5,
+    "line_end": 19
+  },
+  {
+    "id": "DAT-USER",
+    "name": "Users",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 24
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 29
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-ROLE",
+        "line": 31
+      }
+    ],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 20,
+    "line_end": 33
+  },
+  {
+    "id": "DAT-ROLE",
+    "name": "Roles",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 42
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 43
+      }
+    ],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 34,
+    "line_end": 44
+  },
+  {
+    "id": "DAT-FLAG",
+    "name": "Feature Flags",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 54
+      }
+    ],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 45,
+    "line_end": 57
+  },
+  {
+    "id": "DAT-LOG",
+    "name": "Audit Logs",
+    "edges": [],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 58,
+    "line_end": 74
+  },
+  {
+    "id": "DAT-APP",
+    "name": "Managed Applications",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 79
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 85
+      }
+    ],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 75,
+    "line_end": 87
+  },
+  {
+    "id": "DAT-KEY",
+    "name": "API Access Keys",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 92
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-SYS-CP",
+        "line": 92
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 97
+      }
+    ],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 88,
+    "line_end": 102
+  },
+  {
+    "id": "DAT-SSO-CONFIG",
+    "name": "SSO Configuration",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 107
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 112
+      }
+    ],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 103,
+    "line_end": 117
+  },
+  {
+    "id": "DAT-INVITE",
+    "name": "User Invitations",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 127
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-ROLE",
+        "line": 129
+      }
+    ],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 118,
+    "line_end": 133
+  },
+  {
+    "id": "DAT-BILL-EVENT",
+    "name": "Billing Events",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-TENANT",
+        "line": 143
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-APP",
+        "line": 144
+      }
+    ],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 134,
+    "line_end": 148
+  },
+  {
+    "id": "DAT-SESSION",
+    "name": "User Sessions",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 153
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DAT-USER",
+        "line": 158
+      }
+    ],
+    "file_path": "./doc/spec/data-model/schema.md",
+    "line_start": 149,
+    "line_end": 162
+  },
+  {
+    "id": "BB-UI-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "IF-OPS-CONSOLE",
+        "line": 58
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-TENANT-CONSOLE",
+        "line": 59
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-AUDIT-CONSOLE",
+        "line": 60
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "IF-LOGIN-UI",
+        "line": 61
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-PERF-003",
+        "line": 63
+      }
+    ],
+    "file_path": "./doc/arch/views/building-block-view.md",
+    "line_start": 53,
+    "line_end": 64
+  },
+  {
+    "id": "BB-API-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "FR-SYS-002",
+        "line": 71
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-003",
+        "line": 74
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-PERF-001",
+        "line": 75
+      }
+    ],
+    "file_path": "./doc/arch/views/building-block-view.md",
+    "line_start": 65,
+    "line_end": 76
+  },
+  {
+    "id": "BB-AUTH-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-001",
+        "line": 83
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-003",
+        "line": 84
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-004",
+        "line": 85
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-005",
+        "line": 86
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-006",
+        "line": 87
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-003",
+        "line": 90
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-006",
+        "line": 91
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-CAP-002",
+        "line": 92
+      }
+    ],
+    "file_path": "./doc/arch/views/building-block-view.md",
+    "line_start": 77,
+    "line_end": 93
+  },
+  {
+    "id": "BB-TNT-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-001",
+        "line": 100
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-002",
+        "line": 101
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-003",
+        "line": 102
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-004",
+        "line": 103
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-006",
+        "line": 104
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-007",
+        "line": 105
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-OPS-001",
+        "line": 106
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-OPS-002",
+        "line": 107
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-SYS-004",
+        "line": 108
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-CAP-001",
+        "line": 111
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-DATA-001",
+        "line": 112
+      }
+    ],
+    "file_path": "./doc/arch/views/building-block-view.md",
+    "line_start": 94,
+    "line_end": 113
+  },
+  {
+    "id": "BB-FLG-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "FR-FLAG-001",
+        "line": 120
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-FLAG-002",
+        "line": 121
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-PERF-002",
+        "line": 124
+      }
+    ],
+    "file_path": "./doc/arch/views/building-block-view.md",
+    "line_start": 114,
+    "line_end": 125
+  },
+  {
+    "id": "BB-BIL-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "FR-BILL-001",
+        "line": 132
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-BILL-002",
+        "line": 133
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-BILL-003",
+        "line": 134
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-004",
+        "line": 137
+      }
+    ],
+    "file_path": "./doc/arch/views/building-block-view.md",
+    "line_start": 126,
+    "line_end": 138
+  },
+  {
+    "id": "BB-AUD-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-001",
+        "line": 145
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-002",
+        "line": 146
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 147
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-001",
+        "line": 150
+      }
+    ],
+    "file_path": "./doc/arch/views/building-block-view.md",
+    "line_start": 139,
+    "line_end": 151
+  },
+  {
+    "id": "BB-OBS-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "FR-SYS-005",
+        "line": 157
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-002",
+        "line": 159
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-003",
+        "line": 160
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-001",
+        "line": 161
+      }
+    ],
+    "file_path": "./doc/arch/views/building-block-view.md",
+    "line_start": 152,
+    "line_end": 162
+  },
+  {
+    "id": "BB-CICD-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 168
+      }
+    ],
+    "file_path": "./doc/arch/views/building-block-view.md",
+    "line_start": 163,
+    "line_end": 170
+  },
+  {
+    "id": "BB-EVT-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-003",
+        "line": 180
+      }
+    ],
+    "file_path": "./doc/arch/views/building-block-view.md",
+    "line_start": 171,
+    "line_end": 185
+  },
+  {
+    "id": "CC-DEV-001",
+    "name": null,
+    "edges": [],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 9,
+    "line_end": 17
+  },
+  {
+    "id": "CC-AUTH-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-001",
+        "line": 24
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 18,
+    "line_end": 25
+  },
+  {
+    "id": "CC-AUTH-002",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-CAP-002",
+        "line": 31
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-PERF-001",
+        "line": 32
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 26,
+    "line_end": 33
+  },
+  {
+    "id": "CC-AUTH-003",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-003",
+        "line": 41
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 42
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 34,
+    "line_end": 47
+  },
+  {
+    "id": "CC-ERR-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 53
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 48,
+    "line_end": 54
+  },
+  {
+    "id": "CC-ERR-002",
+    "name": null,
+    "edges": [],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 55,
+    "line_end": 58
+  },
+  {
+    "id": "CC-ERR-003",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 64
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 59,
+    "line_end": 65
+  },
+  {
+    "id": "CC-ERR-004",
+    "name": null,
+    "edges": [],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 66,
+    "line_end": 73
+  },
+  {
+    "id": "CC-LOG-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-001",
+        "line": 80
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 74,
+    "line_end": 81
+  },
+  {
+    "id": "CC-LOG-002",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-DATA-001",
+        "line": 87
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 82,
+    "line_end": 88
+  },
+  {
+    "id": "CC-LOG-003",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-003",
+        "line": 94
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 89,
+    "line_end": 99
+  },
+  {
+    "id": "CC-SEC-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-005",
+        "line": 106
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 100,
+    "line_end": 107
+  },
+  {
+    "id": "CC-SEC-002",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-001",
+        "line": 114
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 108,
+    "line_end": 115
+  },
+  {
+    "id": "CC-SEC-003",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-004",
+        "line": 121
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 116,
+    "line_end": 126
+  },
+  {
+    "id": "CC-DAT-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-003",
+        "line": 132
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 127,
+    "line_end": 133
+  },
+  {
+    "id": "CC-DAT-002",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-CAP-001",
+        "line": 139
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 134,
+    "line_end": 144
+  },
+  {
+    "id": "CC-API-001",
+    "name": null,
+    "edges": [],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 145,
+    "line_end": 148
+  },
+  {
+    "id": "CC-API-002",
+    "name": null,
+    "edges": [],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 149,
+    "line_end": 156
+  },
+  {
+    "id": "CC-OBS-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 162
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 157,
+    "line_end": 163
+  },
+  {
+    "id": "CC-OBS-002",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-001",
+        "line": 169
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 164,
+    "line_end": 174
+  },
+  {
+    "id": "CC-OPS-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-002",
+        "line": 181
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 175,
+    "line_end": 182
+  },
+  {
+    "id": "CC-OPS-002",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-SEC-002",
+        "line": 188
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 191
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 183,
+    "line_end": 192
+  },
+  {
+    "id": "CC-OPS-004",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-002",
+        "line": 199
+      }
+    ],
+    "file_path": "./doc/arch/views/cross-cutting-concepts.md",
+    "line_start": 193,
+    "line_end": 199
+  },
+  {
+    "id": "CTX-ACT-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 43
+      }
+    ],
+    "file_path": "./doc/arch/views/context-view.md",
+    "line_start": 41,
+    "line_end": 44
+  },
+  {
+    "id": "CTX-ACT-002",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-OPS",
+        "line": 47
+      }
+    ],
+    "file_path": "./doc/arch/views/context-view.md",
+    "line_start": 45,
+    "line_end": 48
+  },
+  {
+    "id": "CTX-ACT-003",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-AUDIT",
+        "line": 51
+      }
+    ],
+    "file_path": "./doc/arch/views/context-view.md",
+    "line_start": 49,
+    "line_end": 52
+  },
+  {
+    "id": "CTX-ACT-004",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-DEV",
+        "line": 55
+      }
+    ],
+    "file_path": "./doc/arch/views/context-view.md",
+    "line_start": 53,
+    "line_end": 58
+  },
+  {
+    "id": "CTX-EXT-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "TERM-APP-TARGET",
+        "line": 61
+      }
+    ],
+    "file_path": "./doc/arch/views/context-view.md",
+    "line_start": 59,
+    "line_end": 62
+  },
+  {
+    "id": "CTX-EXT-002",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-BILLING",
+        "line": 65
+      }
+    ],
+    "file_path": "./doc/arch/views/context-view.md",
+    "line_start": 63,
+    "line_end": 66
+  },
+  {
+    "id": "CTX-EXT-003",
+    "name": null,
+    "edges": [],
+    "file_path": "./doc/arch/views/context-view.md",
+    "line_start": 67,
+    "line_end": 74
+  },
+  {
+    "id": "RT-001",
+    "name": "RT-001 User Login (OIDC)",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 15
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-UI-001",
+        "line": 16
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-AUTH-001",
+        "line": 17
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-API-001",
+        "line": 18
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-AUTH-001",
+        "line": 48
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-AUTH-002",
+        "line": 49
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-LOG-001",
+        "line": 50
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-AUTH-001",
+        "line": 53
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-PERF-001",
+        "line": 54
+      }
+    ],
+    "file_path": "./doc/arch/views/runtime-view.md",
+    "line_start": 6,
+    "line_end": 57
+  },
+  {
+    "id": "RT-002",
+    "name": "RT-002 Authenticated API Request",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 67
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-API-001",
+        "line": 68
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-TNT-001",
+        "line": 69
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-AUTH-002",
+        "line": 96
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-AUTH-003",
+        "line": 97
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-LOG-001",
+        "line": 98
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-API-001",
+        "line": 99
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-TENANT-001",
+        "line": 102
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-PERF-002",
+        "line": 103
+      }
+    ],
+    "file_path": "./doc/arch/views/runtime-view.md",
+    "line_start": 58,
+    "line_end": 106
+  },
+  {
+    "id": "RT-003",
+    "name": "RT-003 Async Event Processing",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-TNT-001",
+        "line": 116
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-EVT-001",
+        "line": 117
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-BIL-001",
+        "line": 118
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-AUD-001",
+        "line": 119
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-LOG-001",
+        "line": 147
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-DAT-001",
+        "line": 148
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-DAT-002",
+        "line": 149
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-BILL-002",
+        "line": 152
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "FR-LOG-001",
+        "line": 153
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-003",
+        "line": 154
+      }
+    ],
+    "file_path": "./doc/arch/views/runtime-view.md",
+    "line_start": 107,
+    "line_end": 157
+  },
+  {
+    "id": "RT-004",
+    "name": "RT-004 Blue-Green Switchover",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-CICD-001",
+        "line": 167
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-API-001",
+        "line": 168
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-OBS-001",
+        "line": 169
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-OPS-001",
+        "line": 204
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-OPS-002",
+        "line": 205
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-OBS-001",
+        "line": 206
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 209
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-002",
+        "line": 210
+      }
+    ],
+    "file_path": "./doc/arch/views/runtime-view.md",
+    "line_start": 158,
+    "line_end": 213
+  },
+  {
+    "id": "RT-005",
+    "name": "RT-005 Error Handling Flow",
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "ACT-USER",
+        "line": 223
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-API-001",
+        "line": 224
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-TNT-001",
+        "line": 225
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-OBS-001",
+        "line": 226
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-ERR-001",
+        "line": 258
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-ERR-002",
+        "line": 259
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-ERR-003",
+        "line": 260
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-ERR-004",
+        "line": 261
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-LOG-001",
+        "line": 262
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 265
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-MON-002",
+        "line": 266
+      }
+    ],
+    "file_path": "./doc/arch/views/runtime-view.md",
+    "line_start": 214,
+    "line_end": 266
+  },
+  {
+    "id": "DEP-AWS-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-API-001",
+        "line": 73
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 69,
+    "line_end": 77
+  },
+  {
+    "id": "DEP-AWS-006",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-UI-001",
+        "line": 82
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 78,
+    "line_end": 86
+  },
+  {
+    "id": "DEP-AZU-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-AUTH-001",
+        "line": 91
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 87,
+    "line_end": 95
+  },
+  {
+    "id": "DEP-AWS-002",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-TNT-001",
+        "line": 100
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-BIL-001",
+        "line": 100
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-AUD-001",
+        "line": 100
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 96,
+    "line_end": 106
+  },
+  {
+    "id": "DEP-AWS-003",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-TNT-001",
+        "line": 111
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-BIL-001",
+        "line": 111
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 107,
+    "line_end": 117
+  },
+  {
+    "id": "DEP-AWS-004",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-EVT-001",
+        "line": 122
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 118,
+    "line_end": 126
+  },
+  {
+    "id": "DEP-AWS-005",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-FLG-001",
+        "line": 131
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 127,
+    "line_end": 135
+  },
+  {
+    "id": "DEP-AWS-007",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-AUD-001",
+        "line": 140
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-OBS-001",
+        "line": 140
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 136,
+    "line_end": 144
+  },
+  {
+    "id": "DEP-AWS-008",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-TNT-001",
+        "line": 149
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-BIL-001",
+        "line": 149
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 145,
+    "line_end": 153
+  },
+  {
+    "id": "DEP-AWS-009",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "BB-UI-001",
+        "line": 158
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "BB-API-001",
+        "line": 158
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-OPS-002",
+        "line": 165
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-DEV-001",
+        "line": 169
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-OPS-002",
+        "line": 170
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "NFR-OPS-001",
+        "line": 171
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 154,
+    "line_end": 176
+  },
+  {
+    "id": "DEP-OPS-001",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CC-OPS-001",
+        "line": 192
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-OPS-003",
+        "line": 192
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 177,
+    "line_end": 193
+  },
+  {
+    "id": "DEP-OPS-002",
+    "name": null,
+    "edges": [
+      {
+        "edge_type": "ref",
+        "target_id": "CC-OPS-002",
+        "line": 201
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "DEP-OPS-001",
+        "line": 203
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-OPS-002",
+        "line": 207
+      },
+      {
+        "edge_type": "ref",
+        "target_id": "CC-OPS-004",
+        "line": 207
+      }
+    ],
+    "file_path": "./doc/arch/views/deployment-view.md",
+    "line_start": 194,
+    "line_end": 215
+  }
+]

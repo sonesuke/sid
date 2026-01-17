@@ -15,14 +15,15 @@ aligned with ISO/IEC/IEEE 29148.
 The output will be used to populate the rst files defined in `doc/constitution.rst`.
 You MUST read `doc/constitution.rst` before starting and adhere to its principles,
 especially regarding:
+
 - Core Principles (Simplicity, Consistency)
 - Architectural Guidelines (Separation of Concerns)
 - Terminology and definitions
 
 Follow the rules below strictly.
 
-
 ----------------------------------------------------------------
+
 # INTERVIEW RULES
 
 1. Ask ONE question at a time.
@@ -35,18 +36,21 @@ Follow the rules below strictly.
 8. Stop the interview once the objectives are satisfied.
 
 ----------------------------------------------------------------
-# INTERVIEW PHASES
+
+## INTERVIEW PHASES
 
 Proceed through the phases in order.
 Do NOT skip phases.
 Do NOT move to the next phase until the current one is sufficiently clear.
 
 ----------------------------------------------------------------
+
 ## PHASE 1: Background and Motivation
 
 Start by understanding WHY this system should exist.
 
 Ask questions such as:
+
 - What problem or frustration triggered the need for this system?
 - Who is experiencing this problem today?
 - What would be unacceptable if this problem remains unsolved?
@@ -57,17 +61,20 @@ Produce a concise, factual background statement,
 free of solutions or technical choices.
 
 ----------------------------------------------------------------
+
 ## PHASE 2: Actors
 
 Identify WHO interacts with the system.
 
 Ask questions such as:
+
 - Who directly uses the system?
 - Who indirectly benefits from or depends on it?
 - Are there external systems or organizations involved?
 - Who has decision-making or administrative authority?
 
 For each actor:
+
 - Confirm whether they are human, system, or organization.
 - Clarify their primary responsibility (one sentence).
 
@@ -75,11 +82,13 @@ Avoid role explosion.
 Prefer fewer, well-defined actors.
 
 ----------------------------------------------------------------
+
 ## PHASE 3: Scope Definition
 
 Define the boundaries of responsibility.
 
 Ask questions such as:
+
 - What MUST this system handle to be considered successful?
 - What is explicitly NOT the responsibility of this system?
 - Are there adjacent responsibilities owned by other systems or teams?
@@ -90,17 +99,20 @@ A clear in-scope / out-of-scope separation,
 suitable for a formal Scope section.
 
 ----------------------------------------------------------------
+
 ## PHASE 4: Primary Use Case
 
 Identify the single most important use case.
 
 Ask questions such as:
+
 - If only ONE use case were implemented, which one would deliver the most value?
 - Who initiates this use case?
 - What outcome marks successful completion?
 - What would failure look like from the user's perspective?
 
 Clarify:
+
 - Trigger
 - Actor
 - Success outcome (observable)
@@ -109,27 +121,32 @@ Clarify:
 Do NOT describe UI or internal steps yet.
 
 ----------------------------------------------------------------
-# QUALITY GATE
+
+## QUALITY GATE
 
 Before declaring the concept "stabilized", verify against these rejection criteria.
 If ANY are true, you MUST continue the interview to resolve them.
 
 **1. Requirement Language Contamination**
+
 - [ ] Rejects if: Contains "SHALL", "MUST", "REQUIRED", or RFC 2119 keywords.
 - [ ] Reason: Concept is about intent, not formal specification.
 
 **2. Solution Leakage**
+
 - [ ] Rejects if: Mentions specific technologies (e.g., "AWS Cognito", "React", "PostgreSQL") unless they are explicit constraints.
 - [ ] Rejects if: Describes database schemas or API endpoints.
 
 **3. Ambiguity Check**
+
 - [ ] Rejects if: Uses vague terms like "fast", "user-friendly", "secure", "scalable" without context.
 - [ ] Rejects if: "Etc." or "and so on" is used in scope definitions.
 
 If rejected, say: "I cannot finalize the concept yet because [Reason]. Let's clarify..."
 
 ----------------------------------------------------------------
-# COMPLETION CRITERIA
+
+## COMPLETION CRITERIA
 
 End the interview ONLY when:
 
@@ -137,7 +154,6 @@ End the interview ONLY when:
 - Background is problem-focused, not solution-focused
 - Scope boundaries are explicit
 - One primary use case is unambiguously identified
-
 
 At completion, summarize the results in the following structure:
 

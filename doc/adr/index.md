@@ -6,5 +6,6 @@ This directory contains the Architecture Decision Records (ADRs) for the project
 Create a new file in `decisions/` named `short-title.md` following the structure defined in [constitution](constitution.md).
 
 ## Indices
+
 - [constitution](constitution.md)
-- [decisions/*](decisions/*.md)
+- [Decisions](decisions/)

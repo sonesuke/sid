@@ -27,6 +27,7 @@ doc/adr/
 ```
 
 **Naming Convention**:
+
 - Filename: `short-title.md`
 - Title: `[ADR-{Category}-{Number}] Title Case Name`
 - **Format**: ``ADR-{Category}-{Number}``

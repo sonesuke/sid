@@ -10,5 +10,5 @@ This architecture documentation introduces **no new constraints**. All binding c
 
 Refer to [Constraints and Assumptions](../../spec/constraints-and-assumptions/index.md) for the authoritative definitions.
 
-- **Constraints**: [CON-*](#CON) declarations.
-- **Assumptions**: [ASM-*](#ASM) declarations.
+- **Constraints**: `CON-*` declarations.
+- **Assumptions**: `ASM-*` declarations.

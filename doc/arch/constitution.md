@@ -47,27 +47,33 @@ Views SHALL NOT overlap in responsibility.
 ### Context View (C4 Level 1)
 
 **Purpose**:
+
 - Define the system boundary and its external environment.
 
 **Scope**:
+
 - External actors and external systems
 - High-level interactions across the system boundary
 
 **Rules**:
+
 - The Context View SHALL NOT describe internal structure.
 - Use cases and actors SHALL be referenced, not restated.
 
 ### Building Block View (C4 Level 2 / 3)
 
 **Purpose**:
+
 - Allocate responsibilities to architectural building blocks.
 
 **Scope**:
+
 - Major deployable units (containers) and their responsibilities
 - Relationships between building blocks
 - Mapping of responsibilities to Functional Requirements (by reference)
 
 **Rules**:
+
 - Building Blocks represent **responsibility-bearing units**, not technologies.
 - Specific Cloud Managed Services (e.g., AWS Cognito) SHALL NOT be named; use generic terms (e.g., IdP) instead.
 - Implementation technologies SHALL NOT be specified.
@@ -76,18 +82,22 @@ Views SHALL NOT overlap in responsibility.
 ### Runtime View
 
 **Purpose**:
+
 - Explain how building blocks collaborate at runtime to fulfill key scenarios.
 - Demonstrate Cross-cutting Concepts "in action".
 
 **Scope**:
+
 - Representative interaction flows (5-10 key scenarios)
 - Responsibility transitions between building blocks
 - Normal and exceptional execution paths (by reference to ERR)
 
 **ID Convention**:
+
 - **RT-{Number}**: Runtime Scenario identifier (e.g., `RT-001`, `RT-002`)
 
 **Required Structure** (per Scenario):
+
 1. **Scenario**: Brief description of the runtime behavior.
 2. **Actors**: List of Building Blocks and external systems involved.
 3. **Flow**: Step-by-step sequence, preferably as a **Mermaid Sequence Diagram**.
@@ -95,6 +105,7 @@ Views SHALL NOT overlap in responsibility.
 5. **Requirements**: Related FR/NFR references.
 
 **Typical Scenarios**:
+
 - User Login (Authentication flow)
 - Authenticated API Request
 - Async Event Processing (Pub/Sub)
@@ -102,6 +113,7 @@ Views SHALL NOT overlap in responsibility.
 - Error Handling / Retry Flow
 
 **Rules**:
+
 - Runtime Views SHALL NOT redefine Functional Requirements.
 - Error semantics are defined in ERR and SHALL be referenced only.
 - Focus on **time-axis stories**: "Who calls whom, in what order, under what rules."
@@ -109,13 +121,16 @@ Views SHALL NOT overlap in responsibility.
 ### Architecture Decision Records (ADR)
 
 **Purpose**:
+
 - Record significant architectural decisions and their rationale.
 
 **Scope**:
+
 - Decisions involving trade-offs, alternatives, or long-term impact
 - Technology choices, architectural patterns, and deployment strategies
 
 **Rules**:
+
 - ADRs are created when multiple viable options exist.
 - Architecture Views SHALL reference ADRs where decisions affect the structure.
 - ADRs SHALL NOT redefine requirements.
@@ -123,14 +138,17 @@ Views SHALL NOT overlap in responsibility.
 ### Deployment View
 
 **Purpose**:
+
 - Describe how building blocks are deployed onto physical or cloud infrastructure.
 
 **Scope**:
+
 - Environments, regions, and network boundaries
 - Infrastructure components (e.g., cloud services)
 - Mapping of building blocks to deployment units
 
 **Rules**:
+
 - Deployment Views MAY reference specific platforms or services (e.g., AWS).
 - This is the primary view for mapping abstract building blocks to concrete Cloud Managed Services.
 - Deployment Views SHALL demonstrate how NFRs and CONs are satisfied.
@@ -139,10 +157,12 @@ Views SHALL NOT overlap in responsibility.
 ### Cross-cutting Concepts
 
 **Purpose**:
+
 - Define the **"Design Constitution"**: the permanent rules, principles, and mechanisms that apply consistently across all architectural elements.
 - It is the "Physical Laws" of the system that every component must obey.
 
 **Scope (Typical Topics)**:
+
 1. **Authentication & Authorization**: (e.g., "Delegate to External IdP", "Role + Scope model").
 2. **Error Handling**: (e.g., "Map internal exceptions to standard error codes").
 3. **Logging & Auditing**: (e.g., "Mandatory Correlation ID", "No PII in logs").
@@ -152,6 +172,7 @@ Views SHALL NOT overlap in responsibility.
 7. **Observability**: (e.g., "SLI/SLO driven").
 
 **Rules**:
+
 - **DO NOT** write component-specific specific logic (Use Building Block View).
 - **DO NOT** write ADR rationale or history (Use ADRs).
 - **DO NOT** write generic best practices; only document rules adopted by this system.
@@ -159,6 +180,7 @@ Views SHALL NOT overlap in responsibility.
 - Consistent with NFRs (Requirements) and ADRs (Decisions).
 
 **Operational Rules**:
+
 1. **Promotion**: If an ADR is referenced 2-3 times with the same reasoning across different contexts, it is a candidate for promotion to a Cross-cutting Concept (CC).
 2. **Stability**: Once promoted to a CC, the rule represents a stable "Institution". The original ADR may be detached or superseded to prevent regression.
 3. **Exceptions**: Any ADR that violates a Cross-cutting Concept MUST be explicitly labeled as an **"Exception ADR"** with strong justification.

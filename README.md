@@ -26,6 +26,7 @@ Generates the documentation as a single HTML file.
 cd doc
 make singlehtml
 ```
+
 Output: `doc/_build/singlehtml/index.html`
 
 ### Build PDF
@@ -36,6 +37,7 @@ Generates the documentation as a PDF file using Pandoc.
 cd doc
 make pdf
 ```
+
 Output: `specification.pdf` (in the project root)
 
 ### Linting (Check Syntax)
