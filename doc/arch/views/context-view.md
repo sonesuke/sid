@@ -40,25 +40,25 @@ The following actors and systems interact with the SaaS Foundation Platform.
 
 <a id="CTX-ACT-001"></a>
 
-#### [CTX-ACT-001] Tenant User
+#### Tenant User
 
 [ACT-USER](../../spec/actors/list.md#ACT-USER)
 
 <a id="CTX-ACT-002"></a>
 
-#### [CTX-ACT-002] Platform Operator
+#### Platform Operator
 
 [ACT-OPS](../../spec/actors/list.md#ACT-OPS)
 
 <a id="CTX-ACT-003"></a>
 
-#### [CTX-ACT-003] Auditor
+#### Auditor
 
 [ACT-AUDIT](../../spec/actors/list.md#ACT-AUDIT)
 
 <a id="CTX-ACT-004"></a>
 
-#### [CTX-ACT-004] Developer
+#### Developer
 
 [ACT-DEV](../../spec/actors/list.md#ACT-DEV)
 
@@ -66,19 +66,19 @@ The following actors and systems interact with the SaaS Foundation Platform.
 
 <a id="CTX-EXT-001"></a>
 
-#### [CTX-EXT-001] Managed Application
+#### Managed Application
 
 [TERM-APP-TARGET](../../spec/terminology/definitions.md#TERM-APP-TARGET)
 
 <a id="CTX-EXT-002"></a>
 
-#### [CTX-EXT-002] External Billing System
+#### External Billing System
 
 [ACT-BILLING](../../spec/actors/list.md#ACT-BILLING)
 
 <a id="CTX-EXT-003"></a>
 
-#### [CTX-EXT-003] External Identity Provider
+#### External Identity Provider
 
 OIDC-compliant IdP (e.g., Azure Entra ID).
 

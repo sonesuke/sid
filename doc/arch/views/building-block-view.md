@@ -19,6 +19,8 @@ Container(api_gw, "API Gateway", "API Gateway", "Unified Entry Point, Routing, T
 Container(auth_svc, "Auth Service", "Identity Provider / FaaS", "IdP, Token Vending, User Mgmt")
 Container(tenant_svc, "Tenant Service", "FaaS + NoSQL", "Tenant Registration, Config, Lifecycle")
 Container(flag_svc, "Feature Flag Service", "Configuration Service", "Feature Toggles & Rollouts")
+Container(billing_svc, "Billing Service", "FaaS + NoSQL", "Usage Metering & Billing Events")
+Container(audit_svc, "Audit Service", "FaaS + S3", "Audit Log Collection & Archive")
 Container(obs_platform, "Observability Platform", "CloudWatch / X-Ray", "Metrics, Logs, Tracing, Alerting")
 Container(cicd_svc, "CI/CD Service", "GitHub Actions", "Build, Test, Deploy Pipeline")
 
@@ -52,7 +54,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 <a id="BB-UI-001"></a>
 
-### [BB-UI-001] Web Console (SPA)
+### Web Console (SPA)
 
 * **Responsibility**: Single Page Application providing Administrative interfaces for Operators and Tenants.
 * **Related FRs**:
@@ -65,7 +67,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 <a id="BB-API-001"></a>
 
-### [BB-API-001] API Gateway
+### API Gateway
 
 * **Responsibility**: Entry point for all external requests. Handles routing, rate limiting, and authentication offloading.
 * **Related FRs**:
@@ -76,7 +78,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 <a id="BB-AUTH-001"></a>
 
-### [BB-AUTH-001] Auth Service
+### Auth Service
 
 * **Responsibility**: Manages user identities and credentials via External IdP.
 * **Related FRs**:
@@ -92,7 +94,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 <a id="BB-TNT-001"></a>
 
-### [BB-TNT-001] Tenant Service
+### Tenant Service
 
 * **Responsibility**: Manages Tenant lifecycle (onboarding, configuration, suspension).
 * **Related FRs**:
@@ -111,7 +113,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 <a id="BB-FLG-001"></a>
 
-### [BB-FLG-001] Feature Flag Service
+### Feature Flag Service
 
 * **Responsibility**: Delivers dynamic configuration and feature toggles to the Application.
 * **Related FRs**:
@@ -122,7 +124,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 <a id="BB-BIL-001"></a>
 
-### [BB-BIL-001] Billing Service
+### Billing Service
 
 * **Responsibility**: Aggregates usage metrics and interfaces with external Billing System.
 * **Related FRs**:
@@ -134,7 +136,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 <a id="BB-AUD-001"></a>
 
-### [BB-AUD-001] Audit Service
+### Audit Service
 
 * **Responsibility**: Ingests and archives security and operational logs.
 * **Related FRs**:
@@ -147,7 +149,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 <a id="BB-OBS-001"></a>
 
-### [BB-OBS-001] Observability Platform
+### Observability Platform
 
 * **Responsibility**: Centralized collection and visualization of Metrics, Logs, and Traces. Handles Alerting and Synthetics.
 * **Related FRs**:
@@ -159,7 +161,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 <a id="BB-CICD-001"></a>
 
-### [BB-CICD-001] CI/CD Service
+### CI/CD Service
 
 * **Responsibility**: Automation of Build, Test, Security Scanning, and Deployment processes.
 * **Related NFRs**:
@@ -168,7 +170,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 <a id="BB-EVT-001"></a>
 
-### [BB-EVT-001] Event Bus
+### Event Bus
 
 * **Responsibility**: Asynchronous message broker for decoupling services (Publish/Subscribe pattern).
 * **Related FRs**:

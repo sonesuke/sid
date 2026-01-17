@@ -68,7 +68,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 
 <a id="DEP-AWS-001"></a>
 
-#### [DEP-AWS-001] API Gateway
+#### API Gateway
 
 * **AWS Service**: Amazon API Gateway
 * **Mapping**: [BB-API-001](building-block-view.md#BB-API-001)
@@ -77,7 +77,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 
 <a id="DEP-AWS-006"></a>
 
-#### [DEP-AWS-006] Web Console (SPA)
+#### Web Console (SPA)
 
 * **AWS Service**: CloudFront + S3 + Lambda@Edge + **Amazon API Gateway + AWS Lambda**
 * **Mapping**: [BB-UI-001](building-block-view.md#BB-UI-001)
@@ -87,7 +87,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 
 <a id="DEP-AZU-001"></a>
 
-#### [DEP-AZU-001] Auth Service
+#### Auth Service
 
 * **AWS Service**: Azure Entra ID (External)
 * **Mapping**: [BB-AUTH-001](building-block-view.md#BB-AUTH-001)
@@ -96,7 +96,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 
 <a id="DEP-AWS-002"></a>
 
-#### [DEP-AWS-002] Compute (Lambda)
+#### Compute (Lambda)
 
 * **AWS Service**: AWS Lambda
 * **Mapping**: [BB-TNT-001](building-block-view.md#BB-TNT-001), [BB-BIL-001](building-block-view.md#BB-BIL-001), [BB-AUD-001](building-block-view.md#BB-AUD-001)
@@ -106,7 +106,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 
 <a id="DEP-AWS-003"></a>
 
-#### [DEP-AWS-003] Data Store
+#### Data Store
 
 * **AWS Service**: Amazon DynamoDB
 * **Mapping**: [BB-TNT-001](building-block-view.md#BB-TNT-001), [BB-BIL-001](building-block-view.md#BB-BIL-001) (Persistence)
@@ -116,7 +116,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 
 <a id="DEP-AWS-004"></a>
 
-#### [DEP-AWS-004] Event Bus
+#### Event Bus
 
 * **AWS Service**: Amazon EventBridge
 * **Mapping**: [BB-EVT-001](building-block-view.md#BB-EVT-001)
@@ -125,7 +125,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 
 <a id="DEP-AWS-005"></a>
 
-#### [DEP-AWS-005] Feature Flags
+#### Feature Flag Services
 
 * **AWS Service**: AWS AppConfig
 * **Mapping**: [BB-FLG-001](building-block-view.md#BB-FLG-001)
@@ -134,7 +134,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 
 <a id="DEP-AWS-007"></a>
 
-#### [DEP-AWS-007] Observability & Archive
+#### Observability & Archive
 
 * **AWS Service**: CloudWatch Logs / S3
 * **Mapping**: [BB-AUD-001](building-block-view.md#BB-AUD-001), [BB-OBS-001](building-block-view.md#BB-OBS-001)
@@ -143,7 +143,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 
 <a id="DEP-AWS-008"></a>
 
-#### [DEP-AWS-008] Backup
+#### Backup
 
 * **AWS Service**: AWS Backup
 * **Mapping**: [BB-TNT-001](building-block-view.md#BB-TNT-001), [BB-BIL-001](building-block-view.md#BB-BIL-001)
@@ -152,7 +152,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 
 <a id="DEP-AWS-009"></a>
 
-#### [DEP-AWS-009] Web Application Firewall
+#### Web Application Firewall
 
 * **AWS Service**: AWS WAF
 * **Mapping**: [BB-UI-001](building-block-view.md#BB-UI-001) (CloudFront), [BB-API-001](building-block-view.md#BB-API-001) (API Gateway)
@@ -175,7 +175,7 @@ We adopt **Blue-Green Deployment** to achieve Zero Downtime and Immediate Rollba
 
 <a id="DEP-OPS-001"></a>
 
-### [DEP-OPS-001] Blue-Green Switchover
+### Blue-Green Switchover
 
 * **Mechanism**: Traffic shifting via API Gateway Stages / Lambda Aliases.
 * **Procedure**:
@@ -193,7 +193,7 @@ We adopt **Blue-Green Deployment** to achieve Zero Downtime and Immediate Rollba
 
 <a id="DEP-OPS-002"></a>
 
-### [DEP-OPS-002] CI/CD Pipeline
+### CI/CD Pipeline
 
 * **Automated Flow**:
 

@@ -25,9 +25,9 @@ While the domain has some relational aspects, the system prioritizes "Serverless
 **Chosen Option**: **Amazon DynamoDB**
 
 **Justification**:
-DynamoDB is the only option that fully aligns with our **Serverless First** strategy ([architecture-style](architecture-style.md)).
+DynamoDB is the only option that fully aligns with our **Serverless First** strategy ([ADR-ARCH-001](architecture-style.md#ADR-ARCH-001)).
 Unlike Aurora Serverless, DynamoDB offers true "pay-per-request" pricing and eliminates connection management overhead common with Lambda + RDBMS.
-We accept the trade-off of "Eventual Consistency" (see [../../arch/views/cross-cutting-concepts](../../arch/views/cross-cutting-concepts.md) [CC-DAT-002]) and lack of joins in exchange for predictable performance and operational simplicity.
+We accept the trade-off of "Eventual Consistency" (see [CC-DAT-002](../../arch/views/cross-cutting-concepts.md#CC-DAT-002)) and lack of joins in exchange for predictable performance and operational simplicity.
 
 ### Positive Consequences
 
