@@ -4,42 +4,42 @@
 
 ## FR-FLAG-001 Flag Configuration
 
-The [TERM-SYS-CP](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-OPS](../actors/list.md#ACT-OPS) to configure [Feature Flags](../data-model/schema.md#DAT-FLAG) for each [Tenant](../data-model/schema.md#DAT-TENANT).
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) to configure [DAT-FLAG (Feature Flags)](../data-model/schema.md#DAT-FLAG) for each [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT).
 
 **Realized by**:
 
-* [Operator Console](../interface-requirements/ui.md#IF-OPS-CONSOLE)
+* [IF-OPS-CONSOLE (Operator Console)](../interface-requirements/ui.md#IF-OPS-CONSOLE)
 
 **Quality Attributes**:
 
-* [Encryption in Transit](../non-functional-requirements/security.md#NFR-SEC-001)
-* [Least Privilege](../non-functional-requirements/security.md#NFR-SEC-005)
-* [Tenant Scalability](../non-functional-requirements/capacity.md#NFR-CAP-001)
-* [Availability SLO](../non-functional-requirements/availability.md#NFR-OPS-001)
+* [NFR-SEC-001 (Encryption in Transit)](../non-functional-requirements/security.md#NFR-SEC-001)
+* [NFR-SEC-005 (Least Privilege)](../non-functional-requirements/security.md#NFR-SEC-005)
+* [NFR-CAP-001 (Tenant Scalability)](../non-functional-requirements/capacity.md#NFR-CAP-001)
+* [NFR-OPS-001 (Service Level Objective)](../non-functional-requirements/availability.md#NFR-OPS-001)
 
 **Error Conditions**:
 
-* [Access Denied](../error-handling/auth.md#ERR-AUTH-403)
-* [Resource Not Found](../error-handling/resource.md#ERR-RES-404)
+* [ERR-AUTH-403 (Access Denied)](../error-handling/auth.md#ERR-AUTH-403)
+* [ERR-RES-404 (Resource Not Found)](../error-handling/resource.md#ERR-RES-404)
 
 <a id="FR-FLAG-002"></a>
 
 ### FR-FLAG-002 Flag Delivery
 
-The system SHALL provide an interface via [API-FLAG](../interface-requirements/apis.md#API-FLAG) for [TERM-APP-TARGET](../terminology/definitions.md#TERM-APP-TARGET) to retrieve the current state of [Feature Flags](../data-model/schema.md#DAT-FLAG).
+The system SHALL provide an interface via [API-FLAG (Feature Flag API)](../interface-requirements/apis.md#API-FLAG) for [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) to retrieve the current state of [DAT-FLAG (Feature Flags)](../data-model/schema.md#DAT-FLAG).
 
 **Realized by**:
 
-* [API-FLAG](../interface-requirements/apis.md#API-FLAG)
+* [API-FLAG (Feature Flag API)](../interface-requirements/apis.md#API-FLAG)
 
 **Quality Attributes**:
 
-* [Encryption in Transit](../non-functional-requirements/security.md#NFR-SEC-001)
-* [Key Management](../non-functional-requirements/security.md#NFR-SEC-004)
-* [Availability SLO](../non-functional-requirements/availability.md#NFR-OPS-001)
-* [Load Balancing and Failover](../non-functional-requirements/availability.md#NFR-OPS-003)
+* [NFR-SEC-001 (Encryption in Transit)](../non-functional-requirements/security.md#NFR-SEC-001)
+* [NFR-SEC-004 (Key Management)](../non-functional-requirements/security.md#NFR-SEC-004)
+* [NFR-OPS-001 (Service Level Objective)](../non-functional-requirements/availability.md#NFR-OPS-001)
+* [NFR-OPS-003 (Load Balancing and Failover)](../non-functional-requirements/availability.md#NFR-OPS-003)
 
 **Error Conditions**:
 
-* [Invalid Credentials](../error-handling/auth.md#ERR-AUTH-401)
-* [Rate Limit Exceeded](../error-handling/rate-limit.md#ERR-RATE-429)
+* [ERR-AUTH-401 (Invalid Credentials)](../error-handling/auth.md#ERR-AUTH-401)
+* [ERR-RATE-429 (Rate Limit Exceeded)](../error-handling/rate-limit.md#ERR-RATE-429)

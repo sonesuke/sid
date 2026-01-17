@@ -26,7 +26,7 @@ Authentication SHALL be delegated to an External Identity Provider (OIDC complia
 
 * **Decision**: [../../adr/decisions/authentication-provider](../../adr/decisions/authentication-provider.md) (Azure Entra ID).
 * **Root**:
-  * [FR-AUTH-001](../../spec/functional-requirements/auth.md#FR-AUTH-001) (Auth Methods)
+  * [FR-AUTH-001 (Supported Authentication Methods)](../../spec/functional-requirements/auth.md#FR-AUTH-001) (Auth Methods)
 
 <a id="CC-AUTH-002"></a>
 
@@ -35,8 +35,8 @@ Authentication SHALL be delegated to an External Identity Provider (OIDC complia
 Services SHALL be Stateless. Trust Identity/Access Tokens (JWT) verified via public keys.
 
 * **Root**:
-  * [NFR-CAP-002](../../spec/non-functional-requirements/capacity.md#NFR-CAP-002) (User Scalability)
-  * [NFR-PERF-001](../../spec/non-functional-requirements/performance.md#NFR-PERF-001) (Auth Latency)
+  * [NFR-CAP-002 (User Scalability)](../../spec/non-functional-requirements/capacity.md#NFR-CAP-002) (User Scalability)
+  * [NFR-PERF-001 (Authentication Latency)](../../spec/non-functional-requirements/performance.md#NFR-PERF-001) (Auth Latency)
 
 <a id="CC-AUTH-003"></a>
 
@@ -47,8 +47,8 @@ Authorization SHALL use a Role + Scope model.
 * **Role**: Coarse-grained access (e.g., `TenantAdmin`, `User`).
 * **Scope**: Fine-grained permissions (e.g., `billing:read`).
 * **Root**:
-  * [FR-AUTH-003](../../spec/functional-requirements/auth.md#FR-AUTH-003) (SSO Config)
-  * [NFR-SEC-005](../../spec/non-functional-requirements/security.md#NFR-SEC-005) (Least Privilege)
+  * [FR-AUTH-003 (Tenant SSO Configuration)](../../spec/functional-requirements/auth.md#FR-AUTH-003) (SSO Config)
+  * [NFR-SEC-005 (Least Privilege)](../../spec/non-functional-requirements/security.md#NFR-SEC-005) (Least Privilege)
 
 ## Error Handling
 
@@ -61,7 +61,7 @@ Authorization SHALL use a Role + Scope model.
 Internal exceptions SHALL be mapped to standard HTTP error codes.
 
 * **Root**:
-  * [NFR-OPS-001](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Availability SLO)
+  * [NFR-OPS-001 (Service Level Objective)](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Availability SLO)
 
 <a id="CC-ERR-002"></a>
 
@@ -76,7 +76,7 @@ Business Errors (e.g., "Insufficient Funds") SHALL be distinguished from System 
 Internal stack traces SHALL NOT be exposed in API responses (Security).
 
 * **Root**:
-  * [NFR-SEC-001](../../spec/non-functional-requirements/security.md#NFR-SEC-001) (Information Leakage Prevention)
+  * [NFR-SEC-001 (Encryption in Transit)](../../spec/non-functional-requirements/security.md#NFR-SEC-001) (Information Leakage Prevention)
 
 <a id="CC-ERR-004"></a>
 
@@ -96,7 +96,7 @@ A **Correlation ID** is MANDATORY for all internal and external requests. It MUS
 
 * **Decision**: [../../adr/decisions/communication-pattern](../../adr/decisions/communication-pattern.md).
 * **Root**:
-  * [NFR-MON-001](../../spec/non-functional-requirements/monitoring.md#NFR-MON-001) (Continuous Monitoring)
+  * [NFR-MON-001 (Continuous Monitoring)](../../spec/non-functional-requirements/monitoring.md#NFR-MON-001) (Continuous Monitoring)
 
 <a id="CC-LOG-002"></a>
 
@@ -105,7 +105,7 @@ A **Correlation ID** is MANDATORY for all internal and external requests. It MUS
 Personally Identifiable Information (PII) SHALL NOT be logged.
 
 * **Root**:
-  * [NFR-DATA-001](../../spec/non-functional-requirements/data.md#NFR-DATA-001) (Data Privacy)
+  * [NFR-DATA-001 (Data Residency)](../../spec/non-functional-requirements/data.md#NFR-DATA-001) (Data Privacy)
 
 <a id="CC-LOG-003"></a>
 
@@ -114,7 +114,7 @@ Personally Identifiable Information (PII) SHALL NOT be logged.
 Security events (login, permission changes) SHALL be emitted to the Audit Log.
 
 * **Root**:
-  * [FR-LOG-003](../../spec/functional-requirements/audit.md#FR-LOG-003) (Control Plane Auditing)
+  * [FR-LOG-003 (Control Plane Auditing)](../../spec/functional-requirements/audit.md#FR-LOG-003) (Control Plane Auditing)
 
 ## Security
 
@@ -128,7 +128,7 @@ Zero Trust Model. Do not rely on network perimeter (VPC) for security.
 
 * **Decision**: [../../adr/decisions/network-strategy](../../adr/decisions/network-strategy.md) (No VPC).
 * **Root**:
-  * [NFR-SEC-005](../../spec/non-functional-requirements/security.md#NFR-SEC-005) (Least Privilege)
+  * [NFR-SEC-005 (Least Privilege)](../../spec/non-functional-requirements/security.md#NFR-SEC-005) (Least Privilege)
 
 <a id="CC-SEC-002"></a>
 
@@ -138,7 +138,7 @@ TLS 1.2+ is MANDATORY for all data in transit, including internal service-to-ser
 
 * **Decision**: [../../adr/decisions/network-strategy](../../adr/decisions/network-strategy.md).
 * **Root**:
-  * [NFR-SEC-001](../../spec/non-functional-requirements/security.md#NFR-SEC-001) (Encryption in Transit)
+  * [NFR-SEC-001 (Encryption in Transit)](../../spec/non-functional-requirements/security.md#NFR-SEC-001) (Encryption in Transit)
 
 <a id="CC-SEC-003"></a>
 
@@ -147,7 +147,7 @@ TLS 1.2+ is MANDATORY for all data in transit, including internal service-to-ser
 Secrets SHALL be injected at runtime (e.g., via environment variables) and NEVER checked into source code.
 
 * **Root**:
-  * [NFR-SEC-004](../../spec/non-functional-requirements/security.md#NFR-SEC-004) (Key Management)
+  * [NFR-SEC-004 (Key Management)](../../spec/non-functional-requirements/security.md#NFR-SEC-004) (Key Management)
 
 ## Data and Transaction
 
@@ -160,7 +160,7 @@ Secrets SHALL be injected at runtime (e.g., via environment variables) and NEVER
 Write operations SHALL be **Idempotent** to allow safe retries.
 
 * **Root**:
-  * [NFR-OPS-003](../../spec/non-functional-requirements/availability.md#NFR-OPS-003) (Failover)
+  * [NFR-OPS-003 (Load Balancing and Failover)](../../spec/non-functional-requirements/availability.md#NFR-OPS-003) (Failover)
 
 <a id="CC-DAT-002"></a>
 
@@ -169,7 +169,7 @@ Write operations SHALL be **Idempotent** to allow safe retries.
 **Eventual Consistency** is accepted. Distributed Transactions (2PC) are PROHIBITED.
 
 * **Root**:
-  * [NFR-CAP-001](../../spec/non-functional-requirements/capacity.md#NFR-CAP-001) (Tenant Scalability)
+  * [NFR-CAP-001 (Tenant Scalability)](../../spec/non-functional-requirements/capacity.md#NFR-CAP-001) (Tenant Scalability)
 
 ## API Design
 
@@ -198,7 +198,7 @@ API versioning strategy SHALL avoid breaking changes (prefer backwards-compatibl
 Monitoring SHALL be driven by Service Level Indicators (SLIs) and Service Level Objectives (SLOs).
 
 * **Root**:
-  * [NFR-OPS-001](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (SLO)
+  * [NFR-OPS-001 (Service Level Objective)](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (SLO)
 
 <a id="CC-OBS-002"></a>
 
@@ -207,7 +207,7 @@ Monitoring SHALL be driven by Service Level Indicators (SLIs) and Service Level 
 Metrics SHALL follow the RED method (Rate, Errors, Duration).
 
 * **Root**:
-  * [NFR-MON-001](../../spec/non-functional-requirements/monitoring.md#NFR-MON-001) (Continuous Monitoring)
+  * [NFR-MON-001 (Continuous Monitoring)](../../spec/non-functional-requirements/monitoring.md#NFR-MON-001) (Continuous Monitoring)
 
 ## Deployment and Operations
 
@@ -222,7 +222,7 @@ Releases SHALL be **Reversible**.
 * New deployments MUST NOT destructively alter the previous version's resources until the successful switchover is confirmed.
 * **Decision**: [../../adr/decisions/deployment-strategy](../../adr/decisions/deployment-strategy.md) (Blue-Green).
 * **Root**:
-  * [NFR-OPS-002](../../spec/non-functional-requirements/availability.md#NFR-OPS-002) (MTTR)
+  * [NFR-OPS-002 (Maintenance Scheduling)](../../spec/non-functional-requirements/availability.md#NFR-OPS-002) (MTTR)
 
 <a id="CC-OPS-002"></a>
 
@@ -232,9 +232,9 @@ Deployment Artifacts SHALL be **Immutable** (Build Once, Deploy Many).
 
 * The same built artifact (container image, lambda zip) MUST be promoted from Staging to Production. Configuration is injected via environment variables.
 * **Root**:
-  * [NFR-SEC-002](../../spec/non-functional-requirements/security.md#NFR-SEC-002) (Supply Chain Security)
+  * [NFR-SEC-002 (Encryption at Rest)](../../spec/non-functional-requirements/security.md#NFR-SEC-002) (Supply Chain Security)
 * **Root**:
-  * [NFR-OPS-001](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Availability)
+  * [NFR-OPS-001 (Service Level Objective)](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Availability)
 
 <a id="CC-OPS-003"></a>
 
@@ -251,4 +251,4 @@ CI/CD Pipelines SHALL be defined as Code (**Pipeline as Code**).
 * Workflows MUST be versioned alongside the application code to ensure the build process evolves with the software.
 * **Decision**: [../../adr/decisions/cicd-platform](../../adr/decisions/cicd-platform.md) (GitHub Actions).
 * **Root**:
-  * [NFR-OPS-002](../../spec/non-functional-requirements/availability.md#NFR-OPS-002) (MTTR - Revert of pipeline logic)
+  * [NFR-OPS-002 (Maintenance Scheduling)](../../spec/non-functional-requirements/availability.md#NFR-OPS-002) (MTTR - Revert of pipeline logic)

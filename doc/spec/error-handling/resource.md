@@ -20,7 +20,7 @@ The requested resource does not exist.
 
 **Constraints**:
 
-* [Error Disclosure](../constraints-and-assumptions/index.md#CON-SEC-009)
+* [CON-SEC-009 (Error Disclosure)](../constraints-and-assumptions/index.md#CON-SEC-009)
 
 <a id="ERR-RES-410"></a>
 

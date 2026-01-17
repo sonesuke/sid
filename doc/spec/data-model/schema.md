@@ -1,12 +1,12 @@
 # Schema Definitions
 
-This section defines the core data entities managed by the [Control Plane](../terminology/definitions.md#TERM-SYS-CP).
+This section defines the core data entities managed by the [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP).
 
 <a id="DAT-TENANT"></a>
 
 ## Tenants
 
-Represents a customer organization subscribed to the [Managed Application](../terminology/definitions.md#TERM-APP-TARGET).
+Represents a customer organization subscribed to the [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET).
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -21,14 +21,14 @@ Represents a customer organization subscribed to the [Managed Application](../te
 
 ## Users
 
-Represents an individual user belonging to a [Tenant](#DAT-TENANT) or the Platform.
+Represents an individual user belonging to a [DAT-TENANT (Tenants)](#DAT-TENANT) or the Platform.
 
 | Field | Type | Description |
 |-------|------|-------------|
 | id | UUID | Unique identifier for the user. |
-| tenant_id | UUID | Foreign Key to [Tenants](#DAT-TENANT). Null for Platform Operators. |
+| tenant_id | UUID | Foreign Key to [DAT-TENANT (Tenants)](#DAT-TENANT). Null for Platform Operators. |
 | email | String | Unique email address used for login. |
-| role | Enum | Access level ([DAT-ROLE](#DAT-ROLE)). |
+| role | Enum | Access level ([DAT-ROLE (Roles)](#DAT-ROLE)). |
 | status | Enum | User status (`Invited`, `Active`, `Disabled`). |
 
 <a id="DAT-ROLE"></a>
@@ -39,8 +39,8 @@ Enumeration of defined user roles.
 
 * **Owner**: Full access to tenant configuration, billing, and user management.
 * **Administrator**: Access to user management and tenant configuration (excluding billing).
-* **User**: Access to the [Managed Application](../terminology/definitions.md#TERM-APP-TARGET) features only.
-* **Operator**: (Platform level) Full access to the [Control Plane](../terminology/definitions.md#TERM-SYS-CP).
+* **User**: Access to the [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) features only.
+* **Operator**: (Platform level) Full access to the [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP).
 
 <a id="DAT-FLAG"></a>
 
@@ -51,7 +51,7 @@ Controls the availability of features for specific tenants.
 | Field | Type | Description |
 |-------|------|-------------|
 | id | UUID | Unique identifier. |
-| tenant_id | UUID | Foreign Key to [Tenants](#DAT-TENANT). |
+| tenant_id | UUID | Foreign Key to [DAT-TENANT (Tenants)](#DAT-TENANT). |
 | key | String | Feature identifier (e.g., `ai_module_enabled`). |
 | value | Boolean | State of the feature (True/False). |
 
@@ -76,25 +76,25 @@ Immutable record of system events for security and compliance.
 
 ## Managed Applications
 
-Represents a registered [Managed Application](../terminology/definitions.md#TERM-APP-TARGET) instance that interacts with the Platform APIs.
+Represents a registered [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) instance that interacts with the Platform APIs.
 
 | Field | Type | Description |
 |-------|------|-------------|
 | id | UUID | Unique identifier. |
 | name | String | Name of the application. |
-| owner_id | String | Identifier of the [Developer](../actors/list.md#ACT-DEV) or owner. |
+| owner_id | String | Identifier of the [ACT-DEV (Developer)](../actors/list.md#ACT-DEV) or owner. |
 | status | Enum | Registration status (`Active`, `Disabled`). |
 
 <a id="DAT-KEY"></a>
 
 ## API Access Keys
 
-Credentials used by [Managed Applications](#DAT-APP) to authenticate against [Control Plane](../terminology/definitions.md#TERM-SYS-CP) APIs.
+Credentials used by [DAT-APP (Managed Applications)](#DAT-APP) to authenticate against [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) APIs.
 
 | Field | Type | Description |
 |-------|------|-------------|
 | id | UUID | Unique key identifier (KID). |
-| app_id | UUID | Foreign Key to [Managed Applications](#DAT-APP). |
+| app_id | UUID | Foreign Key to [DAT-APP (Managed Applications)](#DAT-APP). |
 | key_hash | String | Secure hash of the API Secret. |
 | scopes | String[] | List of allowed API scopes (e.g., `bill:write`, `log:write`). |
 | created_at | Timestamp | Issuance time. |
@@ -104,12 +104,12 @@ Credentials used by [Managed Applications](#DAT-APP) to authenticate against [Co
 
 ## SSO Configuration
 
-Stores the Identity Provider details for a [Tenant](#DAT-TENANT).
+Stores the Identity Provider details for a [DAT-TENANT (Tenants)](#DAT-TENANT).
 
 | Field | Type | Description |
 |-------|------|-------------|
 | id | UUID | Unique identifier. |
-| tenant_id | UUID | Foreign Key to [Tenants](#DAT-TENANT). |
+| tenant_id | UUID | Foreign Key to [DAT-TENANT (Tenants)](#DAT-TENANT). |
 | issuer_url | String | OIDC Issuer URL. |
 | client_id | String | Client Identifier at IdP. |
 | secret | String | Encrypted Client Secret. |
@@ -124,9 +124,9 @@ Tracks pending invitations for new users.
 | Field | Type | Description |
 |-------|------|-------------|
 | id | UUID | Unique identifier. |
-| tenant_id | UUID | Foreign Key to [Tenants](#DAT-TENANT). |
+| tenant_id | UUID | Foreign Key to [DAT-TENANT (Tenants)](#DAT-TENANT). |
 | email | String | Target email address. |
-| role | Enum | Proposed role ([DAT-ROLE](#DAT-ROLE)). |
+| role | Enum | Proposed role ([DAT-ROLE (Roles)](#DAT-ROLE)). |
 | token | String | Unique token sent via email. |
 | expires_at | Timestamp | Token expiration time. |
 | status | Enum | Invitation status (`Pending`, `Accepted`, `Expired`). |
@@ -140,8 +140,8 @@ Raw records of billable activities reported by applications.
 | Field | Type | Description |
 |-------|------|-------------|
 | id | UUID | Unique identifier. |
-| tenant_id | UUID | Foreign Key to [Tenants](#DAT-TENANT). |
-| app_id | UUID | Foreign Key to [Managed Applications](#DAT-APP). |
+| tenant_id | UUID | Foreign Key to [DAT-TENANT (Tenants)](#DAT-TENANT). |
+| app_id | UUID | Foreign Key to [DAT-APP (Managed Applications)](#DAT-APP). |
 | event_type | String | Type of billable action (e.g., `api_call`, `storage_gb`). |
 | quantity | Integer | Amount consumed. |
 | timestamp | Timestamp | Event occurrence time. |
@@ -150,12 +150,12 @@ Raw records of billable activities reported by applications.
 
 ## User Sessions
 
-Represents an active login session for a [User](#DAT-USER).
+Represents an active login session for a [DAT-USER (Users)](#DAT-USER).
 
 | Field | Type | Description |
 |-------|------|-------------|
 | id | UUID | Unique identifier for the session. |
-| user_id | UUID | Foreign Key to [Users](#DAT-USER). |
+| user_id | UUID | Foreign Key to [DAT-USER (Users)](#DAT-USER). |
 | token | String | Secure session token or JWT reference. |
 | created_at | Timestamp | Session creation time. |
 | expires_at | Timestamp | Session expiration time. |

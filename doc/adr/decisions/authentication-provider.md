@@ -23,9 +23,9 @@ The candidates considered were:
 
 ## Related Requirements
 
-- Satisfies [Supported Authentication Methods](../../spec/functional-requirements/auth.md#FR-AUTH-001)
-- Satisfies [Multi-Factor Authentication](../../spec/non-functional-requirements/security.md#NFR-SEC-003)
-- Satisfies [Adaptive Authentication](../../spec/non-functional-requirements/security.md#NFR-SEC-006)
+- Satisfies [FR-AUTH-001 (Supported Authentication Methods)](../../spec/functional-requirements/auth.md#FR-AUTH-001)
+- Satisfies [NFR-SEC-003 (Multi-Factor Authentication)](../../spec/non-functional-requirements/security.md#NFR-SEC-003)
+- Satisfies [NFR-SEC-006 (Adaptive Authentication)](../../spec/non-functional-requirements/security.md#NFR-SEC-006)
 
 ## Decision
 

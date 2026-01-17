@@ -20,7 +20,7 @@ Authentication failed due to invalid credentials.
 
 **Constraints**:
 
-* [Error Disclosure](../constraints-and-assumptions/index.md#CON-SEC-009)
+* [CON-SEC-009 (Error Disclosure)](../constraints-and-assumptions/index.md#CON-SEC-009)
 
 <a id="ERR-AUTH-403"></a>
 
@@ -42,7 +42,7 @@ An authenticated user attempted an operation they are not authorized to perform.
 
 **Constraints**:
 
-* [Error Disclosure](../constraints-and-assumptions/index.md#CON-SEC-009)
+* [CON-SEC-009 (Error Disclosure)](../constraints-and-assumptions/index.md#CON-SEC-009)
 
 <a id="ERR-AUTH-440"></a>
 
@@ -82,4 +82,4 @@ Multi-factor authentication is required but not provided.
 
 **Constraints**:
 
-* [MFA](../constraints-and-assumptions/index.md#CON-SEC-005)
+* [CON-SEC-005 (Multi-Factor Authentication)](../constraints-and-assumptions/index.md#CON-SEC-005)

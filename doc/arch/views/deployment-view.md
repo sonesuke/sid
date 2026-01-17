@@ -71,7 +71,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 #### API Gateway
 
 * **AWS Service**: Amazon API Gateway
-* **Mapping**: [BB-API-001](building-block-view.md#BB-API-001)
+* **Mapping**: [BB-API-001 (API Gateway)](building-block-view.md#BB-API-001)
 * **Configuration Details**:
   * HTTP APIs (v2) for lower latency and cost.
 
@@ -80,7 +80,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 #### Web Console (SPA)
 
 * **AWS Service**: CloudFront + S3 + Lambda@Edge + **Amazon API Gateway + AWS Lambda**
-* **Mapping**: [BB-UI-001](building-block-view.md#BB-UI-001)
+* **Mapping**: [BB-UI-001 (Web Console (SPA)](building-block-view.md#BB-UI-001)
 * **Configuration Details**:
   * Hosting for static assets (React/TS). Lambda@Edge for security headers.
   * **BFF (Backend for Frontend)**: Specific API endpoints (e.g., config, session) served via APIGW + Lambda.
@@ -90,7 +90,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 #### Auth Service
 
 * **AWS Service**: Azure Entra ID (External)
-* **Mapping**: [BB-AUTH-001](building-block-view.md#BB-AUTH-001)
+* **Mapping**: [BB-AUTH-001 (Auth Service)](building-block-view.md#BB-AUTH-001)
 * **Configuration Details**:
   * External Identities (CIAM). OIDC integration.
 
@@ -99,7 +99,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 #### Compute (Lambda)
 
 * **AWS Service**: AWS Lambda
-* **Mapping**: [BB-TNT-001](building-block-view.md#BB-TNT-001), [BB-BIL-001](building-block-view.md#BB-BIL-001), [BB-AUD-001](building-block-view.md#BB-AUD-001)
+* **Mapping**: [BB-TNT-001 (Tenant Service)](building-block-view.md#BB-TNT-001), [BB-BIL-001 (Billing Service)](building-block-view.md#BB-BIL-001), [BB-AUD-001 (Audit Service)](building-block-view.md#BB-AUD-001)
 * **Configuration Details**:
   * Python 3.x runtime. Deployed via Terraform.
 * **Decision**: [../../adr/decisions/language-runtime](../../adr/decisions/language-runtime.md), [../../adr/decisions/iac-tool-selection](../../adr/decisions/iac-tool-selection.md)
@@ -109,7 +109,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 #### Data Store
 
 * **AWS Service**: Amazon DynamoDB
-* **Mapping**: [BB-TNT-001](building-block-view.md#BB-TNT-001), [BB-BIL-001](building-block-view.md#BB-BIL-001) (Persistence)
+* **Mapping**: [BB-TNT-001 (Tenant Service)](building-block-view.md#BB-TNT-001), [BB-BIL-001 (Billing Service)](building-block-view.md#BB-BIL-001) (Persistence)
 * **Configuration Details**:
   * On-Demand Capacity mode.
 * **Decision**: [../../adr/decisions/data-persistence](../../adr/decisions/data-persistence.md)
@@ -119,7 +119,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 #### Event Bus
 
 * **AWS Service**: Amazon EventBridge
-* **Mapping**: [BB-EVT-001](building-block-view.md#BB-EVT-001)
+* **Mapping**: [BB-EVT-001 (Event Bus)](building-block-view.md#BB-EVT-001)
 * **Configuration Details**:
   * Custom Registry for domain events.
 
@@ -128,7 +128,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 #### Feature Flag Services
 
 * **AWS Service**: AWS AppConfig
-* **Mapping**: [BB-FLG-001](building-block-view.md#BB-FLG-001)
+* **Mapping**: [BB-FLG-001 (Feature Flag Service)](building-block-view.md#BB-FLG-001)
 * **Configuration Details**:
   * Freeform configuration profile.
 
@@ -137,7 +137,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 #### Observability & Archive
 
 * **AWS Service**: CloudWatch Logs / S3
-* **Mapping**: [BB-AUD-001](building-block-view.md#BB-AUD-001), [BB-OBS-001](building-block-view.md#BB-OBS-001)
+* **Mapping**: [BB-AUD-001 (Audit Service)](building-block-view.md#BB-AUD-001), [BB-OBS-001 (Observability Platform)](building-block-view.md#BB-OBS-001)
 * **Configuration Details**:
   * CloudWatch for real-time logs (Retention: 30 days). S3 Glacier for long-term audit archive (Retention: 7 years).
 
@@ -146,7 +146,7 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 #### Backup
 
 * **AWS Service**: AWS Backup
-* **Mapping**: [BB-TNT-001](building-block-view.md#BB-TNT-001), [BB-BIL-001](building-block-view.md#BB-BIL-001)
+* **Mapping**: [BB-TNT-001 (Tenant Service)](building-block-view.md#BB-TNT-001), [BB-BIL-001 (Billing Service)](building-block-view.md#BB-BIL-001)
 * **Configuration Details**:
   * Centralized backup policy. DynamoDB PITR (Point-in-Time Recovery) enabled (35 days).
 
@@ -155,19 +155,19 @@ This table maps the conceptual building blocks to concrete AWS Managed Services.
 #### Web Application Firewall
 
 * **AWS Service**: AWS WAF
-* **Mapping**: [BB-UI-001](building-block-view.md#BB-UI-001) (CloudFront), [BB-API-001](building-block-view.md#BB-API-001) (API Gateway)
+* **Mapping**: [BB-UI-001 (Web Console (SPA)](building-block-view.md#BB-UI-001) (CloudFront), [BB-API-001 (API Gateway)](building-block-view.md#BB-API-001) (API Gateway)
 * **Configuration Details**:
   * Protects against common web exploits (OWASP Top 10) and bots. Managed Rules enabled.
 
 ## Environment Strategy
 
-To ensure stability, we utilize a multi-account strategy with strict promotion rules ([CC-OPS-002](cross-cutting-concepts.md#CC-OPS-002)).
+To ensure stability, we utilize a multi-account strategy with strict promotion rules ([CC-OPS-002 (Rule)](cross-cutting-concepts.md#CC-OPS-002)).
 
 | Environment | Purpose & Configuration | References |
 |-------------|-------------------------|------------|
-| **[DEP-ENV-001] Development** | Integration testing for developers. | [CC-DEV-001](cross-cutting-concepts.md#CC-DEV-001) |
-| **[DEP-ENV-002] Staging** | Pre-production verification (E2E, Load Tests). | [CC-OPS-002](cross-cutting-concepts.md#CC-OPS-002) |
-| **[DEP-ENV-003] Production** | Live traffic. High Availability. | [NFR-OPS-001](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) |
+| **[DEP-ENV-001] Development** | Integration testing for developers. | [CC-DEV-001 (Rule)](cross-cutting-concepts.md#CC-DEV-001) |
+| **[DEP-ENV-002] Staging** | Pre-production verification (E2E, Load Tests). | [CC-OPS-002 (Rule)](cross-cutting-concepts.md#CC-OPS-002) |
+| **[DEP-ENV-003] Production** | Live traffic. High Availability. | [NFR-OPS-001 (Service Level Objective)](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) |
 
 ## Deployment Strategy
 
@@ -189,7 +189,7 @@ We adopt **Blue-Green Deployment** to achieve Zero Downtime and Immediate Rollba
 
 * **Decision**: [../../adr/decisions/deployment-strategy](../../adr/decisions/deployment-strategy.md)
 * **Decision**: [../../adr/decisions/deployment-strategy](../../adr/decisions/deployment-strategy.md)
-* **Principles**: [CC-OPS-001](cross-cutting-concepts.md#CC-OPS-001) (Reversibility), [CC-OPS-003](cross-cutting-concepts.md#CC-OPS-003) (DB Compatibility).
+* **Principles**: [CC-OPS-001 (Rule)](cross-cutting-concepts.md#CC-OPS-001) (Reversibility), [CC-OPS-003 (Rule)](cross-cutting-concepts.md#CC-OPS-003) (DB Compatibility).
 
 <a id="DEP-OPS-002"></a>
 
@@ -200,13 +200,13 @@ We adopt **Blue-Green Deployment** to achieve Zero Downtime and Immediate Rollba
   1. **Pull Request**: Run Linting (Ruff), Unit Tests (Pytest), and Security Scans (Trivy).
   2. **Merge to Main**: Trigger Build Artifact (Lambda Zip).
   3. **Deploy Dev**: Deploy to Development environment. Run Integration Tests.
-  4. **Promote Staging**: Deploy same artifact to Staging ([CC-OPS-002](cross-cutting-concepts.md#CC-OPS-002)). Run E2E / Load Tests.
+  4. **Promote Staging**: Deploy same artifact to Staging ([CC-OPS-002 (Rule)](cross-cutting-concepts.md#CC-OPS-002)). Run E2E / Load Tests.
   5. **Manual Approval**: Operator approves promotion to Production.
-  6. **Promote Production**: Trigger Blue-Green Deployment ([DEP-OPS-001](#DEP-OPS-001)).
+  6. **Promote Production**: Trigger Blue-Green Deployment ([DEP-OPS-001 (Blue-Green Switchover)](#DEP-OPS-001)).
 
 * **Mechanism**: GitHub Actions Workflows.
 * **Decision**: [../../adr/decisions/cicd-platform](../../adr/decisions/cicd-platform.md)
-* **Principles**: [CC-OPS-002](cross-cutting-concepts.md#CC-OPS-002) (Immutable), [CC-OPS-004](cross-cutting-concepts.md#CC-OPS-004) (Pipeline as Code).
+* **Principles**: [CC-OPS-002 (Rule)](cross-cutting-concepts.md#CC-OPS-002) (Immutable), [CC-OPS-004 (Rule)](cross-cutting-concepts.md#CC-OPS-004) (Pipeline as Code).
 
 ## NFR Satisfaction
 

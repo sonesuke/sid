@@ -10,13 +10,13 @@ The system SHALL implement continuous monitoring capabilities:
 * User and Entity Behavior Analytics (UEBA) for anomaly detection.
 * Automated alerting for suspicious activities.
 
-**Constrained by**: [CON-MON-001](../constraints-and-assumptions/index.md#CON-MON-001)
+**Constrained by**: [CON-MON-001 (Continuous Monitoring)](../constraints-and-assumptions/index.md#CON-MON-001)
 
 <a id="NFR-MON-002"></a>
 
 ## NFR-MON-002 System Health Alerting
 
-The system SHALL proactively notify [Platform Operators](../actors/list.md#ACT-OPS) via multiple channels (Email, Slack, PagerDuty) when:
+The system SHALL proactively notify [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) via multiple channels (Email, Slack, PagerDuty) when:
 
 * Error rate exceeds defined thresholds (e.g., > 1% in 5 minutes).
 * Latency (P99) exceeds defined SLOs.

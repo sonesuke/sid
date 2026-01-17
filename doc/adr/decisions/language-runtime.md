@@ -5,7 +5,7 @@
 ## Context and Problem Statement
 
 We need to select the primary programming language and runtime environment for the backend services Control Plane.
-This decision is governed by **Rule [CC-DEV-001](../../arch/views/cross-cutting-concepts.md#CC-DEV-001)** (AI-First Development).
+This decision is governed by **Rule [CC-DEV-001 (Rule [CC-DEV-001])](../../arch/views/cross-cutting-concepts.md#CC-DEV-001)** (AI-First Development).
 
 ### Decision Drivers
 

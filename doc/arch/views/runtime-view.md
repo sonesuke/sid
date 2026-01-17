@@ -13,10 +13,10 @@ A user authenticates via the external Identity Provider (Azure Entra ID) and gai
 
 ### Actors
 
-* [User](../../spec/actors/list.md#ACT-USER)
-* [Web Console (SPA)](building-block-view.md#BB-UI-001)
-* [Auth Service (External IdP)](building-block-view.md#BB-AUTH-001)
-* [API Gateway](building-block-view.md#BB-API-001)
+* [ACT-USER (Tenant User)](../../spec/actors/list.md#ACT-USER)
+* [BB-UI-001 (Web Console (SPA)](building-block-view.md#BB-UI-001)
+* [BB-AUTH-001 (Auth Service)](building-block-view.md#BB-AUTH-001)
+* [BB-API-001 (API Gateway)](building-block-view.md#BB-API-001)
 
 ### Flow
 
@@ -47,14 +47,14 @@ SPA->>User: Display protected content
 
 ### Cross-cutting
 
-* [CC-AUTH-001](cross-cutting-concepts.md#CC-AUTH-001) (Delegate Auth to External IdP)
-* [CC-AUTH-002](cross-cutting-concepts.md#CC-AUTH-002) (Stateless JWT validation)
-* [CC-LOG-001](cross-cutting-concepts.md#CC-LOG-001) (Correlation ID propagated)
+* [CC-AUTH-001 (Rule)](cross-cutting-concepts.md#CC-AUTH-001) (Delegate Auth to External IdP)
+* [CC-AUTH-002 (Rule)](cross-cutting-concepts.md#CC-AUTH-002) (Stateless JWT validation)
+* [CC-LOG-001 (Rule)](cross-cutting-concepts.md#CC-LOG-001) (Correlation ID propagated)
 
 ### Requirements
 
-* [FR-AUTH-001](../../spec/functional-requirements/auth.md#FR-AUTH-001) (Supported Authentication Methods)
-* [NFR-PERF-001](../../spec/non-functional-requirements/performance.md#NFR-PERF-001) (Authentication Latency)
+* [FR-AUTH-001 (Supported Authentication Methods)](../../spec/functional-requirements/auth.md#FR-AUTH-001) (Supported Authentication Methods)
+* [NFR-PERF-001 (Authentication Latency)](../../spec/non-functional-requirements/performance.md#NFR-PERF-001) (Authentication Latency)
 
 ----
 
@@ -68,9 +68,9 @@ An authenticated user makes a REST API call to retrieve tenant information.
 
 ### Actors
 
-* [User](../../spec/actors/list.md#ACT-USER)
-* [API Gateway](building-block-view.md#BB-API-001)
-* [Tenant Service](building-block-view.md#BB-TNT-001)
+* [ACT-USER (Tenant User)](../../spec/actors/list.md#ACT-USER)
+* [BB-API-001 (API Gateway)](building-block-view.md#BB-API-001)
+* [BB-TNT-001 (Tenant Service)](building-block-view.md#BB-TNT-001)
 
 ### Flow
 
@@ -98,15 +98,15 @@ APIGW->>User: Return Response
 
 ### Cross-cutting
 
-* [CC-AUTH-002](cross-cutting-concepts.md#CC-AUTH-002) (Stateless JWT)
-* [CC-AUTH-003](cross-cutting-concepts.md#CC-AUTH-003) (Role + Scope Authorization)
-* [CC-LOG-001](cross-cutting-concepts.md#CC-LOG-001) (Correlation ID)
-* [CC-API-001](cross-cutting-concepts.md#CC-API-001) (REST + JSON)
+* [CC-AUTH-002 (Rule)](cross-cutting-concepts.md#CC-AUTH-002) (Stateless JWT)
+* [CC-AUTH-003 (Rule)](cross-cutting-concepts.md#CC-AUTH-003) (Role + Scope Authorization)
+* [CC-LOG-001 (Rule)](cross-cutting-concepts.md#CC-LOG-001) (Correlation ID)
+* [CC-API-001 (Rule)](cross-cutting-concepts.md#CC-API-001) (REST + JSON)
 
 ### Requirements
 
-* [FR-TENANT-001](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-001) (User Invitation / Tenant context)
-* [NFR-PERF-002](../../spec/non-functional-requirements/performance.md#NFR-PERF-002) (API Latency)
+* [FR-TENANT-001 (User Invitation)](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-001) (User Invitation / Tenant context)
+* [NFR-PERF-002 (API Latency)](../../spec/non-functional-requirements/performance.md#NFR-PERF-002) (API Latency)
 
 ----
 
@@ -120,10 +120,10 @@ A domain event (e.g., `TenantCreated`) is published and consumed by multiple ser
 
 ### Actors
 
-* [Tenant Service](building-block-view.md#BB-TNT-001)
-* [Event Bus](building-block-view.md#BB-EVT-001)
-* [Billing Service](building-block-view.md#BB-BIL-001)
-* [Audit Service](building-block-view.md#BB-AUD-001)
+* [BB-TNT-001 (Tenant Service)](building-block-view.md#BB-TNT-001)
+* [BB-EVT-001 (Event Bus)](building-block-view.md#BB-EVT-001)
+* [BB-BIL-001 (Billing Service)](building-block-view.md#BB-BIL-001)
+* [BB-AUD-001 (Audit Service)](building-block-view.md#BB-AUD-001)
 
 ### Flow
 
@@ -152,15 +152,15 @@ AuditSvc->>AuditSvc: Persist audit log
 
 ### Cross-cutting
 
-* [CC-LOG-001](cross-cutting-concepts.md#CC-LOG-001) (Correlation ID propagation)
-* [CC-DAT-001](cross-cutting-concepts.md#CC-DAT-001) (Idempotent writes)
-* [CC-DAT-002](cross-cutting-concepts.md#CC-DAT-002) (Eventual Consistency)
+* [CC-LOG-001 (Rule)](cross-cutting-concepts.md#CC-LOG-001) (Correlation ID propagation)
+* [CC-DAT-001 (Rule)](cross-cutting-concepts.md#CC-DAT-001) (Idempotent writes)
+* [CC-DAT-002 (Rule)](cross-cutting-concepts.md#CC-DAT-002) (Eventual Consistency)
 
 ### Requirements
 
-* [FR-BILL-002](../../spec/functional-requirements/billing.md#FR-BILL-002) (Billing Event Ingestion)
-* [FR-LOG-001](../../spec/functional-requirements/audit.md#FR-LOG-001) (Audit Log Collection)
-* [NFR-OPS-003](../../spec/non-functional-requirements/availability.md#NFR-OPS-003) (Failover / Event Delivery)
+* [FR-BILL-002 (Billing Event Ingestion)](../../spec/functional-requirements/billing.md#FR-BILL-002) (Billing Event Ingestion)
+* [FR-LOG-001 (Audit Log Collection)](../../spec/functional-requirements/audit.md#FR-LOG-001) (Audit Log Collection)
+* [NFR-OPS-003 (Load Balancing and Failover)](../../spec/non-functional-requirements/availability.md#NFR-OPS-003) (Failover / Event Delivery)
 
 ----
 
@@ -174,9 +174,9 @@ A new version is deployed to Production using Blue-Green deployment. Traffic is 
 
 ### Actors
 
-* [CI/CD Service](building-block-view.md#BB-CICD-001)
-* [API Gateway](building-block-view.md#BB-API-001)
-* [Observability Platform](building-block-view.md#BB-OBS-001)
+* [BB-CICD-001 (CI/CD Service)](building-block-view.md#BB-CICD-001)
+* [BB-API-001 (API Gateway)](building-block-view.md#BB-API-001)
+* [BB-OBS-001 (Observability Platform)](building-block-view.md#BB-OBS-001)
 
 ### Flow
 
@@ -212,14 +212,14 @@ end
 
 ### Cross-cutting
 
-* [CC-OPS-001](cross-cutting-concepts.md#CC-OPS-001) (Reversible release)
-* [CC-OPS-002](cross-cutting-concepts.md#CC-OPS-002) (Immutable artifact)
-* [CC-OBS-001](cross-cutting-concepts.md#CC-OBS-001) (SLI/SLO driven)
+* [CC-OPS-001 (Rule)](cross-cutting-concepts.md#CC-OPS-001) (Reversible release)
+* [CC-OPS-002 (Rule)](cross-cutting-concepts.md#CC-OPS-002) (Immutable artifact)
+* [CC-OBS-001 (Rule)](cross-cutting-concepts.md#CC-OBS-001) (SLI/SLO driven)
 
 ### Requirements
 
-* [NFR-OPS-001](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Availability SLO)
-* [NFR-OPS-002](../../spec/non-functional-requirements/availability.md#NFR-OPS-002) (MTTR)
+* [NFR-OPS-001 (Service Level Objective)](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Availability SLO)
+* [NFR-OPS-002 (Maintenance Scheduling)](../../spec/non-functional-requirements/availability.md#NFR-OPS-002) (MTTR)
 
 ----
 
@@ -233,10 +233,10 @@ An API request fails due to a downstream service error. The system logs the erro
 
 ### Actors
 
-* [User](../../spec/actors/list.md#ACT-USER)
-* [API Gateway](building-block-view.md#BB-API-001)
-* [Tenant Service](building-block-view.md#BB-TNT-001)
-* [Observability Platform](building-block-view.md#BB-OBS-001)
+* [ACT-USER (Tenant User)](../../spec/actors/list.md#ACT-USER)
+* [BB-API-001 (API Gateway)](building-block-view.md#BB-API-001)
+* [BB-TNT-001 (Tenant Service)](building-block-view.md#BB-TNT-001)
+* [BB-OBS-001 (Observability Platform)](building-block-view.md#BB-OBS-001)
 
 ### Flow
 
@@ -269,13 +269,13 @@ Obs->>Obs: Trigger Alert (NFR-MON-002)
 
 ### Cross-cutting
 
-* [CC-ERR-001](cross-cutting-concepts.md#CC-ERR-001) (Map to HTTP codes)
-* [CC-ERR-002](cross-cutting-concepts.md#CC-ERR-002) (Business vs System errors)
-* [CC-ERR-003](cross-cutting-concepts.md#CC-ERR-003) (No stack trace exposure)
-* [CC-ERR-004](cross-cutting-concepts.md#CC-ERR-004) (RFC 7807)
-* [CC-LOG-001](cross-cutting-concepts.md#CC-LOG-001) (Correlation ID)
+* [CC-ERR-001 (Rule)](cross-cutting-concepts.md#CC-ERR-001) (Map to HTTP codes)
+* [CC-ERR-002 (Rule)](cross-cutting-concepts.md#CC-ERR-002) (Business vs System errors)
+* [CC-ERR-003 (Rule)](cross-cutting-concepts.md#CC-ERR-003) (No stack trace exposure)
+* [CC-ERR-004 (Rule)](cross-cutting-concepts.md#CC-ERR-004) (RFC 7807)
+* [CC-LOG-001 (Rule)](cross-cutting-concepts.md#CC-LOG-001) (Correlation ID)
 
 ### Requirements
 
-* [NFR-OPS-001](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Availability SLO)
-* [NFR-MON-002](../../spec/non-functional-requirements/monitoring.md#NFR-MON-002) (System Health Alerting)
+* [NFR-OPS-001 (Service Level Objective)](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Availability SLO)
+* [NFR-MON-002 (System Health Alerting)](../../spec/non-functional-requirements/monitoring.md#NFR-MON-002) (System Health Alerting)

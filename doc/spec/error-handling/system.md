@@ -20,7 +20,7 @@ An unexpected internal error occurred.
 
 **Constraints**:
 
-* [Error Disclosure](../constraints-and-assumptions/index.md#CON-SEC-009)
+* [CON-SEC-009 (Error Disclosure)](../constraints-and-assumptions/index.md#CON-SEC-009)
 
 <a id="ERR-SYS-503"></a>
 
@@ -42,4 +42,4 @@ The service is temporarily unavailable.
 
 **Constraints**:
 
-* [Maintenance Window](../constraints-and-assumptions/index.md#CON-OPS-002)
+* [CON-OPS-002 (Maintenance Window)](../constraints-and-assumptions/index.md#CON-OPS-002)

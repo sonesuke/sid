@@ -58,12 +58,12 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 * **Responsibility**: Single Page Application providing Administrative interfaces for Operators and Tenants.
 * **Related FRs**:
-  * [Operator Console](../../spec/interface-requirements/ui.md#IF-OPS-CONSOLE)
-  * [Tenant Administration Console](../../spec/interface-requirements/ui.md#IF-TENANT-CONSOLE)
-  * [Auditor Console](../../spec/interface-requirements/ui.md#IF-AUDIT-CONSOLE)
-  * [Universal Login Page](../../spec/interface-requirements/ui.md#IF-LOGIN-UI)
+  * [IF-OPS-CONSOLE (Operator Console)](../../spec/interface-requirements/ui.md#IF-OPS-CONSOLE)
+  * [IF-TENANT-CONSOLE (Tenant Administration Console)](../../spec/interface-requirements/ui.md#IF-TENANT-CONSOLE)
+  * [IF-AUDIT-CONSOLE (Auditor Console)](../../spec/interface-requirements/ui.md#IF-AUDIT-CONSOLE)
+  * [IF-LOGIN-UI (Universal Login Page)](../../spec/interface-requirements/ui.md#IF-LOGIN-UI)
 * **Related NFRs**:
-  * [UI Responsiveness](../../spec/non-functional-requirements/performance.md#NFR-PERF-003)
+  * [NFR-PERF-003 (UI Responsiveness)](../../spec/non-functional-requirements/performance.md#NFR-PERF-003)
 
 <a id="BB-API-001"></a>
 
@@ -71,10 +71,10 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 * **Responsibility**: Entry point for all external requests. Handles routing, rate limiting, and authentication offloading.
 * **Related FRs**:
-  * [API Key Management](../../spec/functional-requirements/system-ops.md#FR-SYS-002)
+  * [FR-SYS-002 (API Key Management)](../../spec/functional-requirements/system-ops.md#FR-SYS-002)
 * **Related NFRs**:
-  * [Load Balancing and Failover](../../spec/non-functional-requirements/availability.md#NFR-OPS-003)
-  * [Authentication Latency](../../spec/non-functional-requirements/performance.md#NFR-PERF-001)
+  * [NFR-OPS-003 (Load Balancing and Failover)](../../spec/non-functional-requirements/availability.md#NFR-OPS-003)
+  * [NFR-PERF-001 (Authentication Latency)](../../spec/non-functional-requirements/performance.md#NFR-PERF-001)
 
 <a id="BB-AUTH-001"></a>
 
@@ -82,15 +82,15 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 * **Responsibility**: Manages user identities and credentials via External IdP.
 * **Related FRs**:
-  * [Supported Authentication Methods](../../spec/functional-requirements/auth.md#FR-AUTH-001)
-  * [Tenant SSO Configuration](../../spec/functional-requirements/auth.md#FR-AUTH-003)
-  * [Password Reset](../../spec/functional-requirements/auth.md#FR-AUTH-004)
-  * [Session Management](../../spec/functional-requirements/auth.md#FR-AUTH-005)
-  * [Password Policy Configuration](../../spec/functional-requirements/auth.md#FR-AUTH-006)
+  * [FR-AUTH-001 (Supported Authentication Methods)](../../spec/functional-requirements/auth.md#FR-AUTH-001)
+  * [FR-AUTH-003 (Tenant SSO Configuration)](../../spec/functional-requirements/auth.md#FR-AUTH-003)
+  * [FR-AUTH-004 (Password Reset)](../../spec/functional-requirements/auth.md#FR-AUTH-004)
+  * [FR-AUTH-005 (Session Management)](../../spec/functional-requirements/auth.md#FR-AUTH-005)
+  * [FR-AUTH-006 (Password Policy Configuration)](../../spec/functional-requirements/auth.md#FR-AUTH-006)
 * **Related NFRs**:
-  * [Multi-Factor Authentication](../../spec/non-functional-requirements/security.md#NFR-SEC-003)
-  * [Adaptive Authentication](../../spec/non-functional-requirements/security.md#NFR-SEC-006)
-  * [User Scalability](../../spec/non-functional-requirements/capacity.md#NFR-CAP-002)
+  * [NFR-SEC-003 (Multi-Factor Authentication)](../../spec/non-functional-requirements/security.md#NFR-SEC-003)
+  * [NFR-SEC-006 (Adaptive Authentication)](../../spec/non-functional-requirements/security.md#NFR-SEC-006)
+  * [NFR-CAP-002 (User Scalability)](../../spec/non-functional-requirements/capacity.md#NFR-CAP-002)
 
 <a id="BB-TNT-001"></a>
 
@@ -98,18 +98,18 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 * **Responsibility**: Manages Tenant lifecycle (onboarding, configuration, suspension).
 * **Related FRs**:
-  * [User Invitation](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-001)
-  * [User Deletion](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-002)
-  * [Contract Modification](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-003)
-  * [User Role Management](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-004)
-  * [User Status Management](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-006)
-  * [Invitation Resend](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-007)
-  * [Tenant Status Management](../../spec/functional-requirements/platform-ops.md#FR-OPS-001)
-  * [Tenant Deletion](../../spec/functional-requirements/platform-ops.md#FR-OPS-002)
-  * [Operator JIT Provisioning](../../spec/functional-requirements/system-ops.md#FR-SYS-004)
+  * [FR-TENANT-001 (User Invitation)](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-001)
+  * [FR-TENANT-002 (User Deletion)](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-002)
+  * [FR-TENANT-003 (Contract Modification)](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-003)
+  * [FR-TENANT-004 (User Role Management)](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-004)
+  * [FR-TENANT-006 (User Status Management)](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-006)
+  * [FR-TENANT-007 (Invitation Resend)](../../spec/functional-requirements/tenant-admin.md#FR-TENANT-007)
+  * [FR-OPS-001 (Tenant Status Management)](../../spec/functional-requirements/platform-ops.md#FR-OPS-001)
+  * [FR-OPS-002 (Tenant Deletion)](../../spec/functional-requirements/platform-ops.md#FR-OPS-002)
+  * [FR-SYS-004 (Operator JIT Provisioning)](../../spec/functional-requirements/system-ops.md#FR-SYS-004)
 * **Related NFRs**:
-  * [Tenant Scalability](../../spec/non-functional-requirements/capacity.md#NFR-CAP-001)
-  * [Data Residency](../../spec/non-functional-requirements/data.md#NFR-DATA-001)
+  * [NFR-CAP-001 (Tenant Scalability)](../../spec/non-functional-requirements/capacity.md#NFR-CAP-001)
+  * [NFR-DATA-001 (Data Residency)](../../spec/non-functional-requirements/data.md#NFR-DATA-001)
 
 <a id="BB-FLG-001"></a>
 
@@ -117,10 +117,10 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 * **Responsibility**: Delivers dynamic configuration and feature toggles to the Application.
 * **Related FRs**:
-  * [Flag Configuration](../../spec/functional-requirements/feature-flags.md#FR-FLAG-001)
-  * [Flag Delivery](../../spec/functional-requirements/feature-flags.md#FR-FLAG-002)
+  * [FR-FLAG-001 (Flag Configuration)](../../spec/functional-requirements/feature-flags.md#FR-FLAG-001)
+  * [FR-FLAG-002 (Flag Delivery)](../../spec/functional-requirements/feature-flags.md#FR-FLAG-002)
 * **Related NFRs**:
-  * [API Latency](../../spec/non-functional-requirements/performance.md#NFR-PERF-002)
+  * [NFR-PERF-002 (API Latency)](../../spec/non-functional-requirements/performance.md#NFR-PERF-002)
 
 <a id="BB-BIL-001"></a>
 
@@ -128,11 +128,11 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 * **Responsibility**: Aggregates usage metrics and interfaces with external Billing System.
 * **Related FRs**:
-  * [Billing Event Persistence](../../spec/functional-requirements/billing.md#FR-BILL-001)
-  * [Billing Event Ingestion](../../spec/functional-requirements/billing.md#FR-BILL-002)
-  * [Billing Data Export](../../spec/functional-requirements/billing.md#FR-BILL-003)
+  * [FR-BILL-001 (Billing Event Persistence)](../../spec/functional-requirements/billing.md#FR-BILL-001)
+  * [FR-BILL-002 (Billing Event Ingestion)](../../spec/functional-requirements/billing.md#FR-BILL-002)
+  * [FR-BILL-003 (Billing Data Export)](../../spec/functional-requirements/billing.md#FR-BILL-003)
 * **Related NFRs**:
-  * [Backup and Redundancy](../../spec/non-functional-requirements/availability.md#NFR-OPS-004)
+  * [NFR-OPS-004 (Backup and Redundancy)](../../spec/non-functional-requirements/availability.md#NFR-OPS-004)
 
 <a id="BB-AUD-001"></a>
 
@@ -140,12 +140,12 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 * **Responsibility**: Ingests and archives security and operational logs.
 * **Related FRs**:
-  * [Audit Log Collection](../../spec/functional-requirements/audit.md#FR-LOG-001)
-  * [Audit Log Export](../../spec/functional-requirements/audit.md#FR-LOG-002)
-  * [Control Plane Auditing](../../spec/functional-requirements/audit.md#FR-LOG-003)
+  * [FR-LOG-001 (Audit Log Collection)](../../spec/functional-requirements/audit.md#FR-LOG-001)
+  * [FR-LOG-002 (Audit Log Export)](../../spec/functional-requirements/audit.md#FR-LOG-002)
+  * [FR-LOG-003 (Control Plane Auditing)](../../spec/functional-requirements/audit.md#FR-LOG-003)
   * **Related NFRs**:
 
-    *   [Continuous Monitoring](../../spec/non-functional-requirements/monitoring.md#NFR-MON-001)
+    * [NFR-MON-001 (Continuous Monitoring)](../../spec/non-functional-requirements/monitoring.md#NFR-MON-001)
 
 <a id="BB-OBS-001"></a>
 
@@ -153,11 +153,11 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 * **Responsibility**: Centralized collection and visualization of Metrics, Logs, and Traces. Handles Alerting and Synthetics.
 * **Related FRs**:
-  * [System Health Monitoring](../../spec/functional-requirements/system-ops.md#FR-SYS-005)
+  * [FR-SYS-005 (System Health Monitoring)](../../spec/functional-requirements/system-ops.md#FR-SYS-005)
 * **Related NFRs**:
-  * [System Health Alerting](../../spec/non-functional-requirements/monitoring.md#NFR-MON-002)
-  * [Synthetic Monitoring](../../spec/non-functional-requirements/monitoring.md#NFR-MON-003)
-  * [Continuous Monitoring](../../spec/non-functional-requirements/monitoring.md#NFR-MON-001)
+  * [NFR-MON-002 (System Health Alerting)](../../spec/non-functional-requirements/monitoring.md#NFR-MON-002)
+  * [NFR-MON-003 (Synthetic Monitoring)](../../spec/non-functional-requirements/monitoring.md#NFR-MON-003)
+  * [NFR-MON-001 (Continuous Monitoring)](../../spec/non-functional-requirements/monitoring.md#NFR-MON-001)
 
 <a id="BB-CICD-001"></a>
 
@@ -165,7 +165,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 
 * **Responsibility**: Automation of Build, Test, Security Scanning, and Deployment processes.
 * **Related NFRs**:
-  * [Availability SLO](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Deployment Safety)
+  * [NFR-OPS-001 (Service Level Objective)](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Deployment Safety)
 * **Decision**: [../../adr/decisions/cicd-platform](../../adr/decisions/cicd-platform.md)
 
 <a id="BB-EVT-001"></a>
@@ -176,7 +176,7 @@ Rel(app, api_gw, "Validates Tokens / Fetches Flags")
 * **Related FRs**:
   * Infrastructure component supporting all Event-Driven FRs.
 * **Related NFRs**:
-  * [Load Balancing and Failover](../../spec/non-functional-requirements/availability.md#NFR-OPS-003)
+  * [NFR-OPS-003 (Load Balancing and Failover)](../../spec/non-functional-requirements/availability.md#NFR-OPS-003)
 
 ## Internal Structure
 

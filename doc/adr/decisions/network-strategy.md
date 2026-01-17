@@ -20,9 +20,9 @@ Deploying these serverless resources into a VPC introduces significant challenge
 
 ## Related Requirements
 
-* Satisfies [Encryption in Transit](../../spec/non-functional-requirements/security.md#NFR-SEC-001)
-* Satisfies [Least Privilege](../../spec/non-functional-requirements/security.md#NFR-SEC-005)
-* Satisfies [Availability SLO](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Proxy for NoOps/Maintainability)
+* Satisfies [NFR-SEC-001 (Encryption in Transit)](../../spec/non-functional-requirements/security.md#NFR-SEC-001)
+* Satisfies [NFR-SEC-005 (Least Privilege)](../../spec/non-functional-requirements/security.md#NFR-SEC-005)
+* Satisfies [NFR-OPS-001 (Service Level Objective)](../../spec/non-functional-requirements/availability.md#NFR-OPS-001) (Proxy for NoOps/Maintainability)
 
 ## Decision
 

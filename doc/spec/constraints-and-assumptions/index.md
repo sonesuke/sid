@@ -8,7 +8,7 @@ This section documents the mandatory conditions imposed on the system.
 
 ### CON-SEC-001 Configurable Password Policy
 
-The [TERM-SYS-CP](../terminology/definitions.md#TERM-SYS-CP) SHALL allow each [Tenant](../data-model/schema.md#DAT-TENANT) to configure password complexity requirements (e.g., minimum length, character types).
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow each [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT) to configure password complexity requirements (e.g., minimum length, character types).
 
 **Rationale**: Compliance with Japan's Act on the Protection of Personal Information (APPI).
 
@@ -16,7 +16,7 @@ The [TERM-SYS-CP](../terminology/definitions.md#TERM-SYS-CP) SHALL allow each [T
 
 #### CON-SEC-002 Audit Log Provision
 
-The [TERM-SYS-CP](../terminology/definitions.md#TERM-SYS-CP) SHALL provide audit logs recording access to and modifications of personal data.
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL provide audit logs recording access to and modifications of personal data.
 
 **Rationale**: Compliance with Japan's Act on the Protection of Personal Information (APPI).
 
@@ -95,7 +95,7 @@ All customer data SHALL be stored exclusively in data centers located in Japan o
 
 #### CON-DATA-002 Audit Log Retention
 
-[Audit Logs](../data-model/schema.md#DAT-LOG) SHALL be retained for a minimum of 7 years to comply with Japanese accounting laws and APPI requirements.
+[DAT-LOG (Audit Logs)](../data-model/schema.md#DAT-LOG) SHALL be retained for a minimum of 7 years to comply with Japanese accounting laws and APPI requirements.
 
 **Rationale**: Legal compliance (Japan Accounting Law, APPI).
 
@@ -103,7 +103,7 @@ All customer data SHALL be stored exclusively in data centers located in Japan o
 
 #### CON-DATA-003 Billing Data Retention
 
-[Billing Events](../data-model/schema.md#DAT-BILL-EVENT) SHALL be retained for a minimum of 5 years to comply with tax regulations.
+[DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT) SHALL be retained for a minimum of 5 years to comply with tax regulations.
 
 **Rationale**: Legal compliance (Tax regulations).
 
@@ -113,7 +113,7 @@ All customer data SHALL be stored exclusively in data centers located in Japan o
 
 ### CON-CAP-001 Tenant Capacity
 
-The system SHALL support a minimum of 1,000 active [Tenants](../data-model/schema.md#DAT-TENANT).
+The system SHALL support a minimum of 1,000 active [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT).
 
 **Rationale**: Business scalability requirement.
 
@@ -121,7 +121,7 @@ The system SHALL support a minimum of 1,000 active [Tenants](../data-model/schem
 
 #### CON-CAP-002 User Capacity per Tenant
 
-The system SHALL support a minimum of 10,000 [Users](../data-model/schema.md#DAT-USER) per [Tenant](../data-model/schema.md#DAT-TENANT).
+The system SHALL support a minimum of 10,000 [DAT-USER (Users)](../data-model/schema.md#DAT-USER) per [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT).
 
 **Rationale**: Business scalability requirement.
 

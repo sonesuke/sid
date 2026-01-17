@@ -12,5 +12,5 @@ The system described in this specification. It provides centralized management f
 
 ## Managed Application (TERM-APP-TARGET)
 
-The B2B SaaS applications that are managed by the [TERM-SYS-CP](#TERM-SYS-CP). These applications delegate authentication and feature control to the Control Plane.
+The B2B SaaS applications that are managed by the [TERM-SYS-CP (Control Plane)](#TERM-SYS-CP). These applications delegate authentication and feature control to the Control Plane.
 Also referred to as "Target Application" or "B2B SaaS".

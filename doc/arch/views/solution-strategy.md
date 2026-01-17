@@ -13,9 +13,9 @@ The system follows a **Modular Monolith** or **Service-Oriented Architecture (SO
 
 This strategy addresses the key NFRs as follows:
 
-- **Security**: Centralized Authentication ([FR-AUTH](../../spec/scope/boundaries.md#FR-AUTH)) ensures consistent identity management across all apps. See `NFR-SEC-*`.
-- **Auditability**: Sync/Async event recording ([FR-LOG](../../spec/scope/boundaries.md#FR-LOG)) ensures all critical actions are traceable.
-- **Extensibility**: Feature Flags ([FR-FLAG](../../spec/scope/boundaries.md#FR-FLAG)) allow dynamic feature management without redeployment.
+- **Security**: Centralized Authentication ([FR-AUTH (Authentication)](../../spec/scope/boundaries.md#FR-AUTH)) ensures consistent identity management across all apps. See `NFR-SEC-*`.
+- **Auditability**: Sync/Async event recording ([FR-LOG (Logging and Auditing)](../../spec/scope/boundaries.md#FR-LOG)) ensures all critical actions are traceable.
+- **Extensibility**: Feature Flags ([FR-FLAG (Feature Flag Management)](../../spec/scope/boundaries.md#FR-FLAG)) allow dynamic feature management without redeployment.
 
 ## Technology Independence
 

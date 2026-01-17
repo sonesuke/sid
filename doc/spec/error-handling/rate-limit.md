@@ -20,4 +20,4 @@ The client has exceeded the allowed request rate.
 
 **Constraints**:
 
-* [Response Time and Throughput](../constraints-and-assumptions/index.md#CON-PERF-001)
+* [CON-PERF-001 (Response Time and Throughput)](../constraints-and-assumptions/index.md#CON-PERF-001)

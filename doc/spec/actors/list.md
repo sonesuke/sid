@@ -32,7 +32,7 @@ An external or internal compliance officer responsible for reviewing audit logs 
 
 ## ACT-DEV Developer
 
-The engineer or system administrator responsible for deploying and configuring the [Managed Application](../terminology/definitions.md#TERM-APP-TARGET).
+The engineer or system administrator responsible for deploying and configuring the [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET).
 Interacts with the system to register applications and manage API credentials.
 
 <a id="ACT-BILLING"></a>

@@ -42,25 +42,25 @@ The following actors and systems interact with the SaaS Foundation Platform.
 
 #### Tenant User
 
-[ACT-USER](../../spec/actors/list.md#ACT-USER)
+[ACT-USER (Tenant User)](../../spec/actors/list.md#ACT-USER)
 
 <a id="CTX-ACT-002"></a>
 
 #### Platform Operator
 
-[ACT-OPS](../../spec/actors/list.md#ACT-OPS)
+[ACT-OPS (Platform Operator)](../../spec/actors/list.md#ACT-OPS)
 
 <a id="CTX-ACT-003"></a>
 
 #### Auditor
 
-[ACT-AUDIT](../../spec/actors/list.md#ACT-AUDIT)
+[ACT-AUDIT (Auditor)](../../spec/actors/list.md#ACT-AUDIT)
 
 <a id="CTX-ACT-004"></a>
 
 #### Developer
 
-[ACT-DEV](../../spec/actors/list.md#ACT-DEV)
+[ACT-DEV (Developer)](../../spec/actors/list.md#ACT-DEV)
 
 ### External Systems
 
@@ -68,13 +68,13 @@ The following actors and systems interact with the SaaS Foundation Platform.
 
 #### Managed Application
 
-[TERM-APP-TARGET](../../spec/terminology/definitions.md#TERM-APP-TARGET)
+[TERM-APP-TARGET (Managed Application)](../../spec/terminology/definitions.md#TERM-APP-TARGET)
 
 <a id="CTX-EXT-002"></a>
 
 #### External Billing System
 
-[ACT-BILLING](../../spec/actors/list.md#ACT-BILLING)
+[ACT-BILLING (External Billing System)](../../spec/actors/list.md#ACT-BILLING)
 
 <a id="CTX-EXT-003"></a>
 
