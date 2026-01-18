@@ -1,8 +1,8 @@
 # Compliance Constraints
 
-<a id="CON-COMP-001"></a>
+<a id="CON-COMP-SUBJECT-RIGHTS"></a>
 
-## CON-COMP-001 Data Subject Rights
+## CON-COMP-SUBJECT-RIGHTS Data Subject Rights
 
 The system SHALL support data subject rights as required by GDPR and Japan APPI:
 

@@ -1,8 +1,8 @@
 # Performance Constraints
 
-<a id="CON-PERF-001"></a>
+<a id="CON-PERF-RESPONSE-TIME"></a>
 
-## CON-PERF-001 Response Time and Throughput
+## CON-PERF-RESPONSE-TIME Response Time and Throughput
 
 The system SHALL meet performance targets for latency and throughput to ensure a responsive user experience.
 

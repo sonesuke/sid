@@ -1,8 +1,8 @@
 # Security Constraints
 
-<a id="CON-SEC-001"></a>
+<a id="CON-SEC-PASSWORD-POLICY"></a>
 
-## CON-SEC-001 Configurable Password Policy
+## CON-SEC-PASSWORD-POLICY Configurable Password Policy
 
 The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow each [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT) to configure password complexity requirements (e.g., minimum length, character types).
 
@@ -10,9 +10,9 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 * Compliance with Japan's Act on the Protection of Personal Information (APPI).
 
-<a id="CON-SEC-002"></a>
+<a id="CON-SEC-AUDIT-LOG"></a>
 
-## CON-SEC-002 Audit Log Provision
+## CON-SEC-AUDIT-LOG Audit Log Provision
 
 The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL provide audit logs recording access to and modifications of personal data.
 
@@ -20,9 +20,9 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 * Compliance with Japan's Act on the Protection of Personal Information (APPI).
 
-<a id="CON-SEC-003"></a>
+<a id="CON-SEC-ENCRYPTION-TRANSIT"></a>
 
-## CON-SEC-003 Encryption in Transit
+## CON-SEC-ENCRYPTION-TRANSIT Encryption in Transit
 
 All communications between components and external systems SHALL be encrypted using TLS 1.2 or higher.
 
@@ -34,9 +34,9 @@ All communications between components and external systems SHALL be encrypted us
 
 * [NFR-SEC-001 (Encryption in Transit)](../non-functional-requirements/security.md#NFR-SEC-001)
 
-<a id="CON-SEC-004"></a>
+<a id="CON-SEC-ENCRYPTION-REST"></a>
 
-## CON-SEC-004 Encryption at Rest
+## CON-SEC-ENCRYPTION-REST Encryption at Rest
 
 All persistent data SHALL be encrypted at rest using AES-256 or equivalent.
 
@@ -48,9 +48,9 @@ All persistent data SHALL be encrypted at rest using AES-256 or equivalent.
 
 * [NFR-SEC-002 (Encryption at Rest)](../non-functional-requirements/security.md#NFR-SEC-002)
 
-<a id="CON-SEC-005"></a>
+<a id="CON-SEC-MFA"></a>
 
-## CON-SEC-005 Multi-Factor Authentication
+## CON-SEC-MFA Multi-Factor Authentication
 
 The system SHALL support Multi-Factor Authentication (MFA) for user login.
 
@@ -62,9 +62,9 @@ The system SHALL support Multi-Factor Authentication (MFA) for user login.
 
 * [NFR-SEC-003 (Multi-Factor Authentication)](../non-functional-requirements/security.md#NFR-SEC-003)
 
-<a id="CON-SEC-006"></a>
+<a id="CON-SEC-KEY-MANAGEMENT"></a>
 
-## CON-SEC-006 Key Management
+## CON-SEC-KEY-MANAGEMENT Key Management
 
 The system SHALL implement secure key management practices.
 
@@ -76,9 +76,9 @@ The system SHALL implement secure key management practices.
 
 * [NFR-SEC-004 (Key Management)](../non-functional-requirements/security.md#NFR-SEC-004)
 
-<a id="CON-SEC-007"></a>
+<a id="CON-SEC-LEAST-PRIVILEGE"></a>
 
-## CON-SEC-007 Least Privilege
+## CON-SEC-LEAST-PRIVILEGE Least Privilege
 
 The system SHALL enforce the principle of least privilege.
 
@@ -90,9 +90,9 @@ The system SHALL enforce the principle of least privilege.
 
 * [NFR-SEC-005 (Least Privilege)](../non-functional-requirements/security.md#NFR-SEC-005)
 
-<a id="CON-SEC-008"></a>
+<a id="CON-SEC-ADAPTIVE-AUTH"></a>
 
-## CON-SEC-008 Adaptive Authentication
+## CON-SEC-ADAPTIVE-AUTH Adaptive Authentication
 
 The system SHOULD implement adaptive (risk-based) authentication.
 
@@ -104,9 +104,9 @@ The system SHOULD implement adaptive (risk-based) authentication.
 
 * [NFR-SEC-006 (Adaptive Authentication)](../non-functional-requirements/security.md#NFR-SEC-006)
 
-<a id="CON-SEC-009"></a>
+<a id="CON-SEC-ERROR-DISCLOSURE"></a>
 
-## CON-SEC-009 Error Disclosure
+## CON-SEC-ERROR-DISCLOSURE Error Disclosure
 
 Error responses SHALL NOT reveal sensitive internal details including:
 

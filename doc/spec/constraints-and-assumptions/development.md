@@ -1,8 +1,8 @@
 # Development Constraints
 
-<a id="CON-DEV-001"></a>
+<a id="CON-DEV-SECURE-SDLC"></a>
 
-## CON-DEV-001 Secure Software Development Lifecycle
+## CON-DEV-SECURE-SDLC Secure Software Development Lifecycle
 
 All software development SHALL follow Secure SDLC practices:
 
@@ -19,9 +19,9 @@ All software development SHALL follow Secure SDLC practices:
 
 * [NFR-SEC-007 (Secure Development)](../non-functional-requirements/security.md#NFR-SEC-007)
 
-<a id="CON-DEV-002"></a>
+<a id="CON-DEV-SCRM"></a>
 
-## CON-DEV-002 Supply Chain Risk Management
+## CON-DEV-SCRM Supply Chain Risk Management
 
 The project SHALL implement Cyber Supply Chain Risk Management (C-SCRM):
 
