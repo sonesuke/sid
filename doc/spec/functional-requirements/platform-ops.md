@@ -33,8 +33,6 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 * After the grace period, all tenant data SHALL be permanently and irrecoverably deleted.
 * Deleted data includes: [DAT-USER (Users)](../data-model/schema.md#DAT-USER), [DAT-SESSION (User Sessions)](../data-model/schema.md#DAT-SESSION), [DAT-LOG (Audit Logs)](../data-model/schema.md#DAT-LOG), [DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT), and configuration.
 
-**Constrained by**: [CON-COMP-001 (Data Subject Rights)](../constraints-and-assumptions/compliance.md#CON-COMP-001)
-
 **Realized by**:
 
 * [IF-OPS-CONSOLE (Operator Console)](../interface-requirements/ui.md#IF-OPS-CONSOLE)
@@ -59,8 +57,6 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 * [DAT-LOG (Audit Logs)](../data-model/schema.md#DAT-LOG) SHALL be retained for a minimum of 7 years, then securely deleted.
 * [DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT) SHALL be retained for a minimum of 5 years, then securely deleted.
-
-**Constrained by**: [CON-DATA-002 (Audit Log Retention)](../constraints-and-assumptions/data.md#CON-DATA-002), [CON-DATA-003 (Billing Data Retention)](../constraints-and-assumptions/data.md#CON-DATA-003)
 
 **Realized by**:
 

@@ -15,6 +15,10 @@ The system SHALL support data subject rights as required by GDPR and Japan APPI:
 
 * Legal compliance with privacy regulations.
 
+**Related FRs**:
+
+* [FR-OPS-002 (Tenant Deletion)](../functional-requirements/platform-ops.md#FR-OPS-002)
+
 **Related NFRs**:
 
 * [NFR-DATA-001 (Data Residency)](../non-functional-requirements/data.md#NFR-DATA-001)

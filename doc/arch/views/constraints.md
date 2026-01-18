@@ -8,7 +8,7 @@ This architecture documentation introduces **no new constraints**. All binding c
 
 ## Normative Constraints
 
-Refer to [Constraints and Assumptions](../../spec/constraints-and-assumptions/_index.md) for the authoritative definitions.
+Refer to [Constraints and Assumptions](../../spec/constraints/_index.md) for the authoritative definitions.
 
 - **Constraints**: `CON-*` declarations.
 - **Assumptions**: `ASM-*` declarations.

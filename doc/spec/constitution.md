@@ -50,7 +50,7 @@ The documentation is organized into the following directories, each serving a sp
   - **use-cases**: Description of functional scenarios and user stories.
   - **functional-requirements**: Specific behaviors and functions the system must support.
   - **non-functional-requirements**: Quality attributes such as performance, security, and reliability.
-  - **constraints-and-assumptions**: Limitations and known prerequisites.
+  - **constraints**: Limitations and known prerequisites.
   - **data-model**: Entity definitions, database schemas, and data flow.
   - **interface-requirements**: UI/UX guidelines and API definitions.
   - **error-handling**: Strategies for handling exceptions and failures.
@@ -84,7 +84,7 @@ All identifiers SHALL be globally unique within the project. Identifiers MUST NO
     +-------------------------+-------------+------------------------------------+
     | Use Case                | UC          | doc/spec/use-cases                 |
     +-------------------------+-------------+------------------------------------+
-    | Constraint              | CON         | doc/spec/constraints-and-assumptions|
+    | Constraint              | CON         | doc/spec/constraints|
     +-------------------------+-------------+------------------------------------+
     | Data Entity             | DATA        | doc/spec/data-model                |
     +-------------------------+-------------+------------------------------------+

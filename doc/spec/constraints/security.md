@@ -10,6 +10,10 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 * Compliance with Japan's Act on the Protection of Personal Information (APPI).
 
+**Related FRs**:
+
+* [FR-AUTH-006 (Password Policy Configuration)](../functional-requirements/auth.md#FR-AUTH-006)
+
 <a id="CON-SEC-AUDIT-LOG"></a>
 
 ## CON-SEC-AUDIT-LOG Audit Log Provision
@@ -19,6 +23,10 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 **Rationale**:
 
 * Compliance with Japan's Act on the Protection of Personal Information (APPI).
+
+**Related FRs**:
+
+* [FR-LOG-001 (Audit Logging)](../functional-requirements/audit.md#FR-LOG-001)
 
 <a id="CON-SEC-ENCRYPTION-TRANSIT"></a>
 

@@ -106,8 +106,6 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow each [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT) to configure password complexity requirements (e.g., minimum length, required character types).
 
-**Constrained by**: [CON-SEC-001 (Configurable Password Policy)](../constraints-and-assumptions/security.md#CON-SEC-001)
-
 **Realized by**:
 
 * [IF-TENANT-CONSOLE (Tenant Administration Console)](../interface-requirements/ui.md#IF-TENANT-CONSOLE)

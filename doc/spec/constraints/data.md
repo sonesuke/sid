@@ -24,6 +24,10 @@ All customer data SHALL be stored exclusively in data centers located in Japan o
 
 * Legal compliance (Japan Accounting Law, APPI).
 
+**Related FRs**:
+
+* [FR-OPS-003 (Data Retention Enforcement)](../functional-requirements/platform-ops.md#FR-OPS-003)
+
 <a id="CON-DATA-BILLING-RETENTION"></a>
 
 ## CON-DATA-BILLING-RETENTION Billing Data Retention
@@ -33,3 +37,7 @@ All customer data SHALL be stored exclusively in data centers located in Japan o
 **Rationale**:
 
 * Legal compliance (Tax regulations).
+
+**Related FRs**:
+
+* [FR-OPS-003 (Data Retention Enforcement)](../functional-requirements/platform-ops.md#FR-OPS-003)
