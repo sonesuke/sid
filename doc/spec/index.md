@@ -2,10 +2,8 @@
 
 - [constitution](constitution.md)
 - [style](style.md)
-- [overview/index](overview/index.md)
+- [overview](overview.md)
 - [terminology/index](terminology/index.md)
-- [background/index](background/index.md)
-- [scope/index](scope/index.md)
 - [actors/_index](actors/_index.md)
 - [use-cases/index](use-cases/index.md)
 - [functional-requirements/index](functional-requirements/index.md)

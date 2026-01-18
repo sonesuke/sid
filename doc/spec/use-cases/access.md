@@ -34,7 +34,6 @@ The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) attempts to acce
 
 * [FR-AUTH-001 (Supported Authentication Methods)](../functional-requirements/auth.md#FR-AUTH-001)
 * [FR-AUTH-005 (Session Management)](../functional-requirements/auth.md#FR-AUTH-005)
-* [FR-AUTH (Authentication)](../scope/boundaries.md#FR-AUTH)
 
 <a id="UC-LOGOUT"></a>
 

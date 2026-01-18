@@ -35,7 +35,7 @@ A new customer subscription is confirmed.
 **Related Requirements**:
 
 * [FR-FLAG-001 (Flag Configuration)](../functional-requirements/feature-flags.md#FR-FLAG-001)
-* [FR-FLAG (Feature Flag Management)](../scope/boundaries.md#FR-FLAG)
+
 * [FR-TENANT-001 (User Invitation)](../functional-requirements/tenant-admin.md#FR-TENANT-001)
 * [FR-TENANT-003 (Contract Modification)](../functional-requirements/tenant-admin.md#FR-TENANT-003)
 * [FR-LOG-003 (Control Plane Auditing)](../functional-requirements/audit.md#FR-LOG-003)

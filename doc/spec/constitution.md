@@ -42,10 +42,8 @@ Decisions are made based on technical merit and consensus. When consensus cannot
 The documentation is organized into the following directories, each serving a specific purpose:
 
 - **doc/spec**: Contains the detailed system specifications.
-  - **overview**: High-level summary of the project.
+  - **overview**: High-level system concept, motivation, and scope.
   - **terminology**: Definition of specific terms and abbreviations.
-  - **background**: Context, motivations, and problem statement.
-  - **scope**: Project boundaries (in-scope and out-of-scope).
   - **actors**: Users and external systems interacting with the project.
   - **use-cases**: Description of functional scenarios and user stories.
   - **functional-requirements**: Specific behaviors and functions the system must support.

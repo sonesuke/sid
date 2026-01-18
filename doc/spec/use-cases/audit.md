@@ -63,4 +63,3 @@ A state-changing operation is successfully completed by any Actor.
 **Related Requirements**:
 
 * [FR-LOG-003 (Control Plane Auditing)](../functional-requirements/audit.md#FR-LOG-003)
-* [FR-LOG (Logging and Auditing)](../scope/boundaries.md#FR-LOG)

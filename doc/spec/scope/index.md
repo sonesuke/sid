@@ -1,3 +1,0 @@
-# Scope
-
-- [boundaries](boundaries.md)
