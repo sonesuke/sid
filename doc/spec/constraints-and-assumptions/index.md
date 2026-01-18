@@ -246,7 +246,7 @@ All software development SHALL follow Secure SDLC practices:
 
 **Affected Actors**:
 
-* [ACT-DEV (Developer)](../actors/list.md#ACT-DEV)
+* [ACT-DEV (Developer)](../actors/developer.md#ACT-DEV)
 
 <a id="CON-DEV-002"></a>
 
@@ -262,7 +262,7 @@ The project SHALL implement Cyber Supply Chain Risk Management (C-SCRM):
 
 **Affected Actors**:
 
-* [ACT-DEV (Developer)](../actors/list.md#ACT-DEV)
+* [ACT-DEV (Developer)](../actors/developer.md#ACT-DEV)
 
 ## Compliance Constraints
 

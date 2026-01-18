@@ -5,7 +5,7 @@
 - [terminology/index](terminology/index.md)
 - [background/index](background/index.md)
 - [scope/index](scope/index.md)
-- [actors/index](actors/index.md)
+- [actors/_index](actors/_index.md)
 - [use-cases/index](use-cases/index.md)
 - [functional-requirements/index](functional-requirements/index.md)
 - [non-functional-requirements/index](non-functional-requirements/index.md)

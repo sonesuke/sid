@@ -4,29 +4,29 @@
 
 ## UC-LOGIN Tenant User Login
 
-**Actor**: [ACT-USER (Tenant User)](../actors/list.md#ACT-USER)
+**Actor**: [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER)
 
 **Description**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) logs in to the system or a managed application using their credentials or an external IdP.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) logs in to the system or a managed application using their credentials or an external IdP.
 
 **Trigger**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) attempts to access a protected resource.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) attempts to access a protected resource.
 
 **Preconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) account exists and is active.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) account exists and is active.
 
 **Postconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) receives an authentication token.
-2. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) gains access to the application.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) receives an authentication token.
+2. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) gains access to the application.
 
 **Scenario**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) navigates to the **Universal Login Page**.
-2. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects authentication method (Password or SSO).
-3. If Password: The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) enters email and password.
-4. If SSO: The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) is redirected to IdP and authenticates.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) navigates to the **Universal Login Page**.
+2. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects authentication method (Password or SSO).
+3. If Password: The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) enters email and password.
+4. If SSO: The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) is redirected to IdP and authenticates.
 5. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) validates credentials.
 6. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) issues an authentication token.
 
@@ -40,17 +40,17 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) attempts to access a pr
 
 ## UC-LOGOUT Tenant User Logout
 
-**Actor**: [ACT-USER (Tenant User)](../actors/list.md#ACT-USER)
+**Actor**: [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER)
 
 **Description**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) explicitly terminates their session to secure their access.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) explicitly terminates their session to secure their access.
 
 **Trigger**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Logout" in the **Universal Login Page** or Managed Application.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects "Logout" in the **Universal Login Page** or Managed Application.
 
 **Preconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) has an active [DAT-SESSION (User Sessions)](../data-model/schema.md#DAT-SESSION).
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) has an active [DAT-SESSION (User Sessions)](../data-model/schema.md#DAT-SESSION).
 
 **Postconditions**:
 
@@ -59,7 +59,7 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Logout" in the
 
 **Scenario**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) initiates the logout action.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) initiates the logout action.
 2. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) invalidates the session token.
 3. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) redirects the user.
 
@@ -72,29 +72,29 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Logout" in the
 
 ## UC-AUTH-RESET Password Reset
 
-**Actor**: [ACT-USER (Tenant User)](../actors/list.md#ACT-USER)
+**Actor**: [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER)
 
 **Description**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) initiates a password reset flow when they have forgotten their credentials.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) initiates a password reset flow when they have forgotten their credentials.
 
 **Trigger**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Forgot Password" on the **Universal Login Page**.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects "Forgot Password" on the **Universal Login Page**.
 
 **Preconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) has a registered account with an email address.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) has a registered account with an email address.
 2. The account is configured for password authentication.
 
 **Postconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) has updated their credential.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) has updated their credential.
 2. All existing [DAT-SESSION (User Sessions)](../data-model/schema.md#DAT-SESSION) are invalidated.
 
 **Scenario**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) enters their email address on the **Universal Login Page**.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) enters their email address on the **Universal Login Page**.
 2. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) sends a password reset link/token to the email.
-3. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) clicks the link and enters a new password.
+3. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) clicks the link and enters a new password.
 4. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) updates the credential store.
 5. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) invalidates all active sessions for the user.
 

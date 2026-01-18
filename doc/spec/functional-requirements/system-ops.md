@@ -4,7 +4,7 @@
 
 ## FR-SYS-001 Application Registration
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-DEV (Developer)](../actors/list.md#ACT-DEV) to register a new [DAT-APP (Managed Applications)](../data-model/schema.md#DAT-APP).
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-DEV (Developer)](../actors/developer.md#ACT-DEV) to register a new [DAT-APP (Managed Applications)](../data-model/schema.md#DAT-APP).
 The system SHALL generate a unique Application ID upon registration.
 
 **Quality Attributes**:
@@ -24,9 +24,9 @@ The system SHALL generate a unique Application ID upon registration.
 
 ### FR-SYS-002 API Key Management
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-DEV (Developer)](../actors/list.md#ACT-DEV) to issue [DAT-KEY (API Access Keys)](../data-model/schema.md#DAT-KEY) for a registered [DAT-APP (Managed Applications)](../data-model/schema.md#DAT-APP).
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-DEV (Developer)](../actors/developer.md#ACT-DEV) to issue [DAT-KEY (API Access Keys)](../data-model/schema.md#DAT-KEY) for a registered [DAT-APP (Managed Applications)](../data-model/schema.md#DAT-APP).
 The system SHALL display the Client Secret only once upon issuance.
-The system SHALL allow [ACT-DEV (Developer)](../actors/list.md#ACT-DEV) to revoke existing keys.
+The system SHALL allow [ACT-DEV (Developer)](../actors/developer.md#ACT-DEV) to revoke existing keys.
 
 **Quality Attributes**:
 
@@ -45,8 +45,8 @@ The system SHALL allow [ACT-DEV (Developer)](../actors/list.md#ACT-DEV) to revok
 
 #### FR-SYS-003 Application Lifecycle Management
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-DEV (Developer)](../actors/list.md#ACT-DEV) to update the configuration of a [DAT-APP (Managed Applications)](../data-model/schema.md#DAT-APP).
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-DEV (Developer)](../actors/list.md#ACT-DEV) to change the [DAT-APP (Managed Applications)](../data-model/schema.md#DAT-APP) (e.g., Disable) to block access.
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-DEV (Developer)](../actors/developer.md#ACT-DEV) to update the configuration of a [DAT-APP (Managed Applications)](../data-model/schema.md#DAT-APP).
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-DEV (Developer)](../actors/developer.md#ACT-DEV) to change the [DAT-APP (Managed Applications)](../data-model/schema.md#DAT-APP) (e.g., Disable) to block access.
 
 **Quality Attributes**:
 
@@ -63,7 +63,7 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 #### FR-SYS-004 Operator JIT Provisioning
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL automatically provision a [DAT-USER (Users)](../data-model/schema.md#DAT-USER) record for [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) upon their first successful authentication via the external Identity Provider.
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL automatically provision a [DAT-USER (Users)](../data-model/schema.md#DAT-USER) record for [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) upon their first successful authentication via the external Identity Provider.
 
 * The provisioned user SHALL have ``tenant_id`` set to NULL (platform-level user).
 * The user's ``id`` SHALL be used as ``actor_id`` in [DAT-LOG (Audit Logs)](../data-model/schema.md#DAT-LOG).
@@ -85,7 +85,7 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 #### FR-SYS-005 System Health Monitoring
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL provide a Dashboard or API for [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) to view the real-time health status of system components.
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL provide a Dashboard or API for [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) to view the real-time health status of system components.
 
 * Status SHALL include connectivity to downstream dependencies (DB, Identity Provider, Event Bus).
 * Status SHALL include Error Rates and P99 Latency of key services.

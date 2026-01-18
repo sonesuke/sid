@@ -4,7 +4,7 @@
 
 ## FR-FLAG-001 Flag Configuration
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) to configure [DAT-FLAG (Feature Flags)](../data-model/schema.md#DAT-FLAG) for each [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT).
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) to configure [DAT-FLAG (Feature Flags)](../data-model/schema.md#DAT-FLAG) for each [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT).
 
 **Realized by**:
 

@@ -51,7 +51,7 @@ The system SHALL provide an API ([IF-BILL (Billing Event API)](../interface-requ
 
 #### FR-BILL-003 Billing Data Export
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL provide an interface for [ACT-BILLING (External Billing System)](../actors/list.md#ACT-BILLING) to retrieve [DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT) for invoicing and reconciliation purposes.
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL provide an interface for [ACT-BILLING (External Billing System)](../actors/billing-system.md#ACT-BILLING) to retrieve [DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT) for invoicing and reconciliation purposes.
 
 **Realized by**:
 

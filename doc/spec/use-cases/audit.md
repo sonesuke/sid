@@ -4,27 +4,27 @@
 
 ## UC-AUDIT-EXPORT Audit Log Export
 
-**Actor**: [ACT-AUDIT (Auditor)](../actors/list.md#ACT-AUDIT)
+**Actor**: [ACT-AUDIT (Auditor)](../actors/auditor.md#ACT-AUDIT)
 
 **Description**:
-The [ACT-AUDIT (Auditor)](../actors/list.md#ACT-AUDIT) exports system audit logs for compliance review.
+The [ACT-AUDIT (Auditor)](../actors/auditor.md#ACT-AUDIT) exports system audit logs for compliance review.
 
 **Trigger**:
-The [ACT-AUDIT (Auditor)](../actors/list.md#ACT-AUDIT) selects "Export Logs" within the **Auditor Console**.
+The [ACT-AUDIT (Auditor)](../actors/auditor.md#ACT-AUDIT) selects "Export Logs" within the **Auditor Console**.
 
 **Preconditions**:
 
-1. The [ACT-AUDIT (Auditor)](../actors/list.md#ACT-AUDIT) is logged in with Auditor privileges.
+1. The [ACT-AUDIT (Auditor)](../actors/auditor.md#ACT-AUDIT) is logged in with Auditor privileges.
 
 **Postconditions**:
 
-1. A CSV file containing the requested logs is downloaded to the [ACT-AUDIT (Auditor)](../actors/list.md#ACT-AUDIT)'s device.
+1. A CSV file containing the requested logs is downloaded to the [ACT-AUDIT (Auditor)](../actors/auditor.md#ACT-AUDIT)'s device.
 
 **Scenario**:
 
-1. The [ACT-AUDIT (Auditor)](../actors/list.md#ACT-AUDIT) navigates to the "Audit Logs" view in the **Auditor Console**.
-2. The [ACT-AUDIT (Auditor)](../actors/list.md#ACT-AUDIT) selects the date range and filters for the export.
-3. The [ACT-AUDIT (Auditor)](../actors/list.md#ACT-AUDIT) initiates the download.
+1. The [ACT-AUDIT (Auditor)](../actors/auditor.md#ACT-AUDIT) navigates to the "Audit Logs" view in the **Auditor Console**.
+2. The [ACT-AUDIT (Auditor)](../actors/auditor.md#ACT-AUDIT) selects the date range and filters for the export.
+3. The [ACT-AUDIT (Auditor)](../actors/auditor.md#ACT-AUDIT) initiates the download.
 4. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) queries the log storage.
 5. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) formats the data as CSV and streams the response.
 

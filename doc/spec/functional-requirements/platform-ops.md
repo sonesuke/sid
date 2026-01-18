@@ -4,7 +4,7 @@
 
 ## FR-OPS-001 Tenant Status Management
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) to modify the status of a [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT) (e.g., Active, Suspended).
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) to modify the status of a [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT) (e.g., Active, Suspended).
 When a [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT) is Suspended, the system SHALL revoke access for all [DAT-USER (Users)](../data-model/schema.md#DAT-USER) associated with that tenant.
 
 **Realized by**:
@@ -27,7 +27,7 @@ When a [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT) is Suspended, 
 
 ### FR-OPS-002 Tenant Deletion
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) to permanently delete a [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT) and all associated data upon contract termination or deletion request.
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) to permanently delete a [DAT-TENANT (Tenants)](../data-model/schema.md#DAT-TENANT) and all associated data upon contract termination or deletion request.
 
 * Upon deletion request, the tenant SHALL enter a 30-day grace period (recoverable).
 * After the grace period, all tenant data SHALL be permanently and irrecoverably deleted.

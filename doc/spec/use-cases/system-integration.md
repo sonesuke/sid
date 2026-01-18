@@ -85,24 +85,24 @@ The [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-A
 
 ## UC-SYS-BILL-EXPORT Billing Data Export
 
-**Actor**: [ACT-BILLING (External Billing System)](../actors/list.md#ACT-BILLING) (System)
+**Actor**: [ACT-BILLING (External Billing System)](../actors/billing-system.md#ACT-BILLING) (System)
 
 **Description**:
-The [ACT-BILLING (External Billing System)](../actors/list.md#ACT-BILLING) retrieves billing events from the [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) to generate invoices and perform reconciliation.
+The [ACT-BILLING (External Billing System)](../actors/billing-system.md#ACT-BILLING) retrieves billing events from the [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) to generate invoices and perform reconciliation.
 
 **Trigger**:
-Scheduled job or on-demand request from the [ACT-BILLING (External Billing System)](../actors/list.md#ACT-BILLING).
+Scheduled job or on-demand request from the [ACT-BILLING (External Billing System)](../actors/billing-system.md#ACT-BILLING).
 
 **Postconditions**:
 
-1. The [ACT-BILLING (External Billing System)](../actors/list.md#ACT-BILLING) receives the requested [DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT).
+1. The [ACT-BILLING (External Billing System)](../actors/billing-system.md#ACT-BILLING) receives the requested [DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT).
 
 **Scenario**:
 
-1. The [ACT-BILLING (External Billing System)](../actors/list.md#ACT-BILLING) requests billing events for a specified period/tenant.
+1. The [ACT-BILLING (External Billing System)](../actors/billing-system.md#ACT-BILLING) requests billing events for a specified period/tenant.
 2. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) authenticates and authorizes the request.
 3. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) retrieves matching events from the data store.
-4. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) returns the event data to the [ACT-BILLING (External Billing System)](../actors/list.md#ACT-BILLING).
+4. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) returns the event data to the [ACT-BILLING (External Billing System)](../actors/billing-system.md#ACT-BILLING).
 
 **Related Requirements**:
 

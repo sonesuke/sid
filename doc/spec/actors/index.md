@@ -1,3 +1,0 @@
-# Actors
-
-- [list](list.md)

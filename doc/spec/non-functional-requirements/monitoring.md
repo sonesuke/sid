@@ -14,7 +14,7 @@ The system SHALL implement continuous monitoring capabilities:
 
 ## NFR-MON-002 System Health Alerting
 
-The system SHALL proactively notify [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) via multiple channels (Email, Slack, PagerDuty) when:
+The system SHALL proactively notify [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) via multiple channels (Email, Slack, PagerDuty) when:
 
 * Error rate exceeds defined thresholds (e.g., > 1% in 5 minutes).
 * Latency (P99) exceeds defined SLOs.

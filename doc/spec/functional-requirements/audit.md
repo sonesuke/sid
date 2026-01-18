@@ -28,7 +28,7 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 ### FR-LOG-002 Audit Log Export
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-AUDIT (Auditor)](../actors/list.md#ACT-AUDIT) to export [DAT-LOG (Audit Logs)](../data-model/schema.md#DAT-LOG) in CSV format.
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow [ACT-AUDIT (Auditor)](../actors/auditor.md#ACT-AUDIT) to export [DAT-LOG (Audit Logs)](../data-model/schema.md#DAT-LOG) in CSV format.
 
 **Realized by**:
 

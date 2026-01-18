@@ -5,31 +5,31 @@
 
 ## UC-PROV-001 Tenant Provisioning
 
-**Actor**: [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS)
+**Actor**: [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS)
 
 **Description**:
-The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) creates a new tenant configuration and enables subscribed features, allowing the tenant to immediately access the [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET).
+The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) creates a new tenant configuration and enables subscribed features, allowing the tenant to immediately access the [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET).
 
 **Trigger**:
 A new customer subscription is confirmed.
 
 **Preconditions**:
 
-1. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) is logged in.
+1. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) is logged in.
 
 **Postconditions**:
 
 1. A new tenant entity is created in the [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP).
-2. Initial [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner) is provisioned.
+2. Initial [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner) is provisioned.
 3. Feature flags corresponding to the subscription plan are active.
 
 **Scenario**:
 
-1. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) navigates to the **Operator Console**.
-2. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) enters tenant details (Name, Domain, Plan) and the email address for the initial Owner.
-3. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) selects the [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) to enable.
-4. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) selects the "Provision" action.
-5. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) creates the tenant and the initial [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner).
+1. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) navigates to the **Operator Console**.
+2. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) enters tenant details (Name, Domain, Plan) and the email address for the initial Owner.
+3. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) selects the [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) to enable.
+4. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) selects the "Provision" action.
+5. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) creates the tenant and the initial [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner).
 6. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) enables access to the [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET).
 
 **Related Requirements**:
@@ -44,17 +44,17 @@ A new customer subscription is confirmed.
 
 ## UC-TENANT-SUSPEND Tenant Suspension
 
-**Actor**: [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS)
+**Actor**: [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS)
 
 **Description**:
-The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) suspends a tenant's access to the managed application, usually due to non-payment or policy violation.
+The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) suspends a tenant's access to the managed application, usually due to non-payment or policy violation.
 
 **Trigger**:
-The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) selects "Suspend Tenant" in the **Operator Console**.
+The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) selects "Suspend Tenant" in the **Operator Console**.
 
 **Preconditions**:
 
-1. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) is logged in.
+1. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) is logged in.
 2. The target tenant is currently Active.
 
 **Postconditions**:
@@ -64,10 +64,10 @@ The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) selects "Suspend Te
 
 **Scenario**:
 
-1. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) searches for the tenant in the **Operator Console**.
-2. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) selects the "Suspend" action.
-3. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) provides a reason (optional).
-4. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) confirms the action.
+1. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) searches for the tenant in the **Operator Console**.
+2. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) selects the "Suspend" action.
+3. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) provides a reason (optional).
+4. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) confirms the action.
 5. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) invokes the suspension logic.
 
 **Related Requirements**:
@@ -79,17 +79,17 @@ The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) selects "Suspend Te
 
 ## UC-OPS-TENANT-DELETE Tenant Deletion
 
-**Actor**: [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS)
+**Actor**: [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS)
 
 **Description**:
-The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) permanently deletes a tenant and all associated data upon contract termination or deletion request.
+The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) permanently deletes a tenant and all associated data upon contract termination or deletion request.
 
 **Trigger**:
-The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) selects "Delete Tenant" in the **Operator Console**.
+The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) selects "Delete Tenant" in the **Operator Console**.
 
 **Preconditions**:
 
-1. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) is logged in.
+1. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) is logged in.
 2. The target tenant exists.
 
 **Postconditions**:
@@ -99,9 +99,9 @@ The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) selects "Delete Ten
 
 **Scenario**:
 
-1. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) searches for the tenant in the **Operator Console**.
-2. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) selects the "Delete" action.
-3. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) confirms the action with explicit acknowledgment.
+1. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) searches for the tenant in the **Operator Console**.
+2. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) selects the "Delete" action.
+3. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) confirms the action with explicit acknowledgment.
 4. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) marks the tenant for deletion (30-day grace).
 5. After the grace period, the [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) permanently deletes all related data.
 

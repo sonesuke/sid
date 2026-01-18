@@ -5,17 +5,17 @@
 
 ## UC-OPS-LOGIN Operator Login
 
-**Actor**: [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS)
+**Actor**: [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS)
 
 **Description**:
-The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) logs in to the **Operator Console**. JIT provisioning occurs if it is their first login.
+The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) logs in to the **Operator Console**. JIT provisioning occurs if it is their first login.
 
 **Trigger**:
-The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) accesses the Operator Console URL.
+The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) accesses the Operator Console URL.
 
 **Preconditions**:
 
-1. The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) has a valid account in the external IdP.
+1. The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) has a valid account in the external IdP.
 
 **Postconditions**:
 
@@ -38,10 +38,10 @@ The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) accesses the Operat
 
 ## UC-OPS-MONITOR System Monitoring
 
-**Actor**: [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS)
+**Actor**: [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS)
 
 **Description**:
-The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) views system usage metrics to ensure platform health.
+The [ACT-OPS (Platform Operator)](../actors/platform-operator.md#ACT-OPS) views system usage metrics to ensure platform health.
 
 **Trigger**:
 The operator navigates to the "Dashboard" in the Operator Console.

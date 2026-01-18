@@ -82,7 +82,7 @@ Represents a registered [TERM-APP-TARGET (Managed Application)](../terminology/d
 |-------|------|-------------|
 | id | UUID | Unique identifier. |
 | name | String | Name of the application. |
-| owner_id | String | Identifier of the [ACT-DEV (Developer)](../actors/list.md#ACT-DEV) or owner. |
+| owner_id | String | Identifier of the [ACT-DEV (Developer)](../actors/developer.md#ACT-DEV) or owner. |
 | status | Enum | Registration status (`Active`, `Disabled`). |
 
 <a id="DAT-KEY"></a>

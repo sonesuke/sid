@@ -161,7 +161,7 @@ The specification elements are related by the following dependency model.
 
 Use Cases (UC) SHALL follow the narrative structure: **Actor -> Entry Point (Informative) -> Goal**.
 
-- **Actor**: A defined `Actor` ([ACT](actors/index.md)).
+- **Actor**: A defined `Actor` ([ACT](actors/tenant-user.md)).
 - **Entry Point**: A narrative mention of the interface (e.g., "via the Console"). **SHALL NOT** use ``:ref:`` to link to Interface specifications.
 - **Goal**: The value or outcome achieved, formally supporting a **Functional Requirement**.
 

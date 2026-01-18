@@ -13,7 +13,7 @@ A user authenticates via the external Identity Provider (Azure Entra ID) and gai
 
 ### Actors
 
-* [ACT-USER (Tenant User)](../../spec/actors/list.md#ACT-USER)
+* [ACT-USER (Tenant User)](../../spec/actors/tenant-user.md#ACT-USER)
 * [BB-UI-001 (Web Console (SPA)](building-block-view.md#BB-UI-001)
 * [BB-AUTH-001 (Auth Service)](building-block-view.md#BB-AUTH-001)
 * [BB-API-001 (API Gateway)](building-block-view.md#BB-API-001)
@@ -68,7 +68,7 @@ An authenticated user makes a REST API call to retrieve tenant information.
 
 ### Actors
 
-* [ACT-USER (Tenant User)](../../spec/actors/list.md#ACT-USER)
+* [ACT-USER (Tenant User)](../../spec/actors/tenant-user.md#ACT-USER)
 * [BB-API-001 (API Gateway)](building-block-view.md#BB-API-001)
 * [BB-TNT-001 (Tenant Service)](building-block-view.md#BB-TNT-001)
 
@@ -233,7 +233,7 @@ An API request fails due to a downstream service error. The system logs the erro
 
 ### Actors
 
-* [ACT-USER (Tenant User)](../../spec/actors/list.md#ACT-USER)
+* [ACT-USER (Tenant User)](../../spec/actors/tenant-user.md#ACT-USER)
 * [BB-API-001 (API Gateway)](building-block-view.md#BB-API-001)
 * [BB-TNT-001 (Tenant Service)](building-block-view.md#BB-TNT-001)
 * [BB-OBS-001 (Observability Platform)](building-block-view.md#BB-OBS-001)

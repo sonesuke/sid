@@ -4,17 +4,17 @@
 
 ## UC-TENANT-USER-DELETE User Deletion
 
-**Actor**: [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner, Administrator)
+**Actor**: [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner, Administrator)
 
 **Description**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner or Administrator) removes a user from the tenant organization.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner or Administrator) removes a user from the tenant organization.
 
 **Trigger**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Delete User" in the **Tenant Administration Console**.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects "Delete User" in the **Tenant Administration Console**.
 
 **Preconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) is logged in with sufficient privileges.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) is logged in with sufficient privileges.
 2. Target user exists.
 
 **Postconditions**:
@@ -24,8 +24,8 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Delete User" i
 
 **Scenario**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects the user to remove.
-2. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) confirms deletion.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects the user to remove.
+2. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) confirms deletion.
 3. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) removes the user.
 4. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) invalidates existing sessions.
 
@@ -38,17 +38,17 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Delete User" i
 
 ## UC-TENANT-USER-UPDATE User Role Update
 
-**Actor**: [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner, Administrator)
+**Actor**: [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner, Administrator)
 
 **Description**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner or Administrator) modifies the role of an existing user within the tenant organization.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner or Administrator) modifies the role of an existing user within the tenant organization.
 
 **Trigger**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Edit Role" in the **Tenant Administration Console**.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects "Edit Role" in the **Tenant Administration Console**.
 
 **Preconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) is logged in with sufficient privileges.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) is logged in with sufficient privileges.
 2. Target user exists.
 
 **Postconditions**:
@@ -58,9 +58,9 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Edit Role" in 
 
 **Scenario**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects the user to update.
-2. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects the new role.
-3. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) saves the changes.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects the user to update.
+2. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects the new role.
+3. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) saves the changes.
 4. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) validates the permissions (e.g., cannot downgrade own role if last Owner).
 5. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) updates the user record.
 6. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) invalidates existing sessions to enforce new permissions.
@@ -74,17 +74,17 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Edit Role" in 
 
 ## UC-TENANT-USER-STATUS-UPDATE User Status Update
 
-**Actor**: [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner, Administrator)
+**Actor**: [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner, Administrator)
 
 **Description**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner or Administrator) changes the status of a user (e.g., to Disabled to block access).
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner or Administrator) changes the status of a user (e.g., to Disabled to block access).
 
 **Trigger**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Disable User" or "Enable User" in the **Tenant Administration Console**.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects "Disable User" or "Enable User" in the **Tenant Administration Console**.
 
 **Preconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) is logged in with sufficient privileges.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) is logged in with sufficient privileges.
 2. Target user exists.
 
 **Postconditions**:
@@ -94,9 +94,9 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Disable User" 
 
 **Scenario**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects the user to update.
-2. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) toggles the status (e.g., Active to Disabled).
-3. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) saves the changes.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects the user to update.
+2. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) toggles the status (e.g., Active to Disabled).
+3. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) saves the changes.
 4. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) validates the action.
 5. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) updates the user record.
 6. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) invalidates sessions if required.
@@ -110,17 +110,17 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Disable User" 
 
 ## UC-TENANT-SESSION-REVOKE Session Revocation
 
-**Actor**: [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner, Administrator)
+**Actor**: [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner, Administrator)
 
 **Description**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner or Administrator) invalidates a specific user's active sessions to force re-authentication.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner or Administrator) invalidates a specific user's active sessions to force re-authentication.
 
 **Trigger**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Revoke Sessions" for a user in the **Tenant Administration Console**.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects "Revoke Sessions" for a user in the **Tenant Administration Console**.
 
 **Preconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) is logged in with sufficient privileges.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) is logged in with sufficient privileges.
 2. The target [DAT-USER (Users)](../data-model/schema.md#DAT-USER) exists.
 
 **Postconditions**:
@@ -130,8 +130,8 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Revoke Session
 
 **Scenario**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) identifies the target user in the **Tenant Administration Console**.
-2. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) initiates the session revocation.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) identifies the target user in the **Tenant Administration Console**.
+2. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) initiates the session revocation.
 3. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) invalidates all tokens associated with the user.
 
 **Related Requirements**:
@@ -143,17 +143,17 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Revoke Session
 
 ## UC-TENANT-INVITE User Invitation
 
-**Actor**: [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner, Administrator)
+**Actor**: [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner, Administrator)
 
 **Description**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner or Administrator) invites a new user to join their tenant organization. The invited user receives an email to set up their account.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner or Administrator) invites a new user to join their tenant organization. The invited user receives an email to set up their account.
 
 **Trigger**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Invite User" in the **Tenant Administration Console**.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects "Invite User" in the **Tenant Administration Console**.
 
 **Preconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) is logged in with Owner or Administrator role.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) is logged in with Owner or Administrator role.
 2. The invited email address does not already exist in the tenant.
 
 **Postconditions**:
@@ -163,8 +163,8 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Invite User" i
 
 **Scenario**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) enters the email address and role (Admin or User) of the new user.
-2. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) submits the invitation.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) enters the email address and role (Admin or User) of the new user.
+2. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) submits the invitation.
 3. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) validates the input and permissions.
 4. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) sends the invitation email.
 
@@ -177,17 +177,17 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Invite User" i
 
 ## UC-TENANT-INVITE-RESEND Invitation Resend
 
-**Actor**: [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner or Administrator)
+**Actor**: [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner or Administrator)
 
 **Description**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) resends an invitation to a user whose previous invitation expired or was not received.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) resends an invitation to a user whose previous invitation expired or was not received.
 
 **Trigger**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Resend Invitation" for a pending invitation.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects "Resend Invitation" for a pending invitation.
 
 **Preconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) is logged in with Owner or Administrator role.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) is logged in with Owner or Administrator role.
 2. A pending or expired invitation exists for the target user.
 
 **Postconditions**:
@@ -198,8 +198,8 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Resend Invitat
 
 **Scenario**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) views the list of pending invitations.
-2. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Resend" for the target user.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) views the list of pending invitations.
+2. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) selects "Resend" for the target user.
 3. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) invalidates the old invitation.
 4. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) creates a new invitation and sends the email.
 
@@ -212,18 +212,18 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) selects "Resend Invitat
 
 ## UC-TENANT-SSO SSO Configuration
 
-**Actor**: [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner)
+**Actor**: [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner)
 
 **Description**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) (Role: Owner) configures an external Identity Provider (OIDC) to enable Single Sign-On for their users.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) (Role: Owner) configures an external Identity Provider (OIDC) to enable Single Sign-On for their users.
 
 **Trigger**:
-The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) initiates "SSO Setup" in the **Tenant Administration Console**.
+The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) initiates "SSO Setup" in the **Tenant Administration Console**.
 
 **Preconditions**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) is logged in with Owner role.
-2. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) has the necessary metadata (Client ID, Issuer URL) from their IdP.
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) is logged in with Owner role.
+2. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) has the necessary metadata (Client ID, Issuer URL) from their IdP.
 
 **Postconditions**:
 
@@ -232,7 +232,7 @@ The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) initiates "SSO Setup" i
 
 **Scenario**:
 
-1. The [ACT-USER (Tenant User)](../actors/list.md#ACT-USER) enters IdP details (Issuer URL, Client ID, Client Secret).
+1. The [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER) enters IdP details (Issuer URL, Client ID, Client Secret).
 2. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) verifies the IdP configuration (discovery).
 3. The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) saves the configuration.
 

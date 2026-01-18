@@ -31,7 +31,7 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 ### FR-AUTH-003 Tenant SSO Configuration
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow a Tenant Owner (role of [ACT-USER (Tenant User)](../actors/list.md#ACT-USER), see [DAT-ROLE (Roles)](../data-model/schema.md#DAT-ROLE)) to register an external Identity Provider (IdP) for Single Sign-On (SSO).
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL allow a Tenant Owner (role of [ACT-USER (Tenant User)](../actors/tenant-user.md#ACT-USER), see [DAT-ROLE (Roles)](../data-model/schema.md#DAT-ROLE)) to register an external Identity Provider (IdP) for Single Sign-On (SSO).
 The configuration SHALL be stored in [DAT-SSO-CONFIG (SSO Configuration)](../data-model/schema.md#DAT-SSO-CONFIG).
 
 **Realized by**:

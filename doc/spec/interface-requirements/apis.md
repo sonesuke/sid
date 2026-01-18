@@ -7,7 +7,7 @@ This section defines the external interfaces provided by the system.
 ## IF-BILL Billing Event API
 
 **Type**: REST API
-**Direction**: Bidirectional ([TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) <-> [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) / [ACT-BILLING (External Billing System)](../actors/list.md#ACT-BILLING) <- [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP))
+**Direction**: Bidirectional ([TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) <-> [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) / [ACT-BILLING (External Billing System)](../actors/billing-system.md#ACT-BILLING) <- [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP))
 **Purpose**: To report billable operations from managed applications and to retrieve billing events for invoicing.
 **Payload**: SHALL include Tenant ID, Timestamp, Event Type, and Quantity.
 
