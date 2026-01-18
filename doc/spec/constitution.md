@@ -179,11 +179,7 @@ When generating or modifying documentation:
 - Editorial changes that do not alter meaning SHALL retain the same identifier.
 - Semantic changes SHALL result in a new identifier.
 - Deprecated identifiers SHALL remain documented and MUST NOT be reused.
-
-#### Documentation Format
-
-- **Tables**: Tables SHALL be written using the reStructuredText "Simple Tables" format (using ``===`` borders) for readability.
-  - Exception: Complex grids that require spanning cells may use "Grid Tables".
+les".
 
 ## **Amendment Policy**
 

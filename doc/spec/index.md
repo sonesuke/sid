@@ -1,6 +1,7 @@
 # Specifications
 
 - [constitution](constitution.md)
+- [style](style.md)
 - [overview/index](overview/index.md)
 - [terminology/index](terminology/index.md)
 - [background/index](background/index.md)
@@ -9,7 +10,7 @@
 - [use-cases/index](use-cases/index.md)
 - [functional-requirements/index](functional-requirements/index.md)
 - [non-functional-requirements/index](non-functional-requirements/index.md)
-- [constraints-and-assumptions/index](constraints-and-assumptions/index.md)
+- [constraints-and-assumptions/_index](constraints-and-assumptions/_index.md)
 - [data-model/index](data-model/index.md)
 - [interface-requirements/index](interface-requirements/index.md)
 - [error-handling/index](error-handling/index.md)

@@ -49,3 +49,15 @@ The system SHOULD implement adaptive (risk-based) authentication that considers:
 * Behavioral patterns.
 
 When elevated risk is detected, additional authentication factors SHALL be required.
+
+<a id="NFR-SEC-007"></a>
+
+## NFR-SEC-007 Secure Development
+
+The system SHALL be developed using secure coding practices to minimize vulnerabilities.
+
+<a id="NFR-SEC-008"></a>
+
+## NFR-SEC-008 Supply Chain Security
+
+The system SHALL validate the integrity and security of all third-party components and dependencies.
