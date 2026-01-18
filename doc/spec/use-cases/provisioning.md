@@ -1,3 +1,4 @@
+
 # Tenant Provisioning & Lifecycle
 
 <a id="UC-PROV-001"></a>
@@ -34,6 +35,7 @@ A new customer subscription is confirmed.
 **Related Requirements**:
 
 * [FR-FLAG-001 (Flag Configuration)](../functional-requirements/feature-flags.md#FR-FLAG-001)
+* [FR-FLAG (Feature Flag Management)](../scope/boundaries.md#FR-FLAG)
 * [FR-TENANT-001 (User Invitation)](../functional-requirements/tenant-admin.md#FR-TENANT-001)
 * [FR-TENANT-003 (Contract Modification)](../functional-requirements/tenant-admin.md#FR-TENANT-003)
 * [FR-LOG-003 (Control Plane Auditing)](../functional-requirements/audit.md#FR-LOG-003)
@@ -106,5 +108,6 @@ The [ACT-OPS (Platform Operator)](../actors/list.md#ACT-OPS) selects "Delete Ten
 **Related Requirements**:
 
 * [FR-OPS-002 (Tenant Deletion)](../functional-requirements/platform-ops.md#FR-OPS-002)
+* [FR-OPS-003 (Data Retention Enforcement)](../functional-requirements/platform-ops.md#FR-OPS-003)
 * [FR-LOG-003 (Control Plane Auditing)](../functional-requirements/audit.md#FR-LOG-003)
-* [CON-COMP-001 (Data Subject Rights)](../constraints-and-assumptions/index.md#CON-COMP-001)
+* [FR-AUTH-006 (Password Policy Configuration)](../functional-requirements/auth.md#FR-AUTH-006)

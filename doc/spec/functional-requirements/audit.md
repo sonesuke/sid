@@ -4,11 +4,11 @@
 
 ## FR-LOG-001 Audit Log Collection
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL collect security and operational logs from all components via [API-LOG (Audit Log API)](../interface-requirements/apis.md#API-LOG) and persist them as [DAT-LOG (Audit Logs)](../data-model/schema.md#DAT-LOG).
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL collect security and operational logs from all components via [IF-LOG (Audit Log API)](../interface-requirements/apis.md#IF-LOG) and persist them as [DAT-LOG (Audit Logs)](../data-model/schema.md#DAT-LOG).
 
 **Realized by**:
 
-* [API-LOG (Audit Log API)](../interface-requirements/apis.md#API-LOG)
+* [IF-LOG (Audit Log API)](../interface-requirements/apis.md#IF-LOG)
 
 **Quality Attributes**:
 

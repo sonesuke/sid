@@ -4,11 +4,11 @@
 
 ## FR-BILL-001 Billing Event Persistence
 
-The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL persistently record billable events triggers received via [FR-BILL-002 (Billing Event Ingestion)](#FR-BILL-002) as [DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT).
+The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHALL persistently record billable events triggers received triggers as [DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT).
 
 **Realized by**:
 
-* [API-BILL (Billing Event API)](../interface-requirements/apis.md#API-BILL)
+* [IF-BILL (Billing Event API)](../interface-requirements/apis.md#IF-BILL)
 
 **Quality Attributes**:
 
@@ -28,11 +28,11 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 ### FR-BILL-002 Billing Event Ingestion
 
-The system SHALL provide an API ([API-BILL (Billing Event API)](../interface-requirements/apis.md#API-BILL)) that allows [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) to report billable events (corresponding to [DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT)).
+The system SHALL provide an API ([IF-BILL (Billing Event API)](../interface-requirements/apis.md#IF-BILL)) that allows [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) to report billable events (corresponding to [DAT-BILL-EVENT (Billing Events)](../data-model/schema.md#DAT-BILL-EVENT)).
 
 **Realized by**:
 
-* [API-BILL (Billing Event API)](../interface-requirements/apis.md#API-BILL)
+* [IF-BILL (Billing Event API)](../interface-requirements/apis.md#IF-BILL)
 
 **Quality Attributes**:
 
@@ -55,7 +55,7 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 **Realized by**:
 
-* [API-BILL (Billing Event API)](../interface-requirements/apis.md#API-BILL)
+* [IF-BILL (Billing Event API)](../interface-requirements/apis.md#IF-BILL)
 
 **Quality Attributes**:
 

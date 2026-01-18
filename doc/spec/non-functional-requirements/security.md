@@ -6,15 +6,11 @@
 
 All network communications SHALL use TLS 1.2 or higher.
 
-**Constrained by**: [CON-SEC-003 (Encryption in Transit)](../constraints-and-assumptions/index.md#CON-SEC-003)
-
 <a id="NFR-SEC-002"></a>
 
 ## NFR-SEC-002 Encryption at Rest
 
 All persistent data SHALL be encrypted using AES-256 or equivalent algorithm.
-
-**Constrained by**: [CON-SEC-004 (Encryption at Rest)](../constraints-and-assumptions/index.md#CON-SEC-004)
 
 <a id="NFR-SEC-003"></a>
 
@@ -22,8 +18,6 @@ All persistent data SHALL be encrypted using AES-256 or equivalent algorithm.
 
 The system SHALL support Multi-Factor Authentication (MFA) for user login.
 MFA options SHALL include TOTP (Time-based One-Time Password) and WebAuthn.
-
-**Constrained by**: [CON-SEC-005 (Multi-Factor Authentication)](../constraints-and-assumptions/index.md#CON-SEC-005)
 
 <a id="NFR-SEC-004"></a>
 
@@ -35,8 +29,6 @@ The system SHALL implement secure key management practices including:
 * Periodic key rotation (at least annually).
 * Secure key destruction upon expiration or revocation.
 
-**Constrained by**: [CON-SEC-006 (Key Management)](../constraints-and-assumptions/index.md#CON-SEC-006)
-
 <a id="NFR-SEC-005"></a>
 
 ## NFR-SEC-005 Least Privilege
@@ -45,8 +37,6 @@ The system SHALL enforce the principle of least privilege:
 
 * Users and services SHALL be granted only the minimum permissions required.
 * Separation of duties SHALL be implemented for sensitive operations.
-
-**Constrained by**: [CON-SEC-007 (Least Privilege)](../constraints-and-assumptions/index.md#CON-SEC-007)
 
 <a id="NFR-SEC-006"></a>
 
@@ -59,5 +49,3 @@ The system SHOULD implement adaptive (risk-based) authentication that considers:
 * Behavioral patterns.
 
 When elevated risk is detected, additional authentication factors SHALL be required.
-
-**Constrained by**: [CON-SEC-008 (Adaptive Authentication)](../constraints-and-assumptions/index.md#CON-SEC-008)

@@ -26,11 +26,11 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 ### FR-FLAG-002 Flag Delivery
 
-The system SHALL provide an interface via [API-FLAG (Feature Flag API)](../interface-requirements/apis.md#API-FLAG) for [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) to retrieve the current state of [DAT-FLAG (Feature Flags)](../data-model/schema.md#DAT-FLAG).
+The system SHALL provide an interface via [IF-FLAG (Feature Flag API)](../interface-requirements/apis.md#IF-FLAG) for [TERM-APP-TARGET (Managed Application)](../terminology/definitions.md#TERM-APP-TARGET) to retrieve the current state of [DAT-FLAG (Feature Flags)](../data-model/schema.md#DAT-FLAG).
 
 **Realized by**:
 
-* [API-FLAG (Feature Flag API)](../interface-requirements/apis.md#API-FLAG)
+* [IF-FLAG (Feature Flag API)](../interface-requirements/apis.md#IF-FLAG)
 
 **Quality Attributes**:
 

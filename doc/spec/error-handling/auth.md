@@ -18,10 +18,6 @@ Authentication failed due to invalid credentials.
 * Authentication is denied
 * No session is established
 
-**Constraints**:
-
-* [CON-SEC-009 (Error Disclosure)](../constraints-and-assumptions/index.md#CON-SEC-009)
-
 <a id="ERR-AUTH-403"></a>
 
 ## ERR-AUTH-403 Access Denied
@@ -39,10 +35,6 @@ An authenticated user attempted an operation they are not authorized to perform.
 
 * Operation is rejected
 * No state change occurs
-
-**Constraints**:
-
-* [CON-SEC-009 (Error Disclosure)](../constraints-and-assumptions/index.md#CON-SEC-009)
 
 <a id="ERR-AUTH-440"></a>
 
@@ -79,7 +71,3 @@ Multi-factor authentication is required but not provided.
 
 * Authentication flow pauses
 * User is prompted for MFA verification
-
-**Constraints**:
-
-* [CON-SEC-005 (Multi-Factor Authentication)](../constraints-and-assumptions/index.md#CON-SEC-005)

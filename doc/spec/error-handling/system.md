@@ -18,10 +18,6 @@ An unexpected internal error occurred.
 * Operation fails
 * State may be inconsistent (should be recoverable)
 
-**Constraints**:
-
-* [CON-SEC-009 (Error Disclosure)](../constraints-and-assumptions/index.md#CON-SEC-009)
-
 <a id="ERR-SYS-503"></a>
 
 ## ERR-SYS-503 Service Unavailable
@@ -39,7 +35,3 @@ The service is temporarily unavailable.
 
 * Operation is rejected
 * Client should retry later
-
-**Constraints**:
-
-* [CON-OPS-002 (Maintenance Window)](../constraints-and-assumptions/index.md#CON-OPS-002)

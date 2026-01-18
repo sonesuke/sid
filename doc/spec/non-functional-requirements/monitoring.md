@@ -10,8 +10,6 @@ The system SHALL implement continuous monitoring capabilities:
 * User and Entity Behavior Analytics (UEBA) for anomaly detection.
 * Automated alerting for suspicious activities.
 
-**Constrained by**: [CON-MON-001 (Continuous Monitoring)](../constraints-and-assumptions/index.md#CON-MON-001)
-
 <a id="NFR-MON-002"></a>
 
 ## NFR-MON-002 System Health Alerting

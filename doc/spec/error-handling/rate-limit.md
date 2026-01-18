@@ -17,7 +17,3 @@ The client has exceeded the allowed request rate.
 
 * Current request is rejected
 * Client should wait and retry
-
-**Constraints**:
-
-* [CON-PERF-001 (Response Time and Throughput)](../constraints-and-assumptions/index.md#CON-PERF-001)

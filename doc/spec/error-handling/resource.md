@@ -18,10 +18,6 @@ The requested resource does not exist.
 * Operation is rejected
 * No state change occurs
 
-**Constraints**:
-
-* [CON-SEC-009 (Error Disclosure)](../constraints-and-assumptions/index.md#CON-SEC-009)
-
 <a id="ERR-RES-410"></a>
 
 ## ERR-RES-410 Resource Gone

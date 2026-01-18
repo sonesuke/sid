@@ -94,3 +94,4 @@ The [TERM-SYS-CP (Control Plane)](../terminology/definitions.md#TERM-SYS-CP) SHA
 
 * [NFR-MON-001 (Continuous Monitoring)](../non-functional-requirements/monitoring.md#NFR-MON-001)
 * [NFR-MON-002 (System Health Alerting)](../non-functional-requirements/monitoring.md#NFR-MON-002)
+* [NFR-MON-003 (Synthetic Monitoring)](../non-functional-requirements/monitoring.md#NFR-MON-003)
